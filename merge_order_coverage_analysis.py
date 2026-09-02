@@ -8,6 +8,7 @@ from openai import OpenAI
 
 
 MODEL_NAME = "gpt-4o-mini"
+N_FACTS_PER_CHUNK = 4
 client = OpenAI()  # reads OPENAI_API_KEY from the environment
 
 
@@ -75,10 +76,9 @@ def compute_coverage(chunk_summaries: list[str], final_summary: str, n_facts: in
         facts = extract_facts(chunk_summary, n_facts=n_facts)
         found = [fact_present(f, final_summary) for f in facts]
         coverage = sum(found) / len(facts) if facts else 0
-        results.append({"chunk": chunk_num, "facts": facts, "found": found, "coverage": coverage})
-        print(f"  Chunk {chunk_num}: {sum(found)}/{len(facts)} facts found (coverage={coverage:.2f})")
+        results.append({"chapter": chunk_num, "facts": facts, "found": found, "coverage": coverage})
+        print(f"  Chapter {chunk_num}: {sum(found)}/{len(facts)} facts found (coverage={coverage:.2f})")
     return results
-
 
 def main():
     parser = argparse.ArgumentParser(description="Run coverage analysis on merge results.")
@@ -92,7 +92,6 @@ def main():
     print(f"Found {len(pairs)} complete pairs: {pairs}")
 
     # Coverage analysis for each book
-    N_FACTS_PER_CHUNK = 4
     coverage_summary = []
 
     for doc_id in pairs:
@@ -119,21 +118,21 @@ def main():
             json.dump(coverage_data, f, indent=2, ensure_ascii=False)
         print(f"  Saved: {out_path}")
 
-        chunks = [d["chunk"] for d in forward_coverage]
+        chapters = [d["chapter"] for d in forward_coverage]
         f_cov = [d["coverage"] for d in forward_coverage]
         b_cov = [d["coverage"] for d in backward_coverage]
 
         plt.figure(figsize=(10, 6))
-        plt.plot(chunks, f_cov, marker="o", label="Forward merge", color="steelblue")
-        plt.plot(chunks, b_cov, marker="s", label="Backward merge", color="firebrick")
-        plt.xlabel("Chunk number (document order)")
-        plt.ylabel("Fact coverage (fraction of chunk's facts found in final summary)")
-        plt.title(f"{title}: fact coverage by chunk, forward vs. backward")
+        plt.plot(chapters, f_cov, marker="o", label="Forward merge", color="steelblue")
+        plt.plot(chapters, b_cov, marker="s", label="Backward merge", color="firebrick")
+        plt.xlabel("chapter number (document order)")
+        plt.ylabel("Fact coverage (fraction of chapter's facts found in final summary)")
+        plt.title(f"{title}: fact coverage by chapter, forward vs. backward")
         plt.legend()
         plt.grid(True, alpha=0.3)
-        plt.xticks(chunks)
+        plt.xticks(chapters)
         plt.ylim(-0.05, 1.05)
-        plot_path = os.path.join(args.plots_dir, f"coverage_{doc_id}.png")
+        plot_path = os.path.join(args.plots_dir, f"coverage_{doc_type}_{doc_id }.png")
         plt.savefig(plot_path, dpi=150, bbox_inches="tight")
         plt.close()
         print(f"  Saved plot: {plot_path}")

@@ -81,13 +81,13 @@ def main():
 
     summary_data = []
 
-    for id in pairs:
-        with open(os.path.join(args.results_dir, f"{id}_forward.json"), "r", encoding="utf-8") as f:
+    for doc_id in pairs:
+        with open(os.path.join(args.results_dir, f"{doc_id}_forward.json"), "r", encoding="utf-8") as f:
             forward = json.load(f)
-        with open(os.path.join(args.results_dir, f"{id}_backward.json"), "r", encoding="utf-8") as f:
+        with open(os.path.join(args.results_dir, f"{doc_id}_backward.json"), "r", encoding="utf-8") as f:
             backward = json.load(f)
 
-        title = forward.get("title") or forward.get("book_title", id)
+        title = forward.get("title") or forward.get("book_title", doc_id)
         num_chapters = forward.get("num_chunks") or forward.get("num_chapters")
         doc_type = forward.get("type", "unknown")
         print(f"\n=== {title} ({num_chapters} chunks, type={doc_type}) ===")
@@ -105,11 +105,11 @@ def main():
         plt.plot(chapters, b_vals, marker="s", label="Backward merge", color="firebrick")
         plt.xlabel("chapter number (document order)")
         plt.ylabel("Stability: first-appearance vs. final-step similarity")
-        plt.title(f"{title}: stability by chunk, forward vs. backward")
+        plt.title(f"{title}: stability by chapter, forward vs. backward")
         plt.legend()
         plt.grid(True, alpha=0.3)
         plt.xticks(chapters)
-        plot_path = os.path.join(args.plots_dir, f"stability_{id}.png")
+        plot_path = os.path.join(args.plots_dir, f"stability_{doc_type}_{doc_id}.png")
         plt.savefig(plot_path, dpi=150, bbox_inches="tight")
         plt.close()
         print(f"  Saved plot: {plot_path}")

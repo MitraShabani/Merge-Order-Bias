@@ -5,6 +5,8 @@ summarizes each chunk, then merges the chunk summaries into a running
 summary twice -- once forward (first chunk to last) and once backward
 (last chunk to first) -- using GPT-4o mini.
 
+python merge_order_bias.py --input_dir text_files --output_dir results --doc_type novel/paper
+
 """
 
 import os
@@ -176,12 +178,19 @@ def run_merge(chunk_summaries: list[str], direction: str) -> tuple[str, list[dic
     return running_summary, merge_log
 
 
+def truncate(text: str, max_length: int = 40) -> str:
+    """Shorten a string to max_length characters, without cutting mid-word if possible."""
+    if len(text) <= max_length:
+        return text
+    truncated = text[:max_length].rsplit(" ", 1)[0]
+    return truncated if truncated else text[:max_length]
+
 # Main batch loop: process every book or paper, both directions
-def process_file(filepath: str, output_dir: str) -> None:
+def process_file(filepath: str, output_dir: str, doc_type: str) -> None:
 
     filename = os.path.basename(filepath)
-    title = filename.replace(".txt", "").replace("_", " ").title()
-    file_id = filename.replace(".txt", "")
+    file_id = truncate(filename.replace(".txt", ""))
+    title = file_id.replace("_", " ").title()
 
     forward_path = os.path.join(output_dir, f"{file_id}_forward.json")
     backward_path = os.path.join(output_dir, f"{file_id}_backward.json")
@@ -222,6 +231,7 @@ def process_file(filepath: str, output_dir: str) -> None:
     ]:
         results = {
             "title": title,
+            "type": doc_type,
             "model": MODEL_NAME,
             "merge_order": direction,
             "num_chunks": len(chunks),
@@ -240,6 +250,7 @@ def main():
     parser = argparse.ArgumentParser(description="Run forward/backward hierarchical-merge experiment.")
     parser.add_argument("--input_dir", required=True, help="Folder of .txt source files (books or papers).")
     parser.add_argument("--output_dir", required=True, help="Folder to write result JSON files to.")
+    parser.add_argument("--doc_type", required=True, help="Type of file, novel or paper")
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -247,7 +258,7 @@ def main():
     print(f"Found {len(input_files)} input files: {input_files}")
 
     for filename in input_files:
-        process_file(os.path.join(args.input_dir, filename), args.output_dir)
+        process_file(os.path.join(args.input_dir, filename), args.output_dir, args.doc_type)
 
     print("\n=== Batch complete ===")
 
