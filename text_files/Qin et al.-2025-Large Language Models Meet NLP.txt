@@ -1,0 +1,3148 @@
+Front. Comput. Sci., 2025, 0(0): 1–35
+https://doi.org/10.1007/sxxxxx-yyy-zzzz-1
+RESEARCH ARTICLE
+Large Language Models Meet NLP: A Survey
+Libo Qin1, Qiguang Chen 2, Xiachong Feng3, Yang Wu2, Y ongheng Zhang1,
+Yinghui Li4, Min Li 1, Wanxiang Che(B)2, Philip S. Yu 5
+1 School of Computer Science and Engineering, Central South University, Changsha 410083, China
+2 Research Center for Social Computing and Interactive Robotics,
+Harbin Institute of Technology, Harbin 150001, China
+3 Department of Computer Science, University of Hong Kong, Hong Kong 999077, China
+4 Shenzhen International Graduate School, Tsinghua University, Beĳing 100084, China
+5 Department of Computer Science, University of Illinons at Chicago, Chicago 60637‌‌, America
+©Higher Education Press 2025
+###SECTION###
+Abstract Whilelargelanguagemodels(LLMs)likeChat-
+GPT have shown impressive capabilities in Natural Lan-
+guage Processing (NLP) tasks, a systematic investigation
+of their potential in this field remains largely unexplored.
+This study aims to address this gap by exploring the fol-
+lowing questions: (1)How are LLMs currently applied
+to NLP tasks in the literature? (2)Have traditional NLP
+tasks already been solved with LLMs? (3) What is the
+future of the LLMs for NLP? To answer these questions,
+we take the first step to provide a comprehensive overview
+of LLMs in NLP. Specifically, we first introduce a unified
+taxonomy including (1)parameter-frozen paradigmand
+(2)parameter-tuning paradigmto offer a unified perspec-
+tive for understanding the current progress of LLMs in
+NLP. Furthermore, we summarize the new frontiers and
+the corresponding challenges, aiming to inspire further
+groundbreaking advancements. We hope this work offers
+valuableinsightsintothepotentialandlimitationsofLLMs,
+whilealsoservingasapracticalguideforbuildingeffective
+LLMs in NLP.
+Keywords Natural Language Processing, Large Lan-
+guage Models, Parameter-frozen Paradigm, Parameter-
+tuning Paradigm, ChatGPT
+Received month dd, yyyy; accepted month dd, yyyy
+E-mail: car@ir.hit.edu.cn
+###SECTION###
+1 Introduction
+Recently, large language models (LLMs) represent a sig-
+nificant breakthrough in AI through scaling up language
+models [1, 2, 3, 4, 5, 6, 7, 8, 9]. Current studies on LLMs,
+such as GPT-series [10, 11], PaLM-series [12], OPT [13],
+and LLaMA [14], have shown impressive zero-shot per-
+formance. In addition, LLMs also bring some emergent
+abilities including instruction following [15], chain-of-
+thoughtreasoning[ 16]andin-contextlearning[ 17], which
+attract increasing attention [18].
+With the advancement of large language models, as
+shown in Figure 1, LLMs allow various natural language
+processing (NLP) tasks (e.g., zero-shot mathematical rea-
+soning [16, 19], text summarization [20, 21], machine
+translation [22, 23], information extraction [24, 25] and
+sentiment analysis [26,27]) to be achieved through a uni-
+fied generative paradigm, which has achieved remarkable
+success [1, 28, 29, 30]. Additionally, some LLMs in NLP
+work without needing any additional training data and can
+even surpass traditional models fine-tuned with supervised
+learning. This advancement significantly contributes to
+the development of NLP. As a result, the community has
+witnessedanexponentialgrowthofLLMsforNLPstudies,
+which motivates us to investigate the following questions:
+(1) How are LLMs currently applied to NLP tasks in the
+literature? (2)Have traditional NLP tasks already been
+solved with LLMs? (3)What is the future of the LLMs for
+NLP?
+arXiv:2405.12819v2  [cs.CL]  25 Aug 2025
+
+2 Front. Comput. Sci., 2025, 0(0): 1–35
+…
+T ranslation:
+Please translate it into
+Chinese: Good Morning! 早上好!
+Sentiment Analysis:
+What’s the sentiment of
+the sentence? Positive
+Information Extraction
+Trump’s Tokyo visit has ...
+Who is the VISITOR? VISITOR=
+Trump
+68 years
+Mathematical Reasoning
+Mary is two… what is the
+sum of the ages of them?
+Parameter-
+Efficient Tuning
+ChatGPT
+Bard LLaMA
+GPT4
+Zero-shot 
+Learning
+Full Parameter 
+Tuning
+Few-shot 
+Learning
+Large 
+Language 
+Model
+N
+L
+P
+Fig. 1 The example of applying LLMs for NLP tasks (e.g., math-
+ematical reasoning, machine translation, information extraction and
+sentiment analysis).
+Toanswertheabovequestions,wepresentacomprehen-
+sive and detailed analysis on LLMs from the perspective
+of independent NLP tasks. The overarching goal of this
+work is to explore current developments in LLMs for NLP.
+To this end, in this paper, we first introduce the relevant
+background and preliminary. Furthermore, we introduce a
+unified paradigm on LLMs for NLP: (1)parameter-frozen
+paradigmincluding (i)zero-shot learningand (ii)few-shot
+learning; (2)parameter-tuning paradigmcontaining (i)
+full-parameter tuningand (ii)parameter-efficient tuning,
+aiming to provide a unified perspective to understand the
+current progress of LLMs for NLP tasks:
+• Parameter-frozenparadigm directlyappliesprompt-
+ingapproachonLLMforNLPtaskswithouttheneed
+for parameter tuning. This category includeszero-
+shot and few-shot learning, depending on whether
+the few-shot demonstrations is required.
+• Parameter-tuning paradigmrefers to the need for
+tuning parameters of LLMs for NLP tasks. This
+categoryincludesboth full-parameterandparameter-
+efficient tuning, depending on whether fine-tuning is
+required for all model parameters.
+Finally, we conclude by identifying potential frontier areas
+for future research, along with the associated challenges to
+stimulatefurtherexploration. Insummary,thisworkoffers
+the following contributions:
+(1) Firstsurvey: Wepresentthefirstcomprehensivesur-
+vey of Large Language Models (LLMs) for Natural
+Language Processing (NLP) tasks.
+(2) New taxonomy: We introduce a new taxonomy
+including (1)parameter-frozen paradigmand (2)
+parameter-tuning paradigm, which provides a uni-
+fied view to understand LLMs for NLP tasks.
+(3) New frontiers: We discuss emerging areas of re-
+search in LLMs for NLP and highlight the chal-
+lengesassociatedwiththem,aimingtoinspirefuture
+breakthroughs.
+(4) Abundant resources: We create the first curated
+collectionofLLMresourcesforNLP,includingopen-
+source implementations, relevant corpora, and a list
+of research papers. These resources are available
+at https://github.com/LightChen233/Awesom
+e-LLM-for-NLP.
+We hope this work will be a valuable resource for
+researchers and spur further advancements in the field of
+LLM-based NLP.
+###SECTION###
+2 Background
+AsshowninFigure2,thissectiondescribesthebackground
+ofparameter-frozenparadigm( §2.1)andparameter-tuning
+paradigm (§2.2).
+###SECTION###
+2.1 Parameter-Frozen Paradigm
+Parameter-frozen paradigm can directly apply prompting
+for NLP tasks without any parameter tuning. As shown in
+Figure 2 (a), this category encompasseszero-shot learning
+andfew-shot learning[10, 31].
+• Zero-shot Learning
+In zero-shot learning, LLMs leverage the instruction fol-
+lowing capabilities to solve NLP tasks based on a given
+instruction prompt, which is defined as:
+P = Prompt(I) , (1)
+whereI andP denote the input and output of prompting,
+respectively.
+• Few-shot Learning
+Few-shot learning uses in-context learning capabilities to
+solve the NLP tasks imitating few-shot demonstrations.
+Formally, given some demonstrationsE, the process of
+few-shot learning is defined as:
+P = Prompt(E ,I) . (2)
+###SECTION###
+2.2 Parameter-Tuning Paradigm
+As shown in Figure 2 (b), the parameter-tuning paradigm
+involvesadjustingLLMparametersforNLPtasks,covering
+bothfull-parameterandparameter-efficient tuning.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 3
+Large Language Model
+Tuned Params
+早上好! PositiveVISITOR=Trump68 years
+Mathematical 
+Reasoning
+Information 
+Extraction
+Machine 
+Translation
+Sentiment 
+Analysis
+Large Language Model
+Mathematical 
+Reasoning
+Information 
+Extraction
+Machine 
+Translation
+Sentiment 
+Analysis
+Demo 1
+Demo …
+Demo 1
+Demo …
+Demo 1
+Demo …
+Demo 1
+Demo …
+Large Language Model
+ Large Language Model
+Zero-shot Learning Few-shot Learning
+Full-parameter TuningParameter-efficient Tuning
+(b) Parameter-Tuning Paradigm
+(a) Parameter-Frozen Paradigm
+Mathematical 
+Reasoning
+Information 
+Extraction
+Machine 
+Translation
+Sentiment 
+Analysis
+Mathematical 
+Reasoning
+Information 
+Extraction
+Machine 
+Translation
+Sentiment 
+Analysis
+早上好! PositiveVISITOR=Trump68 years
+早上好! PositiveVISITOR=Trump68 years 早上好! PositiveVISITOR=Trump68 years
+N
+L
+P
+ N
+L
+P
+N
+L
+P
+ N
+L
+P
+Fig. 2 The taxonomy of LLMs for NLP, including parameter-frozen (a) and parameter-tuning paradigm (b), whereblue module with ice
+denotes that the parameters are kept unchanged, andorange module with firerepresents the fine-tuning of full or selected parameters.
+Table 1 Comparison of resource consumption and performance across NLP adaptation paradigms. Data is compiled from Dettmers et al.
+[35], Mundra et al.[36], Hu et al.[37].[+]: better performance / low resource consumption, [++]: much better performance / moderate re-
+source consumption, [+++]: best performance / high resource consumption, [-]: no consumption. Zero-shot Learning has lowest resource
+consumption and best out-of-domain task generalization, while Full-Parameter Tuning has highest cost and best in-domain performance.
+Strategy Training Cost Memory (Train) Memory (Infer) Latency Accuracy Generalization
+Zero-Shot Learning $0 - + + + +++
+Few-Shot Learning $0 - ++ ++ ++ ++
+Full Parameter-Tuning >$1K 2 ×model size + + +++ +
+PET (LoRA) $10 ∼$1K < 1 ×model size + + ++ ++
+• Full-parameter Tuning
+In the full-parameter tuning approach, all parameters of
+the modelM are fine-tuned on the training datasetD:
+ˆM = Fine-tune(M|D) , (3)
+where ˆM is the fine-tuned model with the updated param-
+eters.
+• Parameter-efficient Tuning
+Parameter-efficient tuning (PET) involves adjusting a set
+of existing parameters or incorporating additional tunable
+parameters(likeBottleneckAdapter[ 32],Low-RankAdap-
+tation (LoRA) [33], Prefix-tuning [34], and QLoRA [35])
+toefficientlyadaptmodelsforspecificNLPtasks. Formally,
+parameter-efficient tuning first tunes a set of parameters
+W, denoting as:
+ˆW = Fine-tune(W|D ,M) , (4)
+where ˆW stands for the trained parameters.
+###SECTION###
+2.3 Comparison of Paradigms
+Tofurtherunderstandtheadvantagesondifferentparadigms,
+we summarize the resource consumption and performance
+ofeachparadigminTable1. Generallyspeaking,zero-shot
+learning offers the highest application efficiency, mod-
+erate improvements on in-domain tasks, and robust out-
+of-domain generalization. In contrast, few-shot learning
+typically yields superior in-domain performance relative
+to zero-shot learning; however, it demands greater compu-
+tational resources, achieves lower overall efficiency, and
+exhibits reduced generalization to novel domains. Full-
+parameter tuning, when ample training data and resources
+areavailable,attainsthebestin-domainperformancebutat
+the expense of the least efficient deployment and the weak-
+est transfer to out-of-domain settings. Finally, parameter-
+efficient tuning strikes a balance: with limited resources,
+
+4 Front. Comput. Sci., 2025, 0(0): 1–35
+it can match or exceed the performance of full-parameter
+tuningincertaincases,whileofferinghigherefficiencyand
+oftenimprovedgeneralizationbeyondthetrainingdomain.
+###SECTION###
+3 Natural Language Understanding
+As shown in Figure 3, we first describe some typical
+NLP understanding tasks, which consists of Semantic
+Analysis (§3.1), Information Extraction (§3.2), Dialogue
+Understanding (§3.3), and Table Understanding (§3.4).
+###SECTION###
+3.1 Sentiment Analysis
+Sentiment analysis, a key function in natural language
+processing, identifies the emotional tone of a text, like
+positive opinions or criticisms [38].
+3.1.1 Parameter-Frozen Paradigm
+• Zero-shot Learning
+With the help of instruction tuning, LLMs have been
+equipped with excellent zero-shot learning ability [39].
+Recent studies [40] find that using simple instructions
+can elicit ChatGPT’s strong capabilities on a series of
+sentiment analysis tasks such as sentiment classification
+and aspect-based sentiment analysis. Current mainstream
+LLMs possess the ability of multilingual understanding
+to analyze the sentiment conveyed by different languages
+based on sentiment lexicons [41]. Moreover, Du et al.[42]
+propose a prompting framework to evaluate and reveal
+LLMs’ limitations in financial attribute reasoning for senti-
+ment analysis, highlighting weaknesses in numerical and
+understanding.
+• Few-shot Learning
+Few-shot prompting not only elicits in-context learning
+in LLMs but also elaborates the intent of users more
+clearly. According to the findings presented by previous
+studies [40, 43, 44, 45], incorporating exemplars to the
+promptssignificantlyboostsLLMs’performanceonaspect-
+based sentiment analysis and emotion recognition tasks.
+Furthermore, Sun et al.[46] introduce few-shot learning
+on more complex procedures, incorporating multi-LLM
+negotiation framework for deeper sentiment analysis.
+3.1.2 Parameter-Tuning Paradigm
+• Full-Parameter Tuning
+Full-parameter instruction tuning has been shown to be an
+effective approach to bridge the gap between task-agnostic
+pre-trainingandtask-specificinference. Specifically,Wang
+etal. [120]designunifiedsentimentinstructionforvarious
+aspect-based sentiment analysis tasks to elicit the LLMs.
+Variaetal. [121]utilizetask-specificsentimentinstructions
+to fine-tune LLMs for the inter-task dependency. Yang
+and Li[122]transform the visual input into plain text dur-
+ing prompt construction for instruction tuning. Moreover,
+Zhang et al.[47] conduct an empirical study to evaluate
+bLLMs’ effectiveness in sentiment analysis for software
+engineering, revealing their advantages in data-scarce sce-
+narios and limitations compared to fine-tuned sLLMs with
+sufficient training data. These works demonstrate the
+potential of tuning LLMs for advanced sentiment analysis.
+• Parameter-Efficient Tuning
+Sentiment analysis techniques have numerous real-world
+applications such as opinion mining [123]. Therefore,
+efficiency is a vital dimension for evaluating sentiment
+analysis methods. Qiu et al.[124] utilize LoRA to tune
+LLMs on the empathy multi-turn conversation dataset
+namely SMILECHAT to develop emotional systems.
+###SECTION###
+3.2 Information Extraction
+Information Extraction (IE) tasks aim at extracting struc-
+tural information from plain text, which typically includes
+relation extraction (RE), named entity recognition (NER),
+and event extraction (EE) [182].
+3.2.1 Parameter-Frozen Paradigm
+• Zero-shot Learning
+InspiredbytheimpressivecapabilitiesofLLMsonvarious
+tasks, recent studies [24, 48] begin to explore zero-shot
+prompting methods to solve IE tasks by leveraging knowl-
+edge embedded in LLMs. Wei et al.[24] , Xie et al.[49]
+andZhangetal. [48]proposeaseriesofmethodstodecom-
+posequestion-answeringtasksbybreakingdownNERinto
+smaller, simpler subproblems, which improves the overall
+process. Xie et al.[49]introduce two methods, syntactic
+prompting and tool augmentation, to improve performance
+of LLMs by incorporating the syntactic information. Siep-
+mann et al.[183] explore the use of GPT-4 for automated
+information extraction of diagnoses, medications, and al-
+lergiesfromdischargeletters,demonstratinghighaccuracy
+with prompt tuning and highlighting its potential to re-
+duce administrative burden in healthcare. In addition, Gu
+et al.[184] conduct a cross-sectional study to evaluate
+advanced open-source LLMs for information extraction of
+social determinants of health (SDoH) from clinical notes,
+using human-annotated EHR data and comparing against
+a pattern-matching baseline.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 5
+Parameter-Frozen Paradigm Taxonomy
+Understanding (§3)
+Sentiment Analysis (§3.1) e.g., Zhang et al. [40], Koto et al. [41], Zhao et al. [43], Xu et al. [44], Sun et al. [46], Du et al. [42], Zhang et al. [47]
+Information Extraction
+(§3.2)
+e.g., Zhang et al. [48],Wei et al. [24],Xie et al. [49], Li and Zhang [50],Li et al. [51], Bi et al. [52], Fornasiere et al. [53],
+Tang et al. [54]
+Dialogue Understanding
+(§3.3)
+e.g., Pan et al. [55], He and Garner [56], Hudeček and Dušek [57], Heck et al. [58], Gao et al. [59], Li et al. [60],
+Zhang et al. [61, 62], Wu et al. [63], Das et al. [64], Chi et al. [65], Hu et al. [66], King and Flanigan [67], Addlesee et al. [68],
+Chung et al. [69], Lee et al. [70], Lin et al. [71], Cao [72]
+Table Understanding (§3.4) e.g., Singha et al. [73], Patnaik et al. [74], Ye et al. [75, 76], Sui et al. [77, 78], Cheng et al. [79], Zhang et al. [80, 81, 82, 83],
+Chen [84], Luo et al. [85], Li et al. [86], Jiang et al. [87], Wang et al. [88], Kong et al. [89]
+Generation (§4)
+Summarization (§4.1) e.g., Goyal et al. [90], Ravaut et al. [91], Bhaskar et al. [92], Wang et al. [93], Zhang et al. [94, 95], Adams et al. [96], Tang et al. [97]
+Code Generation (§4.2) e.g., Chen et al. [98], Nĳkamp et al. [99], Christopoulou et al. [100], Luo et al. [101], Allal et al. [102], Li et al. [103, 104],
+Guo et al. [105], Roziere et al. [106], Zheng et al. [107],
+Machine Translation (§4.3) e.g., Wei et al. [108],Zhu et al. [109],Li et al. [110, 111],Alves et al. [112],Raunak et al. [113],Lu et al. [114]
+Mathematical Reasoning
+(§4.4)
+e.g., Wei et al. [16], Zhang et al. [115], Kojima et al. [31], Wang et al. [116], Touvron et al. [14], Lu et al. [117], Gao et al. [118],
+Das et al. [119]
+Parameter-Tuning Paradigm Taxonomy
+Understanding (§3)
+Sentiment Analysis (§3.1) e.g., Wang et al. [120], Varia et al. [121], Yang and Li [122], Zhao et al. [123], Qiu et al. [124]
+Information Extraction
+(§3.2)
+e.g., Lu et al. [125],Gan et al. [126],Sainz et al. [127],Wang et al. [128], Das et al. [129], Liang et al. [130], Dagdelen et al. [131],
+Xue et al. [132], Rixewa et al. [133]
+Dialogue Understanding
+(§3.3) e.g., Xie et al. [134],Zhao et al. [135], Gupta et al. [136],Yu et al. [137],Feng et al. [138], Liu et al. [139]
+Table Understanding (§3.4) e.g., Li et al. [140], Xie et al. [134], Xue et al. [141], Zhang et al. [142], Zhu et al. [143], Bai et al. [144], Zhang et al. [145],
+He et al. [146], Li et al. [147]
+Generation (§4)
+Summarization (§4.1) e.g., Pagnoni et al. [148], Zhao et al. [149], Yuan et al. [150], Feng et al. [151], Li and Liang [152], Ravaut et al. [153]
+Code Generation (§4.2) e.g., Wang et al. [154, 155],Le et al. [156],Shojaee et al. [157],Ayupov and Chirkova [158],Zhuo et al. [159], Weyssow et al. [160]
+Machine Translation (§4.3) e.g., Xu et al. [161, 162], Iyer et al. [163],Moslem et al. [164],Ustun and Stickland [165],Alves et al. [112] Wu et al. [166, 167],
+Mathematical Reasoning
+(§4.4)
+e.g., Luo et al. [168], Yue et al. [169], Ho et al. [170], Schick et al. [171], Hu et al. [37, 172], Shi et al. [173], Shao et al. [174],
+Luo et al. [175], Chen et al. [176], Liu et al. [177], Yu et al. [178], Ranaldi et al. [179], Srivastava et al. [180], Cai et al. [181]
+Fig. 3 Taxonomy of LLMs for NLP including Parameter-Frozen Paradigm and Parameter-Tuning Paradigm.
+• Few-shot Learning
+Considering the gap between sequence labeling and text
+generation, providing exemplars could help LLMs better
+understand the given task and follow the problem-solving
+steps, especially in tasks requiring structured outputs and
+clear format adherence for accuracy. To select pertinent
+demonstrations, Li and Zhang[50] deploy the retrieval
+moduletoretrievethemostsuitableexamplesforthegiven
+test sentence, aiming to enhance task relevance and re-
+sponse accuracy. Instead of using natural language for
+structured output, Li et al.[51]and Bi et al.[52]propose
+reformulating IE tasks as code with code-related LLMs
+suchasCodex,effectivelyleveragingtheirpowerfulsyntax-
+aware generation and reasoning capabilities. Fornasiere
+etal. [53]introduceprompt-basedstrategiesforsmall-scale
+LLMs to extract structured and unstructured medical infor-
+mation from clinical texts, demonstrating strong zero-shot
+performance and enhanced explainability through line-
+number referencing to source text. Tang et al.[54]explore
+the impact of various prompt engineering strategies, per-
+sona, chain-of-thought, and few-shot prompting, on the
+performanceofGPT-3.5andGPT-4inextractingkeyinfor-
+mation from medical publications, evaluating alignment
+with ground truth using multiple comprehensive metrics.
+3.2.2 Parameter-Tuning Paradigm
+• Full-Parameter Tuning
+A common practice to customize LLMs is fine-tuning
+LLMs on the collected dataset. There typically are three
+tuningparadigmsadoptedtoenhanceLLMs’abilities. The
+first one is tuning LLMs on a single dataset to strengthen
+a specific ability. The second one is standardizing data
+formats across all IE subtasks, thus enabling a single
+model to efficiently handle diverse tasks [125,126]. The
+last one is tuning LLMs on a mixed dataset and testing
+on the unseen tasks [127, 128], which is always used to
+improve the generalization ability of LLMs. Rixewa et al.
+[133] introduce a unified interleaved representation with
+cross-modal attention to enhance multi-modal information
+retrieval, enabling accurate and efficient processing of
+complex content across text and image formats.
+• Parameter-Efficient Tuning
+Tuning huge parameters of LLMs poses a significant chal-
+lenge to both research and development. To address this
+challenge [185, 186], Das et al.[129] propose a method
+for dynamic sparse fine-tuning that focuses on a specific
+subset of parameters during the IE training process. This
+approach is particularly useful when dealing with limited
+data. Meanwhile, Liang et al.[130] introduce Lottery
+
+6 Front. Comput. Sci., 2025, 0(0): 1–35
+Prompt Tuning (LPT), a method that efficiently tunes only
+a portion of the prompt vectors used for lifelong informa-
+tion extraction. This technique optimizes both parameter
+efficiencyanddeploymentefficiency. Dagdelenetal. [131]
+introduce a simple and flexible approach to fine-tuning
+LLMs for joint named entity recognition and relation ex-
+traction, enabling the generation of structured scientific
+knowledgerecordsfromcomplexmaterialschemistrytexts.
+Xue et al.[132] introduce AutoRE, a novel end-to-end
+document-level relation extraction model using the RHF
+paradigm and parameter-efficient fine-tuning, enabling
+state-of-the-art performance without relying on predefined
+options.
+###SECTION###
+3.3 Dialogue Understanding
+Dialogue understanding typically consists of spoken lan-
+guage understanding (SLU) [187] and dialogue state track-
+ing (DST) [188].
+3.3.1 Parameter-Frozen Paradigm
+• Zero-shot Learning
+Recent studies highlight the effectiveness of LLMs in dia-
+logue understanding through zero-shot prompting [55, 56,
+57,58,189]. Gao et al.[59]and Addlesee et al.[68]intro-
+duce zero-shot chain-of-thought prompting strategies in
+LLMs,enhancingunderstandingbystep-by-stepreasoning.
+Moreover, Zhang et al.[61] and Wu et al.[63] treat SLU
+and DST as agent systems and code generation tasks to
+effectivelyimprovetaskperformance. Further,Chungetal.
+[69], Chi et al.[65] and Zhang et al.[62] extend the task
+to actual scenarios and understand the dialog by zero-shot
+prompting for efficient interaction and dialog management.
+Recently, Qin et al.[190] and Qin et al.[191] propose a
+seriesofmulti-stagesolutionframeworksthatleveragesthe
+interactive capabilities of LLMs to address single-intent
+and multi-intent SLU tasks respectively. Dong et al.[192]
+proposeamulti-agentframework,ProTOD,whichisanovel
+active DST planner framework based on multiple LLMs’
+interation,designedtoenhancethedialog’sproactivityand
+goal completion rate.
+• Few-shot Learning
+LimitedbytheinstructionfollowingabilityoftheLLMs,re-
+centstudieshavefocusedonimprovingmodelperformance
+in dialogue understanding through the relevant few-shot
+demonstrations [57]. To address “overfitting” in the given
+few-shot demonstrations, Hu et al.[66], King and Flani-
+gan [67], Das et al.[64], Li et al.[60], Lee et al.[70],
+King and Flanigan[67] and Addlesee et al.[68] further
+introduce some methods for retrieving diverse few-shot
+demonstrations to improve understanding performance.
+Lin et al.[71] and Cao [72] integrate DST tasks with
+an agent through in-context-learning, enhancing dialogue
+understanding capabilities.
+3.3.2 Parameter-Tuning Paradigm
+• Full-Parameter Tuning
+Full-parametertuninginvolvesnotfreezinganyparameters
+and using all parameters to train dialogue understanding
+tasks [137]. Specifically, Xie et al.[134], Zhao et al.[135]
+unifies structured tasks into a textual format by training
+fullparametersdemonstratingsignificantimprovementand
+generalization. Gupta et al.[136]utilize input with some
+demonstrations as a new DST representation format to
+train LLM with full parameters and achieve great results.
+Acikgozetal. [193]suggestthatDST,typicallytrainedona
+limitedsetofAPIs,needsnewdataforqualitymaintenance.
+They propose a unified instruction-tuning paradigm for
+multi-turn DST and advanced function calls, enhancing
+dialogue management and generalization.
+• Parameter-Efficient Tuning
+Limitedbythehugecostoffull-parameterfine-tuning,alot
+ofworkbeginstofocusmoreonParameter-EfficientTuning
+(PET) for lower-cost dialogue understanding task training.
+Specifically, Feng et al.[138] present LDST, a LLaMA-
+driven DST framework that leverages LoRA technology
+for parameter-efficient fine-tuning, achieving performance
+comparable to ChatGPT. Liu et al.[139] provide a key-
+value pair soft-prompt pool, selecting soft-prompts from
+the prompting pool based on the conversation history for
+betterPET.FurtherYinetal. [194]addressthemulti-intent
+detectiontaskandintroducesMIDLM,abidirectionalLLM
+framework that enables autoregressive LLMs to leverage
+bidirectional information through post-training, thereby
+eliminating the need to train the model from scratch.
+###SECTION###
+3.4 Table Understanding
+Table understanding involves the comprehension and anal-
+ysis of structured data presented in tables, focusing on
+interpreting and extracting meaningful information, like
+Table Question Answering [195, 196, 197].
+3.4.1 Parameter-Frozen Paradigm
+• Zero-shot Learning
+Recently, the advancements for LLMs have paved the way
+for exploring zero-shot learning capabilities in understand-
+ing and interpreting tabular data [73, 74, 76]. Ye et al.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 7
+[75] and Sui et al.[77] concentrate on breaking down
+large tables into smaller segments to reduce irrelevant data
+interference during table understanding. Further, Patnaik
+et al.[74]introduce CABINET, a framework that includes
+a module for generating parsing statements to emphasize
+the data related to a given question. Sui et al.[78] develop
+TAP4LLM, enhancing LLMs’ table understanding abili-
+ties by incorporating reliable information from external
+knowledge sources into prompts. Additionally, Ye et al.
+[76] propose a DataFrameQA framework to utilize secure
+Pandas queries to address issues of data leakage in table
+understanding. These efforts signify a significant stride
+towards leveraging LLMs for more effective and efficient
+zero-shot learning in table data comprehension.
+• Few-shot Learning
+Few-shot learning has been an increasingly focal point for
+researchers to address the limitations of LLMs, particu-
+larly in the context of table understanding and instruction
+following ability [83, 84, 198]. Luo et al.[85] propose a
+hybrid prompt strategy coupled with a retrieval-of-thought
+to further improve the example quality for table under-
+standing tasks. Cheng et al. [79] introduce Binder to
+redefine the table understanding task as a coding task,
+enabling the execution of code to derive answers directly
+from tables. Furthermore, Li et al.[86], Jiang et al.[87]
+and Zhang et al.[80, 81] conceptualize the table under-
+standing as a more complex agent task, which utilizes
+external tools to augment LLMs in table tasks. Building
+upon these developments, ReAcTable [82] integrates ad-
+ditional actions into the process, such as generating SQL
+queries, producing Python code, and directly answering
+questions, thereby further enriching the few-shot learning
+landscape. Wang et al.[88] introduce Chain-of-Table, a
+framework that guides LLMs to perform table-based rea-
+soning by iteratively updating tabular data as intermediate
+steps, enabling structured, dynamic reasoning chains that
+significantly improve performance on table understanding
+tasks. Kong et al.[89] propose OpenTab, an open-domain
+table reasoning framework that enhances LLMs’ ability to
+handle structured table data by retrieving relevant tables
+and generating SQL programs for reasoning, significantly
+improving accuracy over existing methods in both open
+and closed domain scenarios.
+3.4.2 Parameter-Tuning Paradigm
+• Full-Parameter Tuning
+LeveragingtheexistingcapabilitiesofLLMs,Full-Parameter
+Tuning optimizes these models for specific table under-
+standing tasks. Li et al.[140] and Xie et al.[134] adapt a
+substantial volume of table-related data for table instruc-
+tion tuning, which leads to better generalization in table
+understanding tasks. Additionally, Xue et al.[141] intro-
+duce DB-GPT to enhance LLMs by fine-tuning them and
+integrating a retrieval-augmented generation component
+to better support table understanding.
+• Parameter-Efficient Tuning
+Xie et al.[134] utilize prompt-tuning for efficient fine-
+tuning within a unified framework of table representation
+instructions. Moreover, Zhang et al. [142], Zhu et al.
+[143] and Bai et al.[144] adapt Low-Rank Adaptation
+(LoRA) during instruction-tuning for better table under-
+standing and further table cleaning. Furthermore, Zhang
+et al. [145] address challenges related to long table inputs
+by implementing LongLoRA, demonstrating its efficacy
+in managing long-context issues in table understanding
+tasks. Heetal. [146]introduceTableLoRA,atable-specific
+fine-tuning module that enhances LLMs’ understanding
+of tabular data under parameter-efficient settings by com-
+bining specialized table serialization and 2D positional
+encodingtoimproveperformanceonstructuredtabletasks.
+Lietal. [147]introduceanew“tablefine-tuning”paradigm
+that enhances language models like GPT-3.5 and ChatGPT
+on diverse table-understanding tasks by training them with
+synthesized table-based instructions, significantly improv-
+ing their performance and generalizability on structured
+tabular data.
+###SECTION###
+4 Natural Language Generation
+This section presents the LLMs for classific NLP genera-
+tion tasks containing Summarization (§4.1), Code Genera-
+tion (§4.2), Machine Translation (§4.3), and Mathematical
+Reasoning (§4.4), which are illustrated in Figure 3.
+###SECTION###
+4.1 Summarization
+Summarization aims to distill the essential information
+from a text document, producing a concise and coherent
+synopsis that retains the original content’s themes [199].
+4.1.1 Parameter-Frozen Paradigm
+• Zero-shot Learning
+Intheexplorationofzero-shotlearningfortextsummariza-
+tion,LLMssuchasGPT-3havedemonstratedamazingand
+superior performance in generating concise and factually
+accurate summaries, challenging the need for traditional
+fine-tuningapproaches[ 90,92,93]. Zhangetal. [94]high-
+lightinstructiontuningaspivotalforLLMs’summarization
+
+8 Front. Comput. Sci., 2025, 0(0): 1–35
+success. Ravautetal. [91]scrutinizeLLMs’contextutiliza-
+tion, identifying a bias towards initial document segments
+insummarizationtasks[ 200,201]. Furthermore,Yunetal.
+[202] enhances automatic summarization by integrating
+human interaction and semantic graphs, enabling the gen-
+eration of higher-quality, personalized summaries tailored
+to individual users’ interests and needs. These studies
+collectively underscore the versatility and challenges of
+deploying LLMs in zero-shot summarization.
+• Few-shot Learning
+For few-shot learning, LLMs like ChatGPT are scrutinized
+for their summarization abilities. Zhang et al.[95] and
+Tang et al.[97] demonstrate that leveraging in-context
+learning and a dialog-like approach can enhance LLMs’
+extractive summarization, particularly in achieving sum-
+mary faithfulness. Adams et al.[96]introduce a “Chain of
+Density” prompting technique, revealing a preference for
+denser,entity-richsummariesoversparserones. Moreover,
+recentstudieshavebeguntoleveragethereflectivecapabil-
+ities [203], deeper reasoning abilities [204], and planning
+abilities [205] of large reasoning models to enhance the
+depth of thought as well as the conciseness and clarity of
+summaries. Together, these studies reveal the evolving
+strategies to optimize LLMs for summarization tasks.
+4.1.2 Parameter-Tuning Paradigm
+• Full-Parameter Tuning
+Full-Parameter Tuning for text summarization leverages
+the power of LLMs, optimizing them for specific summa-
+rization tasks. DIONYSUS [206] adapts to new domains
+through a novel pre-training strategy tailored for dialogue
+summarization. Socratic Pretraining [ 148] introduces
+a question-driven approach to improve the summariza-
+tion process. Further, Wang et al.[207] and Lu et al.
+[208] demonstrate that carefully prompting LLMs pro-
+duces well-structured rationales, which can guide smaller
+models with fully tuning to generate summaries that are
+both more concise and of higher quality. More recently,
+Aali et al.[209] and Wu et al.[210] employ meticulously
+annotated supervised fine-tuning (SFT) data and predic-
+tion feedback-based reinforcement learning, respectively,
+enabling their models to match or even surpass the per-
+formance of proprietary closed-source models. Overall,
+this allows the model to be easily adapted for different
+summarization tasks, resulting in more controllable and
+relevant summaries.
+• Parameter-Efficient Tuning
+PET strategies have revolutionized the adaptability of
+large pre-trained models for specific summarization tasks,
+demonstrating the power of fine-tuning with minimal pa-
+rameter adjustments [151]. Zhao et al.[149] and Yuan
+et al.[150] adapt prefix-tuning [152] for dialogue summa-
+rization, enhancing model knowledge and generalization
+across domains. Ravaut et al.[153] develop PromptSum
+to combine prompt tuning with discrete entity prompts for
+controllable abstractive summarization. These approaches
+collectively show the efficacy of PET in enabling robust,
+domain-adaptive, and controllable summarization with
+minimal additional computational costs.
+###SECTION###
+4.2 Code Generation
+Code generation involves the automatic creation of exe-
+cutable code from natural language specifications, facilitat-
+ing a more intuitive interface for programming [98].
+4.2.1 Parameter-Frozen Paradigm
+• Zero-shot Learning
+Recent advancements in code generation have been signifi-
+cantlypropelledbythedevelopmentofLLMs,withstudies
+showcasing their proficiency in generating code in a zero-
+shotmanner. CodeLLMs,trainedonbothcodeandnatural
+language, have a robust and amazing zero-shot learning
+capability for programming tasks [99, 106]. Moreover,
+CodeT5+ enriches the landscape by proposing a flexible
+encoder-decoder architecture and a suite of pretraining
+objectives, leading to notable improvements [155]. These
+models collectively push the boundary of what is achiev-
+able in code generation, offering promising avenues for
+zero-shotlearning. Recentreleasesofcode-specificLLMs,
+such as CodeGemma [211] and Qwen2.5-Coder [212],
+further advance the field of LLM-based code generation,
+delivering superior benchmark performance. Addition-
+ally, Seed-Coder [213] introduces a model-centric data
+curation pipeline, while Ling-Coder-Lite [214] leverages a
+Mixture-of-Experts architecture to balance efficiency and
+performance, marking state-of-the-art progress in open-
+source code generation LLMs.
+• Few-shot Learning
+Code generation is being revolutionized by few-shot learn-
+ing. This technique allows models to create precise code
+snippets by learning from just minimal examples [215].
+Chenetal. [98], Allaletal. [102], Lietal. [103], Luoetal.
+[101], and Christopoulou et al.[100] illustrate the efficacy
+of few-shot learning, demonstrating an adeptness at code
+generation that surpasses its predecessors. The develop-
+ment of smaller, yet powerful models [104, 105] further
+highlights the accessibility of few-shot code generation
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 9
+technologies, making them indispensable tools in the arse-
+nalofmoderndevelopers. Importantly,mostmodernLLMs
+for code generation, including Code Llama [106], Seed-
+Coder[213],Qwen2.5-Coder[ 212],andCodeGemma[ 211],
+provide both base and instruct variants, enabling flexible
+few-shot learning execution across diverse programming
+tasks.
+4.2.2 Parameter-Tuning Paradigm
+• Full-Parameter Tuning
+Full-parameter tuning represents a pivotal strategy in
+enhancing code generation models, allowing compre-
+hensive model optimization. Specifically, CodeT se-
+ries [154,155] epitomize this approach by incorporating
+code-specific pre-training tasks and architecture flexibil-
+ity, respectively, to excel in both code understanding and
+generation. CodeRL [156] and PPOCoder [157] intro-
+duce deep reinforcement learning, leveraging compiler
+feedback and execution-based strategies for model refine-
+ment, whereas StepCoder [157] advances this further by
+employing reinforcement learning, curriculum learning,
+and fine-grained optimization techniques. These models
+collectively demonstrate significant improvements across
+a spectrum of code-related tasks, embodying the evolution
+of AI-driven programming aids. Emerging work such as
+PRLCoder [216] leverages process-supervised reinforce-
+ment learning, Focused-DPO [217] enhances preference
+optimization on error-prone points, and ACECoder [218]
+appliesautomatedtest-casesynthesistorefinerewardmod-
+els. Furthermore, SWE-RL [219] expands reinforcement
+learningintoreal-worldsoftwareengineering,significantly
+advancing the reasoning capacities of LLMs. Reinforce-
+ment learning thus demonstrates strong potential for train-
+ing code LLMs and warrants further exploration.
+• Parameter-Efficient Tuning
+PET emerges as a pivotal adaptation in code tasks, striking
+a balance between performance and computational effi-
+ciency [160]. Studies [158, 159] exploring adapters and
+LoRA showcase PET’s viability on code understanding
+and generation tasks, albeit with limitations in perfor-
+mance. Recent investigations, such as Storhaug and Li
+[220], demonstrate that PEFT methods can rival full fine-
+tuning for unit test generation, reducing resource demands.
+Additionally, Zhang et al.[221] provide a comprehensive
+evaluation of PEFT on method-level code smell detection,
+revealing that small models often perform competitively,
+reinforcing the scalability and cost-effectiveness of PET
+techniques for specialized software engineering tasks.
+###SECTION###
+4.3 Machine Translation
+Machine translation is a classical task that utilizes comput-
+ers to automatically translate the given information from
+one language to another, striving for accuracy and preserv-
+ing the semantic essence of the original material [222].
+Recent work [223] revisits key challenges in neural ma-
+chine translation (NMT), highlighting how LLMs address
+issues such as long sentence translation and reduced paral-
+leldatareliance whilefacing newchallenges like inference
+efficiency and low-resource language translation.
+4.3.1 Parameter-Frozen Paradigm
+• Zero-shot Learning
+In the realm of zero-shot learning, Zhu et al.[109] and
+Wei et al.[108]enhance LLMs’ multilingual performance
+through cross-lingual and multilingual instruction-tuning,
+significantly improving translation tasks. OpenBA con-
+tributes to the bilingual model space, demonstrating supe-
+rior performance in Chinese-oriented tasks with a novel
+architecture [111]. These advancements highlight the po-
+tential of LLMs in aligning language in zero-shot settings.
+• Few-shot Learning
+In the exploration of few-shot learning for machine trans-
+lation (MT), recent studies present innovative strategies
+to enhance the capabilities of LLMs [110,224]. Lu et al.
+[114] introduce Chain-of-Dictionary Prompting (CoD) to
+improve the MT of rare words by in-context learning in
+low-resource languages. Raunak et al.[113] investigate
+the impact of demonstration attributes on in-context learn-
+ing, revealing the critical role of output text distribution
+in translation quality. Zhu et al.[225] propose a robust
+multi-view approach for selecting fine-grained demonstra-
+tions, effectively reducing noise in in-context learning
+and significantly improving domain adaptation. Together,
+these works illustrate the significant potential of few-shot
+learning in advancing the field of MT with LLMs.
+4.3.2 Parameter-Tuning Paradigm
+• Full-Parameter Tuning
+Full-parameter tuning in machine translation with LLMs
+represents a frontier for enhancing translation accuracy
+and adaptability [161]. Iyer et al.[163] demonstrate the
+potential of LLMs in disambiguating polysemous words
+through in-context learning and fine-tuning on ambiguous
+datasets, achieving superior performance in multiple lan-
+guages. Moslem et al.[164] and Wu et al.[167] focus
+on exploring fine-tuning methods that enhance real-time
+
+10 Front. Comput. Sci., 2025, 0(0): 1–35
+and context-aware translation capabilities. Xu et al.[162]
+propose Contrastive Preference Optimization (CPO) to
+refine translation quality further, pushing LLMs towards
+better performance. Feng et al.[226] introduce MT-R1-
+Zero, applying reinforcement learning frameworks to MT
+without supervised fine-tuning, achieving competitive re-
+sultsonmultilingualbenchmarksandofferinginsightsinto
+emergent reasoning patterns. Feng et al.[227]present MT-
+Ladder, a cost-effective hierarchical fine-tuning framework
+thatboostsgeneral-purposeLLMs’translationperformance
+to match state-of-the-art models. These studies reveal the
+efficacy and necessity of fine-tuning approaches, and point
+toward reinforcement learning as a promising future di-
+rection for advancing machine translation by leveraging
+LLMs’ emergent reasoning and adaptability.
+• Parameter-Efficient Tuning
+PET is emerging as a transformative approach for inte-
+grating LLMs into machine translation (MT), balancing
+performanceandefficiency. UstunandStickland [165]em-
+pirically assess PET’s efficacy across different languages
+and model sizes, highlighting adapters’ effectiveness with
+adequate parameter budgets. Alves et al.[112] optimize
+thefine-tuningprocesswithadapters,strikingabalancebe-
+tween few-shot learning and fine-tuning efficiency. Recent
+workfurtherdemonstratesPET’sscalabilityandrobustness
+inmultilingualanddomain-specifictasks,confirmingitspo-
+tentialtomakeLLMsmoreadaptableandresource-efficient
+whilemaintainingcompetitiveperformance. Thesestudies
+collectively underline PET’s promise to revolutionize MT
+by offering scalable and cost-effective solutions.
+###SECTION###
+4.4 Mathematical Reasoning
+Mathematical reasoning tasks in NLP involve the use of
+NLP techniques to understand information from math-
+ematical text, perform logical reasoning processes, and
+ultimatelygenerateaccurateanswerstomathematicalques-
+tions [228, 229].
+4.4.1 Parameter-Frozen Paradigm
+• Zero-shot Learning
+Mathematicsservesasatestbedtoinvestigatethereasoning
+capabilities of LLMs [14, 230]. The vanilla prompting
+methodasksLLMstodirectlyarriveatthefinalanswertoa
+givenmathematicalproblem. Itisverychallengingandthe
+reasoningprocessisnottransparenttohumans. Toaddress
+it, Kojima et al.[31]develop a zero-shot chain-of-thought
+technique, which utilizes the simple prompt “Let’s think
+step by step” to elicit mathematical reasoning in LLMs.
+By doing this, the LLM can break down the problem into
+smaller, easier-to-solve pieces before arriving at a final
+answer. Further,Wangetal. [116]proposeanewdecoding
+strategy,calledself-consistency. Thisapproachintegratesa
+series of prompting results to boost the performance. Tang
+et al.[231]propose an automatically enhanced zero-shot
+prompting strategy that adjusts the prompts through model
+retrievaltoimprovetheperformanceofLLMsonmathemat-
+ical reasoning tasks. Moreover, Yuksekgonul et al.[232]
+and Peng et al.[233] employ reflection-based, iterative
+prompting strategies to improve zero-shot mathematical
+reasoning accuracy.
+• Few-shot Learning
+Recent studies explore constructing more suitable exem-
+plars for LLMs to improve mathematical reasoning. Wei
+et al.[16] introduce chain-of-thought prompting, using a
+few demonstrations to guide LLMs through step-by-step
+reasoning. However, creating these examples by hand is
+laborious,soZhangetal. [115]andLuetal. [117]propose
+methods to select in-context examples automatically. To
+improve numerical precision, PAL [118] generates and
+executes intermediate program steps in a runtime envi-
+ronment. Building on this idea, Das et al.[119] present
+MathSensei, a tool-augmented LLM that integrates web
+search, code execution, and symbolic solving, showing
+greater gains on harder problems. Liu et al.[177]propose
+XoT,aunifiedframeworkthatdynamicallyswitchesamong
+diverse prompting methods for better math reasoning. To
+probe consistency, Yu et al.[178]use symbolic programs
+to reveal that LLMs often rely on brittle reasoning despite
+strong static performance. More recently, Ranaldi et al.
+[179]introduce QuaSAR, which blends natural language
+with selective formalization to enhance chain-of-thought
+robustness without full symbolic translation. Moreover,
+Zhang et al.[234]enhance the mathematical capabilities
+of LLMs by improving their single-step reasoning in the
+context of fine-grained in-context learning.
+4.4.2 Parameter-Tuning Paradigm
+• Full-Parameter Tuning
+Full-parameter tuning is a standard method for guiding
+LLMsinmathematicalreasoningtasks[ 181]. Severalstud-
+ies have improved general math-solving ability by creating
+high-quality instruction-tuning datasets, from web-curated
+collections [169], advanced LLM distillation [170], and
+self-generated samples [181, 235]. Moreover, Schick et al.
+[171]introduce ToolFormer, which leverages a calculator
+for numeric operations. Chen et al.[176] propose per-
+turbing token-level chain-of-thought during fine-tuning,
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 11
+Help me book a trip to…
+Check flights from …
+Step1: Mary is …
+Step2: Joan is …
+StepN: …
+Answer: 68 Has Hillary ever
+been president?
+No
+Multilingual LLMs for NLP
+(§5.1)
+Multi-modal LLMs for NLP
+(§5.2)
+3 4
+Tool-Usage in LLMs for NLP
+(§5.3)
+X-of-Thought in LLMs for 
+NLP (§5.4)
+Р
+у
+с
+с
+к
+и
+й
+中
+Hallucination in LLMs for NLP 
+(§5.5)
+How to bury the body?
+I am so sorry. Due to
+ethical considerations, I
+cannot answer …
+Safety in LLMs for NLP 
+(§5.6)
+… What is the
+formula result
+in image?
+好！
+Ладно.
+Good!
+N
+L
+P
+Check tickets from …
+Fig. 4 The future work and new frontier for LLM in NLP tasks.
+improvingaccuracywithoutexternallabels. Yuetal. [236]
+develop Chain-of-Reasoning, which integrates natural-
+language, algorithmic, and symbolic reasoning to boost
+benchmarks. Beyond supervised tuning, reinforcement
+learning has also shown promise. Luo et al.[168] apply
+RLEIF to enhance math reasoning; Luo et al.[175] pro-
+pose OmegaPRM, an MCTS-based method for training
+reward models on MATH500 and GSM8K without human
+oversight;Shaoetal. [174]trainDeepSeekMath7Bon120
+B tokens using web data and GRPO; and Qian et al.[237]
+introduce ToolRL, examining tool selection and reward
+design in RL-based fine-tuning.
+• Parameter-Efficient Tuning
+Fine-tuning LLMs with full parameter updates incurs
+significant memory overhead, limiting accessibility for
+many users. Parameter-efficient tuning techniques, such
+as LoRA [37], offer a promising alternative. Additionally,
+Hu et al.[172] propose a user-friendly framework for in-
+tegrating various adapters into LLMs, enabling them to
+tackle tasks like mathematical reasoning. SPHERE [238]
+introduces a self-evolving data-generation pipeline lever-
+aging LoRA to enhance the performance of small-scale
+language models on mathematical reasoning tasks through
+the self-generation, refinement, and diversification of rea-
+soning chains. Prottasha et al.[239] present Semantic
+Knowledge Tuning (SK-Tuning), which employs semanti-
+cally meaningful vocabulary in lieu of random tokens for
+prompt and prefix tuning, thereby boosting LLM perfor-
+mance on mathematical reasoning tasks. Srivastava et al.
+[180]proposeDTE,agroundtruth-freetrainingframework
+using multi-agent debates and a Reflect-Critique-Refine
+strategytoenhanceLLMreasoning,achievingnotableaccu-
+racygainsandstrongcross-domaingeneralization. Further,
+Alazraki and Rei[240] introduce a meta-reasoning-based
+toolselectionframework,atwo -stagesystemfirstperforms
+meta-reasoning over the given task and then leverages a
+custom, fine-tuned language-modeling head to generate
+candidatetools,therebysubstantiallyimprovingmathemat-
+ical reasoning performance.
+• Takeaways
+(1)LLMsofferaunifiedgenerativesolutionparadigm
+for various NLP tasks. (2) LLMs in NLP tasks still
+have a certain gap from smaller supervised learning
+models. (3) Continuing to fine-tune LLMs on NLP
+tasks bring substantial improvements.
+###SECTION###
+5 Future Work and New Frontier
+In this section, as shown in Figure 4, we highlight some
+new frontiers, aiming to inspire further innovations and
+groundbreaking advancements in the near future.
+
+12 Front. Comput. Sci., 2025, 0(0): 1–35
+###SECTION###
+5.1 Multilingual LLMs for NLP
+Despite the significant success of LLMs in English NLP
+tasks, there are over 7,000 languages worldwide. How
+to extend the success of English-centric LLMs to NLP
+tasks in other languages is an important research ques-
+tion [241, 242, 243, 244, 245]. Inspired by this, Re-
+searchers have made efforts to enhance the multilingual
+LLM through parameter-tuning strategies, including multi-
+lingual pretraining [246, 247, 248, 249], supervised fine-
+tuning [248,249,250], and reinforcement learning [251].
+Other studies focus on cross-lingual alignment via prompt-
+ing, using few-shot approaches [252, 253, 254, 255] and
+zero-shot instructions [256, 257] to enhance alignment.
+Twomainchallengesinthisdirectionareasfollows: (1)
+Enhancing Low-Resource Language Performance: Due
+to poor performance in low-resource languages, how to
+build universal multilingual LLMs that achieve promising
+performance in NLP tasks across languages is a direction
+worth exploring. (2)Improving Cross-lingual Alignment:
+The key to multilingual LLMs is improving the alignment
+betweenEnglishandotherlanguages. Effectivelyachieving
+this alignment is critical for ensuring optimal performance
+in cross-lingual NLP tasks, making it a challenging yet
+essential area for advancement.
+###SECTION###
+5.2 Multi-modal LLMs for NLP
+The current LLMs achieve excellent performance in text
+modality. However,integratingmodalitiesisoneofthekey
+ways to achieve AGI [258,259,260,261]. Therefore, a lot
+of work has begun to explore multi-modal LLMs for multi-
+modal NLP tasks [262, 263, 264, 265, 266, 267, 268].
+The primary challenges in this field are: (1)Complex
+Multi-modal Reasoning: Currently, most multi-modal
+LLMs focus on simple multi-modal reasoning, like recog-
+nition [269,270], while neglecting complex multi-modal
+reansoning [271, 272, 273]. Therefore, how to effectively
+explorecomplexmulti-modalreasoningforNLPisacrucial
+topic [259,274,275,276]. (2)Effective Multi-modal In-
+teraction: Existing methods often simply focus on adding
+direct multi-modal projection or prompting to LLM for
+bridgemulti-modalitygap[ 269,270,277,278,279]. Craft-
+ing a more effective multi-modal interaction mechanism in
+the inference process of multi-modal LLMs to solve NLP
+tasks is an essential problem.
+###SECTION###
+5.3 Tool-usage in LLMs for NLP
+While LLMs have shown success in NLP tasks, they can
+still face challenges when applied in real-world scenar-
+ios [280, 281]. Therefore, a lot of work focuses on ex-
+ploring utilizing LLMs as central controllers to enable the
+usage or construction of tools and agents to solve practical
+NLP tasks [282, 283, 284, 285, 286, 287].
+Theprimaryconcernsare: (1) AppropriateToolUsage:
+Currentworksalwaysconsiderstatictoolusage,neglecting
+to choose appropriate tools to use. Identifying the correct
+tools and using them accurately is a key issue in solving
+NLPtasksefficiently. (2) EfficientToolPlanning: Current
+worksstillfocusontheusageofasingletoolforNLPtasks.
+Motivatedbythis,thereisapressingneedforNLPtasksto
+achieve an efficient tool chain that leverages multiple tools
+in a coordinated manner. For example, when facing Task-
+oriented Dialogue tasks, we can use three tools: booking
+flighttickets,bookingtraintickets,andbookingbustickets.
+Then, how to collaborate to make the trip time as short as
+possibleandthecostaslowaspossibleisatypicalproblem
+in effective tool planning.
+###SECTION###
+5.4 X-of-thought in LLMs for NLP
+When LLMs solve complex NLP problems, they often
+cannot directly give correct answers and require complex
+thinking. Therefore,someworksadaptX-of-thought(XoT)
+for advanced logical reasoning. XoT primarily focuses on
+refining the model’s ability to process and reason through
+complex logic, ultimately aiming to improve the overall
+performance and accuracy in solving challenging NLP
+tasks [31, 115, 256, 288, 289, 290, 291].
+Key challenges in this direction include: (1)Universal
+Step Decomposition:How to develop a method for univer-
+sally applicable step decomposition to generalize LLMs
+to various NLP tasks is the core challenge of XoT. (2)
+Prompting Knowledge Integration:Diverse promptings
+enhancemodelperformanceacrossvariousscenarios. How
+to better integrate the knowledge of different XoT to solve
+NLP problems is an important direction.
+###SECTION###
+5.5 Hallucination in LLMs for NLP
+DuringsolvingtheNLPtasks,LLMsinevitablysufferfrom
+thehallucinationswhereLLMsproduceoutputsthatdeviate
+from world knowledge [292, 293], user request [294], or
+self-generated context [295]. This deviation harms the
+reliability of LLMs in practical scenarios.
+The primary challenges in hallucination are: (1)Effi-
+cient Hallucination Evaluation: How to find appropriate
+and unified evaluation benchmarks and metrics for LLMs
+in various NLP tasks is a key challenge. (2)Leveraging
+Hallucinations for Creativity: Hallucinations can often
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 13
+stimulatecertaincreativeabilities. Howtoleveragehalluci-
+nationtostimulatecreativityandgeneratebetterinnovative
+knowledge is an interesting topic.
+###SECTION###
+5.6 Safety in LLMs for NLP
+ApplyinglargemodelstodownstreamNLPtasksalsoraises
+inevitablesafetyconcerns,includingcopyrightissues[ 296],
+hatetoxicity[ 297],socialbias[ 298,299]andpsychological
+safety [300]. Inspired by this, a growing body of research
+has emerged, focusing on ensuring the safety of LLMs for
+various NLP tasks [301, 302, 303, 304].
+The main challenges to safety in LLMs are: (1)Safety
+BenchmarkConstruction: Currently,therearefewsecurity-
+related benchmarks for LLM on various NLP tasks. Estab-
+lishing effective safety benchmarks is a critical objective
+in this area. (2)Multilingual Safety Risks:LLM suf-
+fers more safety risks across languages and cultures [305].
+Identifying and mitigating these risks in a multilingual
+context is a significant challenge.
+###SECTION###
+5.7 Long Chain-of-Thought in LLMs for NLP
+Long Chain-of-Thought (Long-CoT) extends standard CoT
+prompting by allowing models to reason more deeply, ex-
+plore multiple solution paths, and reflect on intermediate
+outcomes instead of following a single linear chain of
+thought [28, 306, 307]. By organizing reasoning into hier-
+archical levels or segmented sub-chains, Long-CoT equips
+large language models to address complex NLP challenges
+andcompositionalreasoningtasksbeyondthereachofcon-
+ventional CoT [16,288,308,309,310,311,312]. Recent
+innovations integrate reflective mechanisms [282, 313],
+inference-time scaling techniques [116, 314, 315], and
+reinforcement-learning enhancements [7, 316, 317, 318,
+319].
+Key challenges in this direction include: (1)Adap-
+tive Reasoning Length Control: Selecting the appro-
+priate depth and breadth for each sub-chain is challeng-
+ing [320, 321, 322]. If a sub-chain is too shallow, the
+model may overlook critical intermediate abstractions; if
+it is too deep, it risks propagating errors or exceeding
+token limits [19, 323]. (2) Interactive Reasoning: En-
+ablingadynamic,iterativeproblem -solvingprocess,where
+models pose clarifying questions [324], integrate external
+feedback [281, 325], and refine intermediate steps [326],
+remains insufficiently explored [28, 327]. Such interactive
+chains could substantially improve performance and accu-
+racy in tasks requiring real-time adaptation [328, 329].
+###SECTION###
+6 Conclusion
+In this work, we make the first attempt to offer a systemic
+overview of LLMs in NLP, introducing a unified taxon-
+omy of parameter-frozen paradigm and parameter-tuning
+paradigm. Besides, we highlight new research frontiers
+and challenges, hoping to facilitate future research. Addi-
+tionally, we maintain a publicly available resource website
+to track the latest developments in the literature. We hope
+this work can provide valuable insights and resources to
+build effective LLMs in NLP.
+Acknowledgments
+This work was supported by the National Natural Sci-
+ence Foundation of China (NSFC) via grant 62306342,
+62236004, 62206078 and 62476073. This work was sup-
+ported by the Scientific Research Fund of Hunan Provin-
+cial Education Department (24B0001). This work was
+sponsored by the Excellent Young Scientists Fund in
+Hunan Province (2024JJ4070), the Science and Technol-
+ogy Innovation Program of Hunan Province under Grant
+2024RC3024 and CCF-Zhipu Large Model Innovation
+Fund (NO.CCF-Zhipu202406). This work was carried out
+inpartusingcomputingresourcesattheHighPerformance
+Computing Center of Central South University.
+References
+[1] Wayne Xin Zhao, Kun Zhou, Junyi Li, Tianyi Tang,
+Xiaolei Wang, Yupeng Hou, Yingqian Min, Be-
+ichen Zhang, Junjie Zhang, Zican Dong, et al. A
+survey of large language models.arXiv preprint
+arXiv:2303.18223, 2023.
+[2] Jean Kaddour, Joshua Harris, Maximilian Mozes,
+Herbie Bradley, Roberta Raileanu, and Robert
+McHardy. Challenges and applications of large
+language models.arXiv preprint arXiv:2307.10169,
+2023.
+[3] Jingfeng Yang, Hongye Jin, Ruixiang Tang, Xiao-
+tian Han, Qizhang Feng, Haoming Jiang, Shaochen
+Zhong,BingYin,andXiaHu. Harnessingthepower
+ofllmsinpractice: Asurveyonchatgptandbeyond.
+ACM Transactions on Knowledge Discovery from
+Data.
+[4] Muhammad Usman Hadi, Rizwan Qureshi, Abbas
+Shah,MuhammadIrfan,AnasZafar,MuhammadBi-
+lal Shaikh, Naveed Akhtar, Jia Wu, Seyedali Mir-
+jalili,etal.Largelanguagemodels: acomprehensive
+
+14 Front. Comput. Sci., 2025, 0(0): 1–35
+survey of its applications, challenges, limitations,
+and future prospects.Authorea Preprints, 2023.
+[5] Ziyu Zhuang, Qiguang Chen, Longxuan Ma,
+Mingda Li, Yi Han, Yushan Qian, Haopeng Bai,
+ZixianFeng,WeinanZhang,andTingLiu. Through
+the lens of core competency: Survey on evalu-
+ation of large language models. arXiv preprint
+arXiv:2308.07902, 2023.
+[6] Gemini Team, Petko Georgiev, Ving Ian Lei, Ryan
+Burnell, Libin Bai, Anmol Gulati, Garrett Tanzer,
+Damien Vincent, Zhufeng Pan, Shibo Wang, et al.
+Gemini 1.5: Unlocking multimodal understanding
+across millions of tokens of context.arXiv preprint
+arXiv:2403.05530, 2024.
+[7] Daya Guo, Dejian Yang, Haowei Zhang, Junx-
+iao Song, Ruoyu Zhang, Runxin Xu, Qihao
+Zhu, Shirong Ma, Peiyi Wang, Xiao Bi, et al.
+Deepseek-r1: Incentivizing reasoning capability
+in llms via reinforcement learning.arXiv preprint
+arXiv:2501.12948, 2025.
+[8] Zhe Chen, Jiannan Wu, Wenhai Wang, Weĳie Su,
+Guo Chen, Sen Xing, Muyan Zhong, Qinglong
+Zhang, Xizhou Zhu, Lewei Lu, et al. Internvl:
+Scaling up vision foundation models and aligning
+forgenericvisual-linguistictasks. In Proceedingsof
+the IEEE/CVF conference on computer vision and
+pattern recognition, pages 24185–24198, 2024.
+[9] Qiguang Chen, Mingda Yang, Libo Qin, Jinhao Liu,
+Zheng Yan, Jiannan Guan, Dengyun Peng, Yiyan Ji,
+Hanjing Li, Mengkang Hu, et al. Ai4research: A
+surveyofartificialintelligenceforscientificresearch.
+arXiv preprint arXiv:2507.01903, 2025.
+[10] Tom Brown, Benjamin Mann, Nick Ryder, Melanie
+Subbiah,JaredDKaplan,PrafullaDhariwal,Arvind
+Neelakantan,PranavShyam,GirishSastry,Amanda
+Askell,etal. Languagemodelsarefew-shotlearners.
+Advances in neural information processing systems,
+33:1877–1901, 2020.
+[11] LongOuyang,JeffreyWu,XuJiang,DiogoAlmeida,
+CarrollWainwright,PamelaMishkin,ChongZhang,
+Sandhini Agarwal, Katarina Slama, Alex Ray, et al.
+Traininglanguagemodelstofollowinstructionswith
+human feedback.Advances in Neural Information
+Processing Systems, 35:27730–27744, 2022.
+[12] Aakanksha Chowdhery, Sharan Narang, Jacob
+Devlin, Maarten Bosma, Gaurav Mishra, Adam
+Roberts, Paul Barham, Hyung Won Chung, Charles
+Sutton, Sebastian Gehrmann, et al. Palm: Scaling
+language modeling with pathways.arXiv preprint
+arXiv:2204.02311, 2022.
+[13] Susan Zhang, Stephen Roller, Naman Goyal, Mikel
+Artetxe, Moya Chen, Shuohui Chen, Christopher
+Dewan, Mona Diab, Xian Li, Xi Victoria Lin, et al.
+Opt: Openpre-trainedtransformerlanguagemodels.
+arXiv preprint arXiv:2205.01068, 2022.
+[14] Hugo Touvron, Thibaut Lavril, Gautier Izacard,
+Xavier Martinet, Marie-Anne Lachaux, Timothée
+Lacroix, Baptiste Rozière, Naman Goyal, Eric Ham-
+bro, Faisal Azhar, et al. Llama: Open and effi-
+cient foundation language models.arXiv preprint
+arXiv:2302.13971, 2023.
+[15] Jason Wei, Maarten Bosma, Vincent Zhao, Kelvin
+Guu, Adams Wei Yu, Brian Lester, Nan Du, An-
+drew M. Dai, and Quoc V Le. Finetuned language
+models are zero-shot learners. In International
+Conference on Learning Representations, 2022.
+[16] Jason Wei, Xuezhi Wang, Dale Schuurmans,
+Maarten Bosma, Fei Xia, Ed H Chi, Quoc V Le,
+DennyZhou,etal. Chain-of-thoughtpromptingelic-
+itsreasoninginlargelanguagemodels. In Advances
+in Neural Information Processing Systems, 2022.
+[17] Sewon Min, Xinxi Lyu, Ari Holtzman, Mikel
+Artetxe, Mike Lewis, Hannaneh Hajishirzi, and
+Luke Zettlemoyer. Rethinking the role of demon-
+strations: Whatmakesin-contextlearningwork? In
+Proceedings of the 2022 Conference on Empirical
+Methods in Natural Language Processing, pages
+11048–11064, 2022.
+[18] Jason Wei, Yi Tay, Rishi Bommasani, Colin Raffel,
+Barret Zoph, Sebastian Borgeaud, Dani Yogatama,
+MaartenBosma,DennyZhou,DonaldMetzler,etal.
+Emergent abilities of large language models.Trans-
+actions on Machine Learning Research, 2022.
+[19] Qiguang Chen, Libo Qin, Jiaqi Wang, Jingxuan
+Zhou,andWanxiangChe.Unlockingthecapabilities
+of thought: A reasoning boundary framework to
+quantifyandoptimizechain-of-thought. Advancesin
+Neural Information Processing Systems, 37:54872–
+54904, 2024.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 15
+[20] Jiaan Wang, Yunlong Liang, Fandong Meng, Beiqi
+Zou, Zhixu Li, Jianfeng Qu, and Jie Zhou. Zero-
+shotcross-lingualsummarizationvialargelanguage
+models, 2023.
+[21] Yiming Wang, Zhuosheng Zhang, and Rui Wang.
+Element-aware summarization with large language
+models: Expert-aligned evaluation and chain-of-
+thought method.arXiv preprint arXiv:2305.13412,
+2023.
+[22] Longyue Wang, Chenyang Lyu, Tianbo Ji, Zhirui
+Zhang, Dian Yu, Shuming Shi, and Zhaopeng Tu.
+Document-level machine translation with large lan-
+guage models. arXiv preprint arXiv:2304.02210,
+2023.
+[23] Keqin Peng, Liang Ding, Qihuang Zhong, Li Shen,
+Xuebo Liu, Min Zhang, Yuanxin Ouyang, and
+Dacheng Tao. Towards making the most of
+chatgpt for machine translation. arXiv preprint
+arXiv:2303.13780, 2023.
+[24] XiangWei,XingyuCui,NingCheng,XiaobinWang,
+Xin Zhang, Shen Huang, Pengjun Xie, Jinan Xu,
+Yufeng Chen, Meishan Zhang, et al. Zero-shot
+information extraction via chatting with chatgpt.
+arXiv preprint arXiv:2302.10205, 2023.
+[25] ZhenWan,FeiCheng,ZhuoyuanMao,QianyingLiu,
+HaiyueSong,JiweiLi,andSadaoKurohashi.Gpt-re:
+In-contextlearningforrelationextractionusinglarge
+language models.arXiv preprint arXiv:2305.02105,
+2023.
+[26] Jen-tse Huang, Man Ho Lam, Eric John Li, Shujie
+Ren, Wenxuan Wang, Wenxiang Jiao, Zhaopeng
+Tu, and Michael R. Lyu. Emotionally Numb or
+Empathetic? Evaluating How LLMs Feel Using
+EmotionBench, August 2023. arXiv:2308.03656
+[cs].
+[27] ZengzhiWang, QimingXie, ZixiangDing, YiFeng,
+andRuiXia. Ischatgptagoodsentimentanalyzer? a
+preliminarystudy. arXivpreprintarXiv:2304.04339 ,
+2023.
+[28] Qiguang Chen, Libo Qin, Jinhao Liu, Dengyun
+Peng, Jiannan Guan, Peng Wang, Mengkang Hu,
+YuhangZhou,TeGao,andWanxiangChe. Towards
+reasoning era: A survey of long chain-of-thought
+forreasoninglargelanguagemodels. arXivpreprint
+arXiv:2503.09567, 2025.
+[29] YonghengZhang,QiguangChen,MinLi,Wanxiang
+Che, and Libo Qin. Autocap: Towards automatic
+cross-lingualalignmentplanningforzero-shotchain-
+of-thought. InFindings of the Association for Com-
+putational Linguistics ACL 2024, pages 9191–9200,
+2024.
+[30] Lin Ren, Yongbin Liu, Chunping Ouyang, Ying Yu,
+Shuda Zhou, Yidong He, and Yaping Wan. Dylas:
+A dynamic label alignment strategy for large-scale
+multi-label text classification.Information Fusion,
+120:103081, 2025.
+[31] Takeshi Kojima, Shixiang Shane Gu, Machel Reid,
+Yutaka Matsuo, and Yusuke Iwasawa. Large lan-
+guage models are zero-shot reasoners.Advances in
+neural information processing systems, 35:22199–
+22213, 2022.
+[32] Neil Houlsby, Andrei Giurgiu, Stanislaw Jastrzeb-
+ski, Bruna Morrone, Quentin De Laroussilhe, An-
+drea Gesmundo, Mona Attariyan, and Sylvain Gelly.
+Parameter-efficienttransferlearningfornlp. In Inter-
+national Conference on Machine Learning, pages
+2790–2799. PMLR, 2019.
+[33] Edward J Hu, Phillip Wallis, Zeyuan Allen-Zhu,
+Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen,
+et al. Lora: Low-rank adaptation of large language
+models. InInternational Conference on Learning
+Representations, 2021.
+[34] Xiang Lisa Li and Percy Liang. Prefix-tuning: Op-
+timizing continuous prompts for generation. In
+Proceedings of the 59th Annual Meeting of the As-
+sociation for Computational Linguistics and the
+11thInternationalJointConferenceonNaturalLan-
+guage Processing (Volume 1: Long Papers), pages
+4582–4597, 2021.
+[35] Tim Dettmers, Artidoro Pagnoni, Ari Holtzman,
+and Luke Zettlemoyer. Qlora: Efficient finetuning
+ofquantizedllms. arXivpreprintarXiv:2305.14314 ,
+2023.
+[36] NandiniMundra,SumanthDoddapaneni,RajDabre,
+Anoop Kunchukuttan, Ratish Puduppully, and
+Mitesh M Khapra. A comprehensive analysis of
+adapter efficiency. InProceedings of the 7th Joint
+International Conference on Data Science & Man-
+agement of Data (11th ACM IKDD CODS and 29th
+COMAD), pages 136–154, 2024.
+
+16 Front. Comput. Sci., 2025, 0(0): 1–35
+[37] Edward J Hu, yelong shen, Phillip Wallis, Zeyuan
+Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, and
+Weizhu Chen. LoRA: Low-rank adaptation of large
+language models. InInternational Conference on
+Learning Representations, 2022.
+[38] Mayur Wankhade, Annavarapu Chandra Sekhara
+Rao,andChaitanyaKulkarni. Asurveyonsentiment
+analysis methods, applications, and challenges.Ar-
+tificial Intelligence Review, 55(7):5731–5780, 2022.
+[39] Ahmed Belkhir and Fatiha Sadat. Beyond informa-
+tion: Ischatgptempatheticenough? In Proceedings
+of the 14th International Conference on Recent
+Advances in Natural Language Processing, pages
+159–169, 2023.
+[40] Wenxuan Zhang, Yue Deng, Bing Liu, Sinno Jialin
+Pan, andLidongBing. Sentimentanalysisintheera
+of large language models: A reality check.arXiv
+preprint arXiv:2305.15005, 2023.
+[41] Fajri Koto, Tilman Beck, Zeerak Talat, Iryna
+Gurevych, and Timothy Baldwin. Zero-shot sen-
+timent analysis in low-resource languages using
+a multilingual sentiment lexicon.arXiv preprint
+arXiv:2402.02113, 2024.
+[42] KelvinDu,FrankXing,RuiMao,andErikCambria.
+An evaluation of reasoning capabilities of large
+language models in financial sentiment analysis. In
+2024 IEEE Conference on Artificial Intelligence
+(CAI), pages 189–194. IEEE, 2024.
+[43] Weixiang Zhao, Yanyan Zhao, Xin Lu, Shilong
+Wang, Yanpeng Tong, and Bing Qin. Is chat-
+gpt equipped with emotional dialogue capabilities?
+arXiv preprint arXiv:2304.09582, 2023.
+[44] Xiancai Xu, Jia-Dong Zhang, Rongchang Xiao, and
+LeiXiong. Thelimitsofchatgptinextractingaspect-
+category-opinion-sentiment quadruples: A compar-
+ative analysis. arXiv preprint arXiv:2310.06502,
+2023.
+[45] Yao Lu, Zhaiyuan Ji, Jiawei Du, Yu Shanqing,
+QiXuan,andTianyiZhou. Fromllm-anationtollm-
+orchestrator: Coordinating small models for data
+labeling. arXiv preprint arXiv:2506.16393, 2025.
+[46] Xiaofei Sun, Xiaoya Li, Shengyu Zhang, Shuhe
+Wang,FeiWu,JiweiLi,TianweiZhang,andGuoyin
+Wang. Sentiment analysis through llm negotiations.
+arXiv preprint arXiv:2311.01876, 2023.
+[47] Ting Zhang, Ivana Clairine Irsan, Ferdian Thung,
+and David Lo. Revisiting sentiment analysis for
+software engineering in the era of large language
+models.ACMTransactionsonSoftwareEngineering
+and Methodology, 34(3):1–30, 2025.
+[48] Kai Zhang, Bernal Jimenez Gutierrez, and Yu Su.
+Aligning instruction tasks unlocks large language
+models as zero-shot relation extractors. ArXiv,
+abs/2305.11159, 2023.
+[49] Tingyu Xie, Qi Li, Jian Zhang, Yan Zhang, Zuozhu
+Liu, and Hongwei Wang. Empirical study of zero-
+shot NER with ChatGPT. In Houda Bouamor, Juan
+Pino, and Kalika Bali, editors,Proceedings of the
+2023 Conference on Empirical Methods in Natural
+LanguageProcessing,pages7935–7956,Singapore,
+December 2023. Association for Computational
+Linguistics. doi: 10.18653/v1/2023.emnlp-main.49
+3.
+[50] Mingchen Li and Rui Zhang. How far is lan-
+guage model from 100% few-shot named entity
+recognition in medical domain. arXiv preprint
+arXiv:2307.00186, 2023.
+[51] Peng Li, Tianxiang Sun, Qiong Tang, Hang Yan,
+Yuanbin Wu, Xuanjing Huang, and Xipeng Qiu.
+Codeie: Large code generation models are better
+few-shot information extractors. arXiv preprint
+arXiv:2305.05711, 2023.
+[52] Zhen Bi, Jing Chen, Yinuo Jiang, Feiyu Xiong,
+Wei Guo, Huajun Chen, and Ningyu Zhang.
+Codekgc: Code language model for generative
+knowledge graph construction. arXiv preprint
+arXiv:2304.09048, 2023.
+[53] Raffaello Fornasiere, Nicolò Brunello, Vincenzo
+Scotti, Mark James Carman, et al. Medical infor-
+mation extraction with large language models. In
+Proceedings of the 7th International Conference on
+Natural Language and Speech Processing (ICNLSP
+2024), pages 1–10. Association for Computational
+Linguistics, 2024.
+[54] Yiyi Tang, Ziyan Xiao, Xue Li, Qiwen Fang,
+Qingpeng Zhang, Daniel Yee Tak Fong, Francisco
+TszTsunLai,CelineSzeLingChui,EstherWaiYin
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 17
+Chan, Ian Chi Kei Wong, et al. Large language
+model in medical information extraction from titles
+and abstracts with prompt engineering strategies: A
+comparative study of gpt-3.5 and gpt-4.MedRxiv,
+pages 2024–03, 2024.
+[55] Wenbo Pan, Qiguang Chen, Xiao Xu, Wanxiang
+Che, and Libo Qin. A preliminary evaluation of
+chatgpt for zero-shot dialogue understanding.arXiv
+preprint arXiv:2304.04256, 2023.
+[56] Mutian He and Philip N Garner. Can chatgpt de-
+tect intent? evaluating large language models for
+spoken language understanding. arXiv preprint
+arXiv:2305.13512, 2023.
+[57] Vojtěch Hudeček and Ondřej Dušek. Are llms all
+you need for task-oriented dialogue?arXiv preprint
+arXiv:2304.06556, 2023.
+[58] Michael Heck, Nurul Lubis, Benjamin Ruppik, Re-
+nato Vukovic, Shutong Feng, Christian Geishauser,
+Hsien-Chin Lin, Carel van Niekerk, and Milica
+Gašić. Chatgpt for zero-shot dialogue state track-
+ing: A solution or an opportunity?arXiv preprint
+arXiv:2306.01386, 2023.
+[59] Haoyu Gao, Ting-En Lin, Hangyu Li, Min Yang,
+Yuchuan Wu, Wentao Ma, and Yongbin Li. Self-
+explanation prompting improves dialogue under-
+standing in large language models.arXiv preprint
+arXiv:2309.12940, 2023.
+[60] Zekun Li, Wenhu Chen, Shiyang Li, Hong Wang,
+Jing Qian, and Xifeng Yan. Controllable dialogue
+simulation with in-context learning. InFindings
+of the Association for Computational Linguistics:
+EMNLP 2022, pages 4330–4347, 2022.
+[61] Yichi Zhang, Jianing Yang, Keunwoo Yu, Yinpei
+Dai, Shane Storks, Yuwei Bao, Jiayi Pan, Nikhil
+Devraj, Ziqiao Ma, and Joyce Chai. Seagull: An
+embodied agent for instruction following through
+situated dialog. 2023.
+[62] Xiaoying Zhang, Baolin Peng, Kun Li, Jingyan
+Zhou, and Helen Meng. Sgp-tod: Building task
+bots effortlessly via schema-guided llm prompting.
+arXiv preprint arXiv:2305.09067, 2023.
+[63] Yuxiang Wu, Guanting Dong, and Weiran Xu. Se-
+manticparsingbylargelanguagemodelsforintricate
+updating strategies of zero-shot dialogue state track-
+ing. arXiv preprint arXiv:2310.10520, 2023.
+[64] Sarkar Snigdha Sarathi Das, Chirag Shah, Mengt-
+ing Wan, Jennifer Neville, Longqi Yang, Reid An-
+dersen, Georg Buscher, and Tara Safavi. S3-dst:
+Structured open-domain dialogue segmentation and
+state tracking in the era of llms.arXiv preprint
+arXiv:2309.08827, 2023.
+[65] RyanAChi,JeremyKim,ScottHickmann,SiyanLi,
+Gordon Chi, Thanawan Atchariyachanvanit, Kather-
+ine Yu, Nathan A Chi, Gary Dai, Shashank Ram-
+moorthy, et al. Dialogue distillery: Crafting inter-
+polable, interpretable, and introspectable dialogue
+from llms.Alexa Prize SocialBot Grand Challenge,
+5, 2023.
+[66] Yushi Hu, Chia-Hsuan Lee, Tianbao Xie, Tao Yu,
+NoahASmith,andMariOstendorf.In-contextlearn-
+ingforfew-shotdialoguestatetracking. In Findings
+of the Association for Computational Linguistics:
+EMNLP 2022, pages 2627–2643, 2022.
+[67] Brendan King and Jeffrey Flanigan. Diverse
+retrieval-augmentedin-contextlearningfordialogue
+state tracking. InFindings of the Association for
+Computational Linguistics: ACL 2023, pages 5570–
+5585, 2023.
+[68] Angus Addlesee, Weronika Sieińska, Nancie Gun-
+son, Daniel Hernández Garcia, Christian Dondrup,
+and Oliver Lemon. Multi-party goal tracking with
+llms: Comparing pre-training, fine-tuning, and
+prompt engineering. In Proceedings of the 24th
+Meeting of the Special Interest Group on Discourse
+and Dialogue, pages 229–241, 2023.
+[69] Willy Chung, Samuel Cahyawĳaya, Bryan Wilie,
+HolyLovenia,andPascaleFung.Instructtods: Large
+language models for end-to-end task-oriented dia-
+logue systems. arXiv preprint arXiv:2310.08885,
+2023.
+[70] Chia-Hsuan Lee, Hao Cheng, and Mari Ostendorf.
+Orchestrallm: Efficient orchestration of language
+models for dialogue state tracking.arXiv preprint
+arXiv:2311.09758, 2023.
+[71] Eleanor Lin, James Hale, and Jonathan Gratch. To-
+wardabetterunderstandingoftheemotionaldynam-
+ics of negotiation with large language models. In
+
+18 Front. Comput. Sci., 2025, 0(0): 1–35
+ProceedingsoftheTwenty-fourthInternationalSym-
+posium on Theory, Algorithmic Foundations, and
+Protocol Design for Mobile Networks and Mobile
+Computing, pages 545–550, 2023.
+[72] LangCao. Diaggpt: Anllm-basedchatbotwithauto-
+matic topic management for task-oriented dialogue.
+arXiv preprint arXiv:2308.08043, 2023.
+[73] Ananya Singha, José Cambronero, Sumit Gulwani,
+Vu Le, and Chris Parnin. Tabular representation,
+noisy operators, and impacts on table structure un-
+derstanding tasks in llms. InNeurIPS 2023 Second
+Table Representation Learning Workshop, 2023.
+[74] Sohan Patnaik, Heril Changwal, Milan Aggarwal,
+Sumita Bhatia, Yaman Kumar, and Balaji Krishna-
+murthy. Cabinet: Content relevance based noise re-
+ductionfortablequestionanswering. arXivpreprint
+arXiv:2402.01155, 2024.
+[75] Yunhu Ye, Binyuan Hui, Min Yang, Binhua Li, Fei
+Huang, and Yongbin Li. Large language models are
+versatile decomposers: Decomposing evidence and
+questions for table-based reasoning. InProceedings
+ofthe46thInternationalACMSIGIRConferenceon
+ResearchandDevelopmentinInformationRetrieval ,
+pages 174–184, 2023.
+[76] Junyi Ye, Mengnan Du, and Guiling Wang.
+Dataframe qa: A universal llm framework on
+dataframequestionansweringwithoutdataexposure.
+arXiv preprint arXiv:2401.15463, 2024.
+[77] Yuan Sui, Mengyu Zhou, Mingjie Zhou, Shi Han,
+and Dongmei Zhang. Gpt4table: Can large lan-
+guage models understand structured table data? a
+benchmark and empirical study, 2023.
+[78] Yuan Sui, Jiaru Zou, Mengyu Zhou, Xinyi He, Lun
+Du, Shi Han, and Dongmei Zhang. Tap4llm: Ta-
+ble provider on sampling, augmenting, and packing
+semi-structured data for large language model rea-
+soning. arXiv preprint arXiv:2312.09039, 2023.
+[79] Zhoujun Cheng, Tianbao Xie, Peng Shi, Chengzu
+Li, Rahul Nadkarni, Yushi Hu, Caiming Xiong,
+DragomirRadev,MariOstendorf,LukeZettlemoyer,
+et al. Binding language models in symbolic lan-
+guages. InThe Eleventh International Conference
+on Learning Representations, 2022.
+[80] Wenqi Zhang, Yongliang Shen, Weiming Lu, and
+Yueting Zhuang. Data-copilot: Bridging billions of
+data and humans with autonomous workflow.arXiv
+preprint arXiv:2306.07209, 2023.
+[81] Zhehao Zhang, Xitao Li, Yan Gao, and Jian-
+Guang Lou. CRT-QA: A dataset of complex
+reasoning question answering over tabular data.
+In Houda Bouamor, Juan Pino, and Kalika Bali,
+editors, Proceedings of the 2023 Conference on
+Empirical Methods in Natural Language Process-
+ing, pages 2131–2153, Singapore, December 2023.
+Association for Computational Linguistics. doi:
+10.18653/v1/2023.emnlp-main.132.
+[82] Yunjia Zhang, Jordan Henkel, Avrilia Floratou,
+Joyce Cahoon, Shaleen Deep, and Jignesh M Pa-
+tel. Reactable: Enhancing react for table question
+answering. arXiv preprint arXiv:2310.00815, 2023.
+[83] Hangwen Zhang, Qingyi Si, Peng Fu, Zheng Lin,
+and Weiping Wang. Are large language mod-
+els table-based fact-checkers? arXiv preprint
+arXiv:2402.02549, 2024.
+[84] Wenhu Chen. Large language models are few (1)-
+shot table reasoners. InFindings of the Association
+for Computational Linguistics: EACL 2023, pages
+1090–1100, 2023.
+[85] Tongxu Luo, Fangyu Lei, Jiahe Lei, Weihao Liu,
+Shihu He, Jun Zhao, and Kang Liu. Hrot: Hybrid
+prompt strategy and retrieval of thought for table-
+text hybrid question answering. arXiv preprint
+arXiv:2309.12669, 2023.
+[86] Hongxin Li, Jingran Su, Yuntao Chen, Qing Li, and
+Zhaoxiang Zhang. Sheetcopilot: Bringing software
+productivitytothenextlevelthroughlargelanguage
+models. arXiv preprint arXiv:2305.19308, 2023.
+[87] Jinhao Jiang, Kun Zhou, Zican Dong, Keming Ye,
+Xin Zhao, and Ji-Rong Wen. StructGPT: A general
+framework for large language model to reason over
+structured data. In Houda Bouamor, Juan Pino, and
+Kalika Bali, editors,Proceedings of the 2023 Con-
+ference on Empirical Methods in Natural Language
+Processing, pages 9237–9251, Singapore, Decem-
+ber2023.AssociationforComputationalLinguistics.
+doi: 10.18653/v1/2023.emnlp-main.574.
+[88] Zilong Wang, Hao Zhang, Chun-Liang Li, Ju-
+lian Martin Eisenschlos, Vincent Perot, Zifeng
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 19
+Wang, Lesly Miculicich, Yasuhisa Fujii, Jingbo
+Shang,Chen-YuLee,etal.Chain-of-table: Evolving
+tablesinthereasoningchainfortableunderstanding.
+arXiv preprint arXiv:2401.04398, 2024.
+[89] Kezhi Kong, Jiani Zhang, Zhengyuan Shen, Bal-
+asubramaniam Srinivasan, Chuan Lei, Christos
+Faloutsos, Huzefa Rangwala, and George Karypis.
+Opentab: Advancing large language models as
+open-domain table reasoners. arXiv preprint
+arXiv:2402.14361, 2024.
+[90] TanyaGoyal,JunyiJessyLi,andGregDurrett.News
+summarization and evaluation in the era of gpt-3.
+ArXiv, abs/2209.12356, 2022.
+[91] Mathieu Ravaut, Shafiq R. Joty, Aixin Sun, and
+Nancy F. Chen. On context utilization in summa-
+rization with large language models. 2023.
+[92] Adithya Bhaskar, Alexander R. Fabbri, and Greg
+Durrett. Prompted opinion summarization with
+gpt-3.5. InAnnual Meeting of the Association for
+Computational Linguistics, 2022.
+[93] Jiaan Wang, Yunlong Liang, Fandong Meng, Beiqi
+Zou, Zhixu Li, Jianfeng Qu, and Jie Zhou. Zero-
+shotcross-lingualsummarizationvialargelanguage
+models. In Yue Dong, Wen Xiao, Lu Wang, Fei
+Liu, and Giuseppe Carenini, editors,Proceedings
+of the 4th New Frontiers in Summarization Work-
+shop, pages 12–23, Singapore, December 2023.
+Association for Computational Linguistics. doi:
+10.18653/v1/2023.newsum-1.2.
+[94] Tianyi Zhang, Faisal Ladhak, Esin Durmus,
+Percy Liang, Kathleen McKeown, and Tatsunori
+Hashimoto. Benchmarking large language models
+for news summarization.Transactions of the As-
+sociation for Computational Linguistics, 12:39–57,
+2023.
+[95] HaopengZhang,XiaoLiu,andJiaweiZhang.Extrac-
+tivesummarizationviachatgptforfaithfulsummary
+generation. InConference on Empirical Methods in
+Natural Language Processing, 2023.
+[96] Griffin Adams, Alexander R. Fabbri, Faisal Ladhak,
+Eric Lehman, and Noémie Elhadad. From sparse to
+dense: Gpt-4 summarization with chain of density
+prompting. ArXiv, abs/2309.04269, 2023.
+[97] Yuting Tang, Ratish Puduppully, Zhengyuan Liu,
+and Nancy Chen. In-context learning of large lan-
+guage models for controlled dialogue summariza-
+tion: A holistic benchmark and empirical anal-
+ysis. In Yue Dong, Wen Xiao, Lu Wang, Fei
+Liu, and Giuseppe Carenini, editors,Proceedings
+of the 4th New Frontiers in Summarization Work-
+shop, pages 56–67, Singapore, December 2023.
+Association for Computational Linguistics. doi:
+10.18653/v1/2023.newsum-1.6.
+[98] Mark Chen, Jerry Tworek, Heewoo Jun, Qiming
+Yuan, Henrique Ponde de Oliveira Pinto, Jared
+Kaplan, Harri Edwards, Yuri Burda, Nicholas
+Joseph, Greg Brockman, et al. Evaluating large
+language models trained on code.arXiv preprint
+arXiv:2107.03374, 2021.
+[99] Erik Nĳkamp, Bo Pang, Hiroaki Hayashi, Lifu Tu,
+Huan Wang, Yingbo Zhou, Silvio Savarese, and
+Caiming Xiong. Codegen: An open large language
+model for code with multi-turn program synthesis.
+arXiv preprint arXiv:2203.13474, 2022.
+[100] Fenia Christopoulou, Gerasimos Lampouras, Milan
+Gritta, Guchun Zhang, Yinpeng Guo, Zhongqi Li,
+QiZhang,MengXiao,BoShen,LinLi,etal. Pangu-
+coder: Program synthesis with function-level lan-
+guage modeling.arXiv preprint arXiv:2207.11280,
+2022.
+[101] Ziyang Luo, Can Xu, Pu Zhao, Qingfeng Sun, Xi-
+ubo Geng, Wenxiang Hu, Chongyang Tao, Jing
+Ma, Qingwei Lin, and Daxin Jiang. Wizardcoder:
+Empowering code large language models with evol-
+instruct. arXiv preprint arXiv:2306.08568, 2023.
+[102] Loubna Ben Allal, Raymond Li, Denis Kocetkov,
+Chenghao Mou, Christopher Akiki, Carlos Munoz
+Ferrandis, Niklas Muennighoff, Mayank Mishra,
+Alex Gu, Manan Dey, et al. Santacoder: don’t reach
+for the stars! arXiv preprint arXiv:2301.03988,
+2023.
+[103] RaymondLi,LoubnaBenAllal,YangtianZi,Niklas
+Muennighoff, Denis Kocetkov, Chenghao Mou,
+Marc Marone, Christopher Akiki, Jia Li, Jenny
+Chim, et al. Starcoder: may the source be with you!
+arXiv preprint arXiv:2305.06161, 2023.
+[104] Yuanzhi Li, Sébastien Bubeck, Ronen Eldan, Allie
+Del Giorno, Suriya Gunasekar, and Yin Tat Lee.
+
+20 Front. Comput. Sci., 2025, 0(0): 1–35
+Textbooks are all you need ii: phi-1.5 technical
+report. arXiv preprint arXiv:2309.05463, 2023.
+[105] Daya Guo, Qihao Zhu, Dejian Yang, Zhenda Xie,
+Kai Dong, Wentao Zhang, Guanting Chen, Xiao Bi,
+YWu,YKLi,etal. Deepseek-coder: Whenthelarge
+language model meets programming–the rise of
+code intelligence.arXiv preprint arXiv:2401.14196,
+2024.
+[106] Baptiste Roziere, Jonas Gehring, Fabian Gloeckle,
+StenSootla,ItaiGat,XiaoqingEllenTan,YossiAdi,
+Jingyu Liu, Tal Remez, Jérémy Rapin, et al. Code
+llama: Open foundation models for code.arXiv
+preprint arXiv:2308.12950, 2023.
+[107] Qinkai Zheng, Xiao Xia, Xu Zou, Yuxiao Dong,
+Shan Wang, Yufei Xue, Zihan Wang, Lei Shen,
+Andi Wang, Yang Li, et al. Codegeex: A pre-
+trained model for code generation with multilin-
+gual evaluations on humaneval-x.arXiv preprint
+arXiv:2303.17568, 2023.
+[108] Xiangpeng Wei, Hao-Ran Wei, Huan Lin, Tianhao
+Li, Pei Zhang, Xingzhang Ren, Mei Li, Yu Wan,
+ZhiweiCao,BinbinXie,TianxiangHu,ShangjieLi,
+Binyuan Hui, Yu Bowen, Dayiheng Liu, Baosong
+Yang, Fei Huang, and Jun Xie. Polylm: An
+open source polyglot large language model.ArXiv,
+abs/2307.06018, 2023.
+[109] Wenhao Zhu, Yunzhe Lv, Qingxiu Dong, Fei Yuan,
+JingjingXu, ShujianHuang, LingpengKong, Jiajun
+Chen, and Lei Li. Extrapolating large language
+modelstonon-englishbyaligninglanguages. ArXiv,
+abs/2308.04948, 2023.
+[110] Chunyou Li, Mingtong Liu, Hongxiao Zhang,
+Yufeng Chen, Jinan Xu, and Ming Zhou. Mt2: To-
+wards a multi-task machine translation model with
+translation-specific in-context learning. InProceed-
+ings of the 2023 Conference on Empirical Methods
+in Natural Language Processing, pages 8616–8627,
+2023.
+[111] Juntao Li, Zecheng Tang, Yuyang Ding, Pinzheng
+Wang, Peiming Guo, Wangjie You, Dan Qiao, Wen-
+liang Chen, Guohong Fu, Qiaoming Zhu, Guodong
+Zhou, and M. Zhang. Openba: An open-sourced
+15bbilingualasymmetricseq2seqmodelpre-trained
+from scratch.ArXiv, abs/2309.10706, 2023.
+[112] Duarte M. Alves, Nuno M. Guerreiro, Joao Alves,
+José P. Pombal, Ricardo Rei, Jos’e G. C. de Souza,
+Pierre Colombo, and André Martins. Steering large
+language models for machine translation with fine-
+tuning and in-context learning. InConference on
+EmpiricalMethodsinNaturalLanguageProcessing ,
+2023.
+[113] Vikas Raunak, Hany Hassan Awadalla, and Arul
+Menezes. Dissecting in-context learning of transla-
+tions in gpts.ArXiv, abs/2310.15987, 2023.
+[114] Hongyuan Lu, Haoyang Huang, Dongdong Zhang,
+Haoran Yang, Wai Lam, and Furu Wei. Chain-
+of-dictionary prompting elicits translation in large
+language models.ArXiv, abs/2305.06575, 2023.
+[115] Zhuosheng Zhang, Aston Zhang, Mu Li, and Alex
+Smola. Automatic chain of thought prompting in
+large language models. InThe Eleventh Interna-
+tional Conference on Learning Representations,
+2022.
+[116] XuezhiWang,JasonWei,DaleSchuurmans,QuocV
+Le, Ed H. Chi, Sharan Narang, Aakanksha Chowd-
+hery, and Denny Zhou. Self-consistency improves
+chain of thought reasoning in language models. In
+The Eleventh International Conference on Learning
+Representations, 2023.
+[117] Pan Lu, Liang Qiu, Kai-Wei Chang, Ying Nian Wu,
+Song-Chun Zhu, Tanmay Rajpurohit, Peter Clark,
+and Ashwin Kalyan. Dynamic prompt learning via
+policy gradient for semi-structured mathematical
+reasoning.In TheEleventhInternationalConference
+on Learning Representations, 2023.
+[118] Luyu Gao, Aman Madaan, Shuyan Zhou, Uri Alon,
+Pengfei Liu, Yiming Yang, Jamie Callan, and Gra-
+ham Neubig. Pal: Program-aided language models.
+In International Conference on Machine Learning,
+pages 10764–10799. PMLR, 2023.
+[119] Debrup Das, Debopriyo Banerjee, Somak Aditya,
+andAshishKulkarni.Mathsensei: atool-augmented
+large language model for mathematical reasoning.
+arXiv preprint arXiv:2402.17231, 2024.
+[120] ZengzhiWang,RuiXia,andJianfeiYu. Unifiedabsa:
+A unified absa framework based on multi-task in-
+struction tuning.arXiv preprint arXiv:2211.10986,
+2022.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 21
+[121] Siddharth Varia, Shuai Wang, Kishaloy Halder,
+Robert Vacareanu, Miguel Ballesteros, Yassine Be-
+najiba,NehaAnnaJohn,RishitaAnubhai,Smaranda
+Muresan, and Dan Roth. Instruction tuning for few-
+shotaspect-basedsentimentanalysis. arXivpreprint
+arXiv:2210.06629, 2022.
+[122] BinYangandJinlongLi. Visualelementsminingas
+prompts for instruction learning for target-oriented
+multimodal sentiment classification. InFindings
+of the Association for Computational Linguistics:
+EMNLP 2023, pages 6062–6075, 2023.
+[123] JunZhao,KangLiu,andLihengXu. Sentimentanal-
+ysis: mining opinions, sentiments, and emotions,
+2016.
+[124] Huachuan Qiu, Hongliang He, Shuai Zhang, Anqi
+Li, and Zhenzhong Lan. Smile: Single-turn to
+multi-turn inclusive language expansion via chat-
+gpt for mental health support. arXiv preprint
+arXiv:2305.00450, 2023.
+[125] Di Lu, Shihao Ran, Joel Tetreault, and Alejandro
+Jaimes. Event extraction as question generation and
+answering. arXiv preprint arXiv:2307.05567, 2023.
+[126] Chengguang Gan, Qinghao Zhang, and Tatsunori
+Mori. Giellm: Japanese general information ex-
+traction large language model utilizing mutual rein-
+forcement effect.arXiv preprint arXiv:2311.06838,
+2023.
+[127] Oscar Sainz, Iker García-Ferrero, Rodrigo Agerri,
+Oier Lopez de Lacalle, German Rigau, and Eneko
+Agirre. Gollie: Annotation guidelines improve
+zero-shot information-extraction. arXiv preprint
+arXiv:2310.03668, 2023.
+[128] Xiao Wang, Weikang Zhou, Can Zu, Han Xia,
+TianzeChen,YuansenZhang,RuiZheng,JunjieYe,
+Qi Zhang, Tao Gui, et al. Instructuie: Multi-task
+instruction tuning for unified information extraction.
+arXiv preprint arXiv:2304.08085, 2023.
+[129] Sarkar Snigdha Sarathi Das, Haoran Zhang, Peng
+Shi, Wenpeng Yin, and Rui Zhang. Unified low-
+resource sequence labeling by sample-aware dy-
+namic sparse finetuning. In Houda Bouamor, Juan
+Pino, and Kalika Bali, editors,Proceedings of the
+2023 Conference on Empirical Methods in Natural
+LanguageProcessing,pages6998–7010,Singapore,
+December2023.AssociationforComputationalLin-
+guistics. doi: 10.18653/v1/2023.emnlp-main.433.
+[130] Zujie Liang, Feng Wei, Yin Jie, Yuxi Qian,
+Zhenghong Hao, and Bing Han. Prompts can play
+lottery tickets well: Achieving lifelong informa-
+tion extraction via lottery prompt tuning. In Anna
+Rogers, Jordan Boyd-Graber, and Naoaki Okazaki,
+editors, Proceedings of the 61st Annual Meeting
+of the Association for Computational Linguistics
+(Volume 1: Long Papers), pages 277–292, Toronto,
+Canada, July 2023. Association for Computational
+Linguistics. doi: 10.18653/v1/2023.acl-long.16.
+[131] John Dagdelen, Alexander Dunn, Sanghoon Lee,
+NicholasWalker,AndrewSRosen,GerbrandCeder,
+Kristin A Persson, and Anubhav Jain. Structured
+informationextractionfromscientifictextwithlarge
+language models.Nature Communications, 15(1):
+1418, 2024.
+[132] Lilong Xue, Dan Zhang, Yuxiao Dong, and Jie
+Tang. Autore: Document-level relation extrac-
+tion with large language models.arXiv preprint
+arXiv:2403.14888, 2024.
+[133] Dominic Rixewa, Katherine Anderson, Leonard
+Dubois, and Mateo Harrington. Interleaved multi-
+modal document representations for large-scale in-
+formation retrieval using large language models.
+2024.
+[134] Tianbao Xie, Chen Henry Wu, Peng Shi, Ruiqi
+Zhong, Torsten Scholak, Michihiro Yasunaga,
+Chien-Sheng Wu, Ming Zhong, Pengcheng Yin,
+Sida I Wang, et al. Unifiedskg: Unifying and
+multi-tasking structured knowledge grounding with
+text-to-text language models. InProceedings of the
+2022 Conference on Empirical Methods in Natural
+Language Processing, pages 602–631, 2022.
+[135] Jeffrey Zhao, Raghav Gupta, Yuan Cao, Dian Yu,
+Mingqiu Wang, Harrison Lee, Abhinav Rastogi,
+Izhak Shafran, and Yonghui Wu. Description-
+driventask-orienteddialogmodeling. arXivpreprint
+arXiv:2201.08904, 2022.
+[136] Raghav Gupta, Harrison Lee, Jeffrey Zhao, Yuan
+Cao, Abhinav Rastogi, and Yonghui Wu. Show,
+don’t tell: Demonstrations outperform descriptions
+for schema-guided task-oriented dialogue. InPro-
+ceedings of the 2022 Conference of the North Amer-
+ican Chapter of the Association for Computational
+
+22 Front. Comput. Sci., 2025, 0(0): 1–35
+Linguistics: Human Language Technologies, pages
+4541–4549, 2022.
+[137] Dian Yu, Mingqiu Wang, Yuan Cao, Laurent
+El Shafey, Izhak Shafran, and Hagen Soltau.
+Knowledge-grounded dialog state tracking. InFind-
+ings of the Association for Computational Linguis-
+tics: EMNLP 2022, pages 3428–3435, 2022.
+[138] Yujie Feng, Zexin Lu, Bo Liu, Liming Zhan, and
+Xiao-Ming Wu. Towards llm-driven dialogue state
+tracking. arXiv preprint arXiv:2310.14970, 2023.
+[139] Hong Liu, Yucheng Cai, Yuan Zhou, Zhĳian Ou,
+Yi Huang, and Junlan Feng. Prompt pool based
+class-incremental continual learning for dialog state
+tracking. In2023 IEEE Automatic Speech Recogni-
+tion and Understanding Workshop (ASRU), pages
+1–8. IEEE, 2023.
+[140] Peng Li, Yeye He, Dror Yashar, Weiwei Cui, Song
+Ge, Haidong Zhang, Danielle Rifinski Fainman,
+Dongmei Zhang, and Surajit Chaudhuri. Table-
+gpt: Table-tuned gpt for diverse table tasks.arXiv
+preprint arXiv:2310.09263, 2023.
+[141] Siqiao Xue, Caigao Jiang, Wenhui Shi, Fangyin
+Cheng,KetingChen,HongjunYang,ZhipingZhang,
+Jianshan He, Hongyang Zhang, Ganglin Wei, et al.
+Db-gpt: Empowering database interactions with
+private large language models. arXiv preprint
+arXiv:2312.17449, 2023.
+[142] Haochen Zhang, Yuyang Dong, Chuan Xiao, and
+Masafumi Oyamada. Jellyfish: A large language
+model for data preprocessing. arXiv preprint
+arXiv:2312.01678, 2023.
+[143] Fengbin Zhu, Ziyang Liu, Fuli Feng, Chao Wang,
+Moxin Li, and Tat-Seng Chua. Tat-llm: A spe-
+cialized language model for discrete reasoning
+over tabular and textual data. arXiv preprint
+arXiv:2401.13223, 2024.
+[144] Fan Bai, Junmo Kang, Gabriel Stanovsky, Dayne
+Freitag,andAlanRitter. Schema-driveninformation
+extractionfromheterogeneoustables. arXivpreprint
+arXiv:2305.14336, 2023.
+[145] Tianshu Zhang, Xiang Yue, Yifei Li, and Huan Sun.
+Tablellama: Towards open large generalist models
+for tables.arXiv preprint arXiv:2311.09206, 2023.
+[146] Xinyi He, Yihao Liu, Mengyu Zhou, Yeye He,
+Haoyu Dong, Shi Han, Zejian Yuan, and Dongmei
+Zhang. Tablelora: Low-rank adaptation on table
+structure understanding for large language models.
+arXiv preprint arXiv:2503.04396, 2025.
+[147] Peng Li, Yeye He, Dror Yashar, Weiwei Cui, Song
+Ge, Haidong Zhang, Danielle Rifinski Fainman,
+Dongmei Zhang, and Surajit Chaudhuri. Table-
+gpt: Table fine-tuned gpt for diverse table tasks.
+Proceedings of the ACM on Management of Data, 2
+(3):1–28, 2024.
+[148] Artidoro Pagnoni, Alexander R. Fabbri, Wojciech
+Kryscinski,andChien-ShengWu. Socraticpretrain-
+ing: Question-driven pretraining for controllable
+summarization. ArXiv, abs/2212.10449, 2022.
+[149] Lulu Zhao, Fujia Zheng, Weihao Zeng, Keqing
+He, Weiran Xu, Huixing Jiang, Wei Wu, and
+Yanan Wu. Domain-oriented prefix-tuning: To-
+wardsefficientandgeneralizablefine-tuningforzero-
+shot dialogue summarization. In Marine Carpuat,
+Marie-Catherine de Marneffe, and Ivan Vladimir
+Meza Ruiz, editors,Proceedings of the 2022 Con-
+ference of the North American Chapter of the As-
+sociation for Computational Linguistics: Human
+Language Technologies, pages 4848–4862, Seattle,
+United States, July 2022. Association for Computa-
+tional Linguistics. doi: 10.18653/v1/2022.naacl-m
+ain.357.
+[150] Ruifeng Yuan, Zili Wang, Ziqiang Cao, and Wenjie
+Li. Few-shot query-focused summarization with
+prefix-merging. ArXiv, abs/2211.16164, 2022.
+[151] XiachongFeng,XiaochengFeng,XiyuanDu,Ming-
+Sung Kan, and Bing Qin. Adapter-based selective
+knowledge distillation for federated multi-domain
+meeting summarization. ArXiv, abs/2308.03275,
+2023.
+[152] XiangLisaLiandPercyLiang. Prefix-tuning: Opti-
+mizingcontinuouspromptsforgeneration. Proceed-
+ings of the 59th Annual Meeting of the Association
+for Computational Linguistics and the 11th Interna-
+tional Joint Conference on Natural Language Pro-
+cessing (Volume 1: Long Papers), abs/2101.00190,
+2021.
+[153] Mathieu Ravaut, Hailin Chen, Ruochen Zhao,
+Chengwei Qin, Shafiq R. Joty, and Nancy F. Chen.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 23
+Promptsum: Parameter-efficient controllable ab-
+stractive summarization. ArXiv, abs/2308.03117,
+2023.
+[154] YueWang,WeishiWang,ShafiqJoty,andStevenCH
+Hoi. Codet5: Identifier-aware unified pre-trained
+encoder-decodermodelsforcodeunderstandingand
+generation. arXiv preprint arXiv:2109.00859, 2021.
+[155] Yue Wang, Hung Le, Akhilesh Deepak Gotmare,
+Nghi DQ Bui, Junnan Li, and Steven CH Hoi.
+Codet5+: Open code large language models for
+code understanding and generation.arXiv preprint
+arXiv:2305.07922, 2023.
+[156] Hung Le, Yue Wang, Akhilesh Deepak Gotmare,
+Silvio Savarese, and Steven Chu Hong Hoi. Coderl:
+Mastering code generation through pretrained mod-
+els and deep reinforcement learning.Advances in
+Neural Information Processing Systems, 35:21314–
+21328, 2022.
+[157] ParshinShojaee,AneeshJain,SindhuTipirneni,and
+ChandanKReddy.Execution-basedcodegeneration
+using deep reinforcement learning.arXiv preprint
+arXiv:2301.13816, 2023.
+[158] Shamil Ayupov and Nadezhda Chirkova. Parameter-
+efficient finetuning of transformers for source code.
+ArXiv, abs/2212.05901, 2022.
+[159] Terry Yue Zhuo, Armel Zebaze, Nitchakarn Suppat-
+tarachai, Leandro von Werra, Harm de Vries, Qian
+Liu, and Niklas Muennighoff. Astraios: Parameter-
+efficientinstructiontuningcodelargelanguagemod-
+els. arXiv preprint arXiv:2401.00788, 2024.
+[160] Martin Weyssow, Xin Zhou, Kisub Kim, David Lo,
+and Houari Sahraoui. Exploring parameter-efficient
+fine-tuningtechniquesforcodegenerationwithlarge
+language models.arXiv preprint arXiv:2308.10462,
+2023.
+[161] Haoran Xu, Young Jin Kim, Amr Sharaf, and
+Hany Hassan Awadalla. A paradigm shift in ma-
+chine translation: Boosting translation performance
+of large language models.ArXiv, abs/2309.11674,
+2023.
+[162] Haoran Xu, Amr Sharaf, Yunmo Chen, Weiting
+Tan, Lingfeng Shen, Benjamin Van Durme, Kenton
+Murray, and Young Jin Kim. Contrastive pref-
+erence optimization: Pushing the boundaries of
+llm performance in machine translation. ArXiv,
+abs/2401.08417, 2024.
+[163] Vivek Iyer, Pinzhen Chen, and Alexandra Birch.
+Towards effective disambiguation for machine trans-
+lation with large language models. InConference
+on Machine Translation, 2023.
+[164] Yasmin Moslem, Rejwanul Haque, and Andy Way.
+Fine-tuning large language models for adaptive ma-
+chine translation.ArXiv, abs/2312.12740, 2023.
+[165] A. Ustun and Asa Cooper Stickland. When does
+parameter-efficient transfer learning work for ma-
+chine translation? In Conference on Empirical
+Methods in Natural Language Processing, 2022.
+[166] Bohong Wu, Fei Yuan, Hai Zhao, Lei Li, and
+Jingjing Xu. Extrapolating multilingual understand-
+ing models as multilingual generators. InConfer-
+ence on Empirical Methods in Natural Language
+Processing, 2023.
+[167] Minghao Wu, Thuy-Trang Vu, Lizhen Qu, George
+Foster, and Gholamreza Haffari. Adapting large
+language models for document-level machine trans-
+lation. ArXiv, abs/2401.06468, 2024.
+[168] HaipengLuo,QingfengSun,CanXu,PuZhao,Jian-
+guang Lou, Chongyang Tao, Xiubo Geng, Qingwei
+Lin, Shifeng Chen, and Dongmei Zhang. Wiz-
+ardmath: Empowering mathematical reasoning for
+large language models via reinforced evol-instruct,
+2023.
+[169] XiangYue,XingweiQu,GeZhang,YaoFu,Wenhao
+Huang, Huan Sun, Yu Su, and Wenhu Chen. Mam-
+moth: Building math generalist models through
+hybrid instruction tuning, 2023.
+[170] Namgyu Ho, Laura Schmid, and Se-Young Yun.
+Large language models are reasoning teachers. In
+Anna Rogers, Jordan Boyd-Graber, and Naoaki
+Okazaki, editors,Proceedings of the 61st Annual
+Meeting of the Association for Computational Lin-
+guistics (Volume 1: Long Papers), pages 14852–
+14882, Toronto, Canada, July 2023. Association for
+Computational Linguistics. doi: 10.18653/v1/2023
+.acl-long.830.
+[171] Timo Schick, Jane Dwivedi-Yu, Roberto Dessi,
+Roberta Raileanu, Maria Lomeli, Eric Hambro,
+Luke Zettlemoyer, Nicola Cancedda, and Thomas
+
+24 Front. Comput. Sci., 2025, 0(0): 1–35
+Scialom. Toolformer: Language models can teach
+themselves to use tools. InThirty-seventh Confer-
+ence on Neural Information Processing Systems,
+2023.
+[172] ZhiqiangHu,LeiWang,YihuaiLan,WanyuXu,Ee-
+Peng Lim, Lidong Bing, Xing Xu, Soujanya Poria,
+and Roy Ka-Wei Lee. Llm-adapters: An adapter
+family for parameter-efficient fine-tuning of large
+language models, 2023.
+[173] WenhaoShi,ZhiqiangHu,YiBin,JunhuaLiu,Yang
+Yang, See-Kiong Ng, Lidong Bing, and Roy Ka-
+Wei Lee. Math-llava: Bootstrapping mathematical
+reasoning for multimodal large language models.
+arXiv preprint arXiv:2406.17294, 2024.
+[174] Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu,
+Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan
+Zhang, YK Li, Y Wu, et al. Deepseekmath: Push-
+ing the limits of mathematical reasoning in open
+language models.arXiv preprint arXiv:2402.03300,
+2024.
+[175] Liangchen Luo, Yinxiao Liu, Rosanne Liu, Samrat
+Phatale, Meiqi Guo, Harsh Lara, Yunxuan Li, Lei
+Shu, Yun Zhu, Lei Meng, et al. Improve mathemati-
+cal reasoning in language models by automated pro-
+cess supervision.arXiv preprint arXiv:2406.06592,
+2024.
+[176] Changyu Chen, Xiting Wang, Ting-En Lin, Ang Lv,
+Yuchuan Wu, Xin Gao, Ji-Rong Wen, Rui Yan, and
+Yongbin Li. Masked thought: Simply masking par-
+tial reasoning steps can improve mathematical rea-
+soning learning of language models.arXiv preprint
+arXiv:2403.02178, 2024.
+[177] TengxiaoLiu,QipengGuo,YuqingYang,Xiangkun
+Hu,YueZhang,XipengQiu,andZhengZhang.Plan,
+verifyandswitch: Integratedreasoningwithdiverse
+x-of-thoughts. InProceedings of the 2023 Confer-
+ence on Empirical Methods in Natural Language
+Processing, pages 2807–2822, 2023.
+[178] XiaodongYu,BenZhou,HaoCheng,andDanRoth.
+Reasonagain: Using extractable symbolic programs
+to evaluate mathematical reasoning.arXiv preprint
+arXiv:2410.19056, 2024.
+[179] Leonardo Ranaldi, Marco Valentino, Alexander
+Polonsky, and Andrè Freitas. Improving chain-of-
+thought reasoning via quasi-symbolic abstractions.
+arXiv preprint arXiv:2502.12616, 2025.
+[180] Gaurav Srivastava, Zhenyu Bi, Meng Lu, and
+Xuan Wang. Debate, train, evolve: Self evolu-
+tion of language model reasoning.arXiv preprint
+arXiv:2505.15734, 2025.
+[181] Huanqia Cai, Yĳun Yang, and Zhifeng Li. System-
+2 mathematical reasoning via enriched instruction
+tuning. arXiv preprint arXiv:2412.16964, 2024.
+[182] Derong Xu, Wei Chen, Wenjun Peng, Chao Zhang,
+Tong Xu, Xiangyu Zhao, Xian Wu, Yefeng Zheng,
+and Enhong Chen. Large language models for
+generative information extraction: A survey.arXiv
+preprint arXiv:2312.17617, 2023.
+[183] Robert M Siepmann, Giulia Baldini, Cynthia S
+Schmidt, Daniel Truhn, Gustav Anton Müller-
+Franzes, Amin Dada, Jens Kleesiek, Felix Nensa,
+and René Hosch. An automated information ex-
+traction model for unstructured discharge letters
+using large language models and gpt-4.Healthcare
+Analytics, 7:100378, 2025.
+[184] Bowen Gu, Vivian Shao, Ziqian Liao, Valentina
+Carducci, Santiago Romero Brufau, Jie Yang, and
+Rishi J Desai. Scalable information extraction from
+free text electronic health records using large lan-
+guage models.BMC Medical Research Methodol-
+ogy, 25(1):23, 2025.
+[185] Yi Xin, Siqi Luo, Haodi Zhou, Junlong Du, Xi-
+aohong Liu, Yue Fan, Qing Li, and Yuntao Du.
+Parameter-efficientfine-tuningforpre-trainedvision
+models: Asurvey.arXivpreprintarXiv:2402.02242 ,
+2024.
+[186] Yi Xin, Siqi Luo, Xuyang Liu, Haodi Zhou, Xinyu
+Cheng, ChristinaELee, JunlongDu, HaozheWang,
+MingCai Chen, Ting Liu, et al. V-petl bench: A
+unified visual parameter-efficient transfer learning
+benchmark. Advances in Neural Information Pro-
+cessing Systems, 37:80522–80535, 2024.
+[187] Libo Qin, Tianbao Xie, Wanxiang Che, and Ting
+Liu. A survey on spoken language understanding:
+Recentadvancesandnewfrontiers.InZhi-HuaZhou,
+editor, Proceedings of the Thirtieth International
+JointConferenceonArtificialIntelligence,ĲCAI-21 ,
+pages 4577–4584. International Joint Conferences
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 25
+on Artificial Intelligence Organization, 8 2021. doi:
+10.24963/ijcai.2021/622. Survey Track.
+[188] Ruhi Sarikaya, Paul A Crook, Alex Marin, Minwoo
+Jeong, Jean-Philippe Robichaud, Asli Celikyilmaz,
+Young-Bum Kim, Alexandre Rochette, Omar Zia
+Khan,XiaohuLiu,etal. Anoverviewofend-to-end
+language understanding and dialog management for
+personal digital assistants. In 2016 ieee spoken
+languagetechnologyworkshop(slt) ,pages391–397.
+IEEE, 2016.
+[189] Yejin Yoon, Jungyeon Lee, Kangsan Kim, Chanhee
+Park,andTaeukKim.Blendx: Complexmulti-intent
+detection with blended patterns. InProceedings of
+the 2024 Joint International Conference on Compu-
+tational Linguistics, Language Resources and Eval-
+uation (LREC-COLING 2024), pages 2428–2439,
+2024.
+[190] LiboQin, QiguangChen, Jingxuan Zhou, Jin Wang,
+Hao Fei, Wanxiang Che, and Min Li. Divide-solve-
+combine: An interpretable and accurate prompting
+framework for zero-shot multi-intent detection. In
+Proceedings of the AAAI Conference on Artificial
+Intelligence, volume 39, pages 25038–25046, 2025.
+[191] Libo Qin, Fuxuan Wei, Qiguang Chen, Jingxuan
+Zhou, Shĳue Huang, Jiasheng Si, Wenpeng Lu,
+and Wanxiang Che. Croprompt: Cross-task in-
+teractive prompting for zero-shot spoken language
+understanding. InICASSP2025-2025IEEEInterna-
+tional Conference on Acoustics, Speech and Signal
+Processing (ICASSP), pages 1–5. IEEE, 2025.
+[192] WenjieDong,SirongChen,andYanYang. ProTOD:
+Proactive task-oriented dialogue system based on
+large language model. In Owen Rambow, Leo
+Wanner, Marianna Apidianaki, Hend Al-Khalifa,
+BarbaraDiEugenio,andStevenSchockaert,editors,
+Proceedings of the 31st International Conference
+on Computational Linguistics, pages 9147–9164,
+Abu Dhabi, UAE, January 2025. Association for
+Computational Linguistics.
+[193] Emre Can Acikgoz, Jeremiah Greer, Akul Datta,
+Ze Yang, William Zeng, Oussama Elachqar, Em-
+manouil Koukoumidis, Dilek Hakkani-Tür, and
+Gokhan Tur. Can a single model master both multi-
+turn conversations and tool use? calm: A uni-
+fied conversational agentic language model.arXiv
+preprint arXiv:2502.08820, 2025.
+[194] Shangjian Yin, Peĳie Huang, and Yuhong Xu.
+MIDLM: Multi-intent detection with bidirectional
+large language models. In Owen Rambow, Leo
+Wanner, Marianna Apidianaki, Hend Al-Khalifa,
+BarbaraDiEugenio,andStevenSchockaert,editors,
+Proceedings of the 31st International Conference
+on Computational Linguistics, pages 2616–2625,
+Abu Dhabi, UAE, January 2025. Association for
+Computational Linguistics.
+[195] Nengzheng Jin, Joanna Siebert, Dongfang Li, and
+QingcaiChen.Asurveyontablequestionanswering:
+recentadvances.In ChinaConferenceonKnowledge
+Graph and Semantic Computing, pages 174–186.
+Springer, 2022.
+[196] Dingzirui Wang, Longxu Dou, and Wanxiang Che.
+A survey on table-and-text hybridqa: Concepts,
+methods, challenges and future directions.arXiv
+preprint arXiv:2212.13465, 2022.
+[197] Xuanliang Zhang, Dingzirui Wang, Longxu Dou,
+Qingfu Zhu, and Wanxiang Che. A survey of table
+reasoning with large language models.Frontiers of
+Computer Science, 19(9):199348, 2025.
+[198] Xuanliang Zhang, Dingzirui Wang, Keyan Xu,
+Qingfu Zhu, and Wanxiang Che. Rot: Enhancing
+table reasoning with iterative row-wise traversals.
+arXiv preprint arXiv:2505.15110, 2025.
+[199] Tian Shi, Yaser Keneshloo, Naren Ramakrishnan,
+and Chandan K. Reddy. Neural abstractive text
+summarization with sequence-to-sequence models.
+ACM Transactions on Data Science, 2:1 – 37, 2018.
+[200] Aditi Godbole, Jabin Geevarghese George, and
+Smita Shandilya. Leveraging long-context large
+language models for multi-document understanding
+and summarization in enterprise applications. In
+International Conference on Business Intelligence,
+Computational Mathematics, and Data Analytics,
+pages 208–224. Springer, 2025.
+[201] UwePetersandBenjaminChin-Yee. Generalization
+bias in large language model summarization of
+scientific research.Royal Society Open Science, 12
+(4):241776, 2025.
+[202] JungMin Yun, Juhwan Choi, Kyohoon Jin, Soojin
+Jang, Jinhee Jang, and YoungBin Kim. Summpilot:
+Bridgingefficiencyandcustomizationforinteractive
+
+26 Front. Comput. Sci., 2025, 0(0): 1–35
+summarization system. InProceedings of the AAAI
+Conference on Artificial Intelligence, volume 39,
+pages 29724–29726, 2025.
+[203] MuhammadRezaQorib,QishengHu,andHweeTou
+Ng. Just what you desire: Constrained timeline
+summarization with self-reflection for enhanced
+relevance. InProceedings of the AAAI Conference
+on Artificial Intelligence, volume 39, pages 25065–
+25073, 2025.
+[204] Dong-Hai Zhu, Yu-Jie Xiong, Jia-Chen Zhang,
+Xi-Jiong Xie, and Chun-Ming Xia. Understand-
+ing before reasoning: Enhancing chain-of-thought
+with iterative summarization pre-prompting.arXiv
+preprint arXiv:2501.04341, 2025.
+[205] Abhilash Nandy and Sambaran Bandyopadhyay.
+Language models of code are few-shot planners
+and reasoners for multi-document summarization
+with attribution. InProceedings of the AAAI Con-
+ference on Artificial Intelligence, volume 39, pages
+24930–24938, 2025.
+[206] Yu Li, Baolin Peng, Pengcheng He, Michel Galley,
+ZhouYu,andJianfengGao.Dionysus: Apre-trained
+model for low-resource dialogue summarization.
+ArXiv, abs/2212.10018, 2022.
+[207] Linyong Wang, Lianwei Wu, Shaoqi Song, Yaxiong
+Wang,CuiyunGao,andKangWang.Distillingstruc-
+tured rationale from large language models to small
+language models for abstractive summarization. In
+Proceedings of the AAAI Conference on Artificial
+Intelligence, volume 39, pages 25389–25397, 2025.
+[208] Yen-Ju Lu, Ting-Yao Hu, Hema Swetha Koppula,
+Hadi Pouransari, Jen-Hao Rick Chang, Yin Xia,
+XiangKong,QiZhu,XiaomingSimonWang,Oncel
+Tuzel, et al. Mutual reinforcement of llm dialogue
+synthesis and summarization capabilities for few-
+shot dialogue summarization. InFindings of the
+Association for Computational Linguistics: NAACL
+2025, pages 7237–7256, 2025.
+[209] Asad Aali, Dave Van Veen, Yamin Ishraq Arefeen,
+Jason Hom, Christian Bluethgen, Eduardo Pontes
+Reis, Sergios Gatidis, Namuun Clifford, Joseph
+Daws, Arash S Tehrani, et al. A dataset and
+benchmark for hospital course summarization with
+adapted large language models. Journal of the
+American Medical Informatics Association, 32(3):
+470–479, 2025.
+[210] Jiaxing Wu, Lin Ning, Luyang Liu, Harrison Lee,
+Neo Wu, Chao Wang, Sushant Prakash, Shawn
+O’Banion, Bradley Green, and Jun Xie. Rlpf: Re-
+inforcement learning from prediction feedback for
+user summarization with llms. InProceedings of
+the AAAI Conference on Artificial Intelligence, vol-
+ume 39, pages 25488–25496, 2025.
+[211] CodeGemma Team, Heri Zhao, Jeffrey Hui, Joshua
+Howland, Nam Nguyen, Siqi Zuo, Andrea Hu,
+Christopher A Choquette-Choo, Jingyue Shen, Joe
+Kelley,etal. Codegemma: Opencodemodelsbased
+on gemma.arXiv preprint arXiv:2406.11409, 2024.
+[212] Binyuan Hui, Jian Yang, Zeyu Cui, Jiaxi Yang, Day-
+iheng Liu, Lei Zhang, Tianyu Liu, Jiajun Zhang,
+BowenYu,KemingLu,etal. Qwen2.5-codertechni-
+cal report.arXiv preprint arXiv:2409.12186, 2024.
+[213] ByteDance Seed. Seed-coder: Let the code model
+curate data for itself.https://github.com/ByteDance-
+Seed/Seed-Coder/blob/master/Seed-Coder.pdf,
+2025.
+[214] Ling Team, Wenting Cai, Yuchen Cao, Chaoyu
+Chen, Chen Chen, Siba Chen, Qing Cui, Peng Di,
+JunpengFang,ZiGong,etal. Everysamplematters:
+Leveragingmixture-of-expertsandhigh-qualitydata
+for efficient and accurate code llm.arXiv preprint
+arXiv:2503.17793, 2025.
+[215] Shuai Lu, Daya Guo, Shuo Ren, Junjie Huang,
+Alexey Svyatkovskiy, Ambrosio Blanco, Colin
+Clement, Dawn Drain, Daxin Jiang, Duyu Tang,
+et al. Codexglue: A machine learning benchmark
+datasetforcodeunderstandingandgeneration. arXiv
+preprint arXiv:2102.04664, 2021.
+[216] Yufan Ye, Ting Zhang, Wenbin Jiang, and
+Hua Huang. Process-supervised reinforcement
+learning for code generation. arXiv preprint
+arXiv:2502.01715, 2025.
+[217] Kechi Zhang, Ge Li, Jia Li, Yihong Dong, and
+Zhi Jin. Focused-dpo: Enhancing code generation
+through focused preference optimization on error-
+prone points. arXiv preprint arXiv:2502.11475,
+2025.
+[218] HuayeZeng,DongfuJiang,HaozheWang,PingNie,
+XiaotongChen,andWenhuChen. Acecoder: Acing
+coder rl via automated test-case synthesis.arXiv
+preprint arXiv:2502.01718, 2025.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 27
+[219] Yuxiang Wei, Olivier Duchenne, Jade Copet,
+Quentin Carbonneaux, Lingming Zhang, Daniel
+Fried, Gabriel Synnaeve, Rishabh Singh, and Sida I
+Wang. Swe-rl: Advancing llm reasoning via re-
+inforcement learning on open software evolution.
+arXiv preprint arXiv:2502.18449, 2025.
+[220] André Storhaug and Jingyue Li. Parameter-efficient
+fine-tuning of large language models for unit test
+generation: An empirical study. arXiv preprint
+arXiv:2411.02462, 2024.
+[221] Beiqi Zhang, Peng Liang, Xin Zhou, Xiyu Zhou,
+David Lo, Qiong Feng, Zengyang Li, and Lin Li.
+A comprehensive evaluation of parameter-efficient
+fine-tuning on method-level code smell detection.
+arXiv preprint arXiv:2412.13801, 2024.
+[222] Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua
+Bengio. Neuralmachinetranslationbyjointlylearn-
+ing to align and translate.CoRR, abs/1409.0473,
+2014.
+[223] Jianhui Pang, Fanghua Ye, Derek Fai Wong, Dian
+Yu,ShumingShi,ZhaopengTu,andLongyueWang.
+Salute the classic: Revisiting challenges of machine
+translation in the age of large language models.
+Transactions of the Association for Computational
+Linguistics, 13:73–95, 2025.
+[224] Yi-Chong Huang, Xiaocheng Feng, Baohang Li,
+Chengpeng Fu, Wenshuai Huo, Ting Liu, and Bing
+Qin. Aligning translation-specific understanding
+to general understanding in large language models.
+ArXiv, abs/2401.05072, 2024.
+[225] Shaolin Zhu, Menglong Cui, and Deyi Xiong. To-
+wards robust in-context learning for machine trans-
+lation with large language models. InProceedings
+of the 2024 Joint International Conference on Com-
+putational Linguistics, Language Resources and
+Evaluation (LREC-COLING 2024), pages 16619–
+16629, 2024.
+[226] Zhaopeng Feng, Shaosheng Cao, Jiahan Ren, Ji-
+ayuan Su, Ruizhe Chen, Yan Zhang, Zhe Xu,
+Yao Hu, Jian Wu, and Zuozhu Liu. Mt-r1-zero:
+Advancing llm-based machine translation via r1-
+zero-like reinforcement learning. arXiv preprint
+arXiv:2504.10160, 2025.
+[227] Zhaopeng Feng, Ruizhe Chen, Yan Zhang, Zĳie
+Meng, and Zuozhu Liu. Ladder: A model-agnostic
+framework boosting llm-based machine translation
+to the next level.arXiv preprint arXiv:2406.15741,
+2024.
+[228] Pan Lu, Liang Qiu, Wenhao Yu, Sean Welleck,
+and Kai-Wei Chang. A survey of deep learning
+for mathematical reasoning. In Proceedings of
+the 61st Annual Meeting of the Association for
+ComputationalLinguistics(Volume1: LongPapers) ,
+pages 14605–14631, 2023.
+[229] Yibo Yan, Shen Wang, Jiahao Huo, Philip S Yu,
+Xuming Hu, and Qingsong Wen. Mathagent: Lever-
+aging a mixture-of-math-agent framework for real-
+world multimodal mathematical error detection.
+arXiv preprint arXiv:2503.18132, 2025.
+[230] OpenAI. Gpt-4 technical report, 2023.
+[231] Yuzhou Tang, Yibing Zhan, Changtong Zan, Long
+Lan, and Yonggang Che. Elevating large language
+model reasoning ability with auto-enhanced zero-
+shot prompts.Mathematical Foundations of Com-
+puting, pages 0–0, 2025.
+[232] Mert Yuksekgonul, Federico Bianchi, Joseph Boen,
+Sheng Liu, Pan Lu, Zhi Huang, Carlos Guestrin,
+and James Zou. Optimizing generative ai by back-
+propagating language model feedback.Nature, 639
+(8055):609–616, 2025.
+[233] Dengyun Peng, Yuhang Zhou, Qiguang Chen, Jin-
+hao Liu, Jingjing Chen, and Libo Qin. Dlpo: To-
+wards a robust, efficient, and generalizable prompt
+optimization framework from a deep-learning per-
+spective. arXiv preprint arXiv:2503.13413, 2025.
+[234] Beichen Zhang, Yuhong Liu, Xiaoyi Dong, Yuhang
+Zang, Pan Zhang, Haodong Duan, Yuhang Cao,
+Dahua Lin, and Jiaqi Wang. Booststep: Boosting
+mathematical capability of large language models
+via improved single-step reasoning.arXiv preprint
+arXiv:2501.03226, 2025.
+[235] BoPang,HanzeDong,JiachengXu,SilvioSavarese,
+Yingbo Zhou, and Caiming Xiong. Bolt: Bootstrap
+long chain-of-thought in language models without
+distillation. arXiv preprint arXiv:2502.03860, 2025.
+[236] Yiyao Yu, Yuxiang Zhang, Dongdong Zhang, Xiao
+Liang, Hengyuan Zhang, Xingxing Zhang, Ziyi
+Yang, Mahmoud Khademi, Hany Awadalla, Junjie
+Wang, et al. Chain-of-reasoning: Towards unified
+
+28 Front. Comput. Sci., 2025, 0(0): 1–35
+mathematical reasoning in large language models
+via a multi-paradigm perspective.arXiv preprint
+arXiv:2501.11110, 2025.
+[237] Cheng Qian, Emre Can Acikgoz, Qi He, Hongru
+Wang, Xiusi Chen, Dilek Hakkani-Tür, Gokhan Tur,
+and Heng Ji. Toolrl: Reward is all tool learning
+needs. arXiv preprint arXiv:2504.13958, 2025.
+[238] Joykirat Singh, Tanmoy Chakraborty, and Akshay
+Nambi. Self-evolved preference optimization for
+enhancingmathematicalreasoninginsmalllanguage
+models. arXiv preprint arXiv:2503.04813, 2025.
+[239] Nusrat Jahan Prottasha, Asif Mahmud, Md Shoha-
+nur Islam Sobuj, Prakash Bhat, Md Kowsher, Niloo-
+far Yousefi, and Ozlem Ozmen Garibay. Parameter-
+efficient fine-tuning of large language models using
+semantic knowledge tuning.Scientific Reports, 14
+(1):30667, 2024.
+[240] Lisa Alazraki and Marek Rei. Meta-reasoning im-
+proves tool use in large language models. In Luis
+Chiruzzo, Alan Ritter, and Lu Wang, editors,Find-
+ings of the Association for Computational Linguis-
+tics: NAACL 2025, pages 7885–7897, Albuquerque,
+New Mexico, April 2025. Association for Computa-
+tional Linguistics. ISBN 979-8-89176-195-7.
+[241] Libo Qin, Qiguang Chen, Yuhang Zhou, Zhi Chen,
+Yinghui Li, Lizi Liao, Min Li, Wanxiang Che, and
+Philip S Yu. Multilingual large language model: A
+survey of resources, taxonomy and frontiers.arXiv
+preprint arXiv:2404.04925, 2024.
+[242] Genta Winata, Alham Fikri Aji, Zheng Xin Yong,
+andThamarSolorio. Thedecadesprogressoncode-
+switching research in NLP: A systematic survey
+on trends and challenges. In Anna Rogers, Jordan
+Boyd-Graber,andNaoakiOkazaki,editors, Findings
+of the Association for Computational Linguistics:
+ACL 2023, pages 2936–2978, Toronto, Canada, July
+2023. Association for Computational Linguistics.
+doi: 10.18653/v1/2023.findings-acl.185.
+[243] Zihao Li, Yucheng Shi, Zirui Liu, Fan Yang, Ali
+Payani, Ninghao Liu, and Mengnan Du. Language
+ranker: A metric for quantifying llm performance
+across high and low-resource languages. InPro-
+ceedings of the AAAI Conference on Artificial Intel-
+ligence, volume 39, pages 28186–28194, 2025.
+[244] Peng Wang, Ruihan Tao, Qiguang Chen, Mengkang
+Hu, and Libo Qin. X-webagentbench: A multilin-
+gualinteractivewebbenchmarkforevaluatingglobal
+agentic system.arXiv preprint arXiv:2505.15372,
+2025.
+[245] Yongheng Zhang, Xu Liu, Ruoxi Zhou, Qiguang
+Chen, Hao Fei, Wenpeng Lu, and Libo Qin. Cchall:
+Anovelbenchmarkforjointcross-lingualandcross-
+modal hallucinations detection in large language
+models. arXiv preprint arXiv:2505.19108, 2025.
+[246] Linting Xue, Noah Constant, Adam Roberts, Mihir
+Kale,RamiAl-Rfou,AdityaSiddhant,AdityaBarua,
+andColinRaffel. mt5: Amassivelymultilingualpre-
+trained text-to-text transformer. InProceedings of
+the2021ConferenceoftheNorthAmericanChapter
+of the Association for Computational Linguistics:
+Human Language Technologies, pages 483–498,
+2021.
+[247] BigScience Workshop, Teven Le Scao, Angela
+Fan, Christopher Akiki, Ellie Pavlick, Suzana Ilić,
+Daniel Hesslow, Roman Castagné, Alexandra Sasha
+Luccioni, François Yvon, et al. Bloom: A 176b-
+parameteropen-accessmultilinguallanguagemodel.
+arXiv preprint arXiv:2211.05100, 2022.
+[248] Pinzhen Chen, Shaoxiong Ji, Nikolay Bogoychev,
+BarryHaddow,andKennethHeafield. Monolingual
+or multilingual instruction tuning: Which makes
+a better alpaca.arXiv preprint arXiv:2309.08958,
+2023.
+[249] Samuel Cahyawĳaya, Holy Lovenia, Tiezheng Yu,
+Willy Chung, and Pascale Fung. Instruct-align:
+Teaching novel languages with to llms through
+alignment-based cross-lingual instruction. arXiv
+preprint arXiv:2305.13627, 2023.
+[250] JiahuanLi,HaoZhou,ShujianHuang,ShanboChen,
+and Jiajun Chen. Eliciting the translation ability
+of large language models via multilingual finetun-
+ing with translation instructions. arXiv preprint
+arXiv:2305.15083, 2023.
+[251] Ashutosh Bajpai and Tanmoy Chakraborty. Mul-
+tilingual llms inherently reward in-language time-
+sensitive semantic alignment for low-resource lan-
+guages. In Proceedings of the AAAI Conference
+on Artificial Intelligence, volume 39, pages 23469–
+23477, 2025.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 29
+[252] Genta Indra Winata, Andrea Madotto, Zhaojiang
+Lin,RosanneLiu,JasonYosinski,andPascaleFung.
+Languagemodelsarefew-shotmultilinguallearners.
+InProceedings of the 1st Workshop on Multilingual
+Representation Learning, pages 1–15, 2021.
+[253] Freda Shi, Mirac Suzgun, Markus Freitag, Xuezhi
+Wang,SurajSrivats,SoroushVosoughi,HyungWon
+Chung, Yi Tay, Sebastian Ruder, Denny Zhou, et al.
+Language models are multilingual chain-of-thought
+reasoners. InTheEleventhInternationalConference
+on Learning Representations, 2022.
+[254] Xi Victoria Lin, Todor Mihaylov, Mikel Artetxe,
+Tianlu Wang, Shuohui Chen, Daniel Simig, Myle
+Ott, Naman Goyal, Shruti Bhosale, Jingfei Du,
+Ramakanth Pasunuru, Sam Shleifer, Punit Singh
+Koura, Vishrav Chaudhary, Brian O’Horo, Jeff
+Wang, Luke Zettlemoyer, Zornitsa Kozareva, Mona
+Diab, Veselin Stoyanov, and Xian Li. Few-shot
+learningwithmultilingualgenerativelanguagemod-
+els. In Yoav Goldberg, Zornitsa Kozareva, and Yue
+Zhang, editors, Proceedings of the 2022 Confer-
+ence on Empirical Methods in Natural Language
+Processing, pages 9019–9052, Abu Dhabi, United
+Arab Emirates, December 2022. Association for
+Computational Linguistics. doi: 10.18653/v1/2022
+.emnlp-main.616.
+[255] Eshaan Tanwar, Subhabrata Dutta, Manish
+Borthakur, and Tanmoy Chakraborty. Multilingual
+LLMs are better cross-lingual in-context learners
+with alignment. In Anna Rogers, Jordan Boyd-
+Graber, and Naoaki Okazaki, editors,Proceedings
+of the 61st Annual Meeting of the Association for
+Computational Linguistics (Volume 1: Long Pa-
+pers), pages 6292–6307, Toronto, Canada, July
+2023. Association for Computational Linguistics.
+doi: 10.18653/v1/2023.acl-long.346.
+[256] Libo Qin, Qiguang Chen, Fuxuan Wei, Shĳue
+Huang, and Wanxiang Che. Cross-lingual prompt-
+ing: Improving zero-shot chain-of-thought reason-
+ing across languages. InProceedings of the 2023
+Conference on Empirical Methods in Natural Lan-
+guage Processing, pages 2695–2709, 2023.
+[257] Haoyang Huang, Tianyi Tang, Dongdong Zhang,
+Xin Zhao, Ting Song, Yan Xia, and Furu Wei.
+Not all languages are created equal in LLMs: Im-
+proving multilingual capability by cross-lingual-
+thought prompting. In Houda Bouamor, Juan Pino,
+and Kalika Bali, editors,Findings of the Associa-
+tion for Computational Linguistics: EMNLP 2023,
+pages 12365–12394, Singapore, December 2023.
+Association for Computational Linguistics. doi:
+10.18653/v1/2023.findings-emnlp.826.
+[258] Zhenhua Huang, Xin Xu, Juan Ni, Honghao Zhu,
+and Cheng Wang. Multimodal representation learn-
+ing for recommendation in internet of things.IEEE
+Internet of Things Journal, 6(6):10675–10685,
+2019.
+[259] Yaoting Wang, Shengqiong Wu, Yuecheng Zhang,
+William Wang, Ziwei Liu, Jiebo Luo, and Hao Fei.
+Multimodal chain-of-thought reasoning: A compre-
+hensive survey.arXiv preprint arXiv:2503.12605,
+2025.
+[260] XianghuaLi,JiaoQiao,ShuYin,LianweiWu,Chao
+Gao, Zhen Wang, and Xuelong Li. A survey of mul-
+timodalfakenewsdetection: Across-modalinterac-
+tion perspective.IEEE Transactions on Emerging
+Topics in Computational Intelligence, 2025.
+[261] Yi Peng, Xiaokun Wang, Yichen Wei, Jiangbo Pei,
+Weĳie Qiu, Ai Jian, Yunzhuo Hao, Jiachun Pan,
+TianyidanXie,LiGe,etal.Skyworkr1v: Pioneering
+multimodal reasoning with chain-of-thought.arXiv
+preprint arXiv:2504.05599, 2025.
+[262] Pan Lu, Swaroop Mishra, Tanglin Xia, Liang Qiu,
+Kai-Wei Chang, Song-Chun Zhu, Oyvind Tafjord,
+Peter Clark, and Ashwin Kalyan. Learn to explain:
+Multimodalreasoningviathoughtchainsforscience
+questionanswering. AdvancesinNeuralInformation
+Processing Systems, 35:2507–2521, 2022.
+[263] Libo Qin, Shĳue Huang, Qiguang Chen, Chenran
+Cai, Yudi Zhang, Bin Liang, Wanxiang Che, and
+Ruifeng Xu. Mmsd2. 0: Towards a reliable multi-
+modal sarcasm detection system.arXiv preprint
+arXiv:2307.07135, 2023.
+[264] Libo Qin, WeiyunWang, Qiguang Chen, and Wanx-
+iang Che. Cliptext: A new paradigm for zero-shot
+text classification. InFindings of the Association
+for Computational Linguistics: ACL 2023, pages
+1077–1088, 2023.
+[265] Zhengyuan Yang, Linjie Li, Kevin Lin, Jianfeng
+Wang, Chung-Ching Lin, Zicheng Liu, and Li-
+juan Wang. The dawn of lmms: Preliminary
+
+30 Front. Comput. Sci., 2025, 0(0): 1–35
+explorations with gpt-4v (ision). arXiv preprint
+arXiv:2309.17421, 9(1):1, 2023.
+[266] Hao Fei, Shengqiong Wu, Wei Ji, Hanwang Zhang,
+Meishan Zhang, Mong Li Lee, and Wynne Hsu.
+Video-of-thought: step-by-step video reasoning
+from perception to cognition. InProceedings of the
+41stInternationalConferenceonMachineLearning ,
+pages 13109–13125, 2024.
+[267] Libo Qin, Qiguang Chen, Hao Fei, Zhi Chen, Min
+Li, and Wanxiang Che. What factors affect multi-
+modal in-context learning? an in-depth exploration.
+arXiv preprint arXiv:2410.20482, 2024.
+[268] Yongheng Zhang, Xu Liu, Ruihan Tao, Qiguang
+Chen,HaoFei,WanxiangChe,andLiboQin. Vitcot:
+Video-textinterleavedchain-of-thoughtforboosting
+videounderstandinginlargelanguagemodels. arXiv
+preprint arXiv:2507.09876, 2025.
+[269] Weihan Wang, Qingsong Lv, Wenmeng Yu, Wenyi
+Hong,JiQi,YanWang,JunhuiJi,ZhuoyiYang,Lei
+Zhao,XixuanSong,JiazhengXu,BinXu,JuanziLi,
+Yuxiao Dong, Ming Ding, and Jie Tang. Cogvlm:
+Visualexpertforpretrainedlanguagemodels. ArXiv,
+2023.
+[270] HaotianLiu,ChunyuanLi,YuhengLi,andYongJae
+Lee. Improved baselines with visual instruction
+tuning. arXiv preprint arXiv:2310.03744, 2023.
+[271] QiguangChen,LiboQin,JinZhang,ZhiChen,Xiao
+Xu,andWanxiangChe. M3cot: Anovelbenchmark
+for multi-domain multi-step multi-modal chain-of-
+thought. InProceedingsofthe62ndAnnualMeeting
+of the Association for Computational Linguistics
+(Volume 1: Long Papers), pages 8199–8221, 2024.
+[272] Zhengyuan Yang, Linjie Li, Jianfeng Wang, Kevin
+Lin, Ehsan Azarnasab, Faisal Ahmed, Zicheng Liu,
+CeLiu,MichaelZeng,andLĳuanWang. Mm-react:
+Prompting chatgpt for multimodal reasoning and
+action. arXiv preprint arXiv:2303.11381, 2023.
+[273] Pan Lu, Hritik Bansal, Tony Xia, Jiacheng Liu,
+Chunyuan Li, Hannaneh Hajishirzi, Hao Cheng,
+Kai-Wei Chang, Michel Galley, and Jianfeng Gao.
+Mathvista: Evaluating mathematical reasoning of
+foundationmodelsinvisualcontexts. arXivpreprint
+arXiv:2310.02255, 2023.
+[274] Zhuosheng Zhang, Aston Zhang, Mu Li, Hai Zhao,
+GeorgeKarypis,andAlexSmola. Multimodalchain-
+of-thought reasoning in language models.arXiv
+preprint arXiv:2302.00923, 2023.
+[275] Zihui Cheng, Qiguang Chen, Jin Zhang, Hao Fei,
+Xiaocheng Feng, Wanxiang Che, Min Li, and Libo
+Qin. Comt: A novel benchmark for chain of multi-
+modal thought on large vision-language models. In
+Proceedings of the AAAI Conference on Artificial
+Intelligence, volume 39, pages 23678–23686, 2025.
+[276] Zihui Cheng, Qiguang Chen, Xiao Xu, Jiaqi Wang,
+Weiyun Wang, Hao Fei, Yidong Wang, Alex Jin-
+peng Wang, Zhi Chen, Wanxiang Che, et al. Vi-
+sual thoughts: A unified perspective of understand-
+ing multimodal chain-of-thought.arXiv preprint
+arXiv:2505.15510, 2025.
+[277] YifanWu,PengchuanZhang,WenhanXiong,Barlas
+Oguz,JamesCGee,andYixinNie.Theroleofchain-
+of-thought in complex vision-language reasoning
+task. arXiv preprint arXiv:2311.09193, 2023.
+[278] Chancharik Mitra, Brandon Huang, Trevor Darrell,
+and Roei Herzig. Compositional chain-of-thought
+prompting for large multimodal models. arXiv
+preprint arXiv:2311.17076, 2023.
+[279] Peng Wang, Yongheng Zhang, Hao Fei, Qiguang
+Chen, Yukai Wang, Jiasheng Si, Wenpeng Lu, Min
+Li, and Libo Qin. S3 agent: Unlocking the power
+of vllm for zero-shot multi-modal sarcasm detec-
+tion. ACM Transactions on Multimedia Computing,
+Communications and Applications, 2024.
+[280] Yujia Qin, Shihao Liang, Yining Ye, Kunlun Zhu,
+Lan Yan, Yaxi Lu, Yankai Lin, Xin Cong, Xiangru
+Tang, Bill Qian, et al. Toolllm: Facilitating large
+language models to master 16000+ real-world apis.
+arXiv preprint arXiv:2307.16789, 2023.
+[281] MengkangHu,YaoMu,XinmiaoYu,MingyuDing,
+Shiguang Wu, Wenqi Shao, Qiguang Chen, Bin
+Wang, Yu Qiao, and Ping Luo. Tree-planner: Effi-
+cient close-loop task planning with large language
+models. arXiv preprint arXiv:2310.08582, 2023.
+[282] Noah Shinn, Federico Cassano, Ashwin Gopinath,
+Karthik R Narasimhan, and Shunyu Yao. Reflexion:
+Languageagentswithverbalreinforcementlearning.
+InThirty-seventhConferenceonNeuralInformation
+Processing Systems, 2023.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 31
+[283] Lei Wang, Chen Ma, Xueyang Feng, Zeyu Zhang,
+Hao Yang, Jingsen Zhang, Zhiyuan Chen, Jiakai
+Tang, Xu Chen, Yankai Lin, et al. A survey on large
+language model based autonomous agents.arXiv
+preprint arXiv:2308.11432, 2023.
+[284] Xizhou Zhu, Yuntao Chen, Hao Tian, Chenxin
+Tao, Weĳie Su, Chenyu Yang, Gao Huang, Bin
+Li, Lewei Lu, Xiaogang Wang, et al. Ghost in
+the minecraft: Generally capable agents for open-
+world enviroments via large language models with
+text-based knowledge and memory.arXiv preprint
+arXiv:2305.17144, 2023.
+[285] Mengkang Hu, Tianxing Chen, Qiguang Chen, Yao
+Mu, Wenqi Shao, and Ping Luo. Hiagent: Hier-
+archical working memory management for solving
+long-horizon agent tasks with large language model.
+arXiv preprint arXiv:2408.09559, 2024.
+[286] Guibin Zhang, Luyang Niu, Junfeng Fang, Kun
+Wang, Lei Bai, and Xiang Wang. Multi-agent archi-
+tecture search via agentic supernet.arXiv preprint
+arXiv:2502.04180, 2025.
+[287] YanweiYue,GuibinZhang,BoyangLiu,Guancheng
+Wan, Kun Wang, Dawei Cheng, and Yiyan Qi. Mas-
+router: Learning to route llms for multi-agent sys-
+tems. arXiv preprint arXiv:2502.11133, 2025.
+[288] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran,
+Thomas L Griffiths, Yuan Cao, and Karthik
+Narasimhan. Tree of thoughts: Deliberate prob-
+lem solving with large language models.arXiv
+preprint arXiv:2305.10601, 2023.
+[289] Wenhu Chen, Xueguang Ma, Xinyi Wang, and
+William W Cohen. Program of thoughts prompt-
+ing: Disentangling computation from reasoning
+for numerical reasoning tasks. arXiv preprint
+arXiv:2211.12588, 2022.
+[290] BinLei,ChunhuaLiao,CaiwenDing,etal.Boosting
+logical reasoning in large language models through
+a new framework: The graph of thought.arXiv
+preprint arXiv:2308.08614, 2023.
+[291] Yongheng Zhang, Qiguang Chen, Jingxuan Zhou,
+Peng Wang, Jiasheng Si, Jin Wang, Wenpeng Lu,
+and Libo Qin. Wrong-of-thought: An integrated
+reasoning framework with multi-perspective verifi-
+cation and wrong information. InFindings of the
+AssociationforComputationalLinguistics: EMNLP
+2024, pages 6644–6653, 2024.
+[292] Dor Muhlgay, Ori Ram, Inbal Magar, Yoav Levine,
+Nir Ratner, Yonatan Belinkov, Omri Abend, Kevin
+Leyton-Brown, Amnon Shashua, and Yoav Shoham.
+Generating benchmarks for factuality evaluation of
+language models.arXiv preprint arXiv:2307.06908,
+2023.
+[293] Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike
+Lewis, Wen-tau Yih, Pang Wei Koh, Mohit
+Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi.
+Factscore: Fine-grained atomic evaluation of fac-
+tual precision in long form text generation.arXiv
+preprint arXiv:2305.14251, 2023.
+[294] Vaibhav Adlakha, Parishad BehnamGhader,
+Xing Han Lu, Nicholas Meade, and Siva
+Reddy. Evaluating correctness and faithfulness of
+instruction-followingmodelsforquestionanswering.
+arXiv preprint arXiv:2307.16877, 2023.
+[295] Tianyu Liu, Yizhe Zhang, Chris Brockett, Yi Mao,
+Zhifang Sui, Weizhu Chen, and William B Dolan.
+A token-level reference-free hallucination detection
+benchmarkforfree-formtextgeneration.In Proceed-
+ings of the 60th Annual Meeting of the Association
+for Computational Linguistics (Volume 1: Long
+Papers), pages 6723–6737, 2022.
+[296] Kent K Chang, Mackenzie Cramer, Sandeep Soni,
+and David Bamman. Speak, memory: An archaeol-
+ogyofbooksknowntochatgpt/gpt-4. arXivpreprint
+arXiv:2305.00118, 2023.
+[297] ThomasHartvigsen,SaadiaGabriel,HamidPalangi,
+Maarten Sap, Dipankar Ray, and Ece Kamar. Tox-
+iGen: A large-scale machine-generated dataset
+for adversarial and implicit hate speech detec-
+tion. In Smaranda Muresan, Preslav Nakov, and
+Aline Villavicencio, editors, Proceedings of the
+60th Annual Meeting of the Association for Com-
+putational Linguistics (Volume 1: Long Papers),
+pages 3309–3326, Dublin, Ireland, May 2022.
+Association for Computational Linguistics. doi:
+10.18653/v1/2022.acl-long.234.
+[298] Yuxuan Wan, Wenxuan Wang, Pinjia He, Jiazhen
+Gu, Haonan Bai, and Michael R. Lyu. Biasasker:
+Measuringthebiasinconversationalaisystem. Pro-
+ceedings of the 31st ACM Joint European Software
+
+32 Front. Comput. Sci., 2025, 0(0): 1–35
+Engineering Conference and Symposium on the
+Foundations of Software Engineering, 2023.
+[299] J. Dhamala, Tony Sun, Varun Kumar, Satyapriya
+Krishna, Yada Pruksachatkun, Kai-Wei Chang, and
+Rahul Gupta. Bold: Dataset and metrics for mea-
+suring biases in open-ended language generation.
+Proceedings of the 2021 ACM Conference on Fair-
+ness, Accountability, and Transparency, 2021.
+[300] Jen-tse Huang, Man Ho Lam, Eric John Li, Shujie
+Ren, Wenxuan Wang, Wenxiang Jiao, Zhaopeng Tu,
+and Michael R Lyu. Emotionally numb or empa-
+thetic? evaluatinghowllmsfeelusingemotionbench.
+ArXiv, abs/2308.03656, 2023.
+[301] Deep Ganguli, Liane Lovitt, Jackson Kernion,
+Amanda Askell, Yuntao Bai, Saurav Kadavath,
+Ben Mann, Ethan Perez, Nicholas Schiefer, Ka-
+mal Ndousse, et al. Red teaming language models
+to reduce harms: Methods, scaling behaviors, and
+lessons learned.arXiv preprint arXiv:2209.07858,
+2022.
+[302] Hao Sun, Zhexin Zhang, Jiawen Deng, Jiale
+Cheng, and Minlie Huang. Safety assessment of
+chinese large language models. arXiv preprint
+arXiv:2304.10436, 2023.
+[303] WenboPan,ZhichaoLiu,QiguangChen,Xiangyang
+Zhou, Haining Yu, and Xiaohua Jia. The hidden
+dimensions of llm alignment: A multi-dimensional
+safety analysis.arXiv preprint arXiv:2502.09674,
+2025.
+[304] MiaoYu,FanciMeng,XinyunZhou,ShilongWang,
+Junyuan Mao, Linsey Pang, Tianlong Chen, Kun
+Wang, Xinfeng Li, Yongfeng Zhang, et al. A survey
+on trustworthy llm agents: Threats and countermea-
+sures. arXiv preprint arXiv:2503.09648, 2025.
+[305] Yuemei Xu, Ling Hu, Jiayi Zhao, Zihan Qiu, Kexin
+Xu, Yuqi Ye, and Hanwen Gu. A survey on multi-
+lingual large language models: Corpora, alignment,
+and bias. Frontiers of Computer Science, 19(11):
+1911362, 2025.
+[306] Zhong-Zhi Li, Duzhen Zhang, Ming-Liang Zhang,
+Jiaxin Zhang, Zengyan Liu, Yuxuan Yao, Hao-
+tian Xu, Junhao Zheng, Pei-Jie Wang, Xiuyi Chen,
+et al. From system 1 to system 2: A survey of
+reasoning large language models.arXiv preprint
+arXiv:2502.17419, 2025.
+[307] Aaron Jaech, Adam Kalai, Adam Lerer, Adam
+Richardson, Ahmed El-Kishky, Aiden Low, Alec
+Helyar, Aleksander Madry, Alex Beutel, Alex Car-
+ney, et al. Openai o1 system card.arXiv preprint
+arXiv:2412.16720, 2024.
+[308] LiunianHaroldLi,JackHessel,YoungjaeYu,Xiang
+Ren, Kai-Wei Chang, and Yejin Choi. Symbolic
+chain-of-thoughtdistillation: Smallmodelscanalso
+“think” step-by-step. In Anna Rogers, Jordan Boyd-
+Graber, and Naoaki Okazaki, editors,Proceedings
+of the 61st Annual Meeting of the Association for
+Computational Linguistics (Volume 1: Long Pa-
+pers), pages 2665–2679, Toronto, Canada, July
+2023. Association for Computational Linguistics.
+doi: 10.18653/v1/2023.acl-long.150.
+[309] Peifeng Wang, Zhengyang Wang, Zheng Li, Yi-
+fan Gao, Bing Yin, and Xiang Ren. Scott: Self-
+consistent chain-of-thought distillation. InProceed-
+ings of the 61st Annual Meeting of the Association
+for Computational Linguistics (Volume 1: Long
+Papers), pages 5546–5558, 2023.
+[310] QiguangChen,LiboQin,JinhaoLiu,DengyunPeng,
+Jiaqi Wang, Mengkang Hu, Zhi Chen, Wanxiang
+Che,andTingLiu. Ecm: Aunifiedelectroniccircuit
+model for explaining the emergence of in-context
+learning and chain-of-thought in large language
+model. arXiv preprint arXiv:2502.03325, 2025.
+[311] Qing Lyu, Shreya Havaldar, Adam Stein, Li Zhang,
+Delip Rao, Eric Wong, Marianna Apidianaki, and
+Chris Callison-Burch. Faithful chain-of-thought
+reasoning. InThe 13th International Joint Confer-
+ence on Natural Language Processing and the 3rd
+ConferenceoftheAsia-PacificChapteroftheAssoci-
+ationforComputationalLinguistics(ĲCNLP-AACL
+2023), 2023.
+[312] Shuang Zeng, Xinyuan Chang, Mengwei Xie, Xin-
+ranLiu,YifanBai,ZhengPan,MuXu,andXingWei.
+Futuresightdrive: Thinking visually with spatio-
+temporalcotforautonomousdriving. arXivpreprint
+arXiv:2505.17685, 2025.
+[313] MatthewRenzeandErhanGuven. Self-reflectionin
+llmagents: Effectsonproblem-solvingperformance.
+arXiv preprint arXiv:2405.06682, 2024.
+[314] Vidhisha Balachandran, Jingya Chen, Lingjiao
+Chen, Shivam Garg, Neel Joshi, Yash Lara, John
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 33
+Langford, Besmira Nushi, Vibhav Vineet, Yue Wu,
+et al. Inference-time scaling for complex tasks:
+Where we stand and what lies ahead.arXiv preprint
+arXiv:2504.00294, 2025.
+[315] Yangzhen Wu, Zhiqing Sun, Shanda Li, Sean
+Welleck, and Yiming Yang. Inference scaling laws:
+Anempiricalanalysisofcompute-optimalinference
+for problem-solving with language models.arXiv
+preprint arXiv:2408.00724, 2024.
+[316] QiyingYu,ZhengZhang,RuofeiZhu,YufengYuan,
+Xiaochen Zuo, Yu Yue, Tiantian Fan, Gaohong Liu,
+Lingjun Liu, Xin Liu, et al. Dapo: An open-source
+llm reinforcement learning system at scale.arXiv
+preprint arXiv:2503.14476, 2025.
+[317] Yufeng Yuan, Qiying Yu, Xiaochen Zuo, Ruofei
+Zhu, Wenyuan Xu, Jiaze Chen, Chengyi Wang,
+TianTian Fan, Zhengyin Du, Xiangpeng Wei, et al.
+Vapo: Efficient and reliable reinforcement learn-
+ing for advanced reasoning tasks.arXiv preprint
+arXiv:2504.05118, 2025.
+[318] ByteDance Seed, Yufeng Yuan, Yu Yue, Mingxuan
+Wang,XiaochenZuo,JiazeChen,LinYan,Wenyuan
+Xu, Chi Zhang, Xin Liu, et al. Seed-thinking-v1. 5:
+Advancing superb reasoning models with reinforce-
+ment learning. arXiv preprint arXiv:2504.13914,
+2025.
+[319] Keyu Duan, Zichen Liu, Xin Mao, Tianyu Pang,
+Changyu Chen, Qiguang Chen, Michael Qizhe
+Shieh, and Longxu Dou. Efficient process reward
+model training via active learning.arXiv preprint
+arXiv:2504.10559, 2025.
+[320] Yang Sui, Yu-Neng Chuang, Guanchu Wang, Ji-
+amu Zhang, Tianyi Zhang, Jiayi Yuan, Hongyi
+Liu, Andrew Wen, Shaochen Zhong, Hanjie Chen,
+et al. Stop overthinking: A survey on efficient rea-
+soning for large language models.arXiv preprint
+arXiv:2503.16419, 2025.
+[321] Sicheng Feng, Gongfan Fang, Xinyin Ma, and Xin-
+chao Wang. Efficient reasoning models: A survey.
+arXiv preprint arXiv:2504.10903, 2025.
+[322] Bairu Hou, Yang Zhang, Jiabao Ji, Yujian Liu,
+Kaizhi Qian, Jacob Andreas, and Shiyu Chang.
+Thinkprune: Pruning long chain-of-thought of
+llms via reinforcement learning. arXiv preprint
+arXiv:2504.01296, 2025.
+[323] QiguangChen,LiboQin,JinhaoLiu,YueLiao,Jiaqi
+Wang, Jingxuan Zhou, and Wanxiang Che. Rbf++:
+Quantifying and optimizing reasoning boundaries
+across measurable and unmeasurable capabilities
+for chain-of-thought reasoning. arXiv preprint
+arXiv:2505.13307, 2025.
+[324] Jingyuan Qi, Zhiyang Xu, Ying Shen, Minqian Liu,
+Di Jin, Qifan Wang, and Lifu Huang. The art of
+socratic questioning: Recursive thinking with large
+language models. InProceedings of the 2023 Con-
+ference on Empirical Methods in Natural Language
+Processing, pages 4177–4199, 2023.
+[325] Debjit Paul, Mete Ismayilzada, Maxime Peyrard,
+Beatriz Borges, Antoine Bosselut, Robert West,
+and Boi Faltings. Refiner: Reasoning feedback on
+intermediate representations. InProceedings of the
+18th Conference of the European Chapter of the
+Association for Computational Linguistics (Volume
+1: Long Papers), pages 1100–1126, 2024.
+[326] Aman Madaan, Niket Tandon, Prakhar Gupta,
+Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri
+Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming
+Yang, et al. Self-refine: Iterative refinement with
+self-feedback. Advances in Neural Information Pro-
+cessing Systems, 36:46534–46594, 2023.
+[327] Yubo Li, Xiaobin Shen, Xinyu Yao, Xueying Ding,
+Yidi Miao, Ramayya Krishnan, and Rema Padman.
+Beyond single-turn: A survey on multi-turn inter-
+actions with large language models.arXiv preprint
+arXiv:2504.04717, 2025.
+[328] Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak
+Shafran, Karthik R Narasimhan, and Yuan Cao.
+React: Synergizingreasoningandactinginlanguage
+models. InThe Eleventh International Conference
+on Learning Representations, 2023.
+[329] Zhi Chen, Qiguang Chen, Libo Qin, Qipeng Guo,
+Haĳun Lv, Yicheng Zou, Wanxiang Che, Hang Yan,
+Kai Chen, and Dahua Lin. What are the essential
+factors in crafting effective long context multi-hop
+instruction datasets? insights and best practices.
+arXiv preprint arXiv:2409.01893, 2024.
+
+34 Front. Comput. Sci., 2025, 0(0): 1–35
+Libo Qin received his Ph.D. degree in
+computer science from the Harbin Insti-
+tuteofTechnology,China. HeisaProfes-
+sor at Central South University. His re-
+search interests include natural language
+processing and large language models.
+QiguangChenisaPhDstudentinHarbin
+Institute of Technology (HIT), China.
+His research fields include natural lan-
+guageprocessingandcomplexreasoning.
+Xiachong Feng is a Postdoctoral Re-
+searcher at the University of Hong Kong,
+holding a Ph.D. from the Social Com-
+putingandInteractiveRoboticsResearch
+Center at Harbin Institute of Technology.
+HewasalsoavisitingstudentatNational
+University of Singapore. His research
+focusesonlargelanguagemodels(LLMs)andsocialagents,with
+publications in top-tier venues like ACL, TASLP, and TMLR.
+Awarded the National Scholarship three times, he has also re-
+ceived the CCL 2021 Best English Paper Award, TMLR Survey
+Award, and ICASSP 2023 MUG Challenge championship. He
+actively contributes to the academic community as a PC mem-
+ber/Area Chair for ICML, ICLR, and ACL Rolling Review. His
+work bridges AI, NLP, and human-agent interaction.
+YangWuisaPh.D.graduateinComputer
+Science from Harbin Institute of Tech-
+nology (2024), with research expertise
+in improving the planning and cross-task
+generalization abilities of large language
+models for complex tasks. His doctoral
+work received the Best Paper Award at
+IEEE Multimedia 2021.
+Yongheng Zhang is a master student at
+Central South University. His primary
+research interests include large language
+models and multimodal reasoning.
+Yinghui Li received the BEng degree
+from the Department of Computer Sci-
+ence and Technology, Tsinghua Univer-
+sity, in 2020. He is currently working
+towardthePhDdegreewiththeTsinghua
+ShenzhenInternationalGraduateSchool,
+Tsinghua University. His research inter-
+ests include natural language processing
+and deep learning.
+Min Li received her Ph.D. in Computer
+Science from Central South University,
+China, in 2008. She is currently a pro-
+fessor and the dean of the School of
+Computer Science and Engineering at
+Central South University. Her research
+focuses on computational biology, sys-
+tems biology, and bioinformatics. She has authored over 100
+technical papers in leading journals and conference proceedings,
+including Nature Communications, Genome Research, Genome
+Biology, Nucleic Acids Research, and Bioinformatics.
+WanxiangChereceivedhisPh.D.degree
+in computer science from the Harbin In-
+stitute of Technology (HIT), China, in
+2008. HeisaFullProfessorintheSchool
+of Computer Science and Technology,
+HIT. His current research interests in-
+clude natural language processing and
+large language models.
+
+Libo Qin et al. Large Language Models Meet NLP: A Survey 35
+Philip S. Yu (Life Fellow, IEEE) is
+currently a distinguished professor and
+the Wexler chair of information technol-
+ogy with the Department of Computer
+Science, University of Illinois Chicago
+(UIC), Chicago, Illinois. Before joining
+UIC, he was with IBM Watson Research Center, where he built
+aworld-renowneddatamininganddatabasedepartment. Hehas
+authoredorcoauthoredmorethan780papersinrefereedjournals
+and conferences. He holds or has applied for more than 250
+U.S. Patents. His research interest include Big Data, including
+data mining, data stream, database, and privacy. He is a fellow
+of ACM. He was the editor-in-chief of the ACM Transactions
+on Knowledge Discovery from Data during 2011–2017 and
+IEEE Transactions on Knowledge and Data Engineering during
+2001–2004. He was the recipient of several IBM honors includ-
+ing the two IBM Outstanding Innovation Awards, Outstanding
+Technical Achievement Award, two Research Division Awards,
+and 94th Plateau of Invention Achievement Awards.
