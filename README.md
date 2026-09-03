@@ -1,48 +1,44 @@
-# Merge-Order Bias in Book Summarization
+# Merge-Order Bias in Hierarchical Summarization
 ## Question
 
-FABLES (Kim et al., 2024) found LLM book summaries over-emphasize content near the end of the book, using forward-only merging (chapter 1→2→...→last). This project tests whether that's a real model limitation, or an artifact of processing chapters in that fixed order.
+FABLES (Kim et al., 2024) found LLM book summaries over-emphasize content near the end of the book, using forward-only merging (chapter 1→2→...→last). This project tests whether that effect is a real model limitation, or an artifact of processing chunks in that fixed order, and whether it holds the same way in narrative (novels) vs. non-narrative (scientific papers) text.
 
 ## Method
 
-For each book: split into chapters, summarize each individually, merge them into a running summary two ways, forward and backward, using GPT-4o mini.
+For each document: split into chapters, summarize each individually, merge them into a running summary two ways, forward and backward, using GPT-4o mini.
 
 Two metrics were used:
 
-1. Stability: for each chapter, embedding similarity between the running summary right when that chapter was added vs. the final summary. Measures how much a chapter's surrounding text keeps getting rewritten after it joins, not whether its specific content survives.
+1. Stability: for each chapter, embedding similarity between a chunk's text right when it was first merged in vs. the final summary. Measures how much a chunk's surrounding text keeps changing after it joins.
 
-2. Coverage: for each chapter, extract 4 specific facts from its original summary, then check whether each fact is still present in the final merged summary. Coverage score = fraction of facts that survived. This is the metric that directly answers the research question (stability measures rewrite frequency; coverage measures actual content survival).
+2. Coverage: for each chunk, extract 4 specific facts, then check whether each survives into the final summary. Measures actual content preservation, not just wording change
 
-## Findings 
-(3 books: The Gambler, Dr Jekyll and Mr Hyde, Pride and Prejudice)
+## Findings
+(8 documents: 4 novels, The Gambler, Dr Jekyll and Mr Hyde,Pride and Prejudice, Frankenstein. 4 papers, Bean et al. 2025, Rudinger et al. 2018, Łajewska et al. 2025, Qin et al. 2025.)
 
-Stability: forward merging is consistently more stable than backward merging, higher mean, lower variance, across all 3 books.
+Forward merging shows a consistent advantage over backward in scientific papers, but not reliably in novels:
 
-| Book |	Forward Mean ± Std	| Backward Mean ± Std |
-|------|--------------------|---------------------|
-| Pride and Prejudice |	0.915 ± 0.043	| 0.843 ± 0.032 |
-| Dr Jekyll and Mr Hyde |	0.977 ± 0.036	| 0.761 ± 0.082 |
-| The Gambler	| 0.991 ± 0.022	| 0.762 ± 0.058 |
+| Text type | Stability: Forward > Backward	| Coverage: Forward > Backward |
+|--------|--------------------------------------|------------------------------|
+| Papers (4 documents) |	4/4	| 4/4 |
+| Novels (4 documents) |	2/4	| 1/4 |
 
-Coverage: forward merging also preserves more chapter content than backward merging, consistently across all 3 books:
 
-| Book	| Forward Coverage	| Backward Coverage |
-|------|------------------|-----------------|
-| Dr Jekyll and Mr Hyde	| 0.977	| 0.364 |
-| The Gambler	| 0.639	| 0.597 |
-| Pride and Prejudice	| 0.337	| 0.219 |
-
-The size of the coverage gap varies a lot between books and doesn't correlate cleanly with chapter count, not a uniform effect, but the direction (forward > backward) held every time, on both metrics.
-
-Separately: longer books show lower overall coverage in both directions (chapter count vs. forward coverage: r = -0.93, n=3), content preservation seems to degrade with book length, independent of merge direction. Worth noting, not yet confirmed with more books.
+In papers, forward merging is consistently more stable and higher-coverage than backward, with no exceptions across all 4 documents tested. In novels, the pattern is inconsistent, half or more of the books show backward equal to or higher than forward on at least one metric.
 
 ## What this does and doesn't show
 
-Supports: merge order affects both how consistent the merge process is (stability) and how well chapter content survives (coverage) — a real, measurable, replicated effect across two independent metrics.
+This does not cleanly answer the original question either way. If merge order were purely a procedural artifact independent of content, we would expect the effect to appear equally in both text type. If it were purely about narrative content (e.g., "endings" specifically), we would expect it to appear in novels, not papers. Instead, the effect is strong and consistent in the domain without narrative structure, and weak/inconsistent in the domain with it, the opposite of what a simple "it's just about endings" story would predict, but not a clean confirmation of "it's purely mechanical" either.
 
-Does not cleanly support: a "mirror image" pattern where the effect flips symmetrically between the book's beginning and end depending on direction. Only one of three books (The Gambler) showed that shape in coverage; the other two showed forward simply better overall, not a clean positional flip.
+This is treated as a genuine, open finding: merge order has a real, measurable effect, but its reliability depends on text type in a way that isn't yet explained.
 
+## Limitations
+Small sample (4 documents per text type), the novel/paper split is a real, consistent pattern in this data, but not large enough to rule out document-specific factors within each set
+Single model (GPT-4o mini), whether this generalizes to other LLMs is untested
+GPT-4o mini is not perfectly deterministic even at temperature=0; results regenerated from scratch showed some run-to-run variation on the novel coverage numbers specifically
 
 ## Background
-Chang et al., "BooookScore" (ICLR 2024)
-Kim et al., "FABLES" (2024)
+- Chang et al., "BooookScore" (ICLR 2024)
+- Kim et al., "FABLES" (2024)
+- Olabisi & Agrawal, "Understanding Position Bias Effects on Fairness in Social Multi-Document Summarization" (2024)
+- "On Positional Bias of Faithfulness for Long-form Summarization" (NAACL 2025) — tests position bias on ArXiv/PubMed but not full-reversal merge order specifically
