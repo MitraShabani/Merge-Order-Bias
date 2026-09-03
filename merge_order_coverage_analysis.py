@@ -103,20 +103,27 @@ def main():
         title = forward.get("title") or forward.get("book_title", doc_id)
         chunk_summaries = forward.get("chunk_summaries") or forward.get("chapter_summaries")
         doc_type = forward.get("type", "unknown")
-        print(f"\n=== {title} (type={doc_type}) ===")
 
-        print(" Forward coverage:")
-        forward_coverage = compute_coverage(chunk_summaries, forward["final_summary"], args.n_facts)
-        print(" Backward coverage:")
-        backward_coverage = compute_coverage(chunk_summaries, backward["final_summary"], args.n_facts)
+        coverage_path = os.path.join(args.results_dir, f"{doc_id}_coverage.json")
+        if os.path.exists(coverage_path):
+            print(f"\n=== {title} (type={doc_type}) -- loading cached coverage ===")
+            with open(coverage_path, "r", encoding="utf-8") as f:
+                coverage_data = json.load(f)
+            forward_coverage = coverage_data["forward_coverage"]
+            backward_coverage = coverage_data["backward_coverage"]
+        else:
+            print(f"\n=== {title} (type={doc_type}) ===")
+            print(" Forward coverage:")
+            forward_coverage = compute_coverage(chunk_summaries, forward["final_summary"], args.n_facts)
+            print(" Backward coverage:")
+            backward_coverage = compute_coverage(chunk_summaries, backward["final_summary"], args.n_facts)
 
-        # Save raw coverage data
-        coverage_data = {"title": title, "type": doc_type,
-                          "forward_coverage": forward_coverage, "backward_coverage": backward_coverage}
-        out_path = os.path.join(args.results_dir, f"{doc_id}_coverage.json")
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(coverage_data, f, indent=2, ensure_ascii=False)
-        print(f"  Saved: {out_path}")
+            coverage_data = {"title": title, "type": doc_type,
+                              "forward_coverage": forward_coverage, "backward_coverage": backward_coverage}
+            with open(coverage_path, "w", encoding="utf-8") as f:
+                json.dump(coverage_data, f, indent=2, ensure_ascii=False)
+            print(f"  Saved: {coverage_path}")
+
 
         chapters = [d["chapter"] for d in forward_coverage]
         f_cov = [d["coverage"] for d in forward_coverage]
@@ -151,6 +158,47 @@ def main():
 
     print(f"\nSaved summary table: {table_path}")
     print(coverage_df.round(3).to_string(index=False))
+
+    # Cross-document summary plot, grouped by type
+    for doc_type, group in coverage_df.groupby("type"):
+        docs = group["document"].tolist()
+        x = np.arange(len(docs))
+        width = 0.35
+
+        plt.figure(figsize=(9, 6))
+        plt.bar(x - width / 2, group["forward_mean_coverage"], width, label="Forward", color="steelblue")
+        plt.bar(x + width / 2, group["backward_mean_coverage"], width, label="Backward", color="firebrick")
+        plt.xlabel("Document")
+        plt.ylabel("Mean fact coverage")
+        plt.title(f"Mean fact coverage, forward vs. backward -- type: {doc_type}")
+        plt.xticks(x, docs, rotation=15, ha="right")
+        plt.legend()
+        plt.grid(True, alpha=0.3, axis="y")
+        plt.ylim(0, 1.05)
+        summary_plot_path = os.path.join(args.plots_dir, f"coverage_summary_{doc_type}.png")
+        plt.savefig(summary_plot_path, dpi=150, bbox_inches="tight")
+        plt.close()
+        print(f"Saved summary plot ({doc_type}): {summary_plot_path}")
+
+    # Cross-document summary plot, ALL documents together (novels + papers)
+    docs = coverage_df["document"].tolist()
+    x = np.arange(len(docs))
+    width = 0.35
+
+    plt.figure(figsize=(max(9, len(docs) * 1.2), 6))
+    plt.bar(x - width / 2, coverage_df["forward_mean_coverage"], width, label="Forward", color="steelblue")
+    plt.bar(x + width / 2, coverage_df["backward_mean_coverage"], width, label="Backward", color="firebrick")
+    plt.xlabel("Document")
+    plt.ylabel("Mean fact coverage")
+    plt.title("Mean fact coverage, forward vs. backward -- all documents")
+    plt.xticks(x, docs, rotation=20, ha="right")
+    plt.legend()
+    plt.grid(True, alpha=0.3, axis="y")
+    plt.ylim(0, 1.05)
+    all_plot_path = os.path.join(args.plots_dir, "coverage_summary_all.png")
+    plt.savefig(all_plot_path, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"Saved combined summary plot (all documents): {all_plot_path}")
 
     print("\n=== Coverage analysis complete ===")
 

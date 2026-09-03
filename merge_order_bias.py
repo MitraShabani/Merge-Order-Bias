@@ -53,7 +53,7 @@ def split_chunks(full_text: str) -> list[str]:
         # Roman-numeral chapter headings
         chunks = re.split(r"\n\s*[IVXLCDM]+\s*\n", full_text)
     elif re.search(r"\n\s*(Letter|Chapter)\s+\d+\s*\n", full_text):
-        chunks = re.split(r"\n\s*(?:Letter|Chapter)\s+\d+\s*\n", full_text)
+        chunks = re.split(r"\n\s*(?:Letter|Chapter)\s+\d+\s*\n", full_text) 
     else:
         # Numbered section headings, e.g. "1. Introduction" or "2 Related Work"
         chunks = re.split(r"\n\s*\d+\.?\s+[A-Z][a-zA-Z\s]{2,40}\n", full_text)

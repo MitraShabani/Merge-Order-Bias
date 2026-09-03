@@ -166,6 +166,27 @@ def main():
         plt.close()
         print(f"Saved summary plot ({doc_type}): {summary_plot_path}")
 
+    # Cross-document summary plot, ALL documents together (novels + papers)
+    docs = summary_df["document"].tolist()
+    x = np.arange(len(docs))
+    width = 0.35
+
+    plt.figure(figsize=(max(9, len(docs) * 1.2), 6))
+    plt.bar(x - width / 2, summary_df["forward_mean"], width, yerr=summary_df["forward_std"], capsize=5,
+            label="Forward", color="steelblue")
+    plt.bar(x + width / 2, summary_df["backward_mean"], width, yerr=summary_df["backward_std"], capsize=5,
+            label="Backward", color="firebrick")
+    plt.xlabel("Document")
+    plt.ylabel("Mean stability (error bars = std across chunks)")
+    plt.title("Mean stability, forward vs. backward -- all documents")
+    plt.xticks(x, docs, rotation=20, ha="right")
+    plt.legend()
+    plt.grid(True, alpha=0.3, axis="y")
+    all_plot_path = os.path.join(args.plots_dir, "stability_summary_all.png")
+    plt.savefig(all_plot_path, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"Saved combined summary plot (all documents): {all_plot_path}")
+
     print("\n=== Stability analysis complete ===")
 
 
