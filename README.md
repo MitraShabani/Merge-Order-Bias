@@ -20,22 +20,22 @@ Forward merging shows a consistent advantage over backward in scientific papers,
 
 | Text type | Stability: Forward > Backward	| Coverage: Forward > Backward |
 |--------|--------------------------------------|------------------------------|
-| Papers (4 documents) |	4/4	| 4/4 |
+| Papers (4 documents) |	3/4	| 4/4 |
 | Novels (4 documents) |	2/4	| 1/4 |
 
 
-In papers, forward merging is consistently more stable and higher-coverage than backward, with no exceptions across all 4 documents tested. In novels, the pattern is inconsistent, half or more of the books show backward equal to or higher than forward on at least one metric.
+In papers, forward merging is consistently more stable and higher-coverage than backward. In novels, the pattern is inconsistent, half or more of the books show backward equal to or higher than forward on at least one metric.
 
 ## What this does and doesn't show
 
-This does not cleanly answer the original question either way. If merge order were purely a procedural artifact independent of content, we would expect the effect to appear equally in both text type. If it were purely about narrative content (e.g., "endings" specifically), we would expect it to appear in novels, not papers. Instead, the effect is strong and consistent in the domain without narrative structure, and weak/inconsistent in the domain with it, the opposite of what a simple "it's just about endings" story would predict, but not a clean confirmation of "it's purely mechanical" either.
+This does not cleanly answer the original question either way. If merge order were purely a procedural artifact independent of content, we would expect the effect to appear equally in both text types. If it were purely about narrative content (e.g., "endings" specifically), we would expect it to appear in novels, not papers. Instead, the effect is strong and consistent in the text type without narrative structure, and weak and inconsistent in the text type with it — the opposite of what a simple "it's just about endings" story would predict, but not a clean confirmation of "it's purely mechanical" either.
 
-This is treated as a genuine, open finding: merge order has a real, measurable effect, but its reliability depends on text type in a way that isn't yet explained.
+This is treated as a genuine, open finding: merge order has a real, measurable effect (7 of 8 comparisons in papers: 3 of 4 documents on stability, 4 of 4 on coverage; vs. 3 of 8 in novels: 2 of 4 on stability, 1 of 4 on coverage), but its reliability depends on text type in a way that isn't yet explained.
 
 ## Limitations
-Small sample (4 documents per text type), the novel/paper split is a real, consistent pattern in this data, but not large enough to rule out document-specific factors within each set
-Single model (GPT-4o mini), whether this generalizes to other LLMs is untested
-GPT-4o mini is not perfectly deterministic even at temperature=0; results regenerated from scratch showed some run-to-run variation on the novel coverage numbers specifically
+- Small sample (4 documents per text type), the novel/paper split is a real, consistent pattern in this data, but not large enough to rule out document-specific    factors within each set
+- Single model (GPT-4o mini), whether this generalizes to other LLMs is untested
+- GPT-4o mini is not perfectly deterministic even at temperature=0; one paper's stability comparison (Rudinger et al.) changed direction when results were           regenerated from scratch, while all other document-metric comparisons remained consistent
 
 ## Background
 - Chang et al., "BooookScore" (ICLR 2024)
