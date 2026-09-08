@@ -1,0 +1,304 @@
+{
+  "title": "Bean Et Al. - 2025 - Measuring What",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The paper is titled \"Measuring what Matters: Construct Validity in Large Language Model Benchmarks.\"",
+        "The authors are from institutions including the University of Oxford, EPFL, and Stanford University.",
+        "The paper emphasizes the importance of construct validity in evaluating large language models.",
+        "The authors argue for refining benchmarks to better capture the capabilities and limitations of LLMs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The evaluation of large language models (LLMs) is essential for understanding their capabilities.",
+        "A systematic review analyzed 445 LLM benchmarks from natural language processing and machine learning conferences.",
+        "The review was conducted by a team of 29 expert reviewers.",
+        "The authors provided eight key recommendations for improving LLM benchmarks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The development of large language models relies on benchmarks and evaluations. A systematic review of 445 articles from major ML and NLP conferences was conducted. Many benchmarks suffer from weaknesses in defining and operationalizing key concepts. Recommendations for improving benchmark practices and an operational checklist for establishing construct validity are proposed."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Construct validity assesses whether a test accurately measures the intended phenomenon.",
+        "Face validity refers to the test's apparent relevance.",
+        "Construct validity is essential for evaluating abstract abilities in large language models.",
+        "The interpretation of evaluations related to construct validity is debated."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The study reviewed 46,114 articles from major machine learning conferences between 2018 and 2024.",
+        "2,189 articles were initially identified using keywords related to benchmarks for large language models.",
+        "The final selection included 445 articles after applying four inclusion criteria.",
+        "The screening process involved 29 reviewers and an automated step using GPT-4o mini."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The review process yielded a dataset of responses to 21 question items across 445 benchmark articles.",
+        "78.2% of the reviewed benchmarks provided definitions of phenomena.",
+        "Less than 10% of the benchmarks used complete real-world tasks.",
+        "53.4% of articles provided evidence for their benchmark's construct validity."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The text recommends clearly defining the phenomenon being measured in LLM benchmarks.",
+        "The GSM8K benchmark is highlighted as an example of applying the recommendations.",
+        "One recommendation is to construct representative datasets through robust sampling methods.",
+        "The recommendations aim to ensure benchmarks accurately reflect the intended constructs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The systematic review analyzed 445 benchmarks in NLP and ML literature. About half of the articles addressed benchmark validity. The authors developed a checklist of recommendations for improving construct validity in future LLM benchmarks. The review's scale limited the number of reviewers per paper, affecting review robustness."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The systematic review emphasizes the urgent need for robust evaluation methods for large language models.",
+        "The review highlights significant gaps in the construct validity of 445 benchmarks.",
+        "The authors propose eight recommendations for the design and interpretation of LLM benchmarks.",
+        "Acknowledgments are given to funding sources including the Clarendon Scholarship and the National Science Foundation."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The supplementary material includes a comprehensive construct validity checklist.",
+        "The inclusion process resulted in 2,189 initial papers, with 445 ultimately included.",
+        "Inter-rater agreement was assessed on a subset of 46 papers, revealing a mean percent agreement of 68.1%.",
+        "The mean Brennan-Prediger Kappa for coding judgments was 0.524, indicating moderate consistency."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The paper is titled \"Measuring what Matters: Construct Validity in Large Language Model Benchmarks.\"",
+        "The authors are from institutions including the University of Oxford, EPFL, and Stanford University.",
+        "The paper emphasizes the importance of construct validity in evaluating large language models.",
+        "The authors argue for refining benchmarks to better capture the capabilities and limitations of LLMs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The evaluation of large language models (LLMs) is essential for understanding their capabilities.",
+        "A systematic review analyzed 445 LLM benchmarks from natural language processing and machine learning conferences.",
+        "The review was conducted by a team of 29 expert reviewers.",
+        "The authors provided eight key recommendations for improving LLM benchmarks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The development of large language models relies on benchmarks and evaluations. A systematic review of 445 articles from major ML and NLP conferences was conducted. Many benchmarks suffer from weaknesses in defining and operationalizing key concepts. Recommendations for improving benchmark practices and an operational checklist for establishing construct validity are proposed."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Construct validity assesses whether a test accurately measures the intended phenomenon.",
+        "Face validity refers to the test's apparent relevance.",
+        "Construct validity is essential for evaluating abstract abilities in large language models.",
+        "The interpretation of evaluations related to construct validity is debated."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The study reviewed 46,114 articles from major machine learning conferences between 2018 and 2024.",
+        "2,189 articles were initially identified using keywords related to benchmarks for large language models.",
+        "The final selection included 445 articles after applying four inclusion criteria.",
+        "The screening process involved 29 reviewers and an automated step using GPT-4o mini."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The review process yielded a dataset of responses to 21 question items across 445 benchmark articles.",
+        "78.2% of the reviewed benchmarks provided definitions of phenomena.",
+        "Less than 10% of the benchmarks used complete real-world tasks.",
+        "53.4% of articles provided evidence for their benchmark's construct validity."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The text recommends clearly defining the phenomenon being measured in LLM benchmarks.",
+        "The GSM8K benchmark is highlighted as an example of applying the recommendations.",
+        "One recommendation is to construct representative datasets through robust sampling methods.",
+        "The recommendations aim to ensure benchmarks accurately reflect the intended constructs."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The systematic review analyzed 445 benchmarks in NLP and ML literature. About half of the articles addressed benchmark validity. The authors developed a checklist of recommendations for improving construct validity in future LLM benchmarks. The review's limitations included a focus on leading conference proceedings and the use of automated screening."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The systematic review emphasizes the urgent need for robust evaluation methods for large language models.",
+        "The review highlights significant gaps in the construct validity of 445 benchmarks.",
+        "The authors propose eight recommendations for the design and interpretation of LLM benchmarks.",
+        "Acknowledgments are given to funding sources including the Clarendon Scholarship and the National Science Foundation."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The supplementary material includes a comprehensive construct validity checklist.",
+        "The inclusion process resulted in 2,189 initial papers, with 445 ultimately included.",
+        "Inter-rater agreement was assessed on a subset of 46 papers, revealing a mean percent agreement of 68.1%.",
+        "The mean Brennan-Prediger Kappa for coding judgments was 0.524, indicating moderate consistency."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

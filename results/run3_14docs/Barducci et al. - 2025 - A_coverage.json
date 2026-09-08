@@ -1,0 +1,220 @@
+{
+  "title": "Barducci Et Al. - 2025 - A",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "JanusDDG is a model developed by the Computational Biomedicine Unit at the University of Turin.",
+        "The team that developed JanusDDG includes researchers Guido Barducci and Ivan Rossi.",
+        "JanusDDG predicts sequence-based protein stability using a thermodynamics-compliant approach.",
+        "The model employs a two-fronts multi-head attention mechanism."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "JanusDDG is a deep learning framework that predicts the change in Gibbs free energy (ΔΔG) from mutations.",
+        "The model uses protein language model (PLM) embeddings and a bidirectional cross-attention transformer.",
+        "JanusDDG outperforms traditional structure-based methods in predicting ΔΔG.",
+        "The code for JanusDDG can be found at https://github.com/compbiomed-unito/JanusDDG."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The study quantifies protein stability using the change in Gibbs free energy (∆∆𝐺). A positive ∆∆𝐺 indicates a stabilizing mutation. The research introduces JanusDDG, a deep learning model for predicting ∆∆𝐺. JanusDDG incorporates antisymmetry and transitivity to enhance prediction accuracy."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "JanusDDG is a sequence-based model for predicting protein stability.",
+        "The model utilizes bidirectional cross-attention to integrate wild-type and mutant sequence information.",
+        "JanusDDG was evaluated on benchmark datasets S669, S461, and S96.",
+        "The model classifies mutations as stabilizing, neutral, or destabilizing."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "JanusDDG is a new sequence-based deep learning model for predicting protein stability changes due to mutations.",
+        "JanusDDG uses a bidirectional cross-attention architecture combined with protein language model embeddings.",
+        "The model excels in predicting the effects of multiple mutations compared to existing models.",
+        "The authors suggest future validation of JanusDDG across diverse mutation spectra and structural classes."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The JanusDDG model predicts protein stability changes due to mutations.",
+        "The datasets used include blind test datasets S669, S461, S96, and PTmul-NR.",
+        "Performance metrics for evaluating the model include Pearson and Spearman correlation coefficients.",
+        "The JanusDDG architecture utilizes a Bidirectional Cross-Attention Transformer with ESM2 embeddings."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "JanusDDG FineTuned achieved the highest Pearson correlation coefficient of 0.83 on the S461 test set.",
+        "The JanusDDG only Antisym. model enforces antisymmetry in predictions.",
+        "JanusDDG has a mean squared error of 2.10 on the Q3421 dataset.",
+        "JanusDDG FineTuned is an enhanced version of the JanusDDG Base model."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "JanusDDG is a model developed by the Computational Biomedicine Unit at the University of Turin.",
+        "The team that developed JanusDDG includes researchers Guido Barducci and Ivan Rossi.",
+        "JanusDDG predicts sequence-based protein stability using a thermodynamics-compliant approach.",
+        "The model employs a two-fronts multi-head attention mechanism."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "JanusDDG is a deep learning framework that predicts the change in Gibbs free energy (ΔΔG) from mutations.",
+        "The model uses protein language model (PLM) embeddings and a bidirectional cross-attention transformer.",
+        "JanusDDG outperforms traditional structure-based methods in predicting ΔΔG.",
+        "The code for JanusDDG can be found at https://github.com/compbiomed-unito/JanusDDG."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The study quantifies protein stability using the change in Gibbs free energy (∆∆𝐺). A positive ∆∆𝐺 indicates a stabilizing mutation. The research introduces JanusDDG, a deep learning model for predicting ∆∆𝐺. JanusDDG incorporates antisymmetry and transitivity to enhance prediction accuracy."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "JanusDDG is a sequence-based model for predicting protein stability.",
+        "The model utilizes bidirectional cross-attention to integrate wild-type and mutant sequence information.",
+        "JanusDDG was evaluated on benchmark datasets S669, S461, and S96.",
+        "The model classifies mutations as stabilizing, neutral, or destabilizing."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "JanusDDG is a new sequence-based deep learning model for predicting protein stability changes due to mutations.",
+        "JanusDDG uses a bidirectional cross-attention architecture combined with protein language model embeddings.",
+        "The model excels in predicting the effects of multiple mutations compared to existing models.",
+        "The authors suggest future validation of JanusDDG across diverse mutation spectra and structural classes."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The JanusDDG model predicts protein stability changes due to mutations.",
+        "The datasets used include blind test datasets S669, S461, S96, and PTmul-NR.",
+        "Performance metrics for evaluating the model include Pearson and Spearman correlation coefficients.",
+        "The JanusDDG architecture utilizes a Bidirectional Cross-Attention Transformer with ESM2 embeddings."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "JanusDDG FineTuned achieved the highest Pearson correlation coefficient of 0.83 on the S461 test set.",
+        "The JanusDDG only Antisym. model enforces antisymmetry in predictions.",
+        "JanusDDG has a mean squared error of 2.10 on the Q3421 dataset.",
+        "JanusDDG FineTuned is an enhanced version of the JanusDDG Base model."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

@@ -1,0 +1,840 @@
+{
+  "title": "Qin Et Al.-2025-Large Language Models",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The research article titled \"Large Language Models Meet NLP: A Survey\" was published in 2025.",
+        "The article was published in Frontiers in Computer Science.",
+        "The authors of the article include Libo Qin and Philip S. Yu.",
+        "The article spans pages 1 to 35."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "This study investigates the application of large language models (LLMs) like ChatGPT in Natural Language Processing (NLP).",
+        "The research introduces a unified taxonomy categorizing LLMs into parameter-frozen and parameter-tuning paradigms.",
+        "The study addresses key questions about the resolution of traditional NLP tasks.",
+        "It aims to inspire further advancements in the field of NLP."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Large language models (LLMs) are applied in natural language processing (NLP) tasks such as mathematical reasoning and sentiment analysis.",
+        "Notable LLMs include the GPT-series, PaLM-series, OPT, and LLaMA.",
+        "The paper introduces a new taxonomy categorizing LLM approaches into parameter-frozen and parameter-tuning paradigms.",
+        "The research discusses emerging areas and challenges in LLMs for natural language processing."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The section discusses two paradigms: the parameter-frozen paradigm and the parameter-tuning paradigm.",
+        "The parameter-frozen paradigm is detailed in section 2.1.",
+        "The parameter-tuning paradigm is detailed in section 2.2.",
+        "Figure 2 illustrates the two paradigms."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The parameter-frozen paradigm enables prompting in NLP tasks without parameter tuning.",
+        "Zero-shot learning uses instruction-following abilities of large language models to perform tasks.",
+        "Few-shot learning involves in-context learning by mimicking a limited number of demonstrations.",
+        "In few-shot learning, the prompt is formally expressed as P = Prompt(E, I)."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Full-parameter tuning involves fine-tuning all model parameters on a training dataset.",
+        "Parameter-efficient tuning adjusts a subset of existing parameters or adds new tunable parameters.",
+        "Zero-shot learning has the lowest resource consumption and best out-of-domain generalization.",
+        "Full-parameter tuning incurs the highest costs but offers the best in-domain performance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Zero-shot learning is noted for its high application efficiency.",
+        "Few-shot learning requires more computational resources than zero-shot learning.",
+        "Full-parameter tuning achieves the best in-domain performance with sufficient training data.",
+        "Parameter-efficient tuning can match or exceed full-parameter tuning performance in some cases."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The section on Natural Language Understanding includes Semantic Analysis.",
+        "Information Extraction is one of the key NLP tasks outlined.",
+        "Dialogue Understanding is discussed in section 3.3.",
+        "Table Understanding is illustrated in Figure 3."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Sentiment analysis focuses on identifying the emotional tone of text.",
+        "The parameter-frozen paradigm employs zero-shot learning for sentiment classification.",
+        "Few-shot learning improves performance by incorporating exemplars.",
+        "LoRA is a technique used to enhance LLMs for emotional systems in multi-turn conversations."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Recent studies have explored zero-shot prompting methods leveraging large language models for information extraction.",
+        "Siepmann et al. demonstrated the effectiveness of GPT-4 in extracting medical information from discharge letters.",
+        "Gu et al. evaluated LLMs for extracting social determinants of health from clinical notes.",
+        "Li and Zhang proposed few-shot learning approaches that reformulate information extraction tasks as code."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Dialogue understanding includes spoken language understanding (SLU) and dialogue state tracking (DST).",
+        "Zero-shot prompting strategies enhance understanding through step-by-step reasoning.",
+        "Few-shot learning has been studied by researchers like Hu et al. and King and Flanigan.",
+        "Full-parameter tuning shows significant improvements in dialogue tasks, as demonstrated by Xie et al. and Gupta et al."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Recent advancements in large language models (LLMs) have enhanced capabilities in zero-shot and few-shot learning.",
+        "Researchers Ye et al. and Sui et al. focus on segmenting large tables in the zero-shot learning paradigm.",
+        "Luo et al.'s hybrid prompt strategy and Cheng et al.'s Binder redefine table tasks as coding challenges in few-shot learning.",
+        "Parameter-efficient tuning methods like LoRA and TableLoRA enhance performance on structured data with minimal adjustments."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Large Language Models (LLMs) are used for classification tasks in Natural Language Generation (NLG).",
+        "Summarization is one of the tasks discussed in relation to LLMs.",
+        "Code Generation is another task focused on in the section.",
+        "Machine Translation is also a task highlighted in the discussion of LLMs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Zero-shot learning with large language models like GPT-3 shows superior performance in generating concise summaries.",
+        "Few-shot learning techniques enhance extractive summarization through in-context learning and dialog-like approaches.",
+        "The parameter-tuning paradigm includes full-parameter tuning and parameter-efficient tuning (PET).",
+        "Novel strategies like DIONYSUS and Socratic Pretraining optimize LLMs for specific tasks."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Code generation automates the creation of executable code from natural language specifications.",
+        "Recent advancements in code generation have been driven by large language models like CodeLLMs and CodeT5+.",
+        "Few-shot learning enables models to produce accurate code snippets from minimal examples.",
+        "Parameter-efficient tuning methods, such as adapters and LoRA, are competitive in tasks like unit test generation."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Machine translation (MT) uses computers to automatically translate text between languages.",
+        "Researchers Zhu et al. and Wei et al. enhance LLMs' multilingual capabilities through instruction-tuning.",
+        "OpenBA demonstrates strong performance in Chinese tasks.",
+        "Full-parameter tuning methods by Iyer et al. and Feng et al. improve translation accuracy and context-awareness."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Mathematical reasoning in natural language processing utilizes NLP techniques to interpret mathematical texts.",
+        "Kojima et al.'s zero-shot chain-of-thought enhances LLMs' reasoning by breaking down problems into manageable steps.",
+        "Wei et al.'s chain-of-thought prompting improves reasoning through example selection.",
+        "ToolFormer is a technique used in full-parameter tuning to enhance LLMs."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "The section is titled \"5 Future Work and New Frontier.\"",
+        "Figure 4 illustrates emerging opportunities for innovation.",
+        "The aim is to inspire further developments in the field.",
+        "The focus is on significant advancements in the near future."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "Multilingual LLMs aim to extend English-centric NLP models to over 7,000 languages.",
+        "Researchers are exploring multilingual pretraining, supervised fine-tuning, and reinforcement learning.",
+        "A key challenge is improving performance in low-resource languages.",
+        "Effective cross-lingual alignment between English and other languages is essential for cross-lingual NLP tasks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "Multi-modal LLMs are being developed to enhance performance in natural language processing (NLP).",
+        "Current challenges in multi-modal LLMs include addressing complex multi-modal reasoning.",
+        "Most existing models focus on simpler tasks like recognition.",
+        "Research is needed to create more effective interaction mechanisms for multi-modal LLMs in NLP applications."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "LLMs have shown success in natural language processing (NLP) tasks.",
+        "Research is focusing on using LLMs as central controllers for practical NLP tasks.",
+        "Current approaches often overlook the selection of suitable tools for LLMs.",
+        "Coordinated tool chains are needed for task-oriented dialogue scenarios involving travel bookings."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "X-of-thought (XoT) is an approach used in large language models (LLMs).",
+        "XoT aims to enhance the ability of LLMs to tackle complex natural language processing tasks.",
+        "A key challenge in implementing XoT is developing a universal method for step decomposition.",
+        "XoT seeks to effectively integrate diverse prompting knowledge to improve model performance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "Large Language Models (LLMs) can produce outputs that diverge from established world knowledge.",
+        "Hallucinations in LLMs undermine their reliability in practical applications.",
+        "Developing efficient evaluation benchmarks for hallucinations is a key challenge in NLP.",
+        "Exploring how to harness hallucinations can enhance creativity in LLMs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "The application of large language models (LLMs) to downstream NLP tasks raises safety concerns.",
+        "Key challenges include the lack of effective safety benchmarks for LLMs.",
+        "There are heightened safety risks associated with multilingual contexts.",
+        "Research is increasingly focused on ensuring LLM safety for various NLP applications."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Long Chain-of-Thought (Long-CoT) enhances standard Chain-of-Thought (CoT) prompting.",
+        "Long-CoT enables large language models to engage in deeper reasoning.",
+        "Key challenges of Long-CoT include adaptive reasoning length control.",
+        "Long-CoT incorporates innovations such as reflective mechanisms and reinforcement-learning enhancements."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "The work introduces a unified taxonomy that differentiates between parameter-frozen and parameter-tuning paradigms.",
+        "The authors received grants from the National Natural Science Foundation of China.",
+        "The research spans from 2022 to 2025.",
+        "Notable contributions include innovative models such as \"Diaggpt,\" \"Cabinet,\" TableGPT, and Codet5."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The research article titled \"Large Language Models Meet NLP: A Survey\" was published in 2025.",
+        "The article was published in Frontiers in Computer Science.",
+        "The authors of the article include Libo Qin and Philip S. Yu.",
+        "The article spans pages 1 to 35."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "This study investigates the application of large language models (LLMs) like ChatGPT in Natural Language Processing (NLP).",
+        "The research introduces a unified taxonomy categorizing LLMs into parameter-frozen and parameter-tuning paradigms.",
+        "The study addresses key questions about the resolution of traditional NLP tasks.",
+        "It aims to inspire further advancements in the field of NLP."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Large language models (LLMs) are applied in natural language processing (NLP) tasks such as mathematical reasoning and sentiment analysis.",
+        "Notable LLMs include the GPT-series, PaLM-series, OPT, and LLaMA.",
+        "The paper introduces a new taxonomy categorizing LLM approaches into parameter-frozen and parameter-tuning paradigms.",
+        "The research discusses emerging areas and challenges in the field of LLMs for NLP."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The section discusses two paradigms: the parameter-frozen paradigm and the parameter-tuning paradigm.",
+        "The parameter-frozen paradigm is detailed in section 2.1.",
+        "The parameter-tuning paradigm is detailed in section 2.2.",
+        "Figure 2 illustrates the two paradigms."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The parameter-frozen paradigm enables prompting in NLP tasks without parameter tuning.",
+        "Zero-shot learning uses instruction-following abilities of large language models to perform tasks.",
+        "Few-shot learning involves in-context learning by mimicking a limited number of demonstrations.",
+        "In few-shot learning, the prompt is formally expressed as P = Prompt(E, I)."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Full-parameter tuning involves fine-tuning all model parameters on a training dataset.",
+        "Parameter-efficient tuning adjusts a subset of existing parameters or adds new tunable parameters.",
+        "Zero-shot learning has the lowest resource consumption and best out-of-domain generalization.",
+        "Full-parameter tuning incurs the highest costs but offers the best in-domain performance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Zero-shot learning is noted for its high application efficiency.",
+        "Few-shot learning requires more computational resources than zero-shot learning.",
+        "Full-parameter tuning achieves the best in-domain performance with sufficient training data.",
+        "Parameter-efficient tuning can match or exceed full-parameter tuning performance in some cases."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The section on Natural Language Understanding includes Semantic Analysis.",
+        "Information Extraction is one of the key NLP tasks outlined.",
+        "Dialogue Understanding is discussed in section 3.3.",
+        "Table Understanding is illustrated in Figure 3."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Sentiment analysis focuses on identifying the emotional tone of text.",
+        "The parameter-frozen paradigm employs zero-shot learning for sentiment classification.",
+        "Few-shot learning improves performance by incorporating exemplars.",
+        "LoRA is a technique used to enhance LLMs for emotional systems in multi-turn conversations."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Recent studies have explored zero-shot prompting methods leveraging large language models for information extraction.",
+        "Siepmann et al. demonstrated the effectiveness of GPT-4 in extracting medical information from discharge letters.",
+        "Gu et al. evaluated LLMs for extracting social determinants of health from clinical notes.",
+        "Li and Zhang proposed few-shot learning approaches that reformulate information extraction tasks as code."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Dialogue understanding includes spoken language understanding (SLU) and dialogue state tracking (DST).",
+        "Zero-shot prompting strategies enhance understanding via step-by-step reasoning.",
+        "Few-shot learning has been studied by researchers like Hu et al. and King and Flanigan.",
+        "Full-parameter tuning shows significant improvements in dialogue tasks, as demonstrated by Xie et al. and Gupta et al."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Recent advancements in large language models (LLMs) have enhanced capabilities in zero-shot and few-shot learning.",
+        "Researchers Ye et al. and Sui et al. focus on segmenting large tables in the zero-shot learning paradigm.",
+        "Luo et al.'s hybrid prompt strategy and Cheng et al.'s Binder redefine table tasks as coding challenges in few-shot learning.",
+        "Parameter-efficient tuning methods like LoRA and TableLoRA enhance performance on structured data with minimal adjustments."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Large Language Models (LLMs) are used for classification tasks in Natural Language Generation (NLG).",
+        "Summarization is one of the tasks discussed in relation to LLMs.",
+        "Code Generation is another task focused on in the section.",
+        "Machine Translation is also a task highlighted in the discussion of LLMs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Zero-shot learning with large language models like GPT-3 shows superior performance in generating concise summaries.",
+        "Few-shot learning techniques enhance extractive summarization through in-context learning and dialog-like approaches.",
+        "The parameter-tuning paradigm includes full-parameter tuning, which optimizes LLMs for specific tasks.",
+        "DIONYSUS and Socratic Pretraining are novel strategies used in full-parameter tuning for LLMs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Code generation automates the creation of executable code from natural language specifications.",
+        "Recent advancements in code generation have been driven by large language models like CodeLLMs and CodeT5+.",
+        "Few-shot learning enables models to produce accurate code snippets from minimal examples.",
+        "Parameter-efficient tuning methods, such as adapters and LoRA, are competitive in tasks like unit test generation."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Machine translation (MT) uses computers to automatically translate text between languages.",
+        "Researchers Zhu et al. and Wei et al. enhance LLMs' multilingual capabilities through instruction-tuning.",
+        "OpenBA demonstrates strong performance in Chinese tasks.",
+        "Full-parameter tuning methods by Iyer et al. and Feng et al. improve translation accuracy and context-awareness."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Mathematical reasoning in natural language processing utilizes NLP techniques to interpret mathematical texts.",
+        "Kojima et al.'s zero-shot chain-of-thought enhances LLMs' reasoning by breaking down problems into manageable steps.",
+        "Wei et al.'s chain-of-thought prompting improves reasoning through example selection.",
+        "ToolFormer is a technique used in full-parameter tuning to enhance LLMs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "The section is titled \"5 Future Work and New Frontier.\"",
+        "Figure 4 illustrates emerging opportunities for innovation.",
+        "The aim is to inspire further developments in the field.",
+        "The focus is on significant advancements in the near future."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "Multilingual LLMs aim to extend English-centric NLP models to over 7,000 languages.",
+        "Researchers are exploring multilingual pretraining, supervised fine-tuning, and reinforcement learning.",
+        "A key challenge is improving performance in low-resource languages.",
+        "Effective cross-lingual alignment between English and other languages is essential for cross-lingual NLP tasks."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "Multi-modal LLMs are being developed to enhance performance in natural language processing (NLP).",
+        "Current challenges in multi-modal LLMs include addressing complex multi-modal reasoning.",
+        "Most existing models focus on simpler tasks like recognition.",
+        "Research is needed to create more effective interaction mechanisms for multi-modal LLMs in NLP applications."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "LLMs have shown success in natural language processing (NLP) tasks.",
+        "Research is focusing on using LLMs as central controllers for practical NLP tasks.",
+        "Current approaches often overlook the selection of suitable tools for LLMs.",
+        "Coordinated tool chains are needed for task-oriented dialogue scenarios involving travel bookings."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "X-of-thought (XoT) is an approach used in large language models (LLMs).",
+        "XoT aims to enhance the ability of LLMs to tackle complex natural language processing tasks.",
+        "A key challenge in implementing XoT is developing a universal method for step decomposition.",
+        "XoT seeks to effectively integrate diverse prompting knowledge to improve model performance."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "Large Language Models (LLMs) can produce outputs that diverge from established world knowledge.",
+        "Hallucinations in LLMs undermine their reliability in practical applications.",
+        "Developing efficient evaluation benchmarks for hallucinations is a key challenge in NLP.",
+        "Exploring how to harness hallucinations can enhance creativity in LLMs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "The application of large language models (LLMs) to downstream NLP tasks raises safety concerns.",
+        "Key challenges include the lack of effective safety benchmarks for LLMs.",
+        "There are heightened safety risks associated with multilingual contexts.",
+        "Research is increasingly focused on ensuring LLM safety for various NLP applications."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Long Chain-of-Thought (Long-CoT) enhances standard Chain-of-Thought (CoT) prompting.",
+        "Long-CoT enables large language models to engage in deeper reasoning.",
+        "Key challenges of Long-CoT include adaptive reasoning length control.",
+        "Long-CoT incorporates innovations such as reflective mechanisms and reinforcement-learning enhancements."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "The work introduces a unified taxonomy that differentiates between parameter-frozen and parameter-tuning paradigms.",
+        "The authors received grants from the National Natural Science Foundation of China.",
+        "The research spans from 2022 to 2025.",
+        "Notable contributions include models and techniques such as \"Diaggpt,\" \"Cabinet,\" TableGPT, and Codet5."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    }
+  ]
+}

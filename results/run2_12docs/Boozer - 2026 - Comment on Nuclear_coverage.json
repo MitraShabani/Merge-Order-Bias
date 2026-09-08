@@ -1,0 +1,136 @@
+{
+  "title": "Boozer - 2026 - Comment On Nuclear",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Allen H. Boozer critiques Richard Fitzpatrick's paper published in Nuclear Fusion 66, 016012 (2026).",
+        "Boozer emphasizes that slippage between poloidal and toroidal flux is dictated by loop voltage.",
+        "Nuclear Fusion's policy restricts references to \"private communication.\"",
+        "Boozer presents a new expression for loop voltage that aligns with the parallel component of Ohm's law."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was accepted on October 14, 2025.",
+        "The Nuclear Fusion paper was published online on November 6, 2025.",
+        "Fitzpatrick's paper contains misunderstandings of Faraday’s Law in toroidal plasmas.",
+        "The Nuclear Fusion journal's policy prevents the publication of comments that disclose private communications."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Richard Fitzpatrick's 2026 Nuclear Fusion paper has been criticized for misunderstanding Faraday's Law.",
+        "The paper fails to recognize the significance of the toroidal flux and its relationship to the poloidal flux.",
+        "Key errors in the paper include neglecting the influence of the central solenoid's flux.",
+        "The paper's confusions raise concerns about the reliability of its conclusions regarding disruption management in tokamaks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The author addresses misquoting issues in a Nuclear Fusion article.",
+        "The author highlights a specific misquote in the abstract of the Nuclear Fusion paper.",
+        "Fitzpatrick's interpretation of the author's work reflects a misunderstanding of key physics concepts.",
+        "The text concludes with a technical appendix detailing a new expression for loop voltage in toroidal plasmas."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Allen H. Boozer critiques Richard Fitzpatrick's paper published in Nuclear Fusion 66, 016012 (2026).",
+        "Boozer emphasizes that slippage between poloidal and toroidal flux is dictated by loop voltage.",
+        "Nuclear Fusion's policy restricts references to \"private communication.\"",
+        "Boozer presents a new expression for loop voltage that aligns with the parallel component of Ohm's law."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was accepted on October 14, 2025.",
+        "The Nuclear Fusion paper was published online on November 6, 2025.",
+        "Fitzpatrick's paper contains misunderstandings of Faraday’s Law in toroidal plasmas.",
+        "The Nuclear Fusion journal's policy prevents the publication of comments that disclose private communications."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Richard Fitzpatrick's 2026 Nuclear Fusion paper has been criticized for misunderstanding Faraday's Law.",
+        "The paper fails to recognize the significance of the toroidal flux and its relationship to the poloidal flux.",
+        "Key errors in the paper include neglecting the influence of the central solenoid's flux.",
+        "The paper's confusions raise concerns about the reliability of its conclusions regarding disruption management in tokamaks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The author addresses misquoting issues in a Nuclear Fusion article.",
+        "The author highlights a specific misquote in the abstract of the Nuclear Fusion paper.",
+        "Fitzpatrick's interpretation of the author's work reflects a misunderstanding of key physics concepts.",
+        "The text concludes with a technical appendix detailing a new expression for loop voltage in toroidal plasmas."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "title": "The Great Gatsby",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"The Great Gatsby\" was authored by F. Scott Fitzgerald.",
+        "The eBook was released on January 17, 2021.",
+        "The eBook was produced by Alex Cabal for the Standard Ebooks project.",
+        "The eBook includes a table of contents with nine chapters."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The narrator moves to West Egg after World War I to work in the bond business.",
+        "Daisy Buchanan wishes her daughter to be a \"beautiful little fool.\"",
+        "Tom Buchanan expresses aggressive demeanor and racist views during dinner.",
+        "Nick sees Gatsby reaching toward a distant green light at the end of the scene."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The Valley of Ashes is described as a desolate area where ash-grey men labor.",
+        "Tom Buchanan introduces Myrtle Wilson to the narrator during a train stop.",
+        "Tom violently breaks Myrtle's nose when she mentions Daisy's name.",
+        "Myrtle purchases a dog and insists on hosting a gathering at her apartment."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Jay Gatsby hosts extravagant summer parties at his mansion.",
+        "The narrator feels out of place at Gatsby's parties despite having a formal invitation.",
+        "A guest's car crashes during one of Gatsby's parties.",
+        "The narrator has a complex relationship with Jordan Baker, a golf champion."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Gatsby's house is filled with guests who speculate about his past.",
+        "Gatsby introduces the narrator to Meyer Wolfshiem, a gambler linked to the 1919 World Series scandal.",
+        "Tom Buchanan's unexpected arrival reveals Gatsby's past connection to Daisy.",
+        "Gatsby invites Daisy for tea to reconnect with her, without her knowledge of his intentions."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator initially mistakes Gatsby's mansion for a party due to its bright lights.",
+        "Gatsby expresses a desire to invite Daisy over for tea.",
+        "Gatsby's collection of beautiful shirts brings Daisy to tears during their reunion.",
+        "The chapter culminates in a moment of intimacy between Gatsby and Daisy."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was originally named James Gatz.",
+        "Dan Cody was Gatsby's mentor who introduced him to wealth.",
+        "Daisy Buchanan attends one of Gatsby's lavish parties.",
+        "Tom expresses skepticism about Gatsby's wealth during the evening."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby dismisses his servants, prompting speculation about his health.",
+        "Tom Buchanan confronts Gatsby at the Plaza Hotel, calling him \"Mr. Nobody from Nowhere.\"",
+        "Daisy admits to loving both Gatsby and Tom at different times.",
+        "Myrtle dies in a hit-and-run involving Gatsby's car, which Daisy was driving."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator struggles to sleep due to a foghorn and unsettling dreams.",
+        "Gatsby waits for Daisy, who ultimately does not come to him.",
+        "George Wilson seeks revenge on Gatsby, believing he is responsible for Myrtle's death.",
+        "Wilson finds Gatsby and kills him, culminating in tragedy."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The narrator experiences a chaotic scene at Gatsby's mansion after Gatsby's death.",
+        "Mr. Gatz, Gatsby's father, arrives to mourn his son's lost potential.",
+        "The sparse attendance at Gatsby's funeral highlights his loneliness.",
+        "Jordan Baker reveals her engagement to another man during a confrontation with the narrator."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"The Great Gatsby\" was authored by F. Scott Fitzgerald.",
+        "The eBook was released on January 17, 2021.",
+        "The eBook was produced by Alex Cabal for the Standard Ebooks project.",
+        "The eBook includes a table of contents with nine chapters."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The narrator moves to West Egg after World War I to work in the bond business.",
+        "Daisy Buchanan wishes her daughter to be a \"beautiful little fool.\"",
+        "Tom Buchanan expresses aggressive demeanor and racist views during dinner.",
+        "Nick sees Gatsby reaching toward a distant green light at the end of the scene."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The Valley of Ashes is described as a desolate area where ash-grey men labor.",
+        "Tom Buchanan introduces Myrtle Wilson to the narrator during a train stop.",
+        "Tom violently breaks Myrtle's nose when she mentions Daisy's name.",
+        "Myrtle purchases a dog and insists on hosting a gathering at her apartment."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Jay Gatsby hosts extravagant summer parties at his mansion.",
+        "The narrator feels out of place at Gatsby's parties despite having a formal invitation.",
+        "A guest's car crashes during one of Gatsby's parties.",
+        "The narrator has a complex relationship with Jordan Baker, a golf champion."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Gatsby's house is filled with guests who speculate about his past.",
+        "Gatsby introduces the narrator to Meyer Wolfshiem, a gambler linked to the 1919 World Series scandal.",
+        "Tom Buchanan's unexpected arrival reveals Gatsby's past connection to Daisy.",
+        "Daisy hears Gatsby's name for the first time in years, prompting a conversation about his desire to reconnect with her."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator initially mistakes Gatsby's mansion for a party due to its bright lights.",
+        "Gatsby expresses a desire to invite Daisy over for tea.",
+        "Gatsby sends someone to cut the narrator's grass before the tea meeting.",
+        "Daisy is brought to tears when she admires Gatsby's collection of beautiful shirts."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was originally named James Gatz.",
+        "Dan Cody was Gatsby's mentor who introduced him to wealth.",
+        "Daisy Buchanan attends one of Gatsby's lavish parties.",
+        "Tom expresses skepticism about Gatsby's wealth during the evening."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby dismisses his servants, prompting speculation about his health.",
+        "Tom Buchanan confronts Gatsby at the Plaza Hotel, calling him \"Mr. Nobody from Nowhere.\"",
+        "Daisy admits to loving both Gatsby and Tom at different times.",
+        "Myrtle dies in a hit-and-run involving Gatsby's car, which Daisy was driving."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator struggles to sleep due to a foghorn and unsettling dreams.",
+        "Gatsby waits for Daisy, who ultimately does not come to him.",
+        "George Wilson seeks revenge on Gatsby, believing he is responsible for Myrtle's death.",
+        "Wilson finds Gatsby and kills him, culminating in tragedy."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The narrator experiences a chaotic scene at Gatsby's mansion after Gatsby's death.",
+        "Mr. Gatz, Gatsby's father, arrives to mourn his son's lost potential.",
+        "The sparse attendance at Gatsby's funeral underscores his loneliness.",
+        "Jordan Baker reveals her engagement to another man during a confrontation with the narrator."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

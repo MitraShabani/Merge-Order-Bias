@@ -1,0 +1,1564 @@
+{
+  "title": "Pride And Prejudice",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"Pride and Prejudice\" was made available for free on June 1, 1998.",
+        "The eBook can be accessed at www.gutenberg.org/ebooks/1342.",
+        "George Saintsbury wrote the preface for \"Pride and Prejudice.\"",
+        "Elizabeth Bennet is characterized by her charm, wit, and confidence."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Mr. Bingley has rented Netherfield Park.",
+        "Mrs. Bennet wants Mr. Bennet to visit Mr. Bingley.",
+        "Mr. Bennet teases Mrs. Bennet about her obsession with marriage.",
+        "The chapter establishes the social dynamics of the Bennet family."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Mr. Bennet visits Mr. Bingley without telling Mrs. Bennet.",
+        "Mrs. Bennet expresses disbelief and frustration when Mr. Bennet reveals his visit.",
+        "Elizabeth reminds Mrs. Bennet that they will meet Bingley at the upcoming assemblies.",
+        "Lydia asserts her chances of dancing with Bingley at the next ball."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Mrs. Bennet and her daughters seek information about Mr. Bingley.",
+        "Mr. Bingley declines an invitation to dinner because he must go to town.",
+        "Mr. Darcy dismisses Elizabeth Bennet as \"tolerable.\"",
+        "Mrs. Bennet is thrilled by Jane's success with Mr. Bingley."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Jane Bennet admires Mr. Bingley, calling him sensible, good-humored, and handsome.",
+        "Elizabeth Bennet is skeptical about Mr. Bingley's sisters, Miss Bingley and Mrs. Hurst.",
+        "Mr. Bingley has inherited a substantial fortune.",
+        "Elizabeth vows never to dance with Mr. Darcy due to his perceived arrogance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The Bennet sisters visit the Bingleys at Netherfield.",
+        "Jane's amiable nature wins the favor of Mrs. Hurst and Miss Bingley.",
+        "Elizabeth declines to dance with Mr. Darcy at a gathering.",
+        "Mr. Darcy begins to notice Elizabeth's intelligence and charm."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Mr. Bennet's estate is entailed to a distant relative.",
+        "Lydia and Catherine Bennet are excited by the arrival of a militia regiment.",
+        "Jane Bennet becomes ill after getting caught in the rain during her visit to Netherfield.",
+        "Elizabeth Bennet walks three miles to see her sister Jane despite their mother's objections."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Elizabeth Bennet is summoned to dinner at the Bingley residence.",
+        "Mr. Bingley shows genuine concern for Jane's health.",
+        "Elizabeth challenges Darcy and Bingley's views on what it means to be \"accomplished.\"",
+        "Bingley suggests calling a doctor for Jane's worsening condition."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Elizabeth Bennet spends the night in her sister Jane's room at Netherfield.",
+        "Mrs. Bennet arrives at Netherfield with her two youngest daughters.",
+        "Lydia reminds Mr. Bingley of his promise to host a ball.",
+        "Mr. Bingley agrees to host a ball once Jane recovers."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Elizabeth Bennet joins Mrs. Hurst and Miss Bingley in the drawing-room.",
+        "Miss Bingley attempts to engage Mr. Darcy in conversation.",
+        "Elizabeth dismisses Mr. Darcy's invitation to dance a reel.",
+        "The chapter concludes with Elizabeth feeling optimistic about returning home soon."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Elizabeth Bennet and her sister Jane are welcomed in the drawing-room by Mr. Bingley.",
+        "Mr. Bennet announces the impending visit of their cousin Mr. Collins.",
+        "Mr. Collins exhibits pompous manners and earnestness in his compliments.",
+        "Miss de Bourgh is described as a charming but health-impaired young lady."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Mr. Collins seeks to marry one of the Bennet daughters to atone for inheriting their father's estate.",
+        "Mr. Collins initially intends to marry Jane Bennet but shifts his attention to Elizabeth.",
+        "The Bennet sisters meet Mr. Wickham in Meryton, who has just returned from London.",
+        "Mr. Collins expresses admiration for Mrs. Philips in Chapter XV."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Mr. Collins and his five cousins visit their aunt, Mrs. Philips, in Meryton.",
+        "Mr. Wickham has a history of animosity with Mr. Darcy.",
+        "Wickham describes Mr. Darcy as proud and unjust.",
+        "Elizabeth is captivated by Mr. Wickham's charm and conversation."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Elizabeth shares her encounter with Mr. Wickham and Mr. Darcy with her sister Jane.",
+        "Jane remains hopeful that both Mr. Wickham and Mr. Darcy have been misled.",
+        "Mr. Bingley and his sisters invite the Bennet family to a ball at Netherfield.",
+        "Mr. Collins intends to dance with Elizabeth at the ball, which dismays her."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Elizabeth Bennet arrives at Netherfield eager to meet Mr. Wickham.",
+        "Mr. Darcy's influence causes Mr. Wickham to be absent from Netherfield.",
+        "Miss Bingley attempts to tarnish Mr. Wickham's reputation during the gathering.",
+        "Elizabeth hopes for a happy union between Jane Bennet and Mr. Bingley."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Mr. Collins proposes to Elizabeth Bennet at Longbourn.",
+        "Mrs. Bennet insists that Elizabeth stay to hear Mr. Collins' proposal.",
+        "Elizabeth rejects Mr. Collins' proposal, stating they would not make each other happy.",
+        "Elizabeth decides to seek her father's intervention regarding Mr. Collins' proposal."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Mr. Collins proposes marriage to Elizabeth Bennet.",
+        "Elizabeth Bennet rejects Mr. Collins' marriage proposal.",
+        "Mrs. Bennet insists that Elizabeth must accept Mr. Collins.",
+        "Mr. Collins formally withdraws his marriage proposal."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Elizabeth Bennet feels uncomfortable after Mr. Collins's proposal.",
+        "Mr. Collins shifts his attention to Miss Lucas after his proposal to Elizabeth.",
+        "Jane receives a letter from Caroline Bingley stating that the Bingley party has left Netherfield for London.",
+        "Elizabeth believes that Bingley still cares for Jane despite the Bingley family's departure."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "The Bennets dine with the Lucases in Chapter XXII.",
+        "Mr. Collins proposes to Charlotte the day after the dinner.",
+        "Charlotte accepts Mr. Collins's proposal for the security of marriage.",
+        "Elizabeth is shocked when Charlotte informs her of the engagement."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "Charlotte Lucas is engaged to Mr. Collins.",
+        "Mrs. Bennet blames Elizabeth for Charlotte's engagement.",
+        "Mr. Bennet finds amusement in the news of the engagement.",
+        "Jane wishes for Charlotte's happiness despite her surprise."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "Miss Bingley's letter confirms that she and Mr. Bingley are settled in London for the winter.",
+        "Jane expresses her desire to move on after receiving the letter.",
+        "Elizabeth feels resentment towards Bingley for being influenced by his friends.",
+        "Mr. Wickham's presence helps alleviate the family's gloom."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Mr. Collins leaves Longbourn after a week of declarations to Charlotte Lucas.",
+        "Mrs. Bennet expresses her frustrations about her daughters' romantic prospects during Christmas.",
+        "Elizabeth receives advice from Mrs. Gardiner to be cautious of Mr. Wickham.",
+        "Jane grapples with Mr. Bingley's apparent indifference while in London."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "Sir William visits Hunsford for a week.",
+        "Mr. Collins spends his time gardening and reading.",
+        "Mr. Darcy arrives with Colonel Fitzwilliam.",
+        "Elizabeth subtly probes Mr. Darcy about her sister Jane's situation."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "The ladies at the Parsonage receive an invitation to Rosings on Easter day.",
+        "Colonel Fitzwilliam enjoys a conversation with Elizabeth Bennet about music.",
+        "Lady Catherine critiques Elizabeth's musical performance.",
+        "Elizabeth teases Darcy about his past behavior at a ball."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Elizabeth Bennet is surprised by an unexpected visit from Mr. Darcy.",
+        "Darcy comments on the comfort of the house and Lady Catherine's influence.",
+        "Charlotte speculates that Mr. Darcy may be in love with Elizabeth.",
+        "Colonel Fitzwilliam enjoys visiting the Bennet household."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "Elizabeth Bennet encounters Mr. Darcy multiple times during her walks in the park.",
+        "Darcy asks Elizabeth questions about her stay in Hunsford and her opinions on various subjects.",
+        "Colonel Fitzwilliam discusses Darcy's influence over Mr. Bingley regarding his romantic pursuits.",
+        "Elizabeth chooses not to attend a tea at Rosings due to feeling unwell."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 27,
+      "facts": [
+        "Elizabeth Bennet reflects on her sister Jane's letters, noting their lack of cheerfulness.",
+        "Mr. Darcy confesses his love to Elizabeth Bennet during a visit.",
+        "Elizabeth Bennet rejects Mr. Darcy, citing his role in separating Jane and Mr. Bingley.",
+        "After Darcy leaves, Elizabeth feels overwhelmed and distressed by the situation."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 28,
+      "facts": [
+        "Elizabeth Bennet takes a walk for fresh air in Chapter XXXV.",
+        "Mr. Darcy hands Elizabeth a letter explaining his actions regarding Jane and Mr. Bingley.",
+        "Darcy claims he believed Jane was indifferent to Mr. Bingley.",
+        "Darcy reveals that Wickham attempted to elope with his sister, Georgiana."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 29,
+      "facts": [
+        "Elizabeth receives a letter from Mr. Darcy in Chapter XXXVI.",
+        "The letter reveals Mr. Wickham's duplicity, contradicting Elizabeth's previous beliefs.",
+        "Elizabeth reflects on her biases and their impact on her sister Jane's prospects.",
+        "Colonel Fitzwilliam is waiting for Elizabeth when she returns home."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 30,
+      "facts": [
+        "Mr. Collins bids farewell to Mr. Darcy and Mr. Bingley after their visit to Rosings.",
+        "Lady Catherine invites Elizabeth to extend her stay at Rosings.",
+        "Elizabeth must return to town due to her father's wishes.",
+        "Lady Catherine insists on sending a servant with the young ladies for their journey."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 31,
+      "facts": [
+        "Elizabeth and Mr. Collins share a breakfast before her departure from Hunsford.",
+        "Mr. Collins expresses gratitude for Elizabeth's visit and highlights their connection to Lady Catherine.",
+        "Elizabeth reflects on nine dinners at Rosings during her journey back to Mr. Gardiner's house.",
+        "Elizabeth contemplates the revelation of Mr. Darcy's marriage proposal to her sister Jane."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 32,
+      "facts": [
+        "The three Bennet sisters—Jane, Elizabeth, and Lydia—arrive at an inn in Hertfordshire in the second week of May. Lydia shares that Wickham is no longer pursuing Mary King. The sisters enjoy a meal together where Lydia recounts a prank involving dressing a man in women's clothing. Elizabeth feels apprehensive about the prospect of seeing Wickham again upon returning home."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 33,
+      "facts": [
+        "Elizabeth Bennet shares details of her encounter with Mr. Darcy with her sister Jane.",
+        "Jane is shocked by the revelations in Darcy's letter about George Wickham.",
+        "Elizabeth advises against publicly exposing Wickham's faults.",
+        "Mrs. Bennet expresses frustration over Jane's feelings for Bingley."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 34,
+      "facts": [
+        "Lydia receives an invitation from Mrs. Forster to accompany her to Brighton.",
+        "Elizabeth urges Mr. Bennet to prevent Lydia from going to Brighton.",
+        "Mr. Bennet believes it will be beneficial for Lydia to go to Brighton.",
+        "Elizabeth encounters Mr. Wickham one last time before Lydia leaves for Brighton."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 35,
+      "facts": [
+        "Elizabeth Bennet reflects on her father's unsatisfactory marriage to a woman of limited intellect.",
+        "Elizabeth anticipates a trip to the Lakes but is disappointed when plans change to a shorter tour in Derbyshire.",
+        "Mr. and Mrs. Gardiner's arrival brings excitement to Elizabeth's journey.",
+        "Elizabeth agrees to visit Pemberley after learning that Mr. Darcy's family is away for the summer."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 36,
+      "facts": [
+        "Elizabeth Bennet visits Pemberley, Mr. Darcy's estate.",
+        "Mrs. Reynolds praises Mr. Darcy's character during the visit.",
+        "Elizabeth is pleased by Mr. Darcy's respectful demeanor towards her relatives.",
+        "Mrs. Gardiner discusses Mr. Darcy's past treatment of Wickham with Elizabeth."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 37,
+      "facts": [
+        "Elizabeth Bennet anticipates a visit from Mr. Darcy and Miss Darcy after arriving at Pemberley.",
+        "Miss Darcy is described as shy rather than proud when she meets Elizabeth.",
+        "Bingley expresses genuine pleasure in seeing Elizabeth during his visit.",
+        "Elizabeth reflects on her growing interest in Darcy despite their past misunderstandings."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 38,
+      "facts": [
+        "Elizabeth Bennet visits Pemberley in Chapter 45.",
+        "Miss Bingley criticizes Elizabeth's appearance during the visit.",
+        "Mr. Darcy defends Elizabeth by stating he finds her one of the handsomest women he knows.",
+        "Elizabeth and Mrs. Gardiner discuss the events after the visit, avoiding direct mention of Darcy."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 39,
+      "facts": [
+        "Elizabeth Bennet arrives in Lambton without a letter from her sister Jane.",
+        "Lydia has eloped with Mr. Wickham, causing distress in the family.",
+        "Elizabeth encounters Mr. Darcy, who offers his support.",
+        "Elizabeth and her relatives prepare to return home to address Lydia's crisis."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 40,
+      "facts": [
+        "Lydia elopes with Mr. Wickham.",
+        "Mr. Bennet searches for Lydia in London.",
+        "Mr. Bennet consents to a marriage settlement of five thousand pounds.",
+        "Mr. Gardiner informs the family that Lydia and Wickham are not yet married."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 41,
+      "facts": [
+        "Mr. Wickham is content after a conversation with Elizabeth.",
+        "Mrs. Bennet expresses her sadness over Lydia and Wickham's departure.",
+        "Mr. Bingley arrives at Netherfield accompanied by Mr. Darcy.",
+        "Bingley's renewed attention to Jane rekindles Elizabeth's hope."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 42,
+      "facts": [
+        "Elizabeth Bennet grapples with her feelings for Mr. Darcy after a visit.",
+        "Jane Bennet feels reassured after her first meeting with Mr. Bingley.",
+        "During dinner, Bingley sits next to Jane and shows admiration for her.",
+        "Jane insists she has no romantic intentions towards Mr. Bingley."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 43,
+      "facts": [
+        "Mr. Bingley visits the Bennet family alone in Chapter LV.",
+        "Mrs. Bennet invites Mr. Bingley to dinner, which he accepts.",
+        "Jane reveals to Elizabeth that she is in love with Mr. Bingley.",
+        "The chapter concludes with the Bennets being viewed as the luckiest family."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 44,
+      "facts": [
+        "Lady Catherine de Bourgh visits the Bennet family after Bingley's engagement to Jane.",
+        "Lady Catherine disapproves of a rumored engagement between Elizabeth and Mr. Darcy.",
+        "Elizabeth rejects Lady Catherine's demands regarding the rumored engagement.",
+        "Lady Catherine departs in frustration after insulting Elizabeth's family and social standing."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 45,
+      "facts": [
+        "Lady Catherine de Bourgh visits Elizabeth Bennet to break off her supposed engagement to Mr. Darcy.",
+        "Mr. Collins sends a letter congratulating the family on Jane's engagement.",
+        "Mr. Collins warns Elizabeth against a match with Mr. Darcy due to Lady Catherine's disapproval.",
+        "Elizabeth feels both amused and mortified by Mr. Collins's letter."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 46,
+      "facts": [
+        "Mr. Bingley visits Longbourn with Mr. Darcy to spend time with Jane Bennet.",
+        "Elizabeth expresses her gratitude for Darcy's kindness towards her sister, Lydia.",
+        "Darcy reveals that Lady Catherine's visit gave him hope regarding Elizabeth's feelings.",
+        "Darcy acknowledges his role in facilitating Bingley and Jane's engagement."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 47,
+      "facts": [
+        "Elizabeth Bennet returns home to find her sister Jane and the family curious about her whereabouts.",
+        "Jane initially struggles to believe that Elizabeth is truly engaged to Darcy.",
+        "Mrs. Bennet is shocked but ecstatic upon learning of Elizabeth's engagement to Darcy.",
+        "Elizabeth gains her father's consent for the engagement after explaining Darcy's true character."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 48,
+      "facts": [
+        "Elizabeth questions Mr. Darcy about the origins of his love for her.",
+        "Darcy admits he cannot pinpoint when he fell in love with Elizabeth.",
+        "Elizabeth writes to her aunt, inviting her family to Pemberley for Christmas.",
+        "Mr. Darcy prepares to inform Lady Catherine of his engagement to Elizabeth."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 49,
+      "facts": [
+        "Mrs. Bennet is pleased with the marriages of her daughters, Jane and Elizabeth, to Mr. Bingley and Mr. Darcy.",
+        "Mr. Bennet misses Elizabeth while Jane and Bingley move to a nearby estate.",
+        "Lydia's letter to Elizabeth reveals her expectation of financial support from Darcy, which Elizabeth declines.",
+        "Darcy reconciles with Lady Catherine in Chapter 61 of \"Pride and Prejudice.\""
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"Pride and Prejudice\" was made available for free on June 1, 1998.",
+        "The eBook can be accessed at www.gutenberg.org/ebooks/1342.",
+        "George Saintsbury wrote the preface for \"Pride and Prejudice.\"",
+        "Elizabeth Bennet is characterized by her charm, wit, and confidence."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Mr. Bingley has rented Netherfield Park.",
+        "Mrs. Bennet wants Mr. Bennet to visit Mr. Bingley.",
+        "Mr. Bingley is described as a young man of considerable fortune.",
+        "The chapter contrasts the personalities of Mr. and Mrs. Bennet."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Mr. Bennet visits Mr. Bingley without telling Mrs. Bennet.",
+        "Mrs. Bennet expresses disbelief and frustration when Mr. Bennet reveals his visit.",
+        "Elizabeth reminds Mrs. Bennet that they will meet Bingley at the upcoming assemblies.",
+        "Lydia asserts her chances of dancing with Bingley at the next ball."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Mrs. Bennet and her daughters seek information about Mr. Bingley.",
+        "Mr. Bingley declines an invitation to dinner because he must go to town.",
+        "Mr. Darcy dismisses Elizabeth Bennet as \"tolerable.\"",
+        "Mrs. Bennet is thrilled by Jane's success with Mr. Bingley."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Jane Bennet admires Mr. Bingley, describing him as sensible, good-humored, and handsome.",
+        "Elizabeth Bennet is skeptical about Mr. Bingley's sisters, Miss Bingley and Mrs. Hurst.",
+        "Mr. Bingley has inherited a substantial fortune.",
+        "Elizabeth vows never to dance with Mr. Darcy due to his perceived arrogance."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The Bennet sisters visit the Bingleys at Netherfield.",
+        "Jane's amiable nature wins the favor of Mrs. Hurst and Miss Bingley.",
+        "Elizabeth declines to dance with Mr. Darcy at a gathering.",
+        "Mr. Darcy begins to notice Elizabeth's intelligence and charm."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Mr. Bennet's estate is entailed to a distant relative.",
+        "Lydia and Catherine Bennet are excited by the arrival of a militia regiment.",
+        "Jane Bennet becomes ill after getting caught in the rain at Netherfield.",
+        "Elizabeth Bennet walks three miles to see her sister Jane despite their mother's objections."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Elizabeth Bennet is summoned to dinner at the Bingley residence.",
+        "Mr. Bingley shows genuine concern for Jane's health.",
+        "Elizabeth challenges Darcy and Bingley's views on what it means to be \"accomplished.\"",
+        "Bingley suggests calling a doctor for Jane's worsening condition."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Elizabeth Bennet spends the night in her sister Jane's room at Netherfield.",
+        "Mrs. Bennet arrives at Netherfield with her two youngest daughters.",
+        "Lydia reminds Mr. Bingley of his promise to host a ball.",
+        "Mr. Bingley agrees to host a ball once Jane recovers."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Elizabeth Bennet joins Mrs. Hurst and Miss Bingley in the drawing-room.",
+        "Miss Bingley attempts to engage Mr. Darcy in conversation.",
+        "Elizabeth dismisses Mr. Darcy's invitation to dance a reel.",
+        "The chapter concludes with Elizabeth feeling optimistic about returning home soon."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Elizabeth Bennet and her sister Jane are welcomed in the drawing-room by Mr. Bingley.",
+        "Mr. Bennet announces the impending visit of their cousin Mr. Collins.",
+        "Mr. Collins exhibits pompous manners and earnestness in his compliments.",
+        "Miss de Bourgh is described as a charming but health-impaired young lady."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Mr. Collins seeks to marry one of the Bennet daughters to atone for inheriting their father's estate.",
+        "Mr. Collins initially intends to marry Jane Bennet but shifts his attention to Elizabeth.",
+        "The Bennet sisters meet Mr. Wickham in Meryton, who has just returned from London.",
+        "Mr. Collins expresses admiration for Mrs. Philips in the chapter's conclusion."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Mr. Collins and his five cousins visit their aunt, Mrs. Philips, in Meryton.",
+        "Mr. Wickham has accepted an invitation to join Mr. Collins and his cousins.",
+        "Wickham reveals a history of animosity with Mr. Darcy during his conversation with Elizabeth.",
+        "Wickham describes Mr. Darcy as proud and unjust, surprising Elizabeth."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Elizabeth shares her encounter with Mr. Wickham and Mr. Darcy with her sister Jane.",
+        "Jane remains hopeful that both Mr. Wickham and Mr. Darcy have been misled.",
+        "Mr. Bingley and his sisters invite the Bennet family to a ball at Netherfield.",
+        "Mr. Collins intends to dance with Elizabeth at the ball, which dismays her."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Elizabeth Bennet arrives at Netherfield eager to meet Mr. Wickham.",
+        "Mr. Wickham is absent due to Mr. Darcy's influence.",
+        "Miss Bingley attempts to tarnish Wickham's reputation during the gathering.",
+        "Elizabeth hopes Jane Bennet and Mr. Bingley will have a happy union."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Mr. Collins proposes to Elizabeth Bennet at Longbourn.",
+        "Mrs. Bennet insists that Elizabeth stay to hear Mr. Collins' proposal.",
+        "Elizabeth rejects Mr. Collins' proposal, stating they would not make each other happy.",
+        "Elizabeth decides to seek her father's intervention regarding Mr. Collins."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Mr. Collins proposes marriage to Elizabeth Bennet.",
+        "Elizabeth Bennet rejects Mr. Collins' marriage proposal.",
+        "Mrs. Bennet insists that Elizabeth must accept Mr. Collins.",
+        "Mr. Collins formally withdraws his marriage proposal."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Elizabeth Bennet feels uncomfortable after Mr. Collins's proposal.",
+        "Mr. Collins shifts his attention to Miss Lucas after his proposal to Elizabeth.",
+        "Jane receives a letter from Caroline Bingley stating that the Bingley party has left Netherfield for London.",
+        "Elizabeth believes that Mr. Bingley still cares for Jane despite the Bingley family's departure."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "The Bennets dine with the Lucases in Chapter XXII.",
+        "Mr. Collins proposes to Charlotte the day after the dinner.",
+        "Charlotte accepts Mr. Collins's proposal for the security of marriage.",
+        "Elizabeth is shocked when Charlotte informs her of the engagement."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "Charlotte Lucas is engaged to Mr. Collins.",
+        "Mrs. Bennet expresses resentment towards Elizabeth regarding the engagement.",
+        "Mr. Bennet finds amusement in the news of Charlotte's engagement.",
+        "Jane wishes for Charlotte's happiness despite her surprise at the engagement."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "Miss Bingley's letter confirms that she and Mr. Bingley are settled in London for the winter.",
+        "Jane expresses her desire to move on after receiving the letter.",
+        "Elizabeth feels resentment towards Bingley for being influenced by his friends.",
+        "Mr. Wickham's presence helps alleviate the family's gloom."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Mr. Collins leaves Longbourn after a week of declarations to Charlotte Lucas.",
+        "Mrs. Bennet expresses her frustrations about her daughters' romantic prospects during Christmas.",
+        "Elizabeth receives an invitation for a summer tour from her aunt and uncle, the Gardiners.",
+        "Jane grapples with Mr. Bingley's apparent indifference while in London."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "Sir William visits Hunsford for a week.",
+        "Mr. Collins spends his time gardening and reading.",
+        "Mr. Darcy arrives with Colonel Fitzwilliam.",
+        "Elizabeth subtly probes Mr. Darcy about her sister Jane's situation."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "The ladies at the Parsonage receive an invitation to Rosings on Easter day.",
+        "Colonel Fitzwilliam enjoys a conversation with Elizabeth Bennet about music.",
+        "Lady Catherine critiques Elizabeth's musical performance.",
+        "Elizabeth teases Darcy about his past behavior at a ball."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Elizabeth Bennet is surprised by an unexpected visit from Mr. Darcy.",
+        "Darcy comments on the comfort of the house and Lady Catherine's influence.",
+        "Charlotte speculates that Mr. Darcy may be in love with Elizabeth.",
+        "Colonel Fitzwilliam enjoys visiting the Bennet household."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "Elizabeth Bennet encounters Mr. Darcy multiple times during her walks in the park.",
+        "Darcy asks Elizabeth questions about her stay in Hunsford and her opinions on various subjects.",
+        "Colonel Fitzwilliam discusses Darcy's influence over Mr. Bingley regarding his romantic pursuits.",
+        "Elizabeth chooses not to attend a tea at Rosings due to feeling unwell."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 27,
+      "facts": [
+        "Elizabeth Bennet reflects on her sister Jane's letters, noting their lack of cheerfulness.",
+        "Mr. Darcy confesses his love to Elizabeth Bennet during a visit.",
+        "Elizabeth Bennet rejects Mr. Darcy, citing his role in separating Jane and Mr. Bingley.",
+        "After Darcy leaves, Elizabeth feels overwhelmed and distressed by the situation."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 28,
+      "facts": [
+        "Elizabeth Bennet takes a walk for fresh air in Chapter XXXV.",
+        "Mr. Darcy hands Elizabeth a letter explaining his actions regarding Jane and Mr. Bingley.",
+        "Darcy claims he believed Jane was indifferent to Mr. Bingley.",
+        "Darcy reveals that Wickham attempted to elope with his sister, Georgiana."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 29,
+      "facts": [
+        "Elizabeth receives a letter from Mr. Darcy in Chapter XXXVI.",
+        "The letter reveals Mr. Wickham's duplicity, contradicting Elizabeth's previous beliefs.",
+        "Elizabeth reflects on her biases and their impact on her sister Jane's prospects.",
+        "Colonel Fitzwilliam was waiting for Elizabeth when she returned home."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 30,
+      "facts": [
+        "Mr. Collins bids farewell to Mr. Darcy and Mr. Bingley after their visit to Rosings.",
+        "Lady Catherine invites Elizabeth to extend her stay at Rosings.",
+        "Elizabeth must return to town due to her father's wishes.",
+        "Lady Catherine insists on sending a servant with the young ladies for their journey."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 31,
+      "facts": [
+        "Elizabeth and Mr. Collins share a breakfast before her departure from Hunsford.",
+        "Mr. Collins expresses gratitude for Elizabeth's visit and highlights their connection to Lady Catherine.",
+        "Elizabeth reflects on nine dinners at Rosings during her journey back to Mr. Gardiner's house.",
+        "Elizabeth is eager yet hesitant to share Mr. Darcy's marriage proposal to her sister Jane."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 32,
+      "facts": [
+        "The three Bennet sisters—Jane, Elizabeth, and Lydia—arrive at an inn in Hertfordshire in the second week of May. Lydia shares that Wickham is no longer pursuing Mary King. The sisters enjoy a meal together where Lydia recounts a prank involving dressing a man in women's clothing. Elizabeth feels apprehensive about the prospect of seeing Wickham again upon returning home."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 33,
+      "facts": [
+        "Elizabeth Bennet shares details of her encounter with Mr. Darcy with her sister Jane.",
+        "Jane is shocked by the revelations in Darcy's letter about George Wickham.",
+        "Elizabeth advises against publicly exposing Wickham's faults.",
+        "Mrs. Bennet expresses frustration over Jane's feelings for Bingley."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 34,
+      "facts": [
+        "Lydia receives an invitation from Mrs. Forster to accompany her to Brighton.",
+        "Elizabeth urges Mr. Bennet to prevent Lydia from going to Brighton.",
+        "Mr. Bennet believes it will be beneficial for Lydia to go to Brighton.",
+        "Elizabeth encounters Mr. Wickham one last time before Lydia leaves for Brighton."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 35,
+      "facts": [
+        "Elizabeth Bennet reflects on her father's unsatisfactory marriage to a woman of limited intellect.",
+        "Elizabeth anticipates a trip to the Lakes but is disappointed when plans change to a shorter tour in Derbyshire.",
+        "Mr. and Mrs. Gardiner's arrival brings excitement to Elizabeth's journey.",
+        "Elizabeth agrees to visit Pemberley after learning that Mr. Darcy's family is away for the summer."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 36,
+      "facts": [
+        "Elizabeth Bennet visits Pemberley, Mr. Darcy's estate.",
+        "Mrs. Reynolds praises Mr. Darcy's character during the visit.",
+        "Elizabeth is pleased by Mr. Darcy's respectful demeanor towards her relatives.",
+        "Mrs. Gardiner discusses Mr. Darcy's past treatment of Wickham with Elizabeth."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 37,
+      "facts": [
+        "Elizabeth Bennet anticipates a visit from Mr. Darcy and Miss Darcy after arriving at Pemberley.",
+        "Miss Darcy is described as shy rather than proud when she meets Elizabeth.",
+        "Bingley expresses genuine pleasure in seeing Elizabeth again during the visit.",
+        "Elizabeth reflects on her growing interest in Darcy despite their past misunderstandings."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 38,
+      "facts": [
+        "Elizabeth Bennet visits Pemberley in Chapter 45.",
+        "Miss Bingley criticizes Elizabeth's appearance during the visit.",
+        "Mr. Darcy defends Elizabeth by stating he finds her one of the handsomest women he knows.",
+        "Elizabeth and Mrs. Gardiner discuss the events after the visit, avoiding direct mention of Darcy."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 39,
+      "facts": [
+        "Elizabeth Bennet arrives in Lambton without a letter from her sister Jane.",
+        "Lydia has eloped with Mr. Wickham, causing distress in the family.",
+        "Elizabeth encounters Mr. Darcy, who offers his support.",
+        "Elizabeth and her relatives prepare to return home to address Lydia's crisis."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 40,
+      "facts": [
+        "Lydia elopes with Mr. Wickham.",
+        "Mr. Bennet searches for Lydia in London.",
+        "Mr. Bennet consents to a marriage settlement of five thousand pounds.",
+        "Mr. Gardiner informs the family that Lydia and Wickham are not yet married."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 41,
+      "facts": [
+        "Mr. Wickham is content after a conversation with Elizabeth.",
+        "Mrs. Bennet feels dull and forlorn after Lydia and Wickham's departure.",
+        "Mr. Bingley arrives at Netherfield accompanied by Mr. Darcy.",
+        "Bingley's renewed attention to Jane rekindles Elizabeth's hope."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 42,
+      "facts": [
+        "Elizabeth Bennet grapples with her feelings for Mr. Darcy after a visit.",
+        "Bingley sits next to Jane during the dinner, showing admiration for her.",
+        "Mrs. Bennet expresses delight in Jane's prospects with Bingley after the evening.",
+        "Jane insists she has no romantic intentions towards Bingley during a discussion with Elizabeth."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 43,
+      "facts": [
+        "Mr. Bingley visits the Bennet family alone in Chapter LV.",
+        "Mrs. Bennet invites Mr. Bingley to dinner, which he accepts.",
+        "Jane reveals to Elizabeth that she is in love with Mr. Bingley.",
+        "The chapter concludes with the Bennets being viewed as the luckiest family."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 44,
+      "facts": [
+        "Lady Catherine de Bourgh visits the Bennet family after Bingley's engagement to Jane.",
+        "Lady Catherine disapproves of a rumored engagement between Elizabeth and Mr. Darcy.",
+        "Elizabeth rejects Lady Catherine's demands regarding the rumored engagement.",
+        "Lady Catherine departs in frustration after insulting Elizabeth's family and social standing."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 45,
+      "facts": [
+        "Lady Catherine de Bourgh visits Elizabeth Bennet to break off her supposed engagement to Mr. Darcy.",
+        "Mr. Collins sends a letter congratulating the family on Jane's engagement.",
+        "Mr. Collins warns Elizabeth against a match with Mr. Darcy due to Lady Catherine's disapproval.",
+        "Elizabeth feels both amused and mortified by Mr. Collins's letter."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 46,
+      "facts": [
+        "Mr. Bingley visits Longbourn with Mr. Darcy to spend time with Jane Bennet.",
+        "Elizabeth expresses her gratitude for Darcy's kindness towards her sister, Lydia.",
+        "Darcy reveals that Lady Catherine's visit gave him hope regarding Elizabeth's feelings.",
+        "Darcy acknowledges his role in facilitating Bingley and Jane's engagement."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 47,
+      "facts": [
+        "Elizabeth Bennet returns home to find her sister Jane and the family curious about her whereabouts.",
+        "Jane initially struggles to believe that Elizabeth is truly engaged to Darcy.",
+        "Mrs. Bennet is shocked but ecstatic upon learning of Elizabeth's engagement to Darcy.",
+        "Elizabeth gains her father's consent for the engagement after explaining Darcy's true character."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 48,
+      "facts": [
+        "Elizabeth questions Mr. Darcy about the origins of his love for her.",
+        "Darcy admits he cannot pinpoint when he fell in love with Elizabeth.",
+        "Elizabeth writes to her aunt, inviting her family to Pemberley for Christmas.",
+        "Mr. Darcy prepares to inform Lady Catherine of their engagement."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 49,
+      "facts": [
+        "Mrs. Bennet is pleased with the marriages of her daughters, Jane and Elizabeth, to Mr. Bingley and Mr. Darcy.",
+        "Mr. Bennet misses Elizabeth while Jane and Bingley move to a nearby estate.",
+        "Lydia's letter to Elizabeth reveals her expectation of financial support from Darcy, which Elizabeth declines.",
+        "Darcy reconciles with Lady Catherine in Chapter 61 of \"Pride and Prejudice.\""
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

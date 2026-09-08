@@ -1,0 +1,328 @@
+{
+  "title": "The Great Gatsby",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"The Great Gatsby\" was released on January 17, 2021.",
+        "The eBook was last updated on January 26, 2025.",
+        "The eBook includes a table of contents with nine chapters.",
+        "The eBook features a dedication to Zelda."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The narrator's family is prominent in a Midwestern city.",
+        "The narrator moved to the East after World War I to pursue a career in the bond business.",
+        "Daisy wishes her daughter to be a \"beautiful little fool.\"",
+        "Nick observes Gatsby reaching toward a distant green light."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The area known as the \"valley of ashes\" is characterized by ash-covered landscapes and the eyes of Doctor T. J. Eckleburg.",
+        "Tom Buchanan introduces the protagonist to his mistress, Myrtle Wilson, during a train journey to New York.",
+        "Myrtle Wilson's husband, George Wilson, owns the garage where they stop.",
+        "Tom strikes Myrtle during a confrontation when she mentions his wife, Daisy."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Jay Gatsby hosts extravagant summer parties at his mansion.",
+        "The narrator receives a formal invitation to one of Gatsby's parties.",
+        "A chaotic car accident occurs during one of the parties.",
+        "The narrator works at the Probity Trust during the summer."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Gatsby's mansion hosts guests who speculate about his mysterious past, including rumors of bootlegging and murder.",
+        "Gatsby introduces the narrator to Meyer Wolfshiem, a gambler linked to the 1919 World Series scandal.",
+        "Daisy Fay marries Tom Buchanan, despite Gatsby's past courtship of her.",
+        "Gatsby plans to invite Daisy to tea at Nick's house after hearing her name for the first time in years."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator initially mistakes Gatsby's mansion for a party due to its bright lights.",
+        "Gatsby expresses a desire to invite Daisy over for tea.",
+        "Daisy is overwhelmed by Gatsby's collection of beautiful shirts, which brings her to tears.",
+        "The chapter concludes with the narrator feeling like an outsider as Gatsby and Daisy become absorbed in each other."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was originally named James Gatz.",
+        "Gatsby worked for millionaire Dan Cody for five years.",
+        "Tom Buchanan suspects Gatsby of being a bootlegger.",
+        "Gatsby realizes he cannot repeat the past."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby dismisses his servants, prompting speculation about his health.",
+        "Tom Buchanan confronts Gatsby about his past at the Plaza Hotel.",
+        "Daisy admits she never loved Tom during the heated argument.",
+        "Myrtle dies in a hit-and-run accident involving Gatsby's car, which Daisy was driving."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator struggles to sleep due to a foghorn and unsettling dreams.",
+        "Gatsby becomes dejected after waiting for Daisy, who ultimately did not come to him.",
+        "George Wilson becomes obsessed with finding the owner of the yellow car that killed Myrtle.",
+        "Gatsby's longing for Daisy intensifies, leading him to revisit Louisville."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Gatsby's father, Henry C. Gatz, arrives from Minnesota after Gatsby's death.",
+        "Nick Carraway struggles with isolation while trying to reach out to Daisy and Gatsby's acquaintances.",
+        "Gatsby's funeral is attended only by Gatz, Nick, and a few others.",
+        "Tom Buchanan and Daisy retreat into their privilege after causing destruction."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"The Great Gatsby\" was released on January 17, 2021.",
+        "The eBook was last updated on January 26, 2025.",
+        "The eBook includes a dedication to Zelda.",
+        "The eBook was produced by Alex Cabal for the Standard Ebooks project."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The narrator's family is prominent in a Midwestern city.",
+        "The narrator moved to the East after World War I to pursue a career in the bond business.",
+        "Daisy wishes her daughter to be a \"beautiful little fool.\"",
+        "Nick observes Gatsby reaching toward a distant green light."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The area known as the \"valley of ashes\" is characterized by ash-covered landscapes and the eyes of Doctor T. J. Eckleburg.",
+        "Tom Buchanan introduces the protagonist to his mistress, Myrtle Wilson, during a train journey to New York.",
+        "Myrtle Wilson's husband, George Wilson, owns the garage where Tom and the protagonist stop.",
+        "Tom strikes Myrtle during a confrontation when she mentions his wife, Daisy."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Jay Gatsby hosts extravagant summer parties at his mansion.",
+        "The narrator receives a formal invitation to one of Gatsby's parties.",
+        "A chaotic car accident occurs during one of the parties.",
+        "The narrator works at the Probity Trust during the summer."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Gatsby's mansion hosts guests who speculate about his past, including rumors of bootlegging and murder.",
+        "Gatsby introduces the narrator to Meyer Wolfshiem, a gambler linked to the 1919 World Series scandal.",
+        "Daisy Fay marries Tom Buchanan, despite Gatsby's past courtship of her.",
+        "Gatsby plans to invite Daisy to tea at Nick's house after hearing her name for the first time in years."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator initially mistakes Gatsby's mansion for a party due to its bright lights.",
+        "Gatsby expresses a desire to invite Daisy over for tea.",
+        "Daisy is overwhelmed by Gatsby's collection of beautiful shirts, which brings her to tears.",
+        "The chapter concludes with the narrator feeling like an outsider as Gatsby and Daisy become absorbed in each other."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was originally named James Gatz.",
+        "Gatsby worked for millionaire Dan Cody for five years.",
+        "Tom Buchanan suspects Gatsby of being a bootlegger.",
+        "Gatsby realizes he cannot repeat the past."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby dismisses his servants, prompting speculation about his health.",
+        "Tom Buchanan confronts Gatsby at the Plaza Hotel about his past and status.",
+        "Daisy admits she never loved Tom during the heated argument.",
+        "Myrtle dies in a hit-and-run accident involving Gatsby's car, which Daisy was driving."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator struggles to sleep due to a foghorn and unsettling dreams.",
+        "Gatsby becomes dejected after waiting for Daisy, who ultimately does not come to him.",
+        "George Wilson becomes obsessed with finding the owner of the yellow car that killed Myrtle.",
+        "Gatsby's demise occurs after a tragic confrontation with George Wilson."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Gatsby's father, Henry C. Gatz, arrives from Minnesota after Gatsby's death.",
+        "Nick Carraway struggles with isolation while trying to reach out to Daisy and Gatsby's acquaintances.",
+        "Gatsby's funeral is attended only by Gatz, Nick, and a few others.",
+        "Tom Buchanan and Daisy retreat into their privilege after causing destruction."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    }
+  ]
+}

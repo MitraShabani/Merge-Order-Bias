@@ -1,0 +1,354 @@
+{
+  "title": "Ting Et Al. - 2025 - Astro Mlab5",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "AstroMLab 5 aims to create structured summaries from 400,000 astrophysics papers.",
+        "Yuan-Sen Ting is affiliated with The Ohio State University.",
+        "Alberto Accomazzi is associated with the Harvard-Smithsonian Center for Astrophysics.",
+        "Tirthankar Ghosal works at Oak Ridge National Laboratory."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The dataset comprises 408,590 astrophysics papers from arXiv covering the period from 1992 to July 2025.",
+        "It includes the extraction of 9,999 unique concepts with detailed descriptions.",
+        "The dataset contains 3.8 million paper-concept associations.",
+        "The concept vocabulary and embeddings are publicly available at https://github.com/tingyuansen/astro-ph_knowledge_graph."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The deployment of large language models (LLMs) as autonomous agents is advancing in materials science and chemistry. The authors propose organizing all astro-ph papers into structured summaries and concepts. The initiative resulted in a dataset of 408,590 papers. The dataset includes 9,999 unique concepts with semantic embeddings and structured summaries."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The chosen method for converting astrophysics PDFs to machine-readable text is OCR.",
+        "Nougat was initially used to convert PDFs to markdown format, requiring about 1 minute per paper on a V100 GPU.",
+        "The transition to Mathpix OCR API occurred in November 2024.",
+        "Inspections of Mathpix's output for approximately 50,000 papers showed no systematic errors affecting summary quality."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The summarization approach divides academic papers into approximately 10,000-character segments at section boundaries.",
+        "The compression system prioritizes retaining LaTeX formulas and excludes acknowledgments and references.",
+        "The entire summarization process for 408,590 papers cost over $50,000 in API fees.",
+        "Raw summaries are reorganized into seven semantic sections for enhanced analysis and knowledge representation."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The methodology aims to identify approximately 10 novel concepts per paper.",
+        "Each concept includes a concise name, a classification, and a detailed description.",
+        "The final vocabulary consists of 9,999 concepts after manual review.",
+        "The methodology emphasizes scrutiny when utilizing the dataset for specific applications."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The new vocabulary achieves complete coverage of all 408,590 papers.",
+        "The average number of concepts per paper in the new vocabulary is 9.4.",
+        "Traditional ADS keywords are author-supplied and lack systematic curation.",
+        "Concepts are shown to be superior to abstracts for discovery tasks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The temporal analysis tracks the emergence and evolution of concepts over three decades.",
+        "A notable peak in concept emergence occurred in 2007 due to changes in arXiv's cross-listing policies.",
+        "The co-occurrence analysis uses the Ochiai coefficient to examine how concepts appear together in research papers.",
+        "There has been increased integration of computational methods and machine learning in astrophysics research in recent years."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The dataset includes all astro-ph papers from 1992 to July 2025.",
+        "It features a CSV of concept vocabulary with labels, names, classes, and descriptions.",
+        "The dataset provides a citation network with 1.67 million unique identifiers.",
+        "Concept embeddings were generated using text-embedding-3-large."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The dataset contains 408,590 astrophysics papers from arXiv spanning the years 1992 to 2025.",
+        "It includes 9,999 AI-generated concepts with detailed descriptions.",
+        "Temporal analysis indicates a rise in machine learning in astrophysics from 2015 to 2025.",
+        "All code and data processing pipelines related to the dataset are publicly available."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The summary presents a structured format for academic papers across six sections: Background, Motivation, Methodology, Results, Interpretation, and Implication.",
+        "USco1606-1935 is identified as a candidate low-mass binary system using 2MASS data.",
+        "The methodology included photometric and astrometric analysis to confirm the binary nature of USco1606-1935 A.",
+        "If confirmed as gravitationally bound, USco1606-1935 would be a rare example of a young multiple system with wide separations."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "AstroMLab 5 aims to create structured summaries from 400,000 astrophysics papers.",
+        "Yuan-Sen Ting is affiliated with The Ohio State University.",
+        "Alberto Accomazzi is associated with the Harvard-Smithsonian Center for Astrophysics.",
+        "Tirthankar Ghosal works at Oak Ridge National Laboratory."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The dataset comprises 408,590 astrophysics papers from arXiv covering the period from 1992 to July 2025.",
+        "It includes the extraction of 9,999 unique concepts with detailed descriptions.",
+        "The dataset contains 3.8 million paper-concept associations.",
+        "The concept vocabulary and embeddings are publicly available at https://github.com/tingyuansen/astro-ph_knowledge_graph."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The deployment of large language models as autonomous agents is advancing in materials science and chemistry.",
+        "Astronomy has an extensive archive of papers on arXiv that is suitable for LLM applications.",
+        "The authors propose organizing all astro-ph papers into structured summaries and concepts.",
+        "The dataset created includes 408,590 papers and 9,999 unique concepts with semantic embeddings."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The chosen method for converting astrophysics PDFs to machine-readable text is OCR.",
+        "Nougat (Blecher et al., 2023) was initially used to convert PDFs to markdown format.",
+        "The transition to Mathpix OCR API occurred in November 2024.",
+        "Inspections of Mathpix's output for approximately 50,000 papers showed no systematic errors."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The summarization approach divides academic papers into approximately 10,000-character segments at section boundaries.",
+        "The compression system prioritizes retaining LaTeX formulas and excludes acknowledgments and references.",
+        "The entire summarization process for 408,590 papers cost over $50,000 in API fees.",
+        "Raw summaries are reorganized into seven semantic sections for enhanced analysis and knowledge representation."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The methodology aims to identify approximately 10 novel concepts per paper.",
+        "Each concept includes a concise name, a classification, and a detailed description.",
+        "The final vocabulary consists of 9,999 concepts after manual review.",
+        "The methodology emphasizes scrutiny when utilizing the dataset for specific applications."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The new vocabulary achieves complete coverage of all 408,590 papers.",
+        "The average number of concepts per paper in the new vocabulary is 9.4.",
+        "Traditional ADS keywords are author-supplied and lack systematic curation.",
+        "Concepts are shown to be superior to abstracts for discovery tasks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The temporal analysis tracks the emergence and evolution of concepts over three decades.",
+        "A notable peak in concept emergence occurred in 2007 due to changes in arXiv's cross-listing policies.",
+        "The co-occurrence analysis uses the Ochiai coefficient to examine how concepts appear together in research papers.",
+        "There has been increased integration of computational methods and machine learning in astrophysics research in recent years."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The dataset includes all astro-ph papers from 1992 to July 2025.",
+        "It features a CSV of concept vocabulary with labels, names, classes, and descriptions.",
+        "The dataset provides a citation network with 1.67 million unique identifiers.",
+        "Concept embeddings were generated using text-embedding-3-large."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The dataset contains 408,590 astrophysics papers from arXiv spanning the years 1992 to 2025.",
+        "It includes 9,999 AI-generated concepts with detailed descriptions.",
+        "Temporal analysis indicates a rise in machine learning in astrophysics from 2015 to 2025.",
+        "All code and data processing pipelines related to the dataset are publicly available."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The structured summary format for academic papers includes six semantic sections: Background, Motivation, Methodology, Results, Interpretation, and Implication.",
+        "USco1606-1935 is a candidate low-mass binary system identified using 2MASS data.",
+        "The methodology involved photometric and astrometric analysis to confirm the binary nature of USco1606-1935 A.",
+        "If confirmed as gravitationally bound, USco1606-1935 would be a rare example of a young multiple system with wide separations."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}
