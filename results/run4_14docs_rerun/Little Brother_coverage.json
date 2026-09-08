@@ -1,0 +1,712 @@
+{
+  "title": "Little Brother",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"Little Brother\" was released on September 30, 2009.",
+        "The novel was written by Cory Doctorow.",
+        "\"Little Brother\" emphasizes the importance of privacy and freedom of speech.",
+        "The book is dedicated to influential bookstores in Cory Doctorow's career."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The author worked at BakkaPhoenix Books by age 18.",
+        "Marcus Yallow is a high school senior at Cesar Chavez High in San Francisco.",
+        "Marcus faces disciplinary action from Vice-Principal Fred Benson.",
+        "The Alternate Reality Game Marcus plans to participate in is called Harajuku Fun Madness."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Amazon.com is the world's largest online bookseller.",
+        "The group of friends includes Darryl, Marcus, Van, and Jolu.",
+        "They are participating in a game called Harajuku Fun Madness.",
+        "Their mission is interrupted by an earthquake and a mysterious explosion."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Darryl is stabbed during the chaos at Borderlands Books.",
+        "The group is kidnapped by armed individuals in a military-style vehicle.",
+        "They are interrogated by Department of Homeland Security agents.",
+        "A young man is confronted by a government agent and is pressured to unlock his phone."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Marcus is detained and interrogated by authorities after a terrorist attack.",
+        "He faces intense pressure during interrogations to divulge passwords to his personal devices.",
+        "After being released, Marcus is coerced into signing documents that falsely claim his voluntary compliance.",
+        "The narrative explores themes of surveillance, personal autonomy, and the impact of fear on individual rights."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The protagonist is recently freed from a six-day traumatic ordeal.",
+        "The protagonist's friend Darryl is missing after a terrorist attack.",
+        "The protagonist decides to keep their ordeal a secret while plotting revenge.",
+        "They repurpose an Xbox Universal with ParanoidLinux to combat surveillance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The protagonist navigates life in Portland, Oregon.",
+        "The Bay Bridge attack prompted heightened surveillance and the implementation of the PATRIOT Act II.",
+        "Surveillance cameras were introduced in classrooms at the protagonist's school.",
+        "The protagonist distributed ParanoidXbox discs as a form of unmonitored gaming."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Marcus is detained by police for unusual subway travel patterns linked to a new surveillance program.",
+        "Marcus discusses the police incident with his parents, who have differing opinions on the actions taken.",
+        "Jolu expresses feelings of undervaluation in their programming team after the loss of their second-in-command, Darryl.",
+        "Marcus and Jolu engage in an intense programming session, producing significant code together."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The author visited Borders locations in Singapore and San Francisco.",
+        "The Department of Homeland Security implemented surveillance measures in the Bay Area.",
+        "Marcus devised a plan to disrupt the DHS's monitoring systems by swapping identification tags.",
+        "The chapter culminates in a successful operation that brings the city to a standstill."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Compass Books/Books Inc. is the oldest independent bookstore in the western USA.",
+        "The narrator's father, Drew, expresses frustration over police surveillance after being stopped by a young officer.",
+        "The narrator is involved in the Xnet, a network of young activists opposing government surveillance.",
+        "Jolu suggests Sutro Baths as the location for a key-signing event."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Anderson's Bookshops is a family-run children's bookstore located in Chicago.",
+        "The chapter discusses the concept of a man-in-the-middle attack in cybersecurity.",
+        "Public key cryptography uses a pair of keys to secure messages.",
+        "Marcus and Jolu organized a key-signing party to enhance communication security."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Duane Wilkins is the buyer for the science fiction section of the University Bookstore at the University of Washington.",
+        "Jolu leads a group of young activists fighting against the Department of Homeland Security using a secure communication network called Xnet.",
+        "Student Charles labels Yippie activists as terrorists during a classroom debate about social movements post-Vietnam War.",
+        "The protagonist and fellow activist Ange plan a concert promoting the slogan \"Don't Trust Anyone Over 25.\""
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Ms. Galvez leads a classroom debate on the Declaration of Independence.",
+        "Marcus and Ange attend an illegal rave in Dolores Park.",
+        "Police deploy pepper spray during the rave, causing panic.",
+        "Fred Benson announces Ms. Galvez's departure the day after the rave."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "The author had a humorous conversation about science fiction with a clerk at Books-A-Million.",
+        "Marcus and Ange discussed media misrepresentation of a protest at Dolores Park.",
+        "Marcus faced suspension from school for confronting a teacher about her distorted view of the Constitution.",
+        "The chapter addresses themes of freedom, dissent, and government surveillance."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "The author participated in the midnight launch of the final Harry Potter book in 2007 at Mysterious Galaxy bookstore.",
+        "Major General Graeme Sutherland labeled a concert in Dolores Park as a terrorist recruitment rally.",
+        "Marcus was recently suspended from school for challenging the DHS.",
+        "Ange proposed a virtual press conference in the game Clockwork Plunder."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Marcus is involved in the digital resistance movement Xnet.",
+        "He prepares for a press conference in the online game Clockwork Plunder.",
+        "Marcus has a romantic moment with his girlfriend, Ange, before the press conference.",
+        "A young homeless man named Zeb shares his experiences of being imprisoned with Marcus."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "San Francisco's Booksmith is located in the Haight-Ashbury neighborhood.",
+        "Marcus reveals to his mother that he has been interrogated and threatened by the DHS.",
+        "Marcus's family informs Ron Glover that his son Darryl is alive and being held captive.",
+        "Marcus and his girlfriend Angela prepare to share their story with investigative journalist Barbara Stratford."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Waterstone's is a UK bookselling chain.",
+        "Marcus receives an encrypted message from Masha.",
+        "The Department of Homeland Security is planning to target Marcus.",
+        "Marcus considers going public with information about the DHS."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "The author signed stock at Sophia Books in Vancouver.",
+        "The author participated in LARPing weekends at scout camps.",
+        "The author and Ange planned a protest against the Department of Homeland Security.",
+        "Ange gifted the narrator's mom a hot-sauce mister."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "The MIT Press Bookshop is located in Cambridge, MA.",
+        "VampMob is an event in San Francisco where participants dress as vampires.",
+        "Masha is a member of the DHS.",
+        "Marcus escapes with Masha's unlocked phone after breaking her hand."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "The young man finds refuge in The Tattered Cover bookstore in Denver.",
+        "He seeks to contact journalist Barbara Stratford with crucial evidence.",
+        "Marcus is captured and tortured by authorities.",
+        "He is rescued by California Highway Patrol officers and Barbara."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Marcus Yallow is a seventeen-year-old who has faced government torture.",
+        "Marcus is granted bail for a minor theft charge after a tense courtroom experience.",
+        "Darryl is recovering in the hospital while Ange is at home.",
+        "Marcus engages with the Coalition of Voters for a Free America to promote voter registration."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"Little Brother\" was released on September 30, 2009.",
+        "The novel \"Little Brother\" was written by Cory Doctorow.",
+        "The book is available under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license.",
+        "The story follows a teenage hacker fighting against government oppression."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The author worked at BakkaPhoenix Books by age 18.",
+        "Marcus Yallow is a high school senior at Cesar Chavez High in San Francisco.",
+        "Marcus faces disciplinary action from Vice-Principal Fred Benson.",
+        "The Alternate Reality Game Marcus plans to participate in is called Harajuku Fun Madness."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Amazon.com is the world's largest online bookseller.",
+        "The group of friends includes Darryl, Marcus, Van, and Jolu.",
+        "They are participating in a game called Harajuku Fun Madness.",
+        "Their mission is interrupted by an earthquake and a mysterious explosion."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Darryl is stabbed during the chaos at Borderlands Books.",
+        "The group is kidnapped by armed individuals in a military-style vehicle.",
+        "They are interrogated by Department of Homeland Security agents.",
+        "A young man is confronted by a government agent and is pressured to unlock his phone."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Marcus is detained and interrogated by authorities after a terrorist attack.",
+        "He faces intense pressure during interrogations to divulge passwords to his personal devices.",
+        "After being released, Marcus is coerced into signing documents that falsely claim his voluntary compliance.",
+        "The narrative explores themes of surveillance, personal autonomy, and the impact of fear on individual rights."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The protagonist is recently freed from a six-day traumatic ordeal.",
+        "The protagonist's friend Darryl is missing after a terrorist attack.",
+        "The protagonist decides to keep their ordeal a secret while plotting revenge.",
+        "They repurpose an Xbox Universal with ParanoidLinux to combat surveillance."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The protagonist navigates life in Portland, Oregon.",
+        "The Bay Bridge attack prompted heightened surveillance and the implementation of the PATRIOT Act II.",
+        "Surveillance cameras were introduced in classrooms at the protagonist's school.",
+        "The protagonist distributed ParanoidXbox discs as a form of unmonitored gaming."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Marcus is detained for unusual subway travel patterns linked to a new surveillance program.",
+        "Marcus discusses the police incident with his parents, who have differing opinions on the police's actions.",
+        "Jolu expresses feelings of undervaluation in their programming team after the loss of their second-in-command, Darryl.",
+        "Marcus and Jolu engage in an intense programming session, producing significant code together."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The author visited Borders locations in Singapore and San Francisco.",
+        "The Department of Homeland Security implemented surveillance measures in the Bay Area.",
+        "Marcus devised a plan to disrupt the DHS's monitoring systems by swapping identification tags.",
+        "The chapter culminates in a successful operation that brings the city to a standstill."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Compass Books/Books Inc. is the oldest independent bookstore in the western USA.",
+        "The narrator's father, Drew, expresses frustration over police surveillance after being stopped by a young officer.",
+        "The narrator is involved in the Xnet, a network of young activists opposing government surveillance.",
+        "Jolu suggests Sutro Baths as the location for a key-signing event."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Anderson's Bookshops is a family-run children's bookstore in Chicago.",
+        "The chapter discusses the concept of a man-in-the-middle attack in cybersecurity.",
+        "Public key cryptography uses a pair of keys to secure messages.",
+        "Marcus and Jolu organized a key-signing party to enhance communication security."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Duane Wilkins curates the science fiction section of the University Bookstore at the University of Washington.",
+        "Jolu leads a group of young activists fighting against the Department of Homeland Security using a secure communication network called Xnet.",
+        "Student Charles labels Yippie activists as terrorists during a classroom debate about social movements post-Vietnam War.",
+        "The protagonist and fellow activist Ange plan a concert promoting the slogan \"Don't Trust Anyone Over 25.\""
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Ms. Galvez leads a classroom debate on the Declaration of Independence.",
+        "Marcus and Ange attend an illegal rave in Dolores Park.",
+        "Police deploy pepper spray during the rave, causing panic.",
+        "Fred Benson announces Ms. Galvez's departure the day after the rave."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "The author had a humorous conversation about science fiction with a clerk at Books-A-Million.",
+        "Marcus and Ange discussed media misrepresentation of a protest at Dolores Park.",
+        "Marcus was suspended from school for confronting a teacher about her distorted view of the Constitution.",
+        "The chapter explores themes of freedom, dissent, and government surveillance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "The author participated in the midnight launch of the final Harry Potter book in 2007 at Mysterious Galaxy bookstore.",
+        "Major General Graeme Sutherland labeled a concert in Dolores Park as a terrorist recruitment rally.",
+        "Marcus was recently suspended from school for challenging the DHS.",
+        "Ange proposed a virtual press conference in the game Clockwork Plunder."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Marcus is involved in the digital resistance movement Xnet.",
+        "He prepares for a press conference in the online game Clockwork Plunder.",
+        "Marcus has a romantic moment with his girlfriend, Ange, before the press conference.",
+        "A young homeless man named Zeb shares his experiences of being imprisoned with Marcus."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "San Francisco's Booksmith is located in the Haight-Ashbury neighborhood.",
+        "Marcus reveals to his mother that he has been interrogated and threatened by the DHS.",
+        "Marcus's father decides to confront Darryl's father, Ron Glover.",
+        "Marcus and Angela prepare to share their story with investigative journalist Barbara Stratford."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Waterstone's is a UK bookselling chain.",
+        "Marcus receives an encrypted message from Masha.",
+        "The Department of Homeland Security is planning to target Marcus.",
+        "Marcus considers going public with information about the DHS."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "The author signed stock at Sophia Books in Vancouver.",
+        "The author participated in LARPing weekends at scout camps.",
+        "The author and a friend planned a protest against the Department of Homeland Security.",
+        "Ange gifted the narrator's mom a hot-sauce mister."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "The MIT Press Bookshop is located in Cambridge, MA.",
+        "VampMob is an event in San Francisco where participants dress as vampires.",
+        "Masha is a member of the DHS.",
+        "Marcus escapes with Masha's unlocked phone after breaking her hand."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "The young man finds refuge in The Tattered Cover bookstore in Denver.",
+        "He seeks to contact journalist Barbara Stratford with crucial evidence.",
+        "Marcus is captured and tortured by authorities.",
+        "He is rescued by California Highway Patrol officers and Barbara."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Marcus Yallow is a seventeen-year-old who has faced government torture.",
+        "Marcus is granted bail for a minor theft charge after a tense courtroom experience.",
+        "Darryl is recovering in the hospital while Ange is at home.",
+        "Marcus engages with the Coalition of Voters for a Free America to promote voter registration."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

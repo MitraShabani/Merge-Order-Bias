@@ -1,0 +1,348 @@
+{
+  "title": "Łajewska Et Al. - 2025 - Understanding",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The paper is titled \"Understanding and Improving Information Preservation in Prompt Compression for LLMs.\"",
+        "Weronika Łajewska is affiliated with the University of Stavanger.",
+        "The research addresses challenges related to information loss in prompt compression techniques.",
+        "Lluís Màrquez is associated with the Technical University of Catalonia (UPC)."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Recent advancements in large language models have led to their application in various tasks.",
+        "New prompt compression techniques have been developed to balance input length reduction with performance retention.",
+        "Improvements of up to 23% in downstream performance were achieved through refined soft prompting.",
+        "The optimal trade-off between effectiveness and compression rate was found with soft prompting combined with sequence-level training."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Recent advancements in large language models (LLMs) have enabled their application to tasks requiring long-context input.",
+        "The proposed holistic evaluation framework considers downstream task performance, grounding to original text, and information preservation.",
+        "The hard-prompting method LLMLingua and the soft-prompting methods xRAG and PISCO were analyzed using the evaluation framework.",
+        "PISCO achieves the best balance between compression rate and effectiveness among the methods evaluated."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Prompt compression enhances the efficiency of large language models (LLMs) by creating smaller, approximate representations of prompts.",
+        "Hard prompting focuses on producing concise text versions while retaining key information.",
+        "Notable soft prompting approaches include AutoCompressors, Gisting, ICAE, 500xCompressor, and xRAG.",
+        "Evaluation of these methods typically involves downstream tasks such as classification and QA."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The framework proposes including generation tasks with longer contexts for evaluating prompt compression methods.",
+        "Key evaluation dimensions include downstream task performance, response grounding, and information preservation.",
+        "Metrics like BERTScore and Exact Match are utilized for performance evaluation.",
+        "Performance data shows relative drops in performance when context is removed from various models, including Mistral-7B."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The analysis evaluates four prompt compression methods using the Mistral-7B Instruct v0.2 model. PISCO employs two adapters for context compression and response generation. Performance assessments reveal significant performance drops (3% to 55%) with compression, particularly in complex tasks like HotpotQA. PISCO maintains higher semantic similarity and entity retention compared to xRAG."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The authors propose a new training approach for the xRAG model called xRAG w/ Sentence PT + FT.",
+        "The modified xRAG model shows significant performance gains in grounding and entity preservation.",
+        "A two-step pre-training method is introduced to improve the model's ability to handle information across multiple tokens.",
+        "PISCO achieves superior compression rates without performance loss in long-context scenarios."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Many methods, particularly xRAG, struggle to preserve detailed information.",
+        "Modifications to xRAG have shown to improve retention and performance.",
+        "PISCO's sequence-level distillation enhances grounding and information preservation.",
+        "A hybrid approach combining hard and soft prompting minimizes information loss during compression."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The paper evaluates the quality of prompt compression methods in long-context generation tasks.",
+        "The study identifies that many existing methods struggle to maintain detailed information in long-context scenarios.",
+        "The proposed improvements to the xRAG method resulted in a 23% increase in downstream task performance.",
+        "The code repository for this research is available at https://github.com/amazon-science/information-preservation-in-prompt-compression."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The study exclusively uses Mistral-7B as the target large language model.",
+        "The analysis is confined to English benchmarks.",
+        "The evaluation includes only one representative baseline from each category of prompt compression techniques.",
+        "Further exploration is warranted in long-form question-answering scenarios."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Training of the xRAG model was conducted on two compute instances with 8 NVIDIA A100 GPUs.",
+        "The training utilized a dataset of 1,128,075 samples, with 628,003 including context.",
+        "Evaluation datasets included HotpotQA, arXiv-summarization, QuAC, GSM8K, and TriviaQA.",
+        "Mistral-7B achieved the highest grounding scores in a comparative analysis with xRAG, PISCO, and LLMLingua."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The paper is titled \"Understanding and Improving Information Preservation in Prompt Compression for LLMs.\"",
+        "Weronika Łajewska is affiliated with the University of Stavanger.",
+        "The research addresses challenges related to information loss in prompt compression techniques.",
+        "The authors propose methods to improve the retention of essential content in compressed prompts."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Recent advancements in large language models have led to their application in various tasks.",
+        "New prompt compression techniques have been developed to balance input length reduction with performance retention.",
+        "Improvements of up to 23% in downstream performance were achieved through refined soft prompting.",
+        "The optimal trade-off between effectiveness and compression rate was found with soft prompting combined with sequence-level training."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Recent advancements in large language models (LLMs) have enabled their application to tasks requiring long-context input.",
+        "The proposed holistic evaluation framework considers downstream task performance, grounding to original text, and information preservation.",
+        "The hard-prompting method LLMLingua and the soft-prompting methods xRAG and PISCO were analyzed using the evaluation framework.",
+        "PISCO achieves the best balance between compression rate and effectiveness among the methods evaluated."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Prompt compression enhances the efficiency of large language models (LLMs) by creating smaller, approximate representations of prompts.",
+        "Hard prompting focuses on producing concise text versions while retaining key information.",
+        "Notable soft prompting approaches include AutoCompressors, Gisting, ICAE, 500xCompressor, and xRAG.",
+        "Evaluation of these methods typically involves downstream tasks such as classification and QA."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The framework proposes including generation tasks with longer contexts for evaluating prompt compression methods.",
+        "Key evaluation dimensions include downstream task performance, response grounding, and information preservation.",
+        "Metrics like BERTScore and Exact Match are utilized for performance evaluation.",
+        "Performance data shows relative drops in performance when context is removed from various models, including Mistral-7B."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The analysis evaluates four prompt compression methods using the Mistral-7B Instruct v0.2 model. PISCO employs two adapters for context compression and response generation. Performance assessments reveal significant performance drops (3% to 55%) with compression, particularly in complex tasks like HotpotQA. PISCO maintains higher semantic similarity and entity retention compared to xRAG."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The authors propose a new training approach for the xRAG model called xRAG w/ Sentence PT + FT.",
+        "The modified xRAG model shows significant performance gains in grounding and entity preservation.",
+        "A two-step pre-training method is introduced to improve the model's ability to handle information across multiple tokens.",
+        "PISCO achieves superior compression rates without performance loss in long-context scenarios."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Many methods, particularly xRAG, struggle to preserve detailed information.",
+        "Modifications to xRAG have shown to improve retention and performance.",
+        "PISCO's sequence-level distillation enhances grounding and information preservation.",
+        "A hybrid approach combining hard and soft prompting minimizes information loss during compression."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The paper evaluates the quality of prompt compression methods in long-context generation tasks.",
+        "The study identifies that many existing methods struggle to maintain detailed information in long-context scenarios.",
+        "The proposed improvements to the xRAG method resulted in a 23% increase in downstream task performance.",
+        "The code repository for this research is available at https://github.com/amazon-science/information-preservation-in-prompt-compression."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The study exclusively uses Mistral-7B as the target large language model.",
+        "The analysis is confined to English benchmarks.",
+        "The evaluation includes only one representative baseline from each category of prompt compression techniques.",
+        "Further exploration is warranted in long-form question-answering scenarios."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Training of the xRAG model was conducted on two compute instances with 8 NVIDIA A100 GPUs.",
+        "The training utilized a dataset of 1,128,075 samples, with 628,003 including context.",
+        "Evaluation datasets included HotpotQA, arXiv-summarization, QuAC, GSM8K, and TriviaQA.",
+        "Mistral-7B achieved the highest grounding scores in a comparative analysis with xRAG, PISCO, and LLMLingua."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    }
+  ]
+}
