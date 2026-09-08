@@ -1,0 +1,1342 @@
+{
+  "title": "Frankenstein",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"Frankenstein\" was released on October 1, 1993.",
+        "The eBook was last updated on February 10, 2026.",
+        "The eBook can be accessed at www.gutenberg.org/ebooks/84.",
+        "The project credits include Judith Boss and Christy Phillips."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "I'm sorry, but I cannot extract facts from the provided summary as it does not contain any specific information or content to summarize. Please provide a text with details for me to extract facts from."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "I'm sorry, but I cannot extract facts from the provided summary as it does not contain any specific information or content to summarize. Please provide a text with details for me to extract facts from."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "There is no text from Chapter 2 provided for summarization.",
+        "The request is for a summary of Chapter 2.",
+        "No specific details or events from Chapter 2 are mentioned.",
+        "The user is seeking a summary of a specific chapter."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "There is no text from Chapter 4 provided for summarization.",
+        "The request is for a summary of Chapter 4.",
+        "The user is seeking specific facts from the summary.",
+        "The summary does not contain any information to extract facts from."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "There is no text from Chapter 6 provided for summarization.",
+        "The request is for a summary of Chapter 6.",
+        "The user is seeking specific facts from a summary.",
+        "The task requires checkable facts that are not vague or generic."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "There is no text from Chapter 8 provided for summarization.",
+        "The request is for a summary of Chapter 8.",
+        "The user is seeking specific information from a chapter.",
+        "The summary request does not include any details or content."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The request is for text from Chapter 10.",
+        "The summary does not provide any specific information.",
+        "No facts can be extracted from the provided summary.",
+        "The summary lacks details necessary for fact extraction."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "There is no Chapter 12 text provided for summarization.",
+        "The request is for a summary of Chapter 12.",
+        "No specific content from Chapter 12 is available.",
+        "The user is seeking a summary of a specific chapter."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "There is no text from Chapter 14 provided for summarization.",
+        "The request is for a summary of Chapter 14.",
+        "The user is asking for specific facts from a summary.",
+        "The summary does not contain any information to extract facts from."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "There is no text from Chapter 16 provided for summarization.",
+        "The request is for a summary of Chapter 16.",
+        "The user is asking for specific facts from a summary.",
+        "The summary does not contain any information to extract facts from."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "There is no Chapter 18 text provided for summarization.",
+        "The request is for a summary of Chapter 18.",
+        "No specific content from Chapter 18 is available.",
+        "The user is seeking information from a specific chapter."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "There is no text from Chapter 20 provided for summarization.",
+        "The request is for a summary of Chapter 20.",
+        "The user is asking for specific facts from a summary.",
+        "The summary does not contain any information to extract facts from."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "There is no Chapter 22 text provided for summarization.",
+        "The request is for a summary of Chapter 22.",
+        "No specific content from Chapter 22 is available.",
+        "The user is seeking a summary of a specific chapter."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "The request is for text from Chapter 24.",
+        "The summary does not provide any specific information.",
+        "No facts can be extracted from the provided summary.",
+        "The summary lacks content to verify any statements."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "R. Walton wrote a letter to his sister, Mrs. Saville, on December 11th.",
+        "Walton plans to travel to Archangel in a few weeks to hire a ship and crew.",
+        "He intends to commence his voyage towards the North Pole in June.",
+        "Walton reflects on the sacrifices he made to prepare for his journey, including studying various sciences."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Robert Walton wrote a letter on March 28 from Archangel.",
+        "Walton has hired a vessel and engaged courageous sailors for his voyage.",
+        "He expresses a desire for a friend to share in his triumphs and support him.",
+        "Walton reassures his sister, Mrs. Saville, of his resolve and prudence."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "The letter is dated July 7th, 17—.",
+        "The writer's name is R.W.",
+        "The letter is addressed to Mrs. Saville in England.",
+        "The voyage is being sent back home via a merchant ship from Archangel."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "The letter is dated August 5th.",
+        "The crew rescues a nearly frozen European man from a drifting sledge.",
+        "The stranger warns the captain about the dangers of seeking knowledge.",
+        "The captain resolves to document the stranger's narrative."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "The narrator's father was a respected public servant known for his integrity.",
+        "Beaufort, a once-prosperous merchant, retreated to Lucerne with his daughter, Caroline.",
+        "The narrator's father married Caroline two years after Beaufort's death.",
+        "The narrator's mother adopted Elizabeth Lavenza, who became his beloved companion."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "The narrator spent his childhood in Switzerland with his friend Henry Clerval and cousin Elizabeth.",
+        "The narrator was particularly interested in the works of early alchemists like Cornelius Agrippa.",
+        "A pivotal moment for the narrator occurred during a thunderstorm when he saw a tree struck by lightning.",
+        "The narrator shifted his studies towards mathematics after his experience with the lightning strike."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "The protagonist's parents sent him to the University of Ingolstadt at seventeen.",
+        "Elizabeth fell ill with scarlet fever before the protagonist's departure.",
+        "Professor Krempe dismissed the protagonist's previous studies of alchemy as outdated.",
+        "Professor Waldman inspired the protagonist with the potential of modern chemistry."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "The narrator studies natural philosophy and chemistry under Professors Krempe and Waldman.",
+        "He makes a groundbreaking discovery in physiology related to bestowing animation upon lifeless matter.",
+        "The narrator chooses to create a being of gigantic stature.",
+        "His relentless dedication to his project leads to physical and emotional deterioration."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "Victor Frankenstein brings a creature to life on a November night.",
+        "Victor is horrified by the creature's grotesque appearance.",
+        "Victor suffers from a nervous fever that confines him for months.",
+        "Henry Clerval cares for Victor while concealing the severity of his illness from Victor's family."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Elizabeth expresses her concern for Victor Frankenstein's health in a letter.",
+        "Ernest, Elizabeth's younger brother, is eager to pursue a military career.",
+        "Justine Moritz returns after facing hardships following her family's death.",
+        "Victor Frankenstein and Henry Clerval spend a joyful fortnight exploring the countryside."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "Victor Frankenstein receives a letter from his father, Alphonse, about the murder of his younger brother William. Justine Moritz is accused of William's murder after a picture of Victor's mother is found in her possession. Victor believes Justine is innocent despite the circumstantial evidence against her. Victor resolves to return to Geneva immediately after receiving the letter about William's death."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 27,
+      "facts": [
+        "Justine is wrongfully accused of murdering William.",
+        "A picture found in Justine's pocket ties her to the crime.",
+        "Justine confesses to the crime under pressure from her confessor.",
+        "Justine is ultimately condemned and executed."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 28,
+      "facts": [
+        "Victor feels profound guilt following Justine's death.",
+        "Victor retreats to the Alpine valleys seeking relief from his anguish.",
+        "Elizabeth encourages Victor to find peace amidst his sorrow.",
+        "Victor arrives in Chamounix, hoping for a reprieve from his torment."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 29,
+      "facts": [
+        "The narrator spends a day near the Arveiron glacier.",
+        "He resolves to ascend Montanvert to see the glacier's view again.",
+        "The creature confronts the narrator, expressing his misery.",
+        "They cross the ice together to a hut where the creature prepares to share his story."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 30,
+      "facts": [
+        "The narrator found solace in a forest near Ingolstadt.",
+        "They encountered fire and learned to manage it.",
+        "The narrator left the forest in search of better sustenance.",
+        "They observed a kind family consisting of an old man, a young woman, and a young man."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 31,
+      "facts": [
+        "The narrator observes a kind and gentle family of cottagers from a distance.",
+        "The family struggles with poverty, which leads to their unhappiness.",
+        "The narrator refrains from stealing their food and gathers his own sustenance.",
+        "As spring arrives, the family's situation improves."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 32,
+      "facts": [
+        "The narrator reflects on transformative events during a beautiful spring.",
+        "Felix is melancholic until the arrival of a mysterious lady named Safie.",
+        "The narrator begins to learn the cottagers' language through Safie's lessons.",
+        "The narrator feels like a monster shunned by humanity."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 33,
+      "facts": [
+        "De Lacey once lived in affluence in Paris with his son Felix and daughter Agatha.",
+        "Felix vowed to rescue Safie's father, a Turkish merchant, from unjust imprisonment.",
+        "The Turk betrayed Felix, leading to the imprisonment of De Lacey and Agatha.",
+        "Safie escaped her father's plans and journeyed to Germany to reunite with Felix."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 34,
+      "facts": [
+        "The narrator observes a family of cottagers.",
+        "He discovers a portmanteau containing _Paradise Lost_.",
+        "The blind old man is named De Lacey.",
+        "The cottagers react with horror when they see the narrator."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 35,
+      "facts": [
+        "The creature expresses anguish and rage towards his creator, Victor Frankenstein.",
+        "The creature burns down the cottage of the De Lacey family.",
+        "The creature kills a boy who is revealed to be Victor's son.",
+        "The creature demands that Victor create a companion for him."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 36,
+      "facts": [
+        "The creature demands that Victor Frankenstein create a female companion for him.",
+        "Victor initially feels anger and horror towards the creature.",
+        "The creature promises to live in isolation if granted a mate.",
+        "Victor ultimately consents to the creature's request for a companion."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 37,
+      "facts": [
+        "Victor Frankenstein struggles to resume his work due to fear of the creature's vengeance.",
+        "Victor's father suggests an immediate marriage to Elizabeth.",
+        "Victor requests to visit England under the pretense of seeking knowledge.",
+        "Clerval accompanies Victor on his trip to England."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 38,
+      "facts": [
+        "The narrator and Clerval planned to stay in London for several months.",
+        "Clerval was excited about his future plans to assist European colonization in India.",
+        "The narrator received an invitation to visit Scotland after several months in London.",
+        "The narrator decided to separate from Clerval to work in solitude on a remote Orkney island."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 39,
+      "facts": [
+        "The narrator grapples with the consequences of creating a second creature.",
+        "The first creature vowed to isolate itself from humanity.",
+        "The narrator destroys the unfinished being he was creating.",
+        "The narrator faces hostility and accusations of murder upon reaching land."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 40,
+      "facts": [
+        "The dead body found on the beach is identified as Henry Clerval.",
+        "The narrator experiences intense agitation after hearing about Clerval's murder.",
+        "The narrator falls into a feverish state for two months.",
+        "The narrator is released from prison after three months when evidence proves he was elsewhere during the murder."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 41,
+      "facts": [
+        "The narrator arrives in Paris after a taxing voyage.",
+        "He feels overwhelming guilt and despair due to the deaths of William, Justine, and Henry.",
+        "Elizabeth sends the narrator a heartfelt letter expressing her love and concern.",
+        "On their wedding day, the narrator is plagued by anxiety and fears impending doom."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 42,
+      "facts": [
+        "The narrator and Elizabeth land at eight o'clock.",
+        "Elizabeth is murdered by the creature the narrator created.",
+        "The narrator's father dies after hearing the news of Elizabeth's death.",
+        "The narrator vows to pursue the monster himself."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 43,
+      "facts": [
+        "The narrator departs Geneva to pursue the creature he created.",
+        "Captain Walton rescues the narrator during his journey.",
+        "The crew demands to head south despite Frankenstein's appeals.",
+        "The creature expresses remorse for his actions after Frankenstein's death."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"Frankenstein\" was released on October 1, 1993.",
+        "The eBook was last updated on February 10, 2026.",
+        "The eBook can be accessed at www.gutenberg.org/ebooks/84.",
+        "The project credits include Judith Boss and Christy Phillips."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "I'm sorry, but I cannot extract facts from the provided summary as it does not contain any specific information or content to summarize. Please provide a text with details for me to extract facts from."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "I'm sorry, but I cannot extract facts from the provided summary as it does not contain any specific information or content to summarize. Please provide a text with details for me to extract facts from."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "There is no text from Chapter 2 provided for summarization.",
+        "The request is for a summary of Chapter 2.",
+        "The user is seeking specific facts from the summary.",
+        "The output should consist of four checkable facts."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "There is no text from Chapter 4 provided for summarization.",
+        "The request is for a summary of Chapter 4.",
+        "The user is seeking specific facts from a summary.",
+        "The summary does not contain any information to extract facts from."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "There is no text from Chapter 6 provided for summarization.",
+        "The request is for a summary of Chapter 6.",
+        "The user is seeking specific information from a chapter.",
+        "The summary request does not include any details or content."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "There is no text from Chapter 8 provided for summarization.",
+        "The request is for a summary of Chapter 8.",
+        "The user is asking for specific facts from a summary.",
+        "The summary does not contain any information to extract facts from."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The request is for text from Chapter 10.",
+        "The summary does not provide any specific information.",
+        "No facts can be extracted from the provided summary.",
+        "The summary lacks details necessary for fact extraction."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "There is no text from Chapter 12 provided for summarization.",
+        "The request is for a summary of Chapter 12.",
+        "The user is asking for specific facts from a summary.",
+        "The summary does not contain any information to extract facts from."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "There is no text from Chapter 14 provided for summarization.",
+        "The request is for a summary of Chapter 14.",
+        "No specific details or events from Chapter 14 are mentioned.",
+        "The summary request does not include any factual information."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "There is no text from Chapter 16 provided for summarization.",
+        "The request is for a summary of Chapter 16.",
+        "The user is seeking specific information from a chapter.",
+        "The task involves extracting facts from a summary."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "There is no Chapter 18 text provided for summarization.",
+        "The request is for a summary of Chapter 18.",
+        "No specific details or events from Chapter 18 are mentioned.",
+        "The summary does not contain any checkable facts."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "There is no Chapter 20 text provided for summarization.",
+        "The request is for a summary of Chapter 20.",
+        "No specific content from Chapter 20 is available.",
+        "The summary request does not include any details or events."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "There is no Chapter 22 text provided for summarization.",
+        "The request is for a summary of Chapter 22.",
+        "No specific content or details from Chapter 22 are available.",
+        "The user is seeking a summary of a specific chapter."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "The request is for text from Chapter 24.",
+        "The summary does not provide any specific information.",
+        "No facts can be extracted from the provided summary.",
+        "The summary lacks content to verify any statements."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "R. Walton wrote a letter to his sister, Mrs. Saville, on December 11th.",
+        "Walton plans to travel to Archangel in a few weeks to hire a ship and crew.",
+        "He intends to commence his voyage towards the North Pole in June.",
+        "Walton reflects on the sacrifices he made to prepare for his journey, including studying various sciences."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Robert Walton wrote a letter on March 28 from Archangel. He has hired a vessel and engaged courageous sailors for his voyage. Walton expresses feelings of isolation and a longing for companionship. He reassures his sister, Mrs. Saville, of his resolve and prudence."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "The letter is dated July 7th, 17—.",
+        "The writer's name is R.W.",
+        "The letter is addressed to Mrs. Saville in England.",
+        "The voyage is being sent back home via a merchant ship from Archangel."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "The letter is dated August 5th.",
+        "The crew rescues a nearly frozen European man from a drifting sledge.",
+        "The stranger warns the captain about the dangers of seeking knowledge.",
+        "The captain resolves to document the stranger's narrative."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "The narrator's father was a respected public servant known for his integrity.",
+        "Beaufort, a once-prosperous merchant, retreated to Lucerne with his daughter, Caroline.",
+        "The narrator's father married Caroline two years after Beaufort's death.",
+        "The narrator's mother adopted Elizabeth Lavenza, who became his beloved companion."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "The narrator spent his childhood in Switzerland with his friend Henry Clerval and cousin Elizabeth.",
+        "The narrator was particularly interested in natural philosophy and the works of early alchemists.",
+        "A pivotal moment for the narrator occurred during a thunderstorm when he saw a tree struck by lightning.",
+        "The narrator shifted his studies towards mathematics after his experience with the lightning strike."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "The protagonist's parents sent him to the University of Ingolstadt at seventeen.",
+        "Elizabeth fell ill with scarlet fever before the protagonist's departure.",
+        "Professor Krempe dismissed the protagonist's previous studies of alchemy as outdated.",
+        "Professor Waldman inspired the protagonist with the potential of modern chemistry."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "The narrator studies natural philosophy and chemistry under Professors Krempe and Waldman.",
+        "He makes significant discoveries in physiology related to life and death.",
+        "He discovers the ability to bestow animation upon lifeless matter.",
+        "His project leads to his physical and emotional deterioration."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "Victor Frankenstein brings a creature to life on a November night.",
+        "Victor is horrified by the creature's grotesque appearance.",
+        "Victor suffers from a nervous fever that confines him for months.",
+        "Henry Clerval cares for Victor while concealing the severity of his illness from Victor's family."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Elizabeth expresses her concern for Victor Frankenstein's health in a letter.",
+        "Ernest, Elizabeth's younger brother, is eager to pursue a military career.",
+        "Justine Moritz returns after facing hardships following the death of her mother and siblings.",
+        "Victor Frankenstein and Henry Clerval spend a joyful fortnight exploring the countryside."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "Victor Frankenstein receives a letter from his father, Alphonse, about the murder of his younger brother William. Justine Moritz is accused of William's murder after a picture of Victor's mother is found in her possession. Victor believes Justine is innocent despite the circumstantial evidence against her. Victor resolves to return to Geneva immediately after receiving the letter detailing William's death."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 27,
+      "facts": [
+        "Justine is wrongfully accused of murdering William.",
+        "A picture found in Justine's pocket ties her to the crime.",
+        "Justine confesses to the crime under pressure from her confessor.",
+        "Justine is ultimately condemned and executed."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 28,
+      "facts": [
+        "Victor feels profound guilt following Justine's death.",
+        "Victor retreats to the Alpine valleys seeking relief from his anguish.",
+        "Elizabeth encourages Victor to find peace amidst his sorrow.",
+        "Victor arrives in Chamounix, hoping for a reprieve from his torment."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 29,
+      "facts": [
+        "The narrator spends a day near the Arveiron glacier.",
+        "He resolves to ascend Montanvert to see the glacier's view.",
+        "The creature confronts the narrator and pleads for compassion.",
+        "They cross the ice together to a hut where the creature prepares to share his story."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 30,
+      "facts": [
+        "The narrator found solace in a forest near Ingolstadt.",
+        "They encountered fire and learned to manage it.",
+        "The narrator left the forest in search of better sustenance.",
+        "They observed a kind family consisting of an old man, a young woman, and a young man."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 31,
+      "facts": [
+        "The narrator observes a kind and gentle family of cottagers from a distance.",
+        "The family struggles with poverty, leading to their unhappiness.",
+        "The narrator refrains from stealing their food and gathers his own sustenance.",
+        "As spring arrives, the family's situation improves."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 32,
+      "facts": [
+        "The narrator reflects on transformative events during a beautiful spring.",
+        "Felix is melancholic until the arrival of a mysterious lady named Safie.",
+        "The narrator begins to learn the cottagers' language through Safie's lessons.",
+        "The narrator feels like a monster shunned by humanity."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 33,
+      "facts": [
+        "De Lacey once lived in affluence in Paris with his son Felix and daughter Agatha.",
+        "Felix vowed to rescue Safie's father, a Turkish merchant, who was unjustly imprisoned.",
+        "The Turk betrayed Felix, leading to the imprisonment of De Lacey and Agatha.",
+        "Safie escaped her father's plans and journeyed to Germany to reunite with Felix."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 34,
+      "facts": [
+        "The narrator observes a family of cottagers.",
+        "He discovers a portmanteau containing _Paradise Lost_.",
+        "The blind old man is named De Lacey.",
+        "The cottagers react with horror when they see the narrator."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 35,
+      "facts": [
+        "The creature expresses anguish and rage towards his creator, Victor Frankenstein.",
+        "The creature burns down the cottage of the De Lacey family.",
+        "The creature kills a boy who is revealed to be Victor's son.",
+        "The creature demands that Victor create a companion for him."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 36,
+      "facts": [
+        "The creature demands that Victor Frankenstein create a female companion for him.",
+        "Victor initially feels anger and horror towards the creature.",
+        "The creature promises to live in isolation if granted a mate.",
+        "Victor ultimately consents to the creature's request for a companion."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 37,
+      "facts": [
+        "Victor Frankenstein struggles to resume his work due to fear of the creature's vengeance.",
+        "Victor's father suggests an immediate marriage to Elizabeth.",
+        "Victor requests to visit England under the pretense of seeking knowledge.",
+        "Clerval accompanies Victor on his journey to England."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 38,
+      "facts": [
+        "The narrator and Clerval planned to stay in London for several months.",
+        "Clerval was excited about his future plans to assist European colonization in India.",
+        "The narrator received an invitation to visit Scotland after several months in London.",
+        "The narrator decided to separate from Clerval to work in solitude on a remote Orkney island."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 39,
+      "facts": [
+        "The narrator grapples with the consequences of creating a second creature.",
+        "The first creature vowed to isolate itself from humanity.",
+        "The narrator destroys the unfinished being he was creating.",
+        "The narrator faces hostility and accusations of murder upon reaching land."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 40,
+      "facts": [
+        "The dead body found on the beach is identified as Henry Clerval.",
+        "The narrator experiences intense agitation and falls into a feverish state for two months.",
+        "The narrator is released from prison after three months when evidence proves he was elsewhere during Clerval's murder.",
+        "The narrator is determined to return to Geneva to protect his loved ones and confront the monster he created."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 41,
+      "facts": [
+        "The narrator arrives in Paris after a taxing voyage.",
+        "He feels overwhelming guilt and despair due to the deaths of William, Justine, and Henry.",
+        "Elizabeth sends the narrator a heartfelt letter expressing her love and concern.",
+        "On their wedding day, the narrator is plagued by anxiety and fears impending doom."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 42,
+      "facts": [
+        "The narrator and Elizabeth land at eight o'clock.",
+        "Elizabeth is murdered by the creature the narrator created.",
+        "The narrator's father dies after hearing the news of Elizabeth's death.",
+        "The narrator vows to pursue the monster himself after the magistrate doubts his tale."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 43,
+      "facts": [
+        "The narrator departs Geneva to pursue the creature he created.",
+        "Captain Walton rescues the narrator during his journey.",
+        "The crew decides to head south despite Frankenstein's appeals.",
+        "The creature expresses remorse for his actions after Frankenstein's death."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    }
+  ]
+}

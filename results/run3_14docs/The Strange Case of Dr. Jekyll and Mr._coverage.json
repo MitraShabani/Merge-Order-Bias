@@ -1,0 +1,360 @@
+{
+  "title": "The Strange Case Of Dr. Jekyll And Mr.",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"The Strange Case of Dr. Jekyll and Mr. Hyde\" was authored by Robert Louis Stevenson.",
+        "The eBook was released on June 27, 2008.",
+        "The eBook can be accessed online at www.gutenberg.org/ebooks/43.",
+        "The text is credited to David Widger."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Mr. Utterson is a reserved and austere lawyer.",
+        "Mr. Richard Enfield recounts an incident involving a man named Hyde trampling a young girl.",
+        "Enfield and others extorted money from Hyde to avoid scandal.",
+        "Hyde possesses a key to a mysterious door."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Mr. Utterson examined Dr. Jekyll's will after dinner.",
+        "Dr. Jekyll's will bequeathed all his possessions to Edward Hyde.",
+        "Dr. Lanyon had not seen Jekyll in over a decade.",
+        "Utterson discovered that Hyde had a key to Jekyll's laboratory."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Dr. Jekyll hosted a dinner for a few close friends, including Mr. Utterson.",
+        "Utterson expressed concerns about Jekyll's connection to Mr. Hyde.",
+        "Jekyll urged Utterson to promise to look after Hyde's interests after his departure.",
+        "Utterson agreed to Jekyll's request to ensure justice for Hyde."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Sir Danvers Carew was murdered by Mr. Hyde in October of 18—.",
+        "A maid witnessed the altercation between Carew and Hyde from her window.",
+        "Mr. Utterson identified the broken cane at the crime scene as one he had given to Dr. Henry Jekyll.",
+        "Hyde's living quarters were found to be luxurious yet ransacked, indicating his hasty departure."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Mr. Utterson visits Dr. Jekyll in the late afternoon.",
+        "Dr. Jekyll expresses concern for his reputation after the murder of Sir Danvers Carew.",
+        "Jekyll shows Utterson a letter from Edward Hyde.",
+        "Mr. Guest notes the similar handwriting between Jekyll's letter and Hyde's letter."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Mr. Hyde vanished after the murder of Sir Danvers.",
+        "Dr. Jekyll became increasingly reclusive after a brief period of social engagement.",
+        "Dr. Lanyon was gravely ill and refused to discuss Jekyll.",
+        "Lanyon left Utterson a sealed letter to be opened only after Jekyll's death or disappearance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Mr. Utterson and Mr. Enfield stop in front of the door associated with Mr. Hyde.",
+        "Utterson expresses concern for Dr. Jekyll during their walk.",
+        "Dr. Jekyll appears very low and reluctant to join Utterson and Enfield outside.",
+        "Jekyll suddenly displays a look of terror while conversing with Utterson and Enfield."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Mr. Utterson is visited by Poole, Dr. Jekyll's butler.",
+        "Utterson and Poole find a lifeless body believed to be Hyde in Jekyll's cabinet.",
+        "A will is found that names Utterson as the beneficiary.",
+        "Utterson decides to examine the documents before involving the police."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Dr. Lanyon received a registered letter from Dr. Henry Jekyll on January 9th.",
+        "Jekyll instructed Lanyon to retrieve a specific drawer from his cabinet.",
+        "At midnight, a mysterious man arrived to collect the drawer's contents.",
+        "The man consumed a potion and transformed into Jekyll before Lanyon's eyes."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Dr. Henry Jekyll created a potion that transformed him into Edward Hyde.",
+        "Jekyll became horrified by Hyde's violent actions, including murder.",
+        "Jekyll's attempts to renounce Hyde ultimately failed.",
+        "Project Gutenberg emphasizes the importance of public donations for its mission."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"The Strange Case of Dr. Jekyll and Mr. Hyde\" was authored by Robert Louis Stevenson.",
+        "The eBook was released on June 27, 2008.",
+        "The eBook can be accessed online at www.gutenberg.org/ebooks/43.",
+        "The text is credited to David Widger."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Mr. Utterson is a reserved and austere lawyer.",
+        "Mr. Richard Enfield recounts an incident involving a man named Hyde trampling over a young girl.",
+        "Enfield and others extorted money from Hyde to avoid scandal.",
+        "Hyde possesses a key to a mysterious door."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Mr. Utterson examined Dr. Jekyll's will after dinner.",
+        "Dr. Jekyll's will bequeathed all his possessions to Edward Hyde.",
+        "Dr. Lanyon had not seen Jekyll in over a decade.",
+        "Utterson discovered that Hyde had a key to Jekyll's laboratory."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Dr. Jekyll hosted a dinner for a few close friends, including Mr. Utterson.",
+        "Utterson expressed concerns about Jekyll's connection to Mr. Hyde.",
+        "Jekyll urged Utterson to promise to look after Hyde's interests after his departure.",
+        "Utterson agreed to Jekyll's request to ensure justice for Hyde."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Sir Danvers Carew was murdered by Mr. Hyde in October of 18—.",
+        "A maid witnessed the altercation between Carew and Hyde from her window.",
+        "Mr. Utterson identified the broken cane at the crime scene as one he had given to Dr. Henry Jekyll.",
+        "Hyde's living quarters were found to be luxurious yet ransacked, indicating his hasty departure."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Mr. Utterson visits Dr. Jekyll in the late afternoon.",
+        "Dr. Jekyll expresses concern for his reputation after the murder of Sir Danvers Carew.",
+        "Jekyll shows Utterson a letter from Edward Hyde.",
+        "Mr. Guest notes the similar handwriting between Jekyll's letter and Hyde's letter."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Mr. Hyde vanished after the murder of Sir Danvers.",
+        "Dr. Jekyll became increasingly reclusive after a brief period of social engagement.",
+        "Dr. Lanyon was gravely ill and refused to discuss Jekyll.",
+        "Lanyon left Utterson a sealed letter to be opened only after Jekyll's death or disappearance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Mr. Utterson and Mr. Enfield stop in front of the door associated with Mr. Hyde.",
+        "Utterson expresses concern for Dr. Jekyll during their walk.",
+        "Dr. Jekyll appears very low and reluctant to join Utterson and Enfield outside.",
+        "Jekyll suddenly displays a look of terror that shocks both Utterson and Enfield."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Mr. Utterson is visited by Poole, Dr. Jekyll's butler.",
+        "Utterson and Poole find a lifeless body believed to be Hyde in Jekyll's cabinet.",
+        "A will is found naming Utterson as the beneficiary.",
+        "Utterson decides to examine the documents before involving the police."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Dr. Lanyon received a registered letter from Dr. Henry Jekyll on January 9th.",
+        "Jekyll instructed Lanyon to retrieve a specific drawer from his cabinet.",
+        "At midnight, a mysterious man arrived to collect the drawer's contents.",
+        "The man consumed a potion and transformed into Jekyll before Lanyon's eyes."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Dr. Henry Jekyll created a potion that transformed him into Edward Hyde.",
+        "Jekyll became horrified by Hyde's violent actions, including murder.",
+        "Jekyll's attempts to renounce Hyde ultimately failed.",
+        "Project Gutenberg emphasizes the importance of public donations for its mission."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    }
+  ]
+}

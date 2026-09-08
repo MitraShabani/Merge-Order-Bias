@@ -1,0 +1,188 @@
+{
+  "title": "Boozer - 2026 - Comment On Nuclear",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The comment on the paper was made by Allen H. Boozer.",
+        "The paper discussed is titled \"A Simple Model of Current Ramp-Up and Ramp-Down in Tokamaks.\"",
+        "The comment was dated August 25, 2026.",
+        "The focus of the comment is on improving efficiency and stability in plasma operations."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The paper \"Nuclear Fusion66, 016012 (2026)\" was authored by Richard Fitzpatrick.",
+        "The paper critiques errors in the understanding of poloidal magnetic flux evolution in tokamaks.",
+        "Fitzpatrick presents a new expression for loop voltage in the paper.",
+        "The journal Nuclear Fusion prohibits the mention of \"private communication\" in responses."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was accepted on October 14, 2025.",
+        "The Nuclear Fusion paper was published online on November 6, 2025.",
+        "Fitzpatrick's paper contains misunderstandings of Faraday’s Law in toroidal plasmas.",
+        "The Nuclear Fusion journal's policy prevents the publication of comments that disclose private communications."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Richard Fitzpatrick's 2026 Nuclear Fusion paper has been criticized for misunderstanding Faraday's Law.",
+        "The paper fails to recognize the significance of the toroidal flux and its relationship to the poloidal flux.",
+        "Key errors in the paper include neglecting the influence of the central solenoid's flux.",
+        "The analysis of the paper is complicated by a lack of consideration for the time-dependent nature of poloidal flux."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The author addresses misquoting issues in a Nuclear Fusion article.",
+        "The Nuclear Fusion policy allows for false claims to be supported by private communications.",
+        "A specific misquote in the abstract of the Nuclear Fusion paper oversimplified the author's views on ramp-down times.",
+        "The author emphasizes the need for improved understanding and diagnostics of plasma behavior in tokamak power plants."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Appendix A derives a new expression for loop voltage for toroidal plasmas. The electric field parallel to the magnetic field incorporates bootstrap and direct current drive current densities. The Pfirsch-Schlüter current density balances the divergence of the perpendicular current density. The net plasma current density is defined to be divergence-free."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The comment on the paper was made by Allen H. Boozer.",
+        "The paper discussed is titled \"A Simple Model of Current Ramp-Up and Ramp-Down in Tokamaks.\"",
+        "The comment was dated August 25, 2026.",
+        "The focus of the comment is on improving efficiency and stability in plasma operations."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The paper \"Nuclear Fusion66, 016012 (2026)\" was authored by Richard Fitzpatrick.",
+        "The paper critiques errors in the understanding of poloidal magnetic flux evolution in tokamaks.",
+        "Fitzpatrick presents a new expression for loop voltage in the paper.",
+        "The journal Nuclear Fusion prohibits the mention of \"private communication\" in responses."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was accepted on October 14, 2025.",
+        "The Nuclear Fusion paper was published online on November 6, 2025.",
+        "Fitzpatrick's paper contains misunderstandings of Faraday’s Law in toroidal plasmas.",
+        "The Nuclear Fusion journal's policy prevents the publication of comments that disclose private communications."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Richard Fitzpatrick's 2026 Nuclear Fusion paper has been criticized for misunderstanding Faraday's Law.",
+        "The paper fails to recognize the significance of the toroidal flux and its relationship to the poloidal flux.",
+        "Key errors in the paper include neglecting the influence of the central solenoid's flux.",
+        "The analysis of the paper is complicated by a lack of consideration for the time-dependent nature of poloidal flux."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The author addresses misquoting issues in a Nuclear Fusion article.",
+        "The Nuclear Fusion policy allows for false claims to be supported by private communications.",
+        "A specific misquote in the abstract of the Nuclear Fusion paper oversimplified the author's views on ramp-down times.",
+        "The author emphasizes the need for improved understanding and diagnostics of plasma behavior in tokamak power plants."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Appendix A derives a new expression for loop voltage for toroidal plasmas. The electric field parallel to the magnetic field incorporates bootstrap and direct current drive current densities. The Pfirsch-Schlüter current density balances the divergence of the perpendicular current density. The net plasma current density is defined to be divergence-free."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}
