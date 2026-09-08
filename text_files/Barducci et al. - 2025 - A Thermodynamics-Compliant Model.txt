@@ -1,0 +1,1308 @@
+JanusDDG: A Thermodynamics-Compliant Model for
+Sequence-Based Protein Stability via Two-Fronts Multi-Head
+Attention
+Guido Barducci1, Ivan Rossi 1, Francesco Codicè 1, Cesare Rollo 1, Valeria Repetto 1, Corrado Pancotti 1,
+Virginia Iannibelli1, Tiziana Sanavia 1 and Piero Fariselli 1
+1Computational Biomedicine Unit, Dept. of Medical Sciences, University of Turin, Turin, Italy
+###SECTION###
+Abstract
+Understanding how residue variations affect protein stability is crucial for designing functional proteins and deciphering the molec-
+ular mechanisms underlying disease-related mutations. Recent advances in protein language models (PLMs) have revolutionized
+computational protein analysis, enabling, among other things, more accurate predictions of mutational effects. In this work, we
+introduce JanusDDG, a deep learning framework that leverages PLM-derived embeddings and a bidirectional cross-attention trans-
+former architecture to predict ΔΔ𝐺 of single and multiple-residue mutations while simultaneously being constrained to respect
+fundamental thermodynamic properties, such as antisymmetry and transitivity. Unlike conventional self-attention, JanusDDG computes
+queries (Q) and values (V) as the difference between wild-type and mutant embeddings, while keys (K) alternate between the two.
+This cross-interleaved attention mechanism enables the model to capture mutation-induced perturbations while preserving essential
+contextual information. Experimental results show that JanusDDG achieves state-of-the-art performance in predicting ΔΔ𝐺 from
+sequence alone, matching or exceeding the accuracy of structure-based methods for both single and multiple mutations.
+Code Availability: https://github.com/compbiomed-unito/JanusDDG
+Keywords
+Machine Learning, DDG, Protein Stability.
+###SECTION###
+1. Introduction
+Protein stability is a fundamental property that determines
+a protein’s structure, function, and overall behavior in bi-
+ological systems. One of the most widely used metrics for
+evaluating protein stability is the change in Gibbs free en-
+ergy (∆∆𝐺), which quantifies the difference in stability
+between a wild-type protein and its mutant counterpart.
+∆∆𝐺 is calculated by comparing the free energy of un-
+folding for both proteins, providing insight into whether a
+mutation stabilizes or destabilizes the structure.
+In this study, we adopt the convention that a positive
+∆∆𝐺 value indicates a stabilizing mutation (i.e., the mu-
+tant form is more thermodynamically favorable than the
+wild type). Conversely, a negative ∆∆𝐺 suggests that the
+mutation is destabilizing, making the protein more prone to
+unfolding or degradation. Accordingly, the∆∆𝐺 between a
+wild-type (𝑤) protein and a mutant (𝑚) of the same protein
+is defined as:
+∆∆𝐺 = ∆𝐺𝑤− ∆𝐺𝑚 (1)
+where ∆𝐺𝑤 and ∆𝐺𝑚 are given by:
+∆𝐺𝑤 =𝐺𝑢
+𝑤−𝐺𝑓
+𝑤, ∆𝐺𝑚 =𝐺𝑢
+𝑚−𝐺𝑓
+𝑚. (2)
+Here,𝐺𝑢 represents the Gibbs free energy of the unfolded
+state, while𝐺𝑓 corresponds to that of the folded state.
+The ∆∆𝐺 analysis is useful in several fields, including
+protein engineering [1], to design more stable or functional
+/envel⌢pe-⌢penguido.barducci@unito.it (G. Barducci); ivan.rossi@unito.it (I. Rossi);
+francesco.codice@unito.it (F. Codicè); cesare.rollo@unito.it (C. Rollo);
+valeria.repetto@unito.it (V. Repetto); corrado.pancotti@unito.it
+(C. Pancotti); virginia.iannibelli@unito.it (V. Iannibelli);
+tiziana.sanavia@unito.it (T. Sanavia); piero.fariselli@unito.it
+(P. Fariselli)
+/orcid0009-0005-1052-8495 (G. Barducci); 0000-0002-2077-7496 (I. Rossi);
+0000-0001-6093-1454 (C. Rollo); 0000-0001-8678-3189 (V. Repetto);
+0000-0003-2327-1148 (C. Pancotti); 0009-0008-5253-4051 (V. Iannibelli);
+0000-0003-3288-0631 (T. Sanavia); 0000-0003-1811-4762 (P. Fariselli)
+© 2025 Author:Pleasefillinthe\copyrightclause macro
+proteins for industrial and medical applications [2], in drug
+discovery [3], where it can guide the development of small
+molecules that either compensate for destabilizing muta-
+tions or exploit structural weaknesses in pathogenic pro-
+teins, and in medicine, where it helps to predict the impact
+of genetic mutations in disorders caused by protein mis-
+folding, such as Alzheimer disease [4], amyotrophic lateral
+sclerosis [5], and cystic fibrosis [6].
+In recent years, many studies have been published where
+the prediction of ∆∆𝐺 is based on energy-based force
+fields[7, 8, 9] , machine learning [ 10] and deep learning
+models [11, 12, 13, 14, 15, 16, 17, 18, 19, 20], mostly based
+on protein language models[21, 22, 23]. These methods be-
+long to two main categories: sequence-based models and
+structure-based models. The former are more convenient
+to use because they require as input just the amino acid
+sequence of the protein and its mutations, while the latter
+also need the spatial structure of the protein. Structure-
+based methods have usually shown better performance than
+sequence-based ones [24, 25, 26, 27] thus justifying the non-
+trivial extra requirement of producing a realistic model of
+the protein structure when the experimental structural in-
+formation is not already available. The latter can be per-
+formed using tools such as AlphaFold[28], RoseTTaFold[29]
+and OpenFold[ 30], that can produce high-quality struc-
+tures but that are also computationally expensive. Fur-
+thermore, most of the systems developed so far share the
+limitation of predicting stability changes just for single or
+double mutations [31, 32]. Few models to date are capable
+of predicting mutations involving more than two amino
+acids [7, 33, 34, 23].
+In this work, we introduce JanusDDG, a deep learning
+model that leverages a protein language model [35] to ex-
+tract informative representations from the sequences of
+wild-type and mutated proteins. By relying solely on se-
+quence information, JanusDDG avoids the need for struc-
+tural input while still capturing the rich contextual and
+evolutionary signals encoded in the language model embed-
+dings. Furthermore, JanusDDG is explicitly designed to be
+arXiv:2504.03278v2  [q-bio.QM]  14 Apr 2025
+
+Figure 1: Overwie JanusDDG.
+a) JanusDDG Backbone. The model takes as input wild-type and mutant-type amino acid sequences without requiring
+3D structural information, and provides a prediction of ΔΔ𝐺 by leveraging the power of bidirectional cross-attention. This
+backbone model enables the prediction of stability changes resulting from single and multi mutations, capturing the underlying
+patterns of sequence-to-stability relationships effectively. b) Antisymmetry. To make the JanusDDG model antisymmetric by
+design, the base JanusDDG backbone is applied twice with inverted inputs. The resulting predictions are subtracted from each
+other and then divided by 2. This procedure leverages the antisymmetry as a fundamental property of the model, contributing
+to a more accurate representation of the relationship between mutations and stability changes. c) Transitivity. To enhance
+the transitivity of the model, fine-tuning is implemented based on the thermodynamic property that links the Gibbs free
+energy changes (ΔΔ𝐺) between three mutations (A, B, U). The loss function is formulated such that the model learns the
+following relation:ΔΔ𝐺(𝐴,𝐵 ) = ΔΔ𝐺*(𝐴,𝐵 )≡ ΔΔ𝐺(𝐴,𝑈 ) + ΔΔ𝐺(𝑈,𝐵 ). This property stems from the fact that the
+Gibbs free energy is a state function, allowing the model to learn transitive relationships between mutations. This approach
+enables JanusDDG to be more robust and accurate in predicting stability changes in mutated protein sequences.
+compliant with the physics of protein stability. Through the
+use of tailored loss functions and architectural constraints,
+it enforces fundamental thermodynamic properties such as
+antisymmetry (the prediction changes sign when the muta-
+tion is reversed) and transitivity (mutational effects remain
+consistent across intermediate states). This ensures that the
+model’s predictions are not only accurate but also physically
+grounded.
+###SECTION###
+2. Results
+A model capable of predicting protein stability directly from
+sequence is of significant importance, as it can be applied
+more easily in practice, since it does not require the 3𝐷-
+structures of the proteins of interest. In a recent study,
+DDGemb was introduced as a sequence-based predictor
+capable of estimating ∆∆𝐺 for both single and double
+mutations [23]. This model leverages the ESM2 language
+model [35] to generate protein embeddings, which are then
+processed by a deep learning architecture based on self-
+attention mechanisms.
+Building on the strengths of DDGemb, we explored new
+ways to enrich the input representation and improve com-
+pliance with known physical principles. While DDGemb
+relies on the difference between wild-type and mutant em-
+beddings, we retain and integrate more of the original con-
+textual information. Additionally, we aimed to design a
+model architecture that naturally incorporates thermody-
+namic properties such as antisymmetry and transitivity
+(Fig. 1), which are foundational to the Gibbs free energy
+landscape.
+To this end, we developed JanusDDG, a novel sequence-
+based model depicted in Fig. 1. JanusDDG employs bidirec-
+tional cross-attention rather than standard self-attention,
+
+allowing it to combine information from both the delta be-
+tween wild-type and mutant sequences and the full wild-
+type context itself. This design enables JanusDDG to process
+the entire protein sequence and make predictions for both
+single and multiple mutations, expanding its scope of appli-
+cation.
+In the following sections, we present the results of Janus-
+DDG on widely used benchmark datasets for protein stabil-
+ity prediction, described in detail in Section 4.1.
+
+2.1. State-Function Property of Gibbs Free
+Energy
+A reliable ∆∆𝐺 predictor should reflect the fundamental
+properties of Gibbs free energy, which is a state function.
+In particular, two key mathematical properties must be sat-
+isfied:
+• Antisymmetry: ∆∆𝐺(𝐴,𝐵 ) =−∆∆𝐺(𝐵,𝐴 )
+• Transitivity: ∆∆𝐺(𝐴,𝐶 ) = ∆∆ 𝐺(𝐴,𝐵 ) +
+∆∆𝐺(𝐵,𝐶 )
+To encourage JanusDDG to respect these properties, we
+implemented two dedicated strategies, as detailed in the
+following sections.
+2.1.1. Antisymmetry
+The ∆∆𝐺 prediction must satisfy the property of anti-
+symmetry, which stems from the fundamental thermody-
+namic principle that Gibbs free energy is a state function (its
+change depends only on the initial and final states, not on the
+path taken). Consequently, if a mutation from amino acid𝐴
+to amino acid𝐵 yields a stability change of ∆∆𝐺(𝐴,𝐵 ),
+the reverse mutation (𝐵→𝐴) should result in the opposite
+change, such that ∆∆𝐺(𝐵,𝐴 ) =−∆∆𝐺(𝐴,𝐵 ).
+Failure to satisfy this property would imply an inconsis-
+tency in the underlying free energy landscape, violating
+thermodynamic constraints and potentially leading to unre-
+alistic predictions. Thus, enforcing antisymmetry in ∆∆𝐺
+estimates is critical for preserving the physical validity of
+the model.
+To impose antisymmetry by design, we adopt a siamese
+neural network architecture, as illustrated in Fig. 1b. Start-
+ing from the trained model, which outputs a directional
+prediction ∆∆𝐺DIR, we construct a mirrored input by swap-
+ping the wild-type and mutant sequences to produce a sec-
+ond prediction, ∆∆𝐺INV. The final antisymmetric predic-
+tion is then obtained by averaging the two in opposite di-
+rections:
+∆∆𝐺 = (∆∆𝐺𝐷𝐼𝑅− ∆∆𝐺𝐼𝑁 𝑉 )/2 (3)
+To evaluate the impact of enforcing antisymmetry, we as-
+sessed JanusDDG on the S669 test dataset (see Materials and
+Methods). Prior to applying the antisymmetry constraint,
+the model already exhibited a strong inverse correlation
+between direct and reverse predictions, with a Pearson cor-
+relation coefficient of:
+𝑃𝐶𝐶 𝑑-𝑟 =−0.95, ⟨𝛿⟩ = 0.02 (4)
+where ⟨𝛿⟩ denotes the mean absolute deviation from
+perfect antisymmetry. However, after introducing the
+antisymmetry-enforcing modification, the model satisfies
+the constraint by design. As expected, this resulted in per-
+fect antisymmetric behavior:
+𝑃𝐶𝐶 𝑑-𝑟 =−1.00, ⟨𝛿⟩ = 0.00 (5)
+When evaluated on the hard SSym benchmark [24], Janus-
+DDG maintains its antisymmetric performance and achieves
+optimal scores, whereas most state-of-the-art methods fail
+to meet this criterion (see Supplementary Table 8).
+2.1.2. Transitivity
+By using the state-function property of Gibbs free energy, if
+we know the ∆∆𝐺(𝐴,𝐵 ) and ∆∆𝐺(𝐵,𝐶 ), we can find
+the ∆∆𝐺(𝐴,𝐶 ) by subtracting these two quantities:
+∆∆𝐺(𝐴,𝐶 ) = ∆𝐺(𝐴)− ∆𝐺(𝐶)
+= ∆𝐺(𝐴)− ∆𝐺(𝐵) + ∆𝐺(𝐵)− ∆𝐺(𝐶)
+= ∆∆𝐺(𝐴,𝐵 ) + ∆∆𝐺(𝐵,𝐶 ) (6)
+A ∆∆𝐺 prediction model should therefore satisfy this prop-
+erty. For this reason, the following fine-tuning, shown in
+Fig. 1c, was performed to encourage the model to respect
+this property. JanusDDG was further trained for additional
+epochs with the introduction of an extra loss function. This
+loss function was designed to train the model to predict
+∆∆𝐺(𝐴,𝐵 ) between the wild-type protein and the mu-
+tant, transitioning through an additional protein state. The
+predicted value should match ∆∆𝐺(𝐴,𝐵 ). The final loss
+function is therefore given by:
+𝐿𝑇 𝑂𝑇 =𝐿[∆∆𝐺(𝐴,𝐵 )− ∆∆𝐺𝑇 𝑅𝑈 𝐸]+
+𝐿{∆∆𝐺(𝐴,𝐵 )−
+[∆∆𝐺(𝐴,𝑋 ) + ∆∆𝐺(𝑋,𝐵 )]}
+(7)
+More technical details are provided in Section 4.5.2.
+To assess the extent to which JanusDDG satisfies the
+transitivity property, we evaluated the model on both the
+S669 test set (by introducing random intermediate residues)
+and the Stransitive dataset, which was specifically developed
+to evaluate transitivity in ∆∆𝐺 prediction [36]. In detail,
+we quantified transitivity by computing the Pearson corre-
+lation between the direct prediction ∆∆𝐺(𝐴,𝐵 ) and the
+corresponding transitive prediction obtained by inserting
+a variable number of random amino acids (1, 3, 5, 7, or 9)
+between residues A and B. The results of this evaluation
+are presented in Fig. 2. Interestingly, the explicit incorpora-
+tion of antisymmetry into the base model already improves
+transitivity, suggesting a synergistic relationship between
+these two fundamental thermodynamic constraints. Subse-
+quent fine-tuning with the transitivity loss further amplifies
+this effect, bringing the model’s behavior into even closer
+alignment with the expected transitive properties, as further
+confirmed in Supplementary 5.1.
+
+2.2. JanusDDG’s Performance in Protein
+Stability Prediction
+To evaluate the performance of JanusDDG, various datasets
+were used for both single and double mutations. It is known
+that using test datasets containing proteins similar to those
+in the training set increases performance, thus limiting
+the ability to discover the true performance of the model.
+In this section, we show the predictions of our model on
+datasets that do not contain proteins with more than 25%
+sequence identity to the training set. The performance on
+other datasets, which might contain similar proteins, is re-
+ported in the Supplementary Information.
+
+Figure 2: Results of the transitivity evaluation of JanusDDG. (a) Illustration of the transitivity property: Since ΔΔ𝐺
+depends only on the initial and final states, ΔΔ𝐺(𝐴,𝐵 ) should be equal to ΔΔ𝐺*(𝐴,𝐵 ), where the latter is computed by
+summing the ΔΔ𝐺 values of multiple intermediate mutations from step 1 to N. The protein figures have been created using
+PyMOL [37]. (b) Pearson correlation results between ΔΔ𝐺 and ΔΔ𝐺*, calculated on S669 for different intermediate steps
+(1, 3, 5, 7, and 9). For each step, the Pearson correlation was computed 10 times for three different models: JanusDDG Base
+(the model without antisymmetry and fine-tuning), JanusDDG only Antisym. (the model with antisymmetry but without
+fine-tuning), and JanusDDG (the final model, incorporating both antisymmetry and fine-tuning). (c) Transitivity performance,
+evaluated on the external dataset Stransitive, for all three models.
+2.2.1. Performance on Single Mutations and Multiple
+Mutations
+We selected three datasets for evaluation: S669 [25], S461 [9],
+and S96. The first two are among the most commonly used
+benchmarks for this task, while the third was introduced
+by [33]. These datasets were chosen because they share
+less than 25% sequence similarity with the JanusDDG train-
+ing set, ensuring an unbiased assessment of generalization
+performance.
+We compared the performance of JanusDDG using the
+scores reported in the latest study on these predictions.
+The results are presented in Fig. 3 for S669, Fig. 4 for S461,
+and Fig. 5 for S96, where comparisons with other existing
+models are also provided. Across all three datasets, Janus-
+DDG achieves performance that is comparable to or exceeds
+that of both existing sequence-based models and several
+structure-informed predictors, despite relying solely on se-
+quence information. More detailed results are reported in
+Supplementary Tables 4, 5, and 12.
+Predicting the stability effects of multiple simultaneous
+mutations is notably more challenging than single-point
+mutations, due to potential epistatic interactions. To eval-
+uate JanusDDG in this setting, we used the PTmut-NR
+dataset [23], which contains proteins with varying num-
+bers of mutations and no close homologs in the training
+set.
+The model’s performance on this benchmark is reported
+in Fig. 6 and Table 7. As with single mutations, JanusDDG
+outperforms previously published models, demonstrating
+its ability to generalize to the more complex landscape of
+multiple-mutation stability prediction.
+It is worth noting that, while JanusDDG performs favor-
+ably in these benchmarks, relative performance may vary
+depending on the dataset and experimental conditions, and
+alternative datasets may yield different model rankings.
+2.2.2. Distance Analysis for Double Mutations
+It has been observed that deep learning models tend to per-
+form better when the distance between mutated residues
+is large, as the resulting ∆∆𝐺 values exhibit greater addi-
+tivity [32]. In Figures 7 and 8, we analyze the performance
+of JanusDDG as a function of the Euclidean 3D distance
+between mutated residues and their sequence separation,
+respectively. As an evaluation metric, we use the absolute
+error between the predicted and experimental∆∆𝐺 values,
+measured on the PTmul-D dataset. Interestingly, there does
+not appear to be a significant difference in performance
+when JanusDDG is evaluated on double mutations that are
+either close or distant, in terms of both spatial proximity
+and sequence separation.
+2.2.3. Performance Evaluation of JanusDDG in
+Stability Classification
+The ability of computational stability predictors to correctly
+identify mutations that stabilize proteins is an essential pre-
+requisite for accelerating protein engineering workflows.
+This underscores the strong need for developing a method
+capable of making such predictions. In order to evaluate the
+performance of JanusDDG concerning this specific capabil-
+ity, we employed the S461 dataset.
+Given that the average experimental error of ∆∆𝐺 is
+0.5 kcal/mol, we define stabilizing proteins as those with
+∆∆𝐺 > 0.5 kcal/mol, neutral proteins as those with
+−0.5 kcal/mol< ∆∆𝐺 <0.5 kcal/mol, and destabilizing
+proteins as those with ∆∆𝐺< −0.5 kcal/mol [38][39]. As
+
+(a) Pearson correlation.
+ (b) MAE.
+Figure 3: Pearson correlation and MAE on S669 test set. The models’ performance data, excluding JanusDDG, were taken
+from [23].
+(a) Pearson correlation.
+ (b) MAE.
+Figure 4: Pearson correlation and MAE on S461 test set. The models’ performance data, excluding JanusDDG, were taken
+from [26].
+a preliminary step, we excluded neutral mutations, then we
+selected the top 5 models with the highest Pearson corre-
+lation on S461 and subsequently analyzed various perfor-
+mance metrics on stability classification. The result is shown
+in Figure 9.As shown, JanusDDG performs well across all
+metrics on this dataset and tends to outperform the other
+models, although the precision score indicates that predict-
+ing stabilizing variants remains challenging.
+###SECTION###
+3. Conclusions and Future Work
+In this work, we introduced JanusDDG, a novel sequence-
+based deep learning model for predicting protein stability
+changes upon mutation. JanusDDG effectively captures
+both contextual and differential information between wild-
+type and mutant sequences by integrating protein language
+model embeddings with a bidirectional cross-attention ar-
+chitecture. The model is thermodynamically compliant by
+design, enforcing antisymmetry and learning transitivity
+through targeted fine-tuning.
+Our benchmarking on datasets with low sequence iden-
+
+(a) Pearson correlation.
+ (b) Mean Absolute Error.
+Figure 5: Pearson correlation and MAE on S96 test set. The model performance data, excluding JanusDDG, were taken from
+[33].
+(a) Pearson correlation.
+ (b) MAE.
+Figure 6: Pearson correlation and MAE on PTmul-NR test set. The models’ performance data, excluding JanusDDG, were
+taken from [23].
+tity to the training set demonstrates that JanusDDG consis-
+tently matches or outperforms both existing sequence-based
+predictors and structure-informed models. This is particu-
+larly noteworthy given that JanusDDG operates solely on
+sequence data, making it broadly applicable to proteins lack-
+ing reliable 3D structural models. Furthermore, JanusDDG
+generalizes well to the more complex task of predicting the
+effects of multiple mutations, an area where many current
+models show limited capabilities.
+We acknowledge that model performance may vary
+across datasets due to differences in experimental protocols,
+mutation types, and sequence diversity. Future validation
+across broader mutation spectra and more diverse struc-
+tural classes may alter the relative performance rankings
+measured in this paper. Nonetheless, this work illustrates
+how integrating physical constraints with the representa-
+tional power of protein language models offers a promising
+direction for improving both accuracy and interpretability
+in stability prediction.
+
+Figure 7: 3D Distance Analysis in Double Mutations of Ptmul-D. The left panel shows the correlation between predicted and
+observed double mutation ΔΔ𝐺 values, colored by the 3D spatial distance between the mutated residues. The right panel
+displays the absolute error for each double mutation (red dots) along with a smoothed fitted curve (blue line).
+Figure 8: Sequence Separation Analysis in Double Mutations of Ptmul-D. The left panel shows the correlation between
+predicted and observed double mutation ΔΔ𝐺 values, colored by the sequence separation between the mutated residues. The
+right panel displays the absolute error for each double mutation (red dots) along with a smoothed fitted curve (blue line).
+###SECTION###
+4. Methods
+4.1. Datasets
+In this subsection, we show the datasets used for training,
+validation, and testing our model for both single and multi-
+ple mutations.
+4.1.1. Blind Test Datasets
+This section details the blind datasets employed to eval-
+uate JanusDDG and to provide a comparative analysis of
+its performance against other models. These datasets are
+specifically composed of proteins exhibiting low sequence
+similarity (less than 25%) with the training set, a crucial
+factor in obtaining a reliable measure of the models’ true
+performance.
+S669 The S669 dataset [ 25] is widely recognized as a
+benchmark for scoring protein stability predictors. The
+strength of this dataset lies in its construction: it exhibits
+low sequence redundancy (below 25% identity) compared to
+common training datasets like S2648 [8] and VariBench [40],
+thus facilitating unbiased comparisons. Comprising 1338
+single-site mutations, both direct and reverse, across 95 pro-
+tein chains, S669 provides experimentally determined∆∆𝐺
+values, which were retrieved from ThermoMutDB [41] and
+manually verified.
+S461 The S461 dataset [9] is another widely used dataset
+to measure the performance on protein stability by pre-
+dictors. This curated dataset addressed some inaccuracies
+present in the original S669 and excluded mutations poten-
+tially involved in natural protein function, such as those at
+oligomer interfaces. The S461 dataset encompasses experi-
+mental structures for 48 wild-type proteins, with a range of
+1 to 68 mutations per protein, totaling 461 mutations, each
+with a single experimental ∆∆𝐺 measurement.
+S96 Comprising 96 single-site variants across 14 distinct
+proteins, the S96 dataset [33] was assembled using the 2021
+
+version of ProTherm [42] as its source. Each variant within
+this dataset was subjected to a rigorous manual checking
+and correction process, informed by the experimental data
+presented in the corresponding research articles. Further-
+more, to ensure independence from commonly used training
+data, only those variants whose parent proteins showed less
+than 25% sequence identity to any protein in the S2648 and
+VariBench datasets were included in S96. In this dataset,
+when multiple experimental ∆∆𝐺 values were reported for
+the same variant, the average has been taken.
+PTmul-NR The PTmul-NR [23] dataset is a carefully cu-
+rated subset derived from the original PTmul [43], specifi-
+cally designed to assess model performance in predicting
+∆∆𝐺 for multi-point mutations, particularly under con-
+ditions of low sequence similarity with the S2450 dataset.
+The original PTmul dataset, which includes 914 multi-point
+variations across 91 proteins, exhibited substantial sequence
+overlap with our S2450 training data. As a result of a rig-
+orous removal procedure, the PTmul-NR dataset was cre-
+ated, consisting of 82 multi-point variants across 14 proteins.
+While this reduction significantly decreased the number of
+variants, it was crucial for ensuring a more reliable compar-
+ison of different methods.
+4.1.2. Training and Validation Datasets
+The datasets underpinning the training and validation of
+JanusDDG are detailed in this section. The S2450 dataset
+served as the foundational resource for training JanusDDG,
+being used both during the initial training phase and in the
+subsequent fine-tuning phase to enhance its predictive per-
+formance. In contrast, the M28 dataset was specifically des-
+ignated as an independent validation set, used exclusively
+during the fine-tuning procedure to assess the model’s abil-
+ity to generalize to multi-point mutations.
+S2450 The S2450 dataset, introduced by [23], is a refined
+version of the established S2648 dataset [8] and originates
+from a collection of 2648 single amino acid substitutions
+across 131 distinct proteins. These mutations have ex-
+perimentally determined ∆∆𝐺 values obtained from the
+ProTherm database [44]. While S2648 was created to have
+low similarity with S669 using sequences from the PDB [25],
+the sequence identity of S2450 was re-evaluated using full-
+length UniProt sequences. Any protein in S2648 exhibiting
+more than 25% sequence identity with a protein in S669
+was excluded. This rigorous filtering process resulted in
+the removal of 18 proteins, encompassing 198 individual
+mutations, ultimately yielding the S2450 dataset utilized as
+the training set in this research. To balance this dataset be-
+tween stabilizing and destabilizing mutations, we used the
+antisymmetry property: ∆∆𝐺(𝐵,𝐴 ) =−∆∆𝐺(𝐴,𝐵 ) to
+double the dataset and make it less imbalanced in terms of
+mutation stability.
+M28 The m28 dataset, a collection of multiple-site
+variants, was constructed using the 2021 version of
+ProTherm [42]. Its selection criteria specifically targeted
+variants with experimental ∆∆𝐺 or ∆∆𝐺𝐻2𝑂 values re-
+ported after 2013. In this dataset, when multiple experimen-
+tal ∆∆𝐺 values were reported for the same variant, the
+average has been taken.
+4.1.3. Other Datasets
+We evaluated JanusDDG on additional datasets to facilitate a
+comparative analysis of its performance against other meth-
+ods documented in the literature. Unlike the strictly blind
+test sets previously discussed, these datasets may include
+proteins with sequence similarity exceeding 25% to our train-
+ing data. This potential overlap could influence the observed
+performance, possibly leading to an overestimation of the
+model’s true capability on unseen data. Consequently, the
+results obtained from these datasets have been interpreted
+with caution and carry less weight in our overall assessment
+compared to the findings from the rigorously blind test sets.
+For this reason, performance on these datasets is reported
+only in the Supplementary Section. For details on these
+datasets, please refer to the cited papers. The datasets are
+as follows:
+• PTmul-D, a dataset derived from PTmul, filtered to
+include only double mutations;
+• K2369, a dataset containing high sequence identity
+with S2450, as defined in [26];
+• Q3421, another dataset with high sequence identity
+to S2450, as defined in [26];
+• Ssym, a dataset generated to test antisymmetry
+based on protein structure [24];
+• Stransitive, a dataset designed to evaluate transitivity
+of the prediction methods [36].
+4.2. Performance Metrics
+To assess the model’s regression performance, we used the
+following metrics, which are among the most commonly
+used for this purpose.
+• Pearson correlation coefficient measures the lin-
+ear relationship between two variables𝑋 and𝑌 and
+is defined as:
+𝑟 =
+∑︀𝑛
+𝑖=1(𝑋𝑖−𝑋¯ )(𝑌𝑖−𝑌¯ )√︁∑︀𝑛
+𝑖=1(𝑋𝑖−𝑋¯ )2∑︀𝑛
+𝑖=1(𝑌𝑖−𝑌¯ )2
+,
+where𝑋¯ and𝑌¯ are the means of𝑋 and𝑌 , respec-
+tively.
+• The Spearman correlation coefficient evaluates
+the monotonic relationship between two variables
+using ranked values, and is given by:
+𝜌 = 1− 6∑︀𝑛
+𝑖=1𝑑2
+𝑖
+𝑛(𝑛2− 1),
+where𝑑𝑖 is the difference between the ranks of the
+𝑖-th pair of values and𝑛 is the number of data points.
+• Root Mean Square Error (RMSE) quantifies the
+average squared difference between predicted values
+𝑦ˆ𝑖 and observed values𝑦𝑖 as:
+RMSE =
+⎯⎸⎸⎷ 1
+𝑛
+𝑛∑︁
+𝑖=1
+(𝑦ˆ𝑖−𝑦𝑖)2.
+• Mean Absolute Error (MAE) measures the aver-
+age of absolute differences between predictions and
+observations:
+MAE = 1
+𝑛
+𝑛∑︁
+𝑖=1
+|𝑦ˆ𝑖−𝑦𝑖|.
+
+Furthermore, we adopted two additional metrics to assess
+anti-symmetry properties [24].
+• Pearson correlation coefficient between𝑝dir and
+𝑝rev, referred to as PCC𝑑−𝑟, and is defined as:
+PCC𝑑−𝑟 = PCC(𝑝dir,𝑝 rev),
+where𝑝dir and𝑝rev are the predicted values in the
+direct and reverse directions, respectively.
+• Anti-symmetry bias⟨𝛿⟩, which quantifies the aver-
+age deviation between𝑝dir and𝑝rev and is computed
+as:
+⟨𝛿⟩ =
+∑︀𝑁
+𝑖=1(𝑝𝑖,dir +𝑝𝑖,rev)
+𝑁 ,
+where𝑁 is the total number of observations.
+To evaluate classification performance in identifying sta-
+bilizing mutations, we used the following metrics.
+• Recall (or Sensitivity) measures the proportion of
+actual positive cases that are correctly identified by
+the model. It is defined as:
+Recall = TP
+TP + FN
+where TP represents true positives and FN false neg-
+atives.
+• Precision quantifies the proportion of positive pre-
+dictions that are actually correct. It is calculated
+as:
+Precision = TP
+TP + FP
+where FP denotes false positives.
+• Matthews Correlation Coefficient (MCC) pro-
+vides a balanced measure of classification perfor-
+mance, even for imbalanced datasets. It considers
+TP, TN (true negatives), FP, and FN in a single metric:
+MCC = TP× TN− FP× FN√︀
+(TP + FP)(TP + FN)(TN + FP)(TN + FN)
+• Balanced Accuracy accounts for class imbalance
+by averaging the recall of each class:
+Balanced Accuracy = Sensitivity + Specificity
+2
+where specificity is given by:
+Specificity = TN
+TN + FP
+• F1 Score is the harmonic mean of precision and
+recall, providing a single metric that balances both
+aspects:
+𝐹 1 = 2× Precision× Recall
+Precision + Recall
+• ROC Curve and AUC . The Receiver Operating
+Characteristic (ROC) curve plots the true positive
+rate (sensitivity) against the false positive rate at var-
+ious threshold settings. The Area Under the Curve
+(AUC) quantifies the overall performance, with a
+value of 1 indicating a perfect classifier and 0.5 rep-
+resenting a random model.
+
+4.3. Proteins Embedding
+In this subsection, we show some characteristics of the pro-
+teins embedding that we used as model input.
+The embedding used to describe the proteins was ob-
+tained from ESM2 with 650M parameters [35]. We analyzed
+these representations to better understand the differences
+between the embeddings of the wild-type and mutated pro-
+teins.
+The figure 10 presents graphs comparing the element-
+wise absolute difference between the wild-type and mutated
+protein embeddings with the absolute sum of the elements
+in the wild-type embedding. As can be seen, the difference
+between the mutated and wild-type protein is almost en-
+tirely localized around the mutation site.
+To test whether the embedding used is suitable for the
+prediction task, we tried using the difference between the
+two embeddings (this time not in absolute value) to predict
+the ∆∆𝐺. This operation is quite naive; therefore, we used
+only a window around the mutation instead of the entire
+sequence, as this window contains most of the information
+about the difference between the wild-type sequence and the
+mutated sequence. The results are shown in the Figure 11.
+As can be seen, the Pearson correlation achieved on the
+training and test sets is very high, considering the simplicity
+of the operation. This suggests that ESM2 can be considered
+a valid model for extracting the input to be processed by
+the network.
+
+4.4. Model Architecture: JanusDDG
+The architecture of our model, shown in Figure 1a, is based
+on the integration of protein language models with the
+Cross-Attention mechanism. The strength of this model is
+mainly due to two factors: it relies solely on the protein
+sequence (allowing it to predict the stability of proteins
+whose structure is unknown) and can be applied regardless
+of their number of mutations. This section explains the
+various building blocks that constitute it.
+4.4.1. Input
+As input to the model, we used the embedding of the two
+sequences (wild-type and mut-type) obtained from ESM2
+650M parameters. These embeddings were also subtracted
+to derive a third embedding that represents the difference
+between the two. The model takes as input both the wild-
+type embedding and the difference embedding.
+4.4.2. Conv1D
+Once the input is fed into the model, two 1D convolutions
+(one for each input) are applied to identify patterns within
+the sequences while simultaneously reducing their dimen-
+sionality. The default Torch parameters were used for the
+convolution, except for the kernel size, which was set to 20
+based on the embedding trend shown in Figure 10.
+4.4.3. Bidirectional Cross Attention Transformer
+The core of the model is the Bidirectional Cross-Attention
+Transformer. The classic Transformer block consists of the
+following components: a Multihead Self-Attention block,
+recurrent connections, and a position-wise FFN. Our pro-
+posed model retains all these components except for the
+first one.
+
+Instead of the Multihead Self-Attention block, we use two
+Cross-Attention blocks, whose mechanism is explained in
+the next section. One is applied to the sequence derived
+from the wild-type sequence embedding, and the other is
+applied to the sequence derived from the embedding of the
+difference between the mutated and wild-type sequences.
+After applying the two Bidirectional Multihead Cross-
+Attention blocks, each output is summed with the input
+of its respective block. Then, the two outputs are concate-
+nated along the feature dimension before being passed into
+a position-wise FFN.
+Bidirectional Cross-Attention The standard self-
+attention mechanism [ 45] enables each element in a
+sequence to attend to all others within the same sequence.
+In contrast, bidirectional cross-attention extends standard
+cross-attention by enabling mutual information flow
+between two input sequences, rather than a one-directional
+mapping. This mechanism enhances the model’s ability to
+capture deep interdependencies between two entities.
+More specifically, cross-attention is a variant of the at-
+tention mechanism where the query Q comes from one
+sequence, while the key K and value V come from an-
+other sequence. Given two input sequences X∈ R𝑛×𝑑 and
+Y∈ R𝑚×𝑑, their corresponding projections are:
+Q𝑋 = X𝑊𝑄, K𝑌 = Y𝑊𝐾, V𝑌 = Y𝑊𝑉 (8)
+where𝑊𝑄,𝑊 𝐾,𝑊 𝑉 ∈ R𝑑×𝑑𝑘 are learnable weight ma-
+trices.
+The attention scores are computed using the scaled dot-
+product:
+Attn(Q𝑋, K𝑌, V𝑌 ) = softmax
+(︂ Q𝑋 K⊤
+𝑌√𝑑𝑘
+)︂
+V𝑌 (9)
+This allows sequence X to attend to sequence Y. How-
+ever, this formulation is inherently asymmetric, meaning
+that sequence Y does not simultaneously attend to X.
+To capture mutual dependencies, we introduce bidirec-
+tional cross-attention, where both sequences X and Y at-
+tend to each other. This is achieved by computing attention
+in both directions:
+H𝑋 = softmax
+(︂ Q𝑋 K⊤
+𝑌√𝑑𝑘
+)︂
+V𝑌 (10)
+H𝑌 = softmax
+(︂ Q𝑌 K⊤
+𝑋√𝑑𝑘
+)︂
+V𝑋 (11)
+where:
+• H𝑋 represents the updated representation of X at-
+tending to Y.
+• H𝑌 represents the updated representation of Y at-
+tending to X.
+The final representations are combined through concate-
+nation:
+Z = Cat(H𝑋, H𝑌 ). (12)
+4.4.4. Pooling Layers: GAP and GMP
+The output from the previous layer is processed using two
+different pooling operations: Global Average Pooling and
+Global Max Pooling. Global Average Pooling computes the
+average value of each feature map, reducing the spatial
+dimensions while preserving the overall feature distribu-
+tion. On the other hand, Global Max Pooling selects the
+maximum value from each feature map, capturing the most
+prominent activations. These two operations help distill the
+most relevant information before passing the representation
+to the subsequent layers. The outputs of these two layers
+are concatenated and then passed to the final layer.
+4.4.5. Linear Layer
+To obtain the final ∆∆𝐺 value, a linear layer with a single
+output neuron is applied.
+4.5. Training
+JanusDDG was trained in two distinct phases: a main train-
+ing phase followed by a fine-tuning phase. Throughout
+both phases, the model parameters were optimized using
+the Adam optimizer with Mean Squared Error (MSE) serving
+as the loss function and a batch size of 6.
+4.5.1. Main Training Phase
+During the main training phase of JanusDDG, the model was
+trained on the S2450 dataset augmented with its inverses.
+The number of training epochs was set to 300, determined
+via 5-fold cross-validation. In this procedure, we identified
+the optimal epoch for each fold as the one yielding the
+maximum Pearson correlation coefficient on the respective
+validation set. The final count of 300 epochs represents
+the average of these optimal epoch numbers across the five
+folds.
+4.5.2. Fine-Tuning Procedure
+After the main trainig phase we did a fine tuning procedure
+to try to augmnet perfromance of JanusDDG on two side:
+Multiple mutations and respect of tranisitivity property.
+The transitivity property is one of the two fundamental
+properties of ∆∆𝐺. It states that:
+∆∆𝐺(𝐴,𝐵 ) = ∆∆𝐺(𝐴,𝐶 ) + ∆∆𝐺(𝐶,𝐵 ). (13)
+To enforce transitivity during fine-tuning, we introduce
+a dedicated two-step loss function (see Fig. 1c) that incor-
+porates a null intermediate state. The second term of the
+loss, MSE(∆∆𝐺(𝐴,𝐵 )− (∆∆𝐺(𝐴,𝑈 ) + ∆∆𝐺(𝑈,𝐵 ))),
+considers the model’s prediction by passing through the
+null state, which serves as a generic thermodynamic refer-
+ence, enabling the model to evaluate and align mutational
+effects across multi-step mutation pathways in a physically
+consistent and residue-agnostic manner. Furthermore, since
+a zero vector loses all information about the original amino
+acids, the model may learn to generalize better to multiple
+mutations, where the initial and final embeddings differ sig-
+nificantly. As the training dataset, we used S2450 and its
+inverse, as in the previous training phase. To choose the
+number of epochs for fine-tuning, we used M28 for valida-
+tion, tracking the Pearson correlation for each epoch over
+30 epochs. The final selected epoch was 28.
+
+4.6. Hyperparameters Selection
+Given the long training time of the model and the large
+number of hyperparameters to be tuned, we opted to adopt
+the Transformer hyperparameters from DDGemb for our
+Bidirectional Transformer, as this model employs the same
+architecture. Specifically, we used the following values:
+Transformer heads (8), position-wise feed-forward network
+(FFN) size (512), and the number of filters for the Conv1D
+layers (128). Additionally, we used the same loss function
+and optimizer as in DDGemb: mean squared error (MSE)
+loss and the Adam optimizer [23].
+To determine the optimal number of training epochs, we
+conducted a 5-fold cross-validation on the training set. We
+utilized the five folds defined by [23], where MMSeq2 [46]
+was employed to partition the training set into five sub-
+sets, each containing proteins with similar sequences. This
+approach ensured that proteins sharing more than 25% se-
+quence identity were assigned to the same subset. The final
+number of training epochs was set to 300, corresponding to
+the mean of the best epoch for each fold.
+
+Figure 9: Performance of the top 5 models (based on Pearson correlation on the S461 dataset) in predicting the stability of
+mutated proteins. The evaluation includes recall, precision, MCC, balanced accuracy, F1 score, and AUC, with ROC curves.
+
+Figure 10: Element-wise absolute difference between the wild-type and mutated protein embeddings (dark blue) with the
+absolute sum of the elements in the wild-type embedding (light blue).
+(a) Train
+ (b) Test
+Figure 11: Pearson correlation between the difference in ESM2 embeddings of the Wild-type and Mutant-type proteins and
+the ΔΔ𝐺.
+
+References
+[1] J. Shi, B. Yuan, H. Yang, Z. Sun, Recent advances on
+protein engineering for improved stability, BioDesign
+Research (2025) 100005.
+[2] M. Gebauer, A. Skerra, Engineered protein scaffolds
+as next-generation therapeutics, Annual review of
+pharmacology and toxicology 60 (2020) 391–415.
+[3] G. K. Meghwanshi, N. Kaur, S. Verma, N. K. Dabi,
+A. Vashishtha, P. Charan, P. Purohit, H. Bhandari,
+N. Bhojak, R. Kumar, Enzymes for pharmaceutical
+and therapeutic applications, Biotechnology and ap-
+plied biochemistry 67 (2020) 586–601.
+[4] R. Mehra, K. P. Kepp, Computational analysis of
+alzheimer-causing mutations in amyloid precursor
+protein and presenilin 1, Archives of Biochemistry
+and Biophysics 678 (2019) 108168.
+[5] C. Pancotti, G. Birolo, C. Rollo, T. Sanavia,
+B. Di Camillo, U. Manera, A. Chiò, P. Fariselli,
+Deep learning methods to predict amyotrophic lateral
+sclerosis disease progression, Scientific reports 12
+(2022) 13738.
+[6] M. S. Bahia, N. Khazanov, Q. Zhou, Z. Yang, C. Wang,
+J. S. Hong, A. Rab, E. J. Sorscher, C. G. Brouillette, J. F.
+Hunt, et al., Stability prediction for mutations in the
+cytosolic domains of cystic fibrosis transmembrane
+conductance regulator, Journal of chemical informa-
+tion and modeling 61 (2021) 1762–1777.
+[7] J. Delgado, R. Reche, D. Cianferoni, G. Orlando,
+R. van der Kant, F. Rousseau, J. Schymkowitz, L. Ser-
+rano, FoldX force field revisited, an improved version,
+Bioinformatics (Oxford, England) 41 (2025) btaf064.
+doi:10.1093/bioinformatics/btaf064.
+[8] Y. Dehouck, J. M. Kwasigroch, D. Gilis, M. Rooman,
+Popmusic 2.1: a web server for the estimation of pro-
+tein stability changes upon mutation and sequence
+optimality, BMC bioinformatics 12 (2011) 1–12.
+[9] I. M. Hernández, Y. Dehouck, U. Bastolla, J. R.
+López-Blanco, P. Chacón, Predicting protein stabil-
+ity changes upon mutation using a simple orienta-
+tional potential, Bioinformatics 39 (2023) btad011.
+URL: https://doi.org/10.1093/bioinformatics/btad011.
+doi:10.1093/bioinformatics/btad011.
+[10] T. Sanavia, G. Birolo, L. Montanucci, P. Turina,
+E. Capriotti, P. Fariselli, Limitations and challenges in
+protein stability prediction upon genome variations:
+towards future applications in precision medicine,
+Computational and Structural Biotechnology Jour-
+nal 18 (2020) 1968–1979. URL: https://www.csbj.org/
+article/S2001-0370(20)30343-3/fulltext. doi: 10.1016/
+j.csbj.2020.07.011.
+[11] C. Pancotti, S. Benevenuta, V. Repetto, G. Birolo,
+E. Capriotti, T. Sanavia, P. Fariselli, A Deep-Learning
+Sequence-Based Method to Predict Protein Stability
+Changes Upon Genetic Variations, Genes 12 (2021)
+911. URL: https://www.mdpi.com/2073-4425/12/6/911.
+doi:10.3390/genes12060911.
+[12] S. Benevenuta, G. Birolo, T. Sanavia, E. Capriotti,
+P. Fariselli, Challenges in predicting stabilizing
+variations: An exploration, Frontiers in Molecu-
+lar Biosciences 9 (2023) 1075570. URL: https://www.
+ncbi.nlm.nih.gov/pmc/articles/PMC9849384/. doi:10.
+3389/fmolb.2022.1075570.
+[13] D. Umerenkov, F. Nikolaev, T. I. Shashkova, P. V. Strash-
+nov, M. Sindeeva, A. Shevtsov, N. V. Ivanisenko, O. L.
+Kardymon, PROSTATA: a framework for protein sta-
+bility assessment using transformers, Bioinformatics
+(Oxford, England) 39 (2023) btad671. doi: 10.1093/
+bioinformatics/btad671.
+[14] K. K. Yang, N. Zanichelli, H. Yeh, Masked inverse
+folding with sequence transfer for protein repre-
+sentation learning, Protein engineering, design &
+selection: PEDS 36 (2023) gzad015. doi: 10.1093/
+protein/gzad015.
+[15] F. Jiang, M. Li, J. Dong, Y. Yu, X. Sun, B. Wu, J. Huang,
+L. Kang, Y. Pei, L. Zhang, S. Wang, W. Xu, J. Xin,
+W. Ouyang, G. Fan, L. Zheng, Y. Tan, Z. Hu, Y. Xiong,
+Y. Feng, G. Yang, Q. Liu, J. Song, J. Liu, L. Hong,
+P. Tan, A general temperature-guided language model
+to design proteins of enhanced stability and activ-
+ity, Science Advances 10 (2024) eadr2641. URL: https:
+//www.science.org/doi/10.1126/sciadv.adr2641. doi:10.
+1126/sciadv.adr2641.
+[16] G. Li, S. Yao, L. Fan, ProSTAGE: Predicting Ef-
+fects of Mutations on Protein Stability by Using Pro-
+tein Embeddings and Graph Convolutional Networks,
+Journal of Chemical Information and Modeling 64
+(2024) 340–347. URL: https://doi.org/10.1021/acs.jcim.
+3c01697. doi:10.1021/acs.jcim.3c01697.
+[17] F. Cuturello, M. Celoria, A. Ansuini, A. Cazzaniga,
+Enhancing predictions of protein stability changes
+induced by single mutations using MSA-based lan-
+guage models, Bioinformatics 40 (2024) btae447.
+URL: https://doi.org/10.1093/bioinformatics/btae447.
+doi:10.1093/bioinformatics/btae447.
+[18] H. Dieckhaus, M. Brocidiacono, N. Z. Randolph,
+B. Kuhlman, Transfer learning to leverage larger
+datasets for improved prediction of protein stability
+changes, Proceedings of the National Academy of
+Sciences 121 (2024) e2314853121. URL: https://www.
+pnas.org/doi/10.1073/pnas.2314853121. doi:10.1073/
+pnas.2314853121.
+[19] S. K. S. Chu, K. Narang, J. B. Siegel, Protein sta-
+bility prediction by fine-tuning a protein language
+model on a mega-scale dataset, PLoS computational
+biology 20 (2024) e1012248. doi: 10.1371/journal.
+pcbi.1012248.
+[20] J. Sun, T. Zhu, Y. Cui, B. Wu, Structure-based self-
+supervised learning enables ultrafast protein stability
+prediction upon mutation, Innovation (Cambridge
+(Mass.)) 6 (2025) 100750. doi:10.1016/j.xinn.2024.
+100750.
+[21] J.-Y. Chen, J.-F. Wang, Y. Hu, X.-H. Li, Y.-R.
+Qian, C.-L. Song, A Comprehensive Review of Pro-
+tein Language Models, 2025. URL: http://arxiv.org/
+abs/2502.06881. doi:10.48550/arXiv.2502.06881,
+arXiv:2502.06881 [q-bio] version: 1.
+[22] J. A. Ruffolo, A. Madani, Designing pro-
+teins with language models, Nature Biotech-
+nology 42 (2024) 200–202. URL: https:
+//www.nature.com/articles/s41587-024-02123-4.
+doi:10.1038/s41587-024-02123-4 .
+[23] C. Savojardo, M. Manfredi, P. L. Martelli, R. Casadio,
+Ddgemb: predicting protein stability change upon
+single-and multi-point variations with embeddings
+and deep learning, Bioinformatics (2025) btaf019.
+[24] F. Pucci, K. V. Bernaerts, J. M. Kwasigroch, M. Rooman,
+Quantification of biases in predictions of protein stabil-
+ity changes upon mutations, Bioinformatics 34 (2018)
+3659–3665.
+
+[25] C. Pancotti, S. Benevenuta, G. Birolo, V. Alberini,
+V. Repetto, T. Sanavia, E. Capriotti, P. Fariselli, Predict-
+ing protein stability changes upon single-point muta-
+tion: a thorough comparison of the available tools on
+a new dataset, Briefings in Bioinformatics 23 (2022)
+bbab555.
+[26] S. Reeves, S. Kalyaanamoorthy, Zero-shot transfer of
+protein sequence likelihood models to thermostability
+prediction, Nature Machine Intelligence 6 (2024) 1063–
+1076.
+[27] C. Rollo, C. Pancotti, G. Birolo, I. Rossi, T. Sanavia,
+P. Fariselli, Influence of model structures on predictors
+of protein stability changes from single-point muta-
+tions, Genes 14 (2023) 2228.
+[28] J. Jumper, R. Evans, A. Pritzel, T. Green, M. Fig-
+urnov, O. Ronneberger, K. Tunyasuvunakool, R. Bates,
+A. Žídek, A. Potapenko, A. Bridgland, C. Meyer,
+S. A. A. Kohl, A. J. Ballard, A. Cowie, B. Romera-
+Paredes, S. Nikolov, R. Jain, J. Adler, T. Back,
+S. Petersen, D. Reiman, E. Clancy, M. Zielin-
+ski, M. Steinegger, M. Pacholska, T. Bergham-
+mer, S. Bodenstein, D. Silver, O. Vinyals, A. W.
+Senior, K. Kavukcuoglu, P. Kohli, D. Hassabis,
+Highly accurate protein structure prediction with Al-
+phaFold, Nature 596 (2021) 583–589. URL: https://
+www.nature.com/articles/s41586-021-03819-2. doi: 10.
+1038/s41586-021-03819-2 .
+[29] M. Baek, F. DiMaio, I. Anishchenko, J. Dauparas,
+S. Ovchinnikov, G. R. Lee, J. Wang, Q. Cong, L. N.
+Kinch, R. D. Schaeffer, C. Millán, H. Park, C. Adams,
+C. R. Glassman, A. DeGiovanni, J. H. Pereira, A. V. Ro-
+drigues, A. A. van Dijk, A. C. Ebrecht, D. J. Opperman,
+T. Sagmeister, C. Buhlheller, T. Pavkov-Keller, M. K.
+Rathinaswamy, U. Dalwadi, C. K. Yip, J. E. Burke, K. C.
+Garcia, N. V. Grishin, P. D. Adams, R. J. Read, D. Baker,
+Accurate prediction of protein structures and interac-
+tions using a three-track neural network, Science
+373 (2021) 871–876. URL: https://www.science.org/
+doi/10.1126/science.abj8754. doi:10.1126/science.
+abj8754.
+[30] G. Ahdritz, N. Bouatta, C. Floristean, S. Kadyan, Q. Xia,
+W. Gerecke, T. J. O’Donnell, D. Berenberg, I. Fisk,
+N. Zanichelli, et al., Openfold: Retraining alphafold2
+yields new insights into its learning mechanisms and
+capacity for generalization, Nature Methods 21 (2024)
+1514–1524.
+[31] J. Ouyang-Zhang, D. J. Diaz, A. R. Klivans, P. Krähen-
+bühl, Predicting a Protein’s Stability under a
+Million Mutations, 2023. URL: http://arxiv.org/abs/
+2310.12979. doi: 10.48550/arXiv.2310.12979,
+arXiv:2310.12979 [q-bio].
+[32] H. Dieckhaus, B. Kuhlman, Protein stability mod-
+els fail to capture epistatic interactions of double
+point mutations, Protein Science 34 (2025) e70003.
+URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/
+pro.70003. doi:10.1002/pro.70003.
+[33] L. Montanucci, E. Capriotti, G. Birolo, S. Benevenuta,
+C. Pancotti, D. Lal, P. Fariselli, Ddgun: an untrained
+predictor of protein stability changes upon amino acid
+variants, Nucleic Acids Research 50 (2022) W222–
+W227.
+[34] Y. Chen, Y. Xu, D. Liu, Y. Xing, H. Gong, An
+end-to-end framework for the prediction of protein
+structure and fitness from single sequence, Na-
+ture Communications 15 (2024) 7400. URL: https://
+www.nature.com/articles/s41467-024-51776-x. doi: 10.
+1038/s41467-024-51776-x .
+[35] Z. Lin, H. Akin, R. Rao, B. Hie, Z. Zhu, W. Lu,
+N. Smetanin, A. dos Santos Costa, M. Fazel-Zarandi,
+T. Sercu, S. Candido, et al., Language models of pro-
+tein sequences at the scale of evolution enable accurate
+structure prediction, bioRxiv (2022).
+[36] Y. B. L. Samaga, S. Raghunathan, U. D. Priyakumar,
+SCONES: Self-Consistent Neural Network for Pro-
+tein Stability Prediction Upon Mutation, The Jour-
+nal of Physical Chemistry B 125 (2021) 10657–10671.
+URL: https://doi.org/10.1021/acs.jpcb.1c04913. doi:10.
+1021/acs.jpcb.1c04913.
+[37] Schrödinger, LLC, The PyMOL molecular graphics
+system, version 1.8, 2015.
+[38] E. Capriotti, P. Fariselli, I. Rossi, R. Casadio, A three-
+state prediction of single point mutations on protein
+stability changes, BMC bioinformatics 9 (2008) 1–9.
+[39] D. J. Diaz, C. Gong, J. Ouyang-Zhang, J. M. Loy, J. Wells,
+D. Yang, A. D. Ellington, A. G. Dimakis, A. R. Klivans,
+Stability Oracle: a structure-based graph-transformer
+framework for identifying stabilizing mutations, Na-
+ture Communications 15 (2024) 6170. URL: https://
+www.nature.com/articles/s41467-024-49780-2. doi: 10.
+1038/s41467-024-49780-2 .
+[40] P. S. Nair, M. Vihinen, V ari b ench: A benchmark
+database for variations, Human mutation 34 (2013)
+42–49.
+[41] J. S. Xavier, T.-B. Nguyen, M. Karmarkar, S. Portelli,
+P. M. Rezende, J. P. Velloso, D. B. Ascher, D. E. Pires,
+Thermomutdb: a thermodynamic database for mis-
+sense mutations, Nucleic acids research 49 (2021)
+D475–D479.
+[42] R. Nikam, A. Kulandaisamy, K. Harini, D. Sharma,
+M. M. Gromiha, Prothermdb: thermodynamic
+database for proteins and mutants revisited after 15
+years, Nucleic acids research 49 (2021) D420–D424.
+[43] L. Montanucci, E. Capriotti, Y. Frank, N. Ben-Tal,
+P. Fariselli, Ddgun: an untrained method for the
+prediction of protein stability changes upon single
+and multiple point variations, BMC bioinformatics 20
+(2019) 1–10.
+[44] K. A. Bava, M. M. Gromiha, H. Uedaira, K. Kitajima,
+A. Sarai, Protherm, version 4.0: thermodynamic
+database for proteins and mutants, Nucleic acids re-
+search 32 (2004) D120–D121.
+[45] A. Waswani, N. Shazeer, N. Parmar, J. Uszkoreit,
+L. Jones, A. Gomez, L. Kaiser, I. Polosukhin, Attention
+is all you need, in: NIPS, 2017.
+[46] M. Steinegger, J. Söding, Mmseqs2 enables sensitive
+protein sequence searching for the analysis of massive
+data sets, Nature biotechnology 35 (2017) 1026–1028.
+###SECTION###
+5. Supplementary Information
+5.1. Comparison Between Janus Base, JanusAsym, and JanusFineTuned
+In this chapter, we present a comparative analysis of the JanusDDG Base, JanusDDG only Antisym., and JanusDDG models,
+evaluating their performance on blind test sets. The assessment includes both single and multiple mutations, providing
+a comprehensive overview of how each model handles different mutation scenarios. JanusDDG only Antisym. is the
+antisymmetric model by construction, derived from the JanusDDG Base to enforce antisymmetry in its predictions. JanusDDG
+is the fine-tuned version of the base model.
+Table 1
+Comparison Between Janus Base, JanusAsym, and JanusFineTuned on the S669 independent test set of single-point variations.
+Method Input Total Direct Reverse rd-r ⟨𝛿⟩
+PCC RMSE MAE PCC RMSE MAE PCC RMSE MAE
+JanusDDG SEQ 0.69 1.39 0.97 0.55 1.39 0.97 0.55 1.39 0.97 -1 0.00
+JanusDDG only Antisym. SEQ 0.69 1.37 0.96 0.55 1.37 0.96 0.55 1.37 0.96 -1 0.00
+JanusDDG Base SEQ 0.69 1.38 0.96 0.55 1.37 0.96 0.53 1.39 0.97 -0.95 0.02
+Table 2
+Comparison Between Janus Base, JanusAsym, and JanusFineTuned on the S461 independent test set of single-point variations.
+Method Input Total Direct Reverse rd-r ⟨𝛿⟩
+PCC RMSE MAE PCC RMSE MAE PCC RMSE MAE
+JanusDDG FineTuned SEQ 0.83 0.96 0.71 0.69 0.96 0.71 0.69 0.96 0.71 -1 0.00
+JanusDDG only Antisym. SEQ 0.84 0.92 0.70 0.70 0.92 0.70 0.70 0.92 0.70 -1 0.00
+JanusDDG Base SEQ 0.84 0.93 0.71 0.70 0.92 0.70 0.68 0.95 0.72 -0.95 0.00
+Table 3
+Comparison Between Janus Base, JanusAsym, and JanusFineTuned on the PTmul-NR independent test set of multi-point
+variations.
+Method Input Total Direct Reverse rd-r ⟨𝛿⟩
+PCC RMSE MAE PCC RMSE MAE PCC RMSE MAE
+JanusDDG FineTuned SEQ 0.61 2.06 1.57 0.61 2.06 1.57 0.61 2.06 1.57 -1 0.00
+JanusDDG only Antisym. SEQ 0.55 2.17 1.67 0.55 2.17 1.67 0.55 2.17 1.67 -1 0.00
+JanusDDG Base SEQ 0.54 2.18 1.67 0.55 2.17 1.63 0.54 2.19 1.71 -0.96 -0.09
+
+5.2. Performance of JanusDDG Across Benchmark Datasets
+Table 4
+Comparative benchmark of different sequence- and structure-based methods on the S669 independent test set of single-point
+variations. The models’ performance data, excluding JanusDDG, were taken from [23].
+Method Input Total Direct Reverse Pearson d-r ⟨𝛿⟩
+PCC RMSE MAE PCC RMSE MAE PCC RMSE MAE
+JanusDDG SEQ 0.69 1.39 0.97 0.55 1.39 0.97 0.55 1.39 0.97 -1 0.00
+DDGemb SEQ 0.68 1.40 0.99 0.53 1.40 0.99 0.52 1.40 0.99 -0.97 0.01
+PROSTATA SEQ 0.65 1.45 1.00 0.49 1.45 1.00 0.49 1.45 0.99 -0.99 -0.01
+ACDC-NN 3D 0.61 1.50 1.05 0.46 1.49 1.05 0.45 1.50 1.06 -0.98 0.02
+INPS-Seq SEQ 0.61 1.52 1.10 0.43 1.52 1.09 0.43 1.53 1.10 -1.00 0.00
+PremPS 3D 0.62 1.49 1.07 0.41 1.50 1.08 0.42 1.49 1.05 -0.85 0.09
+ACDC-NN-Seq SEQ 0.59 1.53 1.08 0.42 1.53 1.08 0.42 1.53 1.08 -1.00 0.00
+DDGun3D 3D 0.57 1.61 1.13 0.43 1.60 1.11 0.41 1.62 1.14 -0.97 0.05
+INPS3D 3D 0.55 1.64 1.19 0.43 1.50 1.07 0.33 1.77 1.31 -0.50 0.38
+THPLM SEQ 0.53 1.63 - 0.39 1.60 - 0.35 1.66 - -0.96 -0.01
+ThermoNet 3D 0.51 1.64 1.20 0.39 1.62 1.17 0.38 1.66 1.23 -0.85 0.05
+DDGun SEQ 0.57 1.74 1.25 0.41 1.72 1.25 0.38 1.75 1.25 -0.96 0.05
+MAESTRO 3D 0.44 1.80 1.30 0.50 1.44 1.06 0.20 2.10 1.66 -0.22 0.57
+ThermoMPNN SEQ 0.43 1.52 - - - - - - - - -
+Dynamut 3D 0.50 1.65 1.21 0.41 1.60 1.19 0.34 1.69 1.24 -0.58 0.06
+PoPMuSiC 3D 0.46 1.82 1.37 0.41 1.51 1.09 0.24 2.09 1.64 -0.32 0.69
+DUET 3D 0.41 1.86 1.39 0.41 1.52 1.10 0.23 2.14 1.68 -0.12 0.67
+I-Mutant3.0-Seq SEQ 0.37 1.91 1.47 0.34 1.54 1.15 0.22 2.22 1.79 -0.48 0.76
+SDM 3D 0.32 1.93 1.45 0.41 1.67 1.26 0.13 2.16 1.64 -0.40 0.40
+mCSM 3D 0.37 1.96 1.49 0.36 1.54 1.13 0.22 2.30 1.86 -0.05 0.85
+Dynamut2 3D 0.36 1.90 1.42 0.34 1.58 1.15 0.17 2.16 1.69 0.03 0.64
+I-Mutant3.0 3D 0.32 1.96 1.49 0.36 1.52 1.12 0.15 2.32 1.87 -0.06 0.81
+Rosetta 3D 0.47 2.69 2.05 0.39 2.70 2.08 0.40 2.68 2.02 -0.72 0.61
+FoldX 3D 0.31 2.39 1.53 0.22 2.30 1.56 0.22 2.48 1.50 -0.20 0.34
+SAAFEC-SEQ SEQ 0.26 2.02 1.54 0.36 1.54 1.13 -0.01 2.40 1.94 -0.03 0.83
+MUpro SEQ 0.32 2.03 1.58 0.25 1.61 1.21 0.20 2.38 1.96 -0.32 0.95
+
+Table 5
+Comparative benchmark of different sequence- and structure-based methods on the S461 independent test set of single-point
+variations.The data used to compute model performance, excluding JanusDDG, were taken from [26].
+Model Pearson Spearman RMSE MAE
+JanusDDG 0.69 0.66 0.97 0.73
+Stability Oracle 0.61 0.63 1.19 0.89
+CartDDG-D 0.60 0.61 3.59 2.93
+PremPS 0.63 0.60 1.03 0.80
+PopMusic 0.61 0.60 1.02 0.76
+MAESTRO 0.63 0.60 1.04 0.79
+INPS3D 0.61 0.59 1.02 0.76
+DDGun3D 0.63 0.58 1.11 0.81
+DUET 0.59 0.57 1.06 0.78
+ACDC-NN 0.60 0.56 1.06 0.78
+KORPMD 0.57 0.54 1.21 0.91
+mCSM 0.53 0.51 1.07 0.81
+SDM 0.56 0.51 1.33 1.02
+ThermoNet 0.55 0.48 1.24 0.93
+I-Mutant3.0 0.49 0.47 1.12 0.84
+SAAFEC-Seq 0.49 0.47 1.12 0.84
+MIF 0.45 0.46 4.37 3.14
+Ankh 0.44 0.44 5.60 4.69
+ESM2-650M 0.43 0.44 4.41 3.55
+Dynamut 0.50 0.43 1.27 0.96
+MPNN-20-00 0.40 0.43 2.36 1.88
+ESM1v Mean 0.39 0.43 4.29 3.33
+ESMIF Multimer 0.37 0.41 1.64 1.26
+MIFST 0.37 0.38 5.02 3.95
+MutComputeX 0.33 0.36 1.39 1.03
+FoldX-D 0.30 0.39 1.91 1.26
+Tranception 0.24 0.27 1.68 1.29
+MSA Transformer Mean 0.30 0.26 5.84 5.05
+Table 6
+Performance comparison on s96. The data used to compute model performance, excluding JanusDDG, were taken from [33].
+Model Pearson Spearman RMSE MAE
+JanusDDG 0.52 0.50 2.10 1.50
+DDGun 0.48 0.44 2.14 1.59
+DDGun3D 0.52 0.48 2.10 1.61
+INPS-MD 0.43 0.37 2.21 1.67
+Maestro 0.36 0.36 2.29 1.64
+mCSM 0.31 0.33 2.33 1.72
+FoldX 0.22 0.38 4.18 2.37
+INPS 0.44 0.41 2.20 1.64
+POPMUSIC 0.36 0.33 2.29 1.74
+SDM 0.51 0.47 2.12 1.59
+Table 7
+Performance comparison of different models on PTmul-NR test set. The models’ performance data, excluding JanusDDG, were
+taken from [23].
+Model Pearson RMSE MAE
+DDG JanusDDG 0.61 2.06 1.57
+DDGemb 0.59 2.16 1.59
+FoldX 0.36 5.51 3.66
+Maestro 0.28 2.55 1.88
+DDGun 0.23 2.55 2.10
+DDGun3D 0.17 2.57 2.08
+
+Table 8
+Performance on Ssym. The data used to compute model performance, excluding JanusDDG, were taken from [26].
+Direct Inverse Antisymmetry
+Dir Pearson Spearman RMSE MAE Pearson Spearman RMSE MAE Pearson d-r <𝛿 >
+JanusDDG 0.84 0.84 0.85 0.55 0.84 0.84 0.85 0.55 -1 0.00
+KORPM 0.56 0.58 1.30 0.94 0.49 0.51 1.40 1.00 -0.88 -0.11
+mpnn_20_00 0.57 0.61 2.44 2.02 0.40 0.48 2.42 1.78 -0.58 -1.40
+Cartddg 0.66 0.69 3.32 2.66 0.45 0.43 3.56 2.63 -0.41 -3.13
+ACDC-NN 0.61 0.53 1.37 1.01 0.59 0.51 1.43 1.04 -0.98 -0.05
+stability-oracle 0.65 0.68 1.38 0.95 0.42 0.42 1.77 1.26 -0.57 -0.50
+mifst 0.46 0.46 5.51 4.54 0.31 0.31 4.11 3.21 -0.74 -2.10
+msa_transformer_mean 0.35 0.32 5.41 4.51 0.35 0.32 5.41 4.51 -1.00 0.00
+mif 0.56 0.54 4.70 3.70 0.35 0.37 3.76 2.77 -0.44 -3.46
+esm2_650M 0.27 0.29 5.73 4.87 0.27 0.29 5.73 4.87 -1.00 0.00
+ankh 0.28 0.29 6.06 5.26 0.28 0.29 6.06 5.26 -1.00 0.00
+tranception 0.26 0.25 1.83 1.33 0.26 0.25 1.83 1.33 -1.00 0.00
+esmif_multimer 0.54 0.49 1.81 1.32 0.15 0.24 1.85 1.34 -0.17 -0.03
+DDGun3D 0.57 0.46 1.40 1.00 0.54 0.45 1.43 1.03 -0.99 -0.04
+FoldX 0.56 0.66 1.93 1.17 0.37 0.39 2.16 1.49 -0.25 -1.12
+Evo 0.58 0.54 1.36 1.00 0.32 0.31 1.75 1.26 -0.58 -0.36
+mutcomputex 0.43 0.46 1.50 1.04 0.16 0.22 1.95 1.40 -0.19 -0.70
+INPS3D 0.61 0.58 1.24 0.89 0.29 0.15 1.94 1.45 -0.51 -1.02
+esm1v_mean 0.10 0.15 3.66 2.40 0.10 0.15 3.66 2.40 -1.00 0.00
+ThermoNet 0.45 0.39 1.57 1.10 0.37 0.31 1.66 1.16 -0.85 -0.04
+MAESTRO 0.57 0.60 1.31 0.91 0.27 0.24 2.16 1.66 -0.33 -1.25
+DUET 0.63 0.62 1.22 0.87 0.17 0.12 2.30 1.76 -0.30 -1.49
+I-Mutant3.0 0.64 0.67 1.21 0.78 -0.04 -0.06 2.32 1.76 0.00 -1.37
+MUpro 0.79 0.77 0.94 0.53 0.07 0.04 2.51 2.03 -0.02 -1.93
+mCSM 0.61 0.57 1.23 0.91 0.14 0.07 2.43 1.93 -0.26 -1.82
+SDM 0.50 0.50 1.57 1.22 0.17 0.14 2.34 1.80 -0.43 -1.09
+Dynamut 0.56 0.50 1.46 1.04 0.35 0.35 1.75 1.26 -0.57 -0.25
+Table 9
+Performance comparison of different models on on K2369. The models’ performance data, excluding JanusDDG, were taken
+from [26].
+Model Type Model MSE Accuracy 𝜌 𝑤𝜌 NDCG wNDCG
+unknown ΔΔ𝐺𝑢 label 0.00± 0.00 1 1 1 1 1
+sequence JanusDDG 1.14 0.72 0.70 0.56 0.87 0.83
+ensemble Ensemble 6 Feats* 1.52± 0.36 0.73 0.66 0.5 0.81 0.75
+ensemble Ensemble 5 Feats* 1.53± 0.36 0.73 0.65 0.51 0.82 0.74
+ensemble Ensemble 7 Feats* 1.53± 0.36 0.73 0.66 0.5 0.81 0.74
+ensemble Ensemble 4 Feats* 1.58± 0.38 0.72 0.65 0.51 0.82 0.75
+transfer Stability Oracle 1.61± 0.17 0.7 0.59 0.48 0.75 0.76
+ensemble Ensemble 3 Feats* 1.70± 0.41 0.72 0.59 0.45 0.81 0.74
+potential KORPM* 1.72± 0.35 0.71 0.55 0.44 0.78 0.74
+ensemble Ensemble 2 Feats* 1.96± 0.49 0.69 0.51 0.39 0.8 0.71
+struc. PSLM ESM-IF 2.95± 0.89 0.65 0.4 0.41 0.76 0.71
+seq. PSLM Tranception (reduced) 3.03± 0.89 0.6 0.31 0.24 0.71 0.68
+seq. PSLM Tranception 3.03± 0.89 0.61 0.32 0.24 0.71 0.69
+unknown Gaussian Noise 3.59± 0.61 0.53 -0.02 -0.02 0.65 0.59
+struc. PSLM ProteinMPNN 0.3 7.38± 1.42 0.66 0.47 0.42 0.81 0.73
+struc. PSLM ProteinMPNN 0.2 7.86± 1.54 0.67 0.47 0.42 0.78 0.73
+struc. PSLM ProteinMPNN 0.1 8.44± 1.49 0.66 0.47 0.4 0.79 0.73
+seq. PSLM ESM-2 150M 22.0± 5.61 0.62 0.24 0.27 0.76 0.69
+seq. PSLM ESM-1V mean 26.9± 3.87 0.63 0.26 0.28 0.76 0.68
+seq. PSLM ESM-2 650M 29.4± 4.54 0.63 0.32 0.3 0.75 0.7
+struc. PSLM MIF 30.7± 6.37 0.65 0.46 0.42 0.77 0.7
+biophysical Rosetta CartDDG 32.4± 3.52 0.7 0.61 0.45 0.8 0.73
+seq. PSLM MSA-T mean 32.7± 5.98 0.63 0.36 0.27 0.73 0.69
+struc. PSLM MIF-ST 34.6± 3.23 0.64 0.45 0.38 0.77 0.71
+seq. PSLM Ankh 37.7± 3.53 0.63 0.36 0.25 0.72 0.68
+seq. PSLM ESM-2 3B 39.7± 4.22 0.62 0.32 0.31 0.71 0.69
+seq. PSLM ESM-2 15B 46.0± 3.54 0.62 0.36 0.28 0.73 0.68
+struc. PSLM Rosetta/ProtMPNN 66.1± 7.09 0.69 0.65 0.53 0.83 0.75
+
+Table 10
+Performance on Q3421 with Alternative Choices for Statistics. The models’ performance data, excluding JanusDDG, were
+taken from [26].
+Model Type Model MSE Accuracy Spearman’s 𝜌 w𝜌 NDCG wNDCG
+unknown ΔΔGu label 0.00 ± 0.00 1 1 1 1
+struc. JanusDDG 2.10 ± 0.86 0.78 0.63 0.72 0.80
+transfer Stability Oracle 2.98 ± 0.48 0.77 0.58 0.46 0.61 0.71
+ensemble Ensemble 5 Feats 3.09 ± 0.42 0.75 0.59 0.48 0.6 0.68
+ensemble Ensemble 6 Feats 3.09 ± 0.43 0.75 0.59 0.48 0.6 0.68
+ensemble Ensemble 7 Feats 3.10 ± 0.42 0.75 0.59 0.48 0.6 0.69
+ensemble Ensemble 4 Feats 3.20 ± 0.43 0.75 0.57 0.48 0.61 0.68
+ensemble Ensemble 3 Feats 3.43 ± 0.45 0.72 0.5 0.4 0.59 0.66
+potential KORPM 3.54 ± 0.48 0.73 0.47 0.34 0.59 0.66
+ensemble Ensemble 2 Feats 3.68 ± 0.45 0.73 0.43 0.34 0.59 0.64
+struc. PSLM MutComputeX 4.04 ± 0.44 0.78 0.36 0.28 0.56 0.64
+unknown Gaussian Noise 4.96 ± 0.39 0.7 0 0 0.51 0.56
+struc. PSLM ESM-IF 5.04 ± 0.49 0.77 0.44 0.41 0.6 0.66
+seq. PSLM Tranception (reduced) 5.09 ± 0.50 0.77 0.25 0.22 0.53 0.58
+seq. PSLM Tranception 5.09 ± 0.50 0.78 0.26 0.24 0.54 0.58
+struc. PSLM ProteinMPNN 0.3 7.26 ± 0.62 0.78 0.48 0.41 0.61 0.69
+struc. PSLM ProteinMPNN 0.2 7.57 ± 0.60 0.78 0.49 0.41 0.6 0.68
+struc. PSLM ProteinMPNN 0.1 8.33 ± 0.64 0.78 0.48 0.4 0.6 0.68
+seq. PSLM ESM-2 150M 16.2 ± 2.14 0.72 0.22 0.24 0.57 0.62
+struc. PSLM MIF 23.8 ± 1.89 0.77 0.47 0.4 0.6 0.68
+seq. PSLM ESM-1V mean 24.2 ± 3.80 0.74 0.22 0.25 0.56 0.6
+biophysical Rosetta CartDDG 26.7 ± 1.98 0.78 0.56 0.43 0.61 0.69
+seq. PSLM ESM-2 650M 27.8 ± 2.64 0.76 0.29 0.3 0.57 0.63
+struc. PSLM MIF-ST 34.8 ± 2.44 0.77 0.4 0.32 0.59 0.63
+seq. PSLM Ankh 37.6 ± 2.74 0.77 0.31 0.28 0.55 0.62
+seq. PSLM MSA-T mean 37.7 ± 3.01 0.77 0.28 0.24 0.56 0.61
+seq. PSLM ESM-2 3B 42.8 ± 4.93 0.77 0.26 0.26 0.54 0.62
+seq. PSLM ESM-2 15B 52.5 ± 5.34 0.77 0.25 0.25 0.55 0.61
+struc. PSLM Rosetta/ProtMPNN 59.2 ± 3.80 0.8 0.62 0.49 0.62 0.71
+Table 11
+Performance comparison of different methods on Ptmul-D. The performance of the ThermoMPNN-D model was taken
+from [32].
+Method PCC SCC RMSE
+JanusDDG 0.55 0.55 1.91
+ThermoMPNN-D 0.57 0.59 1.95
+Table 12
+Performance comparison on s96. The models’ performance data, excluding JanusDDG, were taken from [33].
+Model Pearson RMSE
+JanusDDG 0.52 2.10
+DDGun 0.48 2.14
+DDGun3D 0.52 2.10
+INPS-MD 0.43 2.21
+Maestro 0.36 2.29
+mCSM 0.31 2.33
+FoldX 0.22 4.18
+INPS 0.44 2.20
+POPMUSIC 0.36 2.29
+SDM 0.51 2.12

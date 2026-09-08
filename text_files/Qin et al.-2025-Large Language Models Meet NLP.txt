@@ -155,7 +155,6 @@ LLM-based NLP.
 AsshowninFigure2,thissectiondescribesthebackground
 ofparameter-frozenparadigm( §2.1)andparameter-tuning
 paradigm (§2.2).
-###SECTION###
 2.1 Parameter-Frozen Paradigm
 Parameter-frozen paradigm can directly apply prompting
 for NLP tasks without any parameter tuning. As shown in
@@ -174,7 +173,6 @@ solve the NLP tasks imitating few-shot demonstrations.
 Formally, given some demonstrationsE, the process of
 few-shot learning is defined as:
 P = Prompt(E ,I) . (2)
-###SECTION###
 2.2 Parameter-Tuning Paradigm
 As shown in Figure 2 (b), the parameter-tuning paradigm
 involvesadjustingLLMparametersforNLPtasks,covering
@@ -272,7 +270,6 @@ parameter-efficient tuning first tunes a set of parameters
 W, denoting as:
 ˆW = Fine-tune(W|D ,M) , (4)
 where ˆW stands for the trained parameters.
-###SECTION###
 2.3 Comparison of Paradigms
 Tofurtherunderstandtheadvantagesondifferentparadigms,
 we summarize the resource consumption and performance
@@ -300,7 +297,6 @@ As shown in Figure 3, we first describe some typical
 NLP understanding tasks, which consists of Semantic
 Analysis (§3.1), Information Extraction (§3.2), Dialogue
 Understanding (§3.3), and Table Understanding (§3.4).
-###SECTION###
 3.1 Sentiment Analysis
 Sentiment analysis, a key function in natural language
 processing, identifies the emotional tone of a text, like
@@ -354,7 +350,6 @@ efficiency is a vital dimension for evaluating sentiment
 analysis methods. Qiu et al.[124] utilize LoRA to tune
 LLMs on the empathy multi-turn conversation dataset
 namely SMILECHAT to develop emotional systems.
-###SECTION###
 3.2 Information Extraction
 Information Extraction (IE) tasks aim at extracting struc-
 tural information from plain text, which typically includes
@@ -490,7 +485,6 @@ document-level relation extraction model using the RHF
 paradigm and parameter-efficient fine-tuning, enabling
 state-of-the-art performance without relying on predefined
 options.
-###SECTION###
 3.3 Dialogue Understanding
 Dialogue understanding typically consists of spoken lan-
 guage understanding (SLU) [187] and dialogue state track-
@@ -559,7 +553,6 @@ detectiontaskandintroducesMIDLM,abidirectionalLLM
 framework that enables autoregressive LLMs to leverage
 bidirectional information through post-training, thereby
 eliminating the need to train the model from scratch.
-###SECTION###
 3.4 Table Understanding
 Table understanding involves the comprehension and anal-
 ysis of structured data presented in tables, focusing on
@@ -653,7 +646,6 @@ This section presents the LLMs for classific NLP genera-
 tion tasks containing Summarization (§4.1), Code Genera-
 tion (§4.2), Machine Translation (§4.3), and Mathematical
 Reasoning (§4.4), which are illustrated in Figure 3.
-###SECTION###
 4.1 Summarization
 Summarization aims to distill the essential information
 from a text document, producing a concise and coherent
@@ -726,7 +718,6 @@ controllable abstractive summarization. These approaches
 collectively show the efficacy of PET in enabling robust,
 domain-adaptive, and controllable summarization with
 minimal additional computational costs.
-###SECTION###
 4.2 Code Generation
 Code generation involves the automatic creation of exe-
 cutable code from natural language specifications, facilitat-
@@ -812,7 +803,6 @@ evaluation of PEFT on method-level code smell detection,
 revealing that small models often perform competitively,
 reinforcing the scalability and cost-effectiveness of PET
 techniques for specialized software engineering tasks.
-###SECTION###
 4.3 Machine Translation
 Machine translation is a classical task that utilizes comput-
 ers to automatically translate the given information from
@@ -890,7 +880,6 @@ tentialtomakeLLMsmoreadaptableandresource-efficient
 whilemaintainingcompetitiveperformance. Thesestudies
 collectively underline PET’s promise to revolutionize MT
 by offering scalable and cost-effective solutions.
-###SECTION###
 4.4 Mathematical Reasoning
 Mathematical reasoning tasks in NLP involve the use of
 NLP techniques to understand information from math-
@@ -1053,7 +1042,6 @@ new frontiers, aiming to inspire further innovations and
 groundbreaking advancements in the near future.
 
 12 Front. Comput. Sci., 2025, 0(0): 1–35
-###SECTION###
 5.1 Multilingual LLMs for NLP
 Despite the significant success of LLMs in English NLP
 tasks, there are over 7,000 languages worldwide. How
@@ -1078,7 +1066,6 @@ betweenEnglishandotherlanguages. Effectivelyachieving
 this alignment is critical for ensuring optimal performance
 in cross-lingual NLP tasks, making it a challenging yet
 essential area for advancement.
-###SECTION###
 5.2 Multi-modal LLMs for NLP
 The current LLMs achieve excellent performance in text
 modality. However,integratingmodalitiesisoneofthekey
@@ -1098,7 +1085,6 @@ bridgemulti-modalitygap[ 269,270,277,278,279]. Craft-
 ing a more effective multi-modal interaction mechanism in
 the inference process of multi-modal LLMs to solve NLP
 tasks is an essential problem.
-###SECTION###
 5.3 Tool-usage in LLMs for NLP
 While LLMs have shown success in NLP tasks, they can
 still face challenges when applied in real-world scenar-
@@ -1120,7 +1106,6 @@ flighttickets,bookingtraintickets,andbookingbustickets.
 Then, how to collaborate to make the trip time as short as
 possibleandthecostaslowaspossibleisatypicalproblem
 in effective tool planning.
-###SECTION###
 5.4 X-of-thought in LLMs for NLP
 When LLMs solve complex NLP problems, they often
 cannot directly give correct answers and require complex
@@ -1138,7 +1123,6 @@ Prompting Knowledge Integration:Diverse promptings
 enhancemodelperformanceacrossvariousscenarios. How
 to better integrate the knowledge of different XoT to solve
 NLP problems is an important direction.
-###SECTION###
 5.5 Hallucination in LLMs for NLP
 DuringsolvingtheNLPtasks,LLMsinevitablysufferfrom
 thehallucinationswhereLLMsproduceoutputsthatdeviate
@@ -1155,7 +1139,6 @@ Libo Qin et al. Large Language Models Meet NLP: A Survey 13
 stimulatecertaincreativeabilities. Howtoleveragehalluci-
 nationtostimulatecreativityandgeneratebetterinnovative
 knowledge is an interesting topic.
-###SECTION###
 5.6 Safety in LLMs for NLP
 ApplyinglargemodelstodownstreamNLPtasksalsoraises
 inevitablesafetyconcerns,includingcopyrightissues[ 296],
@@ -1171,7 +1154,6 @@ in this area. (2)Multilingual Safety Risks:LLM suf-
 fers more safety risks across languages and cultures [305].
 Identifying and mitigating these risks in a multilingual
 context is a significant challenge.
-###SECTION###
 5.7 Long Chain-of-Thought in LLMs for NLP
 Long Chain-of-Thought (Long-CoT) extends standard CoT
 prompting by allowing models to reason more deeply, ex-

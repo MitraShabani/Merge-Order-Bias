@@ -254,7 +254,6 @@ ation (RAG) based on multiple source documents.
 Table 1 summarizes the target tasks characteristics.
 The list is not exhaustive and should evolve with
 advances in compression methods and LLMs.1
-###SECTION###
 3.2 Compression Quality Evaluation
 We outline the following key dimensions for mea-
 suring the quality of the compression methods:
@@ -351,7 +350,6 @@ fine-grained compression that accounts for condi-
 tional dependencies.2 Following the LLMLingua
 setup (Jiang et al., 2023b), the compressed prompt
 is provided as textual input to the target LLM.
-###SECTION###
 4.1 Downstream Task Performance
 We first evaluate the out-of-the-box compression
 methods on five diverse tasks (see Section 3.1). 3
@@ -425,7 +423,6 @@ to the remaining two datasets when operating on
 smaller granularity. This suggests that enhancing
 the model to handle finer details is a worthwhile
 direction to explore for soft compression methods.
-###SECTION###
 4.2 Grounding
 We evaluate how prompt compression affects the
 faithfulness of LLM-generated text. Depending on
@@ -470,7 +467,6 @@ the original context. PISCO produces the most
 faithful responses to the source despite high com-
 pression rates, likely due to the use of sequence-
 level knowledge distillation from a teacher model.
-###SECTION###
 4.3 Information Preservation
 We reconstruct the original text from the com-
 pressed xRAG representation by prompting the
@@ -569,7 +565,6 @@ similar level of information retention across differ-
 ent encoding levels, likely due to its higher encod-
 ing capacity: while xRAG compresses information
 into a single token, PISCO uses 8 embeddings.
-###SECTION###
 4.4 Compression Computational Efficiency
 We evaluate the computational cost of various
 prompt compression methods by measuring the
@@ -584,6 +579,7 @@ demand. Dominating operation remains the num-
 ber of matrix multiplication. The results show that
 all compression methods used in our experiments
 are comparable in terms of efficiency.
+###SECTION###
 5 Improving xRAG
 The results presented in Section 4 show a large
 disproportion between PISCO and the remaining
@@ -609,7 +605,6 @@ an xRAG model using the data and code released
 with its paper to ensure that the models are fully
 comparable (details in Appendix D). We denote
 this reproduced version asxRAG (Reproduced).
-###SECTION###
 5.1 Sentence Pre-Training and Sentence-Level
 Fine-Tuning (w/ Sentence PT + FT)
 The only trainable component of the xRAG is a
@@ -755,7 +750,6 @@ tities). In all three dimensions, the performance on
 sentence-level tokens is lower than when encoding
 the entire context at once, implying that the model
 is not able to handle multiple tokens at a time.
-###SECTION###
 5.2 Two-Step Pre-Training and Sentence-
 Level Fine-Tuning (w/ Two-Step PT + FT)
 Even though we see improvements in downstream
@@ -808,7 +802,6 @@ more of them (0.36 vs. 0.23 at context-level and
 serve even higher similarity scores for text encoded
 into multiple tokens (F1 of 0.63 vs. 0.19), showing
 that our strategy captures finer-grained information.
-###SECTION###
 5.3 Qualitative Analysis
 To understand the type of information preserved,
 we conducted a qualitative analysis of recon-
@@ -827,7 +820,6 @@ performance on the TriviaQA dataset. However,
 numerical entities such as dates and numbers are
 often lost. Examples of reconstructed contexts can
 be found in Table 24 in Appendix E.
-###SECTION###
 5.4 Compression Rates
 Table 10 presents the compression rates for each
 model (measured in tokens and including the sys-
@@ -1367,7 +1359,7 @@ Evaluating text generation with BERT. In8th In-
 ternational Conference on Learning Representations,
 ICLR 2020, Addis Ababa, Ethiopia.
 13
-
+###SECTION###
 Appendix for paper “Understanding and
 Improving Information Preservation
 in Prompt Compression for LLMs”

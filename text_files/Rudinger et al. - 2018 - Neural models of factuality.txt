@@ -170,7 +170,6 @@ previous models that rely on deterministic rules
 and/or hand-engineered features, the linear chain-
 structured network reliably outperforms the tree-
 structured network.
-###SECTION###
 2.2 Event factuality datasets
 Saur´ı and Pustejovsky (2009) present the Fact-
 Bank corpus of event factuality annotations, built
@@ -453,7 +452,6 @@ t = [ h(l−1,→)
 t ; h(l−1,←)
 t ] other-
 wise. We setg to the pointwise nonlinearity tanh.
-###SECTION###
 4.2 Stacked bidirectional tree LSTM
 We use a stacked bidirectional extension to the
 child-sum dependency tree LSTM (T-LSTM; Tai
@@ -577,7 +575,6 @@ more directly compare the L- and T-biLSTMs and
 (ii) because a model that uses dependency labels
 substantially increases the number of trainable pa-
 rameters, relative to the size of our datasets.
-###SECTION###
 4.3 Regression model
 To predict the factuality vt for the event referred
 to by a wordwt, we use the hidden states from the
@@ -1323,7 +1320,7 @@ Intelligent Text Processing (CICLing-05) . Springer-
 Verlag, Mexico City, Mexico, pages 486–497.
 Wojciech Zaremba and Ilya Sutskever. 2014. Learning
 to execute. arXiv preprint arXiv:1410.4615 .
-
+###SECTION###
 A Appendix
 A.1 Dataset ﬁltering
 We ﬁlter our dataset to remove annotators with

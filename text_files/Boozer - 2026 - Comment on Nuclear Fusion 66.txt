@@ -1,0 +1,604 @@
+Comment on Nuclear Fusion 66, 016012 (2026) by Richard Fitzpatrick,
+A Simple Model of Current Ramp-Up and Ramp-Down in Tokamaks
+Allen H Boozer
+Columbia University, New York, NY 10027
+ahb17@columbia.edu
+(Dated: August 25, 2026)
+###SECTION###
+The paper Nuclear Fusion66, 016012 (2026) by Richard Fitzpatrick is based on fundamental
+errors in the physics of the evolution of the poloidal magnetic flux in tokamaks. With the certainty
+of Faraday’s Law, the slippage of the poloidal relative to the toroidal flux is given by the loop
+voltage. Some of the errors may be endemic to the tokamak community, such as the focusing on
+a quantityψthat has a subtle relation to the poloidal flux while essentially ignoring the toroidal
+flux. Other errors are due to an entanglement of in principle separable concepts and unjustified
+assumptions. Although Nuclear Fusion allowed the use “private communication” as a reference to
+bolster misquotes, the response must be in arXiv because Nuclear Fusion will not allow any mention
+of “private communication” in a response. This comment also derives a new and simple expression
+for the loop voltage, which has the validity of the parallel component of Ohm’s law.
+###SECTION###
+I. INTRODUCTION
+Richard Fitzpatrick’s 2026 Nuclear Fusion paper
+[1] on current ramp-up and ramp-down in tokamaks
+is based on misunderstandings about the form of
+Faraday’s Law in toroidal plasmas, which may be en-
+demic within the tokamak community, coupled with
+errors due to entangling concepts that in principle
+separable and making unjustified assumptions. The
+scientific issues in his paper are dealt with in Section
+II and even in more detail in my Physics of Plasmas
+paperConstraints on the magnetic field evolution in
+tokamak power plants[2].
+There is a second set of issues that arose from mis-
+quotes in the Nuclear Fusion paper [1] and the use
+of references to “private communication” to bolster
+those misquotes. As discussed in Section III, all the
+“private communication” was through emails which
+explicitly pointed out the falseness of his quotes
+rather than supported them.
+The Nuclear Fusion paper [1], which was accepted
+on October 14 and published online of November
+6, 2025, was Fitzpatrick’s response to a September
+9, 2025 arXiv version of my article [3], which was
+eventually published by the Physics of Plasmas [2].
+However, the initial submission was flatly rejected
+on Nov 10, 2025. The first reviewer of [3] stated:
+“The discussion of the plasma current ramp-down
+is similarly qualitative, and a more rigorous model
+was recently published in Nuclear Fusion by Fitz-
+patrick, prompted by the arXiv article from this au-
+thor.” The Physics of Plasmas required that the
+issues raised in the Nuclear Fusion paper [1] be ad-
+dressed before the paperConstraints on the mag-
+netic field evolution in tokamak power plantswould
+receive any consideration.
+Without being aware of Fitzpatrick’s submission
+and certainly without permission, his Nuclear Fusion
+paper [1] was published with references to “private
+communication” to buttress incorrect statements of
+the views expressed in the arXiv article [3]. Despite
+having copies of all of the “private communication”
+emails, the journal Nuclear Fusion, as a matter of
+policy, will not allow publication of a Comment that
+discloses the actual contents of a “private communi-
+cation” in order to correct the misstatements. This
+comment, which will only be published on arXiv, is
+a companion to a comment written for publication
+in Nuclear Fusion that only deals with the scientific
+issues.
+###SECTION###
+II. SCIENTIFIC ISSUES
+Fitzpatrick’s Nuclear Fusion paper [1] was based
+on a misunderstanding Faraday’s Law. Judging by
+the exuberance of the reviewer of [3] and the ac-
+ceptance and online publication of [1] by Nuclear
+Fusion on November 6, 2025, this misunderstanding
+may be endemic within the tokamak community. A
+fundamental problem is the failure to recognize the
+equation
+∂ψp(ψt,t)
+∂t =V ℓ(ψt,t),(1)
+which has the validity of Faraday’s law in toroidal
+plasmas in which there are magnetic surfaces. The
+toroidal flux is the magnetic flux enclosed by a mag-
+netic surface,ψ t =
+R ⃗B·d⃗ aφ, and the poloidal flux
+is the magnetic flux that passes down through the
+central hole in a magnetic surface,ψ p =−
+R ⃗B·d⃗ aθ,
+Figure 1. The loop voltageV ℓ gives the slippage of
+the poloidal relative to the toroidal flux.
+The derivation of Equation (A9) in Appendix A
+shows that the Ohm’s law for the electric field paral-
+lel to the magnetic field,E|| =ηj||−jbs−jcd, implies
+arXiv:2601.05977v4  [physics.plasm-ph]  24 Aug 2026
+
+FIG. 1: The toroidal fluxψ t is the magnetic flux en-
+closed by a toroidal magnetic surface. The poloidal flux
+ψp(ψt,t) is the magnetic flux going down through the
+hole in the center of the toroidal magnetic surface. The
+toroidal current isI(ψ t,t) is the current enclosed by the
+magnetic surface. The poloidal currentG(ψ t,t) is the
+current coming up through the hole in the center of the
+toroidal magnetic surface. The current density in the
+figure is denoted by ⃗J, but in this paper by ⃗j. This was
+Figure 1 in Boozer, Nucl. Fusion55, 025001 (2015).
+that
+dI
+dψt
+= dIbs
+dψt
++ dInet
+dψt
++ Vℓ
+µ0(G+ιI)η ,(2)
+whereI=
+R⃗j·d⃗ aφ is the toroidal current enclosed
+by a magnetic surface,G=
+R⃗j·d⃗ aθ is the current
+upward through the central hole in a magnetic sur-
+face, Figure 1, andι=dψ p/dψt is the rotational
+transform. The currentsI bs andI cd are the total
+bootstrap and the total externally driven current en-
+closed by a magnetic surface.
+Equations (1) and (2) are easiest to derive in what
+are known as Boozer coordinates [4] in the stellarator
+community, Figure 1:
+2π⃗B= ⃗∇ψt×⃗∇θ+ ⃗∇φ× ⃗∇ψp(ψt,t).(3)
+=µ 0G(ψt,t)⃗∇φ+µ 0I(ψt,t)⃗∇θ+β ∗⃗∇ψt.(4)
+Boozer coordinates exist in the magnetic field of any
+toroidal scalar-pressure plasma equilibrium. These
+coordinates are well known among physicists work-
+ing on stellarators since they are the basis of the op-
+timization that led to the W7-X stellarator and the
+modern stellarator program. The proof of Equation
+(4) is non-trivial even in Boozer coordinates but is
+given in [5].
+Equations (1)) and (2) are coordinate independent
+expressions. The failure to grasp their importance
+presumably comes from the rarity of a mention of
+the toroidal magnetic flux in the tokamak literature.
+Instead of using the toroidal fluxψ t as the radial
+coordinate, as is standard in the stellarator litera-
+ture, the tokamak literature usesψ. The fluxψis
+the natural solution to the Grad-Shafranov equation
+but has a non-trivial relationship to the poloidal flux
+ψp,
+ψ≡Ψ ax
+p −ψp,(5)
+where Ψax
+p (t) is the magnetic flux passing downward
+through the region enclosed by the magnetic axis. A
+rigorous discussion of the implications of Faraday’s
+Law, the slippage of the poloidal fluxψ p relative to
+the toroidal fluxψ t, is made subtle by the use of
+ψas the radial coordinate and impossible when the
+toroidal fluxψ t is ignored.
+Although Equation (1) is non-trivial to prove, it is
+trivially provable at the magnetic axis,ψ=0. At the
+magnetic axis, the application of Stokes’ Theorem
+to Faraday’s Law proves the time derivative of the
+downward magnetic flux through the region enclosed
+by the magnetic axis, Ψax
+p , is given by
+dΨax
+p
+dt =V ax
+ℓ ; (6)
+Vax
+ℓ ≡
+I
+ax
+⃗E·d ⃗ℓ.(7)
+Even this trivially obvious expression implies
+Ψax
+p = Ψ sol
+p + Ψpl
+p ; (8)
+Ψpl
+p =−
+
+Ψin
+p + Ψex
+p
+
+,(9)
+where Ψsol
+p is the magnetic flux coming downward
+through the central solenoid of a tokamak and Ψpl
+p is
+the poloidal flux going downward through the region
+enclosed by the magnetic axis due to the plasma cur-
+rent, Figure 2. The poloidal flux due to the plasma
+current is conventionally negative and is the sum of
+two parts. The part Ψ in
+p gives the poloidal flux due
+to the plasma current that lies within the plasma,
+and Ψex
+p is the part of the poloidal flux due to the
+plasma current that lies outside of the plasma. Nor-
+mally, Ψex
+p is somewhat larger than Ψ in
+p . The Nu-
+clear Fusion paper [1], which was inspired by an
+arXiv article [3], would have avoided many of its
+errors had Figure 2, which was in the arXiv article,
+not been ignored.
+Richard Fitzpatrick’s 2026 Nuclear Fusion paper
+on current ramp-up and ramp-down in tokamaks [1]
+has all the confusions that would be expected from
+basing the magnetic field evolution on the evolution
+ofψand ignoringψ t. In addition, the paper entan-
+gles a number of in-principle separable concepts and
+2
+
+FIG. 2: The lines of the poloidal magnetic field produced
+by the toroidal plasma current are shown together with
+the magnetic field produced by the central solenoid of a
+tokamak.
+made incorrect assumptions. The problems with his
+Nuclear Fusion paper [1] are dealt with in [2], and
+that paper should be consulted for details. Only a
+summary of the problems and incorrect assumptions
+are given here:
+1. Did not mention the changes in the flux in the
+central solenoid, Ψsol(t), which is the only flux
+that is a directly controllable function of time.
+2. Assumed the magnetic flux enclosed by the
+axis is Ψax
+p (t) can be effectively controlled, but
+this flux is given by Equation (8) and deter-
+mined by two terms, Equation (9), that are not
+even discussed Ψsol
+p (t) and Ψex
+p , which is most
+of the poloidal flux produced by the plasma
+current.
+3. Assumed a spatially constant loop voltage in
+the plasma without explanation, which hap-
+pens to be true [3].
+4. Assumed a spatially constant loop volt-
+age implies a profile of the magnetic field
+Bθ(r,t)/B(a,t) that is independent of time
+withathe plasma radius in the cylindrical
+model that was used. This assumption is false.
+When the plasma radiusais fixed, the con-
+verse is true. WhenB θ(r,t)/B(a,t) is inde-
+pendent of time, the loop voltage is spatially
+constant. The bootstrap and driven currents
+were assumed zero.
+5. In the simple cylindrical model of [1],
+Bθ(r,t)/B(a,t) andaindependent of time
+would imply the current profileI(r,t)/I(a,t)
+is independent of time. But, Equation (2) says
+the current profile is dependent on the resistiv-
+ityηprofile which depends on both the elec-
+tron temperature and theZ eff profiles. Even
+with a fixed impurity content,Z eff can be a
+complicated function of the electron tempera-
+ture.
+6. The assumption of a temporally constant cur-
+rent profile meant that if the initial plasma
+was stable based on the 1987 study of TFTR
+disruptions by Cheng, Furth, and Boozer [6],
+which was used, the plasma would remain sta-
+ble.
+7. Assumed a time-independent and spatially-
+constant profile of the thermal energy diffu-
+sivity to calculate the electron temperature
+and thatηj 2 was the only other term in
+the power balance. These assumptions made
+Te(r,t)/Te(0,t) independent of time, but ne-
+glected the effects such as the loss of fusion
+heating and the loss of the H-mode in a realis-
+tic plasma model.
+8. Non-spatially constant thermal diffusivities
+were mentioned, which would have given dif-
+ferentT e and henceI(r) profiles, but only
+one current profile was considered and that
+was assumed to be applicable to all current
+profiles consistent with plasma cooling on the
+timescale given by the spatially constant ther-
+mal diffusivity. A remarkable extrapolation
+was made that all ramp downs of similar speed
+are stable. Only a limited range of current pro-
+files are stable using the Cheng et al study [6].
+9. Had no response to the sentence in the abstract
+of [3]: “A deviation of the profile of the plasma
+current over its full stability range produces
+only a small change,∼16%, in the poloidal
+flux produced by the plasma current. This of-
+fers a simple explanation of why disruptions
+in tokamaks are so common, and why current-
+profile control though difficult seems to be re-
+quired, especially during shutdown.”
+The Nuclear Fusion paper [1] is a complicated in-
+tertwining of confusions about Faraday’s Law, in-
+valid assumptions, and incorrect approximations.
+The paper considers only one current profile, which
+appears to be stable, but this is not a credible argu-
+ment for the robust stability against disruptions for
+all realistic current profiles.
+Two statements are obviously correct but not re-
+flected in the analysis in the Nuclear Fusion paper
+[1]: (1) The definition of the poloidal flux must in-
+clude the solenoidal flux in order to represent its
+induction effect. (2) The time derivative of the
+poloidal flux is at a fixed toroidal flux not at a fixed
+minor radiusr, as is obvious when the plasma is
+shifted outward in major radiusRassuming an ideal
+magnetic evolution. Confusion may arise because
+3
+
+these two statements are only implicit in standard
+tokamak references.
+With 1600 downloads, the errors in [1] may be
+sufficiently subtle to confuse many people and not
+just the usually reliable reviewers for the journals
+Nuclear Fusion and Physics of Plasmas.
+Whatever the correctness of [1] may be, the re-
+viewers may have been lulled into acceptance from
+knowledge of results based on codes that study mag-
+netic induction in tokamaks. These codes have un-
+dergone decades of development and testing against
+thousands of tokamaks discharges on an extremely
+large range of device sizes, plasma temperatures, and
+engineering designs. But, this seems unlikely.
+If these codes were adequate for designing toka-
+maks that are sufficiently disruption free for prac-
+tical fusion power, it should be possible to de-
+termine how JET-ILW should have been operated
+to have high-performance disruption-free plasmas.
+This would show the naivete of the concerns of Ei-
+dietis [7] and of the statement in [8]: “It may be ex-
+pected that a disruption free space may be defined
+in theℓ i−q 95 empirical stability diagram, assuming
+that plasma current profiles tend to maintain itself
+inside the permissible values. In reality, the JET-
+ILW pre-disruptive plasma equilibrium parameters
+create a diffused cloud on theℓ i−q 95 stability dia-
+gram without room for non-disruptive plasmas.”
+An easier task for the codes would be the iden-
+tification of parameters that can be monitored and
+controlled in a fusion power plant that would ensure
+a sufficiently low disruption rate. Even that seems
+too ambitious. The paperARC disruption physics
+and strategy[9] displays little confidence in the use
+of existing codes to ensure disruption avoidance and
+focused on disruption mitigation instead. The inex-
+plicability of the acceptance of the results of [1] raises
+concerns about the reliability of other assessments.
+###SECTION###
+III. MISQUOTING ISSUES
+The scientific issues with the Nuclear Fusion arti-
+cle [1] are now adequately dealt with in my Physics
+of Plasmas paper [2]. What is not dealt with are the
+false statements about my arXiv article that were
+buttressed by “private communication” references in
+the Nuclear fusion paper [1]. The Nuclear Fusion
+policy of allowing false statements to be buttressed
+by “private communication” references but not al-
+lowing any mention of a “private communication”
+to refute those false statements left this arXiv pub-
+lication as the only channel for refuting them.
+If Fitzpatrick had just ignored the “private com-
+munication” emails, that would have been irrespon-
+sible. But, Richard coupled his references to my
+arXiv article and his references to “private commu-
+nication” everywhere except in the Abstract to rein-
+force his claim to be correcting a false view of mine.
+A particularly clear example of a misquote that
+went against an email exchange was in the abstract
+to the Nuclear Fusion paper [1]: “Hence, there is
+no indication that the design ramp times are infea-
+sible, as was recently suggested in Boozer [2].” My
+August 13, 2025 email, which was before August 18
+when the the Nuclear Fusion paper [1] was submit-
+ted: “Actually I didn’t really mean the expected
+ramp down time was 1000 sec, and it would take
+a lot of power to keep the plasma going. What I
+was trying to indicate is that a large cooling of the
+plasma is necessary but the profile had to remain rel-
+atively fixed while doing that ramp down. I agree my
+words were confusing, and they have been changed.”
+Fitzpatrick responded: “Would it be accurate to say
+that you think that the ramp-down times are longer
+than the SPARC and ITER people are claiming” My
+response: “The primary issues are the energy and
+magnetic flux input into the plasma that is required
+during a shutdown to ensure the current profile does
+not slip into a disruptive state more than one time in
+at least a thousand shut-downs. A major problem in
+my view, is that a 20% change in the poloidal flux
+distribution is sufficient to take a plasma far from
+a state as far as possible from a disruption into a
+disruption. This means a disruption can occur in
+approximately a fifth of the time one would expect
+a flattop to last.”
+Despite my statement, “I agree my words were
+confusing, and they have been changed,” which was
+an effort to be polite, the basis of Fitzpatrck’s con-
+fusion is unclear. Two quotes from the first arXiv
+version my article stated: (1) “In principle, the
+restart period can be made arbitrarily short by
+clever choices of the time dependence of Ψsol(t) and
+the heating power. Of course, the periods in which
+substantial heating power is required must be short
+compared to the periods of fusion burn to have net
+energy to sell.” (2) ”A rapid cooling of the central
+part of the plasma seems required, but unless this is
+done with care, the current profile will evolve into a
+disruptive state.”
+The last “private communication” that Fitz-
+patrick and I had before the publication of his pa-
+per was on 9-10 September 2025, which was before
+he submitted his revised version of his article, 25
+September 2025, the version that was accepted. This
+communication illustrates our different perceptions
+of physics issues. I wrote on September 9: “The con-
+fusions on the important points in my arXiv article
+‘Constraints on the magnetic field evolution in toka-
+mak power plants’ were convincing that the abstract
+and introduction had to be rewritten. Any com-
+4
+
+ments are appreciated, especially ones on balance
+and fair quoting.” Fitzpatrick’s September 10 re-
+sponse: “I do not really agree that tokamak plasma
+are “self-organized”. When I think of the term self-
+organized, I naturally think of an RFP plasma. Such
+plasmas are subject to continuous large-amplitude
+m=1 and m=0 tearing modes. It is these modes that
+relax the plasma toward a Taylor state. However, a
+tokamak plasma is quiescent. There are no large
+amplitude tearing modes, and the equilibrium pro-
+files are determined by transport rather than MHD
+activity. The only exception is the sawtooth oscil-
+lation, which periodically generates a short burst of
+MHD activity that prevents the central q value from
+falling significantly below unity. Given that q(0) is
+pinned to a value close to unity, and q(a) is fixed
+by the plasma current, the average broadness of the
+current profile is easily controlled. Experimentalists
+have also become adept at further tailoring the cur-
+rent profile by means of off-axis heating. It is not
+true that there is an inevitable drift to a disruptive
+state in a tokamak plasma. In fact, tokamak dis-
+charges could be maintained indefinitely were it not
+for the limit in the flux-swing of the central solenoid,
+and the gradual build up of impurities.”
+Fitzpatrick’s response reads as if disruptions can
+be easily avoided by a competent machine operator.
+Ensuring tokamaks have a sufficiently low disrup-
+tion rate for the economic feasibility of power plants
+is non-trivial and requires improved understanding
+[7]. Ensuring disruptions are sufficiently rare for the
+feasibility of tokamak power plants would seem to
+require the identification of the externally control-
+lable plasma parameters that show the plasma is
+safe against disruptions. This requirement is more
+stringent in power plants than in existing tokamaks
+or in JET because of the limitations on diagnostics
+and actuators. Generative AI using data from both
+experiments and simulations could help in this iden-
+tification.
+###SECTION###
+Appendix A: The Loop V oltage
+This appendix will derive a new and simple ex-
+pression for the loop voltage, which has the general-
+ity of the parallel Ohm’s Law. The definition of the
+loop voltage, which has the certainty of Faraday’s
+Law when applied to toroidal plasmas, is [5]
+Vℓ(ψt,t)≡lim
+L→∞
+RL
+0
+⃗E·d ⃗ℓ
+RL
+0
+⃗∇
+  φ
+2π
+
+·d⃗ℓ
+;,(A1)
+whered⃗ℓis the differential distance along a magnetic
+field line. Using Ohm’s law, the electric field parallel
+to the magnetic field isE || =η
+
+j||−j bs−j cd
+
+.
+Both the bootstrap current density ⃗jbs =j bs⃗B/B
+and the current density due to direct current drive
+⃗jcd =j cd⃗B/Bare defined to be divergence free.
+Following a discussion in a paper on the Pfirsch-
+Schl¨ uter current [10], the contravariant and covari-
+ant representations of the magnetic field in Boozer
+coordinates, Equations (3 ) and (4 ), can be rewrit-
+ten at an arbitrary point in time as
+2π⃗B= ⃗∇ψt×⃗∇θ0; (A2)
+=µ 0(G+ιI) ⃗∇φ+µ 0I⃗∇θ0 +Bψt
+⃗∇ψt; (A3)
+ι≡ dψp
+dψt
+; (A4)
+θ0 =θ−ιφ.(A5)
+Sinced⃗ℓis the differential distance along a magnetic
+field line
+∂⃗ x(ψt,θ 0,ℓ)
+∂ℓ =
+⃗B
+B and (A6)
+⃗B· ∂⃗ x
+∂ℓ =B,and using Eq. (A3) (A7)
+=
+
+µ0(G+ιI)
+∂φ
+∂ℓ
+
+ψtθ0
+.(A8)
+The implication is that the loop voltage is
+Vℓ =µ 0(G+ιI)η
+ dI
+dψt
+− dIbs
+dψt
+− dIcd
+dψt
+
+.(A9)
+The parallel current ⃗j|| ≡j ||⃗B/Bis not diver-
+gence free,j || =j ps +j net. The Pfirsch-Schl¨ uter
+current density has a divergence that balances the
+divergence of the perpendicular current density that
+is determined by the pressure gradient,⃗j⊥×⃗B= ⃗∇p.
+The Pfirsch-Schl¨ uter current is defined to obey the
+constraint
+lim
+N→∞
+R 2πN
+0
+jps
+B dφ
+R 2πN
+0 dφ
+= 0.(A10)
+The net plasma current density is by definiion diver-
+gence free, which impliesj net/Bis constant along a
+field line, and is given byj net/B=dI/dψ t, where
+I(ψt) is the toroidal current enclosed by a magnetic
+surface,I≡
+R⃗j·d⃗ aφ, Figure 1.
+5
+
+[1] R. Fitzpatrick,A Simple Model of Current Ramp-
+Up and Ramp-Down in Tokamaks, Nuclear Fusion
+66, 016012 (2026); doi: 10.1088/1741-4326/ae1308.
+[2] A. H. Boozer,Constraints on the magnetic field evo-
+lution in tokamak power plants, Phys. Plasmas33,
+082507 (2026); doi: 10.1063/5.0322714.
+[3] A. H. Boozer,Constraints on the magnetic
+field evolution in tokamak power plants,
+arXiv:2507.05456v5 [physics.plasm-ph]
+
+(Sept.
+2025).
+[4] A. H. Boozer,Plasma equilibrium with rational
+magnetic surfaces, Phys. Fluids24, 1999 (1981);
+doi: 10.1063/1.863297.
+[5] A. H. Boozer,Physics of magnetically confined
+plasmas, Rev. Mod. Phys.76, 1071 (2004); doi
+10.1103/RevModPhys.76.1071.
+[6] C Z Cheng, H P Furth and A H Boozer,MHD
+stable regime of the Tokamak, Plasma Phys. Con-
+trol. Fusion29351 (1987); doi 10.1088/0741-
+3335/29/3/006.
+[7] N. Eidietis,Prospects for Disruption Handling in a
+Tokamak-based Fusion Reactor, Fusion Sci. Technol.
+77, 732 (2021); doi 10.1080/15361055.2021.1889919.
+[8] S.N. Gerasimov, P. Abreu, G. Artaserse, M.
+Baruzzo, P. Buratti, I.S. Carvalho, I.H. Coffey, E.
+De La Luna, T.C. Hender, R.B. Henriques, R. Fel-
+ton, S. Jachmich, U. Kruezi9, P.J. Lomas, P. Mc-
+Cullen, M. Maslov, E. Matveeva1, S. Moradi, L.
+Piron, F.G. Rimini, W. Schippers, C. Stuart, G.
+Szepesi, M. Tsalas, D. Valcarcel1, L.E. Zakharov,
+and JET Contributors,Overview of disruptions with
+JET-ILW, Nucl. Fusion60, 066028, (2020); doi:
+10.1088/1741-4326/ab87b0.
+[9] R. Sweeney, V. Riccardo, A. Braun, C. Clauser, A.
+Creely, T. Eich, I. Ekmark, A. Feyrer, C. Hansen,
+J. C. Hillesheim, T. Looby, S. Ratynskaia, R.
+Schramm, R. A. Tinguely, H. Wu, J. Boguski, M. D.
+Boyer, J. Carmichael, A. Carter, R. Datta, T¨ unde
+F¨ ul¨ op, R. Granetz, S. Guizzo, M. Hoppe, A. LeVi-
+ness, A. Nelson, K. Paschalidis, C. Paz-Soldan, I.
+Pusztai, C. Rea, T. Rizzi, A. R. Saperstein, P. B.
+Snyder, B. Stein-Lubrano, and P Tolias,ARC dis-
+ruption physics and strategy, J. Plasma Phys.92,
+E68 (2026); doi: doi:10.1017/S0022377826101585.
+[10] A. H. Boozer,Pfirsch-Schl¨ uter Current,
+<https://arxiv.org/pdf/2605.21637>.
+6

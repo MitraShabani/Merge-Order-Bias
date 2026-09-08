@@ -297,7 +297,6 @@ Based on our review, we provide recommendations to strengthen the construct vali
 benchmarks. We prioritise broadly applicable recommendations, noting that not all apply to every
 benchmark. Each includes a specific checklist of items to address when creating a new benchmark.
 5
-###SECTION###
 5.1 Define the phenomenon
 Define the phenomenon
 □Provide a precise and operational definition for the phenomenon being measured
@@ -314,7 +313,6 @@ can help set boundaries (e.g., repeating memorised answers is not reasoning) [49
 phenomenon has sub-components, as in 61.2% of benchmarks, benchmarking each element separately
 increases clarity and improves interpretation. Although, benchmarks which combine several different
 measures of the same concept can be useful in no single measure is adequate.
-###SECTION###
 5.2 Measure the phenomenon and only the phenomenon
 Measure only the phenomenon
 □Control for unrelated tasks that may affect the results
@@ -335,7 +333,6 @@ proficiency from task performance. If LLMs are used to parse original model resp
 LLM should be validated to avoid introducing new biases or performance artifacts. Though less
 applicable on individual benchmarks, factor analysis techniques are also being explored to extract
 latent capability dimensions with less interference from auxiliary tasks [52, 53, 54].
-###SECTION###
 5.3 Construct a representative dataset for the task
 Construct a representative dataset for the task
 □ Employ sampling strategies to ensure task items are representative of the overall task space
@@ -359,7 +356,6 @@ as occurs in 47.5% of the benchmarks we reviewed. Task items can also be explici
 test for common weaknesses in LLMs. For example, human examinations are unlikely to have the
 same question repeated in several different phrasings, but LLMs are known to be sensitive to minor
 variations in prompts [57, 58] and variations could improve the robustness of the results.
-###SECTION###
 5.4 Acknowledge limitations of reusing datasets
 Acknowledge limitations of reusing datasets
 □Document whether the benchmark adapts a previous dataset or benchmark
@@ -376,7 +372,6 @@ changes have been introduced and what the new benchmark preserves. Differences b
 original and new datasets should be clearly documented and justified. Reporting differences in results
 between the new and original benchmarks can help to demonstrate the impact of changes, including
 whether the new benchmark has improved the construct validity.
-###SECTION###
 5.5 Prepare for contamination
 Prepare for contamination
 □Implement tests to detect data contamination and apply them to the benchmark
@@ -398,7 +393,7 @@ cially when the dataset is already public, or when an LLM is used to generate ta
 Including these contamination checks within the benchmark itself can provide ongoing verification
 of the validity. Dynamic benchmarks have also been proposed as a solution to this issue [25], and
 procedurally generated tasks, in particular, can be used to keep benchmarks up-to-date [62].
-###SECTION###
+
 5.6 Use statistical methods to compare models
 Use statistical methods to compare models
 □Report the benchmark’s sample size and justify its statistical power
@@ -418,7 +413,7 @@ consider the representativeness of the raters, and whether there are meaningful 
 groups [63]. For example, bias benchmarks operate with concepts of harm and bias which are
 culturally and socially contingent [64]. By considering the distribution of ratings, overall results will
 better incorporate potential real-world uses of LLMs.
-###SECTION###
+
 5.7 Conduct an error analysis
 Conduct an error analysis
 □Conduct a qualitative and quantitative analysis of common failure modes
@@ -530,6 +525,7 @@ Nevertheless, this may have introduced undetected false negative systematic erro
 shift in language usage may also have contributed to the lower inclusion of older papers, alongside
 the general increase in papers being published in this area. The scale of the review also necessitated
 limiting the number of reviewers per paper, reducing the robustness of the reviews.
+###SECTION###
 7 Conclusion
 The rapid advancement of LLMs requires robust evaluation. Our systematic review of 445 bench-
 marks reveals prevalent gaps that undermine the construct validity needed to accurately measure
@@ -741,7 +737,7 @@ by Large Language Models”. In:Proceedings of the 61st Annual Meeting of the As
 for Computational Linguistics (Volume 1: Long Papers). Ed. by A. Rogers, J. Boyd-Graber,
 and N. Okazaki. Toronto, Canada: Association for Computational Linguistics, 2023.
 15
-
+###SECTION###
 Supplementary Material
 Table of Contents
 A Construct Validity Checklist 17
