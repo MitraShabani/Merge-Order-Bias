@@ -1,0 +1,328 @@
+{
+  "title": "The Great Gatsby",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"The Great Gatsby\" was released on January 17, 2021.",
+        "The eBook was last updated on January 26, 2025.",
+        "The eBook was produced by Alex Cabal for the Standard Ebooks project.",
+        "The text includes a dedication to Zelda."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The narrator's family is prominent in a Midwestern city.",
+        "He moved to the East after World War I to pursue a career in the bond business.",
+        "Daisy expresses a desire for her daughter to be a \"beautiful little fool.\"",
+        "Nick observes Gatsby standing alone, reaching toward a distant green light."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The area known as the \"valley of ashes\" is described as desolate.",
+        "Tom Buchanan introduces Myrtle Wilson to the narrator at her husband's garage.",
+        "Tom violently strikes Myrtle when she mentions his wife, Daisy.",
+        "The trio travels to New York to host a gathering in a cramped apartment."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Jay Gatsby hosts extravagant summer parties at his mansion.",
+        "The narrator feels out of place despite having a formal invitation.",
+        "A guest's car crashes during one of the parties.",
+        "The narrator works at the Probity Trust during the summer."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Gatsby's mansion hosts extravagant summer parties attended by notable figures from East and West Egg.",
+        "Gatsby claims to be the son of wealthy Midwesterners and an Oxford graduate during lunch with the narrator.",
+        "Mr. Wolfshiem, a gambler linked to the 1919 World Series scandal, praises Gatsby during a lunch.",
+        "Daisy marries Tom Buchanan after a tumultuous moment involving a distressing letter."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator initially mistakes Gatsby's mansion for a party due to its bright lights.",
+        "Gatsby expresses a desire to invite Daisy over for tea.",
+        "Gatsby's collection of beautiful shirts brings Daisy to tears during their reunion.",
+        "Gatsby realizes that the green light across the bay has lost its significance now that Daisy is with him."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was originally named James Gatz.",
+        "Dan Cody was Gatsby's mentor who introduced him to wealth.",
+        "Gatsby hosts lavish parties to attract Daisy Buchanan.",
+        "Daisy Buchanan arrives at one of Gatsby's parties with her husband, Tom."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby dismisses his servants, prompting speculation about his health.",
+        "Daisy admits her past feelings for Tom during a confrontation in town.",
+        "Myrtle dies in a hit-and-run involving Gatsby's car, which Daisy was driving.",
+        "Tom feigns concern over Myrtle's death while distancing himself from the incident."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator struggles to sleep due to a foghorn and unsettling dreams.",
+        "Gatsby waits for Daisy, who never arrives.",
+        "George Wilson seeks revenge at Gatsby's home after the loss of his wife Myrtle.",
+        "Gatsby's death results from a tragic confrontation."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Gatsby's funeral was attended only by Mr. Gatz, Nick, and a few others.",
+        "Mr. Gatz arrived from Minnesota after Gatsby's death.",
+        "Nick Carraway struggles with isolation while trying to reach out to Daisy and Gatsby's acquaintances.",
+        "Tom Buchanan represents the carelessness of the wealthy elite in the narrative."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Project Gutenberg eBook of \"The Great Gatsby\" was released on January 17, 2021.",
+        "The eBook was last updated on January 26, 2025.",
+        "The eBook was produced by Alex Cabal for the Standard Ebooks project.",
+        "The text includes a dedication to Zelda."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The narrator's family is prominent in a Midwestern city.",
+        "He moved to the East after World War I to pursue a career in the bond business.",
+        "Daisy expresses a desire for her daughter to be a \"beautiful little fool.\"",
+        "Nick observes Gatsby standing alone, reaching toward a distant green light."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The area known as the \"valley of ashes\" is described as desolate.",
+        "Tom Buchanan introduces Myrtle Wilson to the narrator at her husband's garage.",
+        "Tom violently strikes Myrtle when she mentions his wife, Daisy.",
+        "The trio travels to New York to host a gathering in a cramped apartment."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Jay Gatsby hosts extravagant summer parties at his mansion.",
+        "The narrator feels out of place despite having a formal invitation.",
+        "A guest's car crashes during one of the parties.",
+        "The narrator works at the Probity Trust during the summer."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Gatsby's mansion hosts extravagant summer parties attended by notable figures from East and West Egg.",
+        "Gatsby claims to be the son of wealthy Midwesterners and an Oxford graduate during lunch with the narrator.",
+        "Mr. Wolfshiem, a gambler linked to the 1919 World Series scandal, praises Gatsby during a lunch meeting.",
+        "Daisy marries Tom Buchanan after a tumultuous moment involving a distressing letter."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator initially mistakes Gatsby's mansion for a party due to its bright lights.",
+        "Gatsby expresses a desire to invite Daisy over for tea.",
+        "Gatsby's collection of beautiful shirts brings Daisy to tears during their reunion.",
+        "Gatsby realizes that the green light across the bay has lost its significance now that Daisy is with him."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was originally named James Gatz.",
+        "Dan Cody was Gatsby's mentor who introduced him to wealth.",
+        "Gatsby hosts lavish parties to attract Daisy Buchanan.",
+        "Daisy Buchanan arrives at one of Gatsby's parties with her husband, Tom."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby dismisses his servants, prompting speculation about his health.",
+        "Daisy admits her past feelings for Tom during a confrontation in town.",
+        "Myrtle dies in a hit-and-run involving Gatsby's car, which Daisy was driving.",
+        "Tom feigns concern over Myrtle's death while distancing himself from the incident."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator struggles to sleep due to a foghorn and unsettling dreams.",
+        "Gatsby waits for Daisy, who never arrives.",
+        "George Wilson seeks revenge at Gatsby's home after the loss of his wife Myrtle.",
+        "Gatsby's death occurs during a tragic confrontation."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Gatsby's funeral was attended only by Mr. Gatz, Nick, and a few others.",
+        "Mr. Gatz arrived from Minnesota after Gatsby's death.",
+        "Nick Carraway struggles with isolation while trying to reach out to Daisy and Gatsby's acquaintances.",
+        "Tom Buchanan represents the carelessness of the wealthy elite in the narrative."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    }
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "title": "Barducci Et Al. - 2025 - A",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "JanusDDG is a model developed for predicting sequence-based protein stability.",
+        "The model utilizes a two-fronts multi-head attention mechanism.",
+        "The research team is from the Computational Biomedicine Unit at the University of Turin, Italy.",
+        "The goal of the research team is to enhance the accuracy of protein stability predictions."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "JanusDDG is a deep learning framework that predicts the change in free energy (ΔΔG) caused by mutations.",
+        "JanusDDG utilizes protein language model (PLM) embeddings and a bidirectional cross-attention transformer.",
+        "JanusDDG achieves state-of-the-art accuracy in predicting ΔΔG from sequence data.",
+        "The code for JanusDDG is available at https://github.com/compbiomed-unito/JanusDDG."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The study quantifies protein stability using the change in Gibbs free energy (∆∆𝐺). A positive ∆∆𝐺 indicates a stabilizing mutation. The research introduces JanusDDG, a deep learning model for predicting ∆∆𝐺. JanusDDG incorporates antisymmetry and transitivity to enhance prediction accuracy."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "JanusDDG is a sequence-based model for predicting protein stability.",
+        "JanusDDG incorporates thermodynamic principles such as antisymmetry and transitivity.",
+        "The model utilizes bidirectional cross-attention to process the entire protein sequence.",
+        "The performance of JanusDDG is evaluated on established benchmark datasets."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The JanusDDG model enforces antisymmetry through a siamese neural network architecture.",
+        "The Pearson correlation coefficient for antisymmetric behavior in JanusDDG is -1.00.",
+        "JanusDDG was fine-tuned with an additional loss function to enhance transitivity.",
+        "Evaluations on the S669 test set showed improved transitivity in the JanusDDG model."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "JanusDDG was evaluated using datasets with less than 25% sequence identity to the training set.",
+        "The model was tested on three primary datasets: S669, S461, and S96.",
+        "JanusDDG showed strong performance metrics in identifying stabilizing mutations using the S461 dataset.",
+        "The model revealed no significant performance differences based on the distance between mutated residues when predicting double mutations."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "JanusDDG is a new sequence-based deep learning model for predicting protein stability changes due to mutations.",
+        "JanusDDG uses a bidirectional cross-attention architecture combined with protein language model embeddings.",
+        "The model excels in predicting the effects of multiple mutations compared to existing models.",
+        "The authors suggest future validation of JanusDDG across a wider range of mutations and structural classes."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The S669 dataset includes 1338 single-site mutations across 95 proteins.",
+        "The S461 dataset contains 461 mutations from 48 proteins.",
+        "The PTmul-NR dataset is designed for multi-point mutations and contains 82 variants across 14 proteins.",
+        "The S2450 dataset is a refined version of S2648 and serves as the primary training resource."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The Pearson correlation coefficient measures the linear relationship between two variables.",
+        "Root Mean Square Error (RMSE) quantifies the average squared difference between predicted and observed values.",
+        "The Matthews Correlation Coefficient (MCC) is used to evaluate classification performance.",
+        "The Receiver Operating Characteristic (ROC) curve includes the Area Under the Curve (AUC) to assess overall performance."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The protein embeddings were derived from ESM2 with 650 million parameters.",
+        "The differences between wild-type and mutated protein embeddings are primarily localized around the mutation site.",
+        "The authors used the non-absolute difference between the two embeddings to predict ∆∆𝐺.",
+        "The results indicated a high Pearson correlation on both training and test sets."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The JanusDDG model architecture integrates protein language models with a Cross-Attention mechanism.",
+        "The model predicts protein stability based solely on sequence data, regardless of mutation count.",
+        "It employs two 1D convolutions to identify sequence patterns and reduce dimensionality.",
+        "The output is processed by a linear layer to produce the final ∆∆𝐺 value."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "JanusDDG underwent training in two phases: a main training phase and a fine-tuning phase.",
+        "The main training utilized the S2450 dataset with 300 epochs determined through 5-fold cross-validation.",
+        "The fine-tuning phase aimed to enhance performance regarding multiple mutations and the transitivity property of ∆∆𝐺.",
+        "The optimal epoch for fine-tuning was selected as 28 based on validation with the M28 dataset."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "The Bidirectional Transformer model used 8 Transformer heads.",
+        "The authors performed 5-fold cross-validation resulting in 300 training epochs.",
+        "JanusDDG achieved a Pearson correlation coefficient of 0.69 on the S669 dataset.",
+        "The mean squared error for JanusDDG on the S96 dataset was 2.10."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "JanusDDG is a model developed for predicting sequence-based protein stability.",
+        "The model utilizes a two-fronts multi-head attention mechanism.",
+        "The research team is from the Computational Biomedicine Unit at the University of Turin, Italy.",
+        "The aim of the research team is to enhance the accuracy of protein stability predictions."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "JanusDDG is a deep learning framework that predicts the change in free energy (ΔΔG) caused by mutations.",
+        "JanusDDG utilizes protein language model (PLM) embeddings and a bidirectional cross-attention transformer.",
+        "JanusDDG achieves state-of-the-art accuracy in predicting ΔΔG from sequence data.",
+        "The code for JanusDDG is available at https://github.com/compbiomed-unito/JanusDDG."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The study quantifies protein stability using the change in Gibbs free energy (∆∆𝐺). A positive ∆∆𝐺 indicates a stabilizing mutation. The research introduces JanusDDG, a deep learning model for predicting ∆∆𝐺. JanusDDG incorporates antisymmetry and transitivity to improve prediction accuracy."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "JanusDDG is a sequence-based model for predicting protein stability.",
+        "JanusDDG incorporates thermodynamic principles such as antisymmetry and transitivity.",
+        "The model utilizes bidirectional cross-attention to process the entire protein sequence.",
+        "The performance of JanusDDG is evaluated on established benchmark datasets."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The JanusDDG model enforces antisymmetry through a siamese neural network architecture.",
+        "The Pearson correlation coefficient for antisymmetric behavior in JanusDDG is -1.00.",
+        "JanusDDG was fine-tuned with an additional loss function to enhance transitivity.",
+        "Evaluations on the S669 test set showed improved transitivity in the JanusDDG model."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "JanusDDG was evaluated using datasets with less than 25% sequence identity to the training set.",
+        "The model was tested on three primary datasets: S669, S461, and S96.",
+        "JanusDDG showed strong performance metrics in identifying stabilizing mutations using the S461 dataset.",
+        "The model revealed no significant performance differences based on the distance between mutated residues when predicting double mutations."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "JanusDDG is a new sequence-based deep learning model for predicting protein stability changes due to mutations.",
+        "JanusDDG combines protein language model embeddings with a bidirectional cross-attention architecture.",
+        "The model excels in predicting the effects of multiple mutations compared to existing models.",
+        "The authors suggest future validation of JanusDDG across a wider range of mutations and structural classes."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The S669 dataset includes 1338 single-site mutations across 95 proteins.",
+        "The S461 dataset contains 461 mutations from 48 proteins.",
+        "The PTmul-NR dataset is designed for multi-point mutations and contains 82 variants across 14 proteins.",
+        "The S2450 dataset is a refined version of S2648 and serves as the primary training resource."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The Pearson correlation coefficient measures the linear relationship between two variables.",
+        "Root Mean Square Error (RMSE) quantifies the average squared difference between predicted and observed values.",
+        "The Matthews Correlation Coefficient (MCC) is used to evaluate classification performance in identifying stabilizing mutations.",
+        "The Receiver Operating Characteristic (ROC) curve includes the Area Under the Curve (AUC) to assess overall performance."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The protein embeddings were derived from ESM2 with 650 million parameters.",
+        "The differences between wild-type and mutated protein embeddings are primarily localized around the mutation site.",
+        "The authors used the non-absolute difference between the two embeddings to predict ∆∆𝐺.",
+        "The results indicated a high Pearson correlation on both training and test sets."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The JanusDDG model architecture integrates protein language models with a Cross-Attention mechanism.",
+        "The model predicts protein stability based solely on sequence data, regardless of mutation count.",
+        "It employs two 1D convolutions to identify sequence patterns and reduce dimensionality.",
+        "The output is processed by a linear layer to produce the final ∆∆𝐺 value."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "JanusDDG underwent training in two phases: a main training phase and a fine-tuning phase.",
+        "The main training utilized the S2450 dataset with 300 epochs determined through 5-fold cross-validation.",
+        "The fine-tuning phase aimed to enhance performance regarding multiple mutations and the transitivity property of ∆∆𝐺.",
+        "The optimal epoch for fine-tuning was selected as 28 based on validation with the M28 dataset."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "The authors utilized 8 Transformer heads in the hyperparameter selection for the Bidirectional Transformer model.",
+        "They performed 5-fold cross-validation resulting in 300 training epochs.",
+        "JanusDDG achieved a Pearson correlation coefficient (PCC) of 0.69 on the S669 and S461 datasets.",
+        "The performance metrics for JanusDDG indicated an MSE of 2.10 and an accuracy of 0.78."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    }
+  ]
+}
