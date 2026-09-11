@@ -1,0 +1,374 @@
+{
+  "title": "Rudinger Et Al. - 2018 - Neural Models",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Rudinger, White, and Van Durme authored a paper on neural models for determining factuality in text.",
+        "The research was conducted at Johns Hopkins University and the University of Rochester.",
+        "The models developed aim to assess whether statements are factual.",
+        "The work contributes to natural language processing and computational linguistics."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The paper introduces two neural models for predicting event factuality.",
+        "The models outperform prior approaches on three datasets: FactBank, UW, and MEANTIME.",
+        "The authors expand the \"It Happened\" component of the Universal Decompositional Semantics dataset.",
+        "The extended dataset is the largest event factuality dataset available."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The paper addresses event factuality prediction (EFP).",
+        "The authors present two neural models that outperform previous systems across four datasets.",
+        "UDS-IH2 is introduced as an extension of UDS-IH1.",
+        "The paper demonstrates the effectiveness of multi-task training and ensembling approaches."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The text examines event factuality prediction. The authors compare bidirectional LSTMs with linear chain versus dependency tree topologies. The study evaluates four factuality datasets: FactBank, MEANTIME, UW, and UDS-IH2. Previous approaches used deterministic rule-based systems with hand-engineered lexical features."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The UDS-IH2 dataset is an extension of the UDS-IH1 event factuality dataset.",
+        "Thirty-two annotators from Amazon Mechanical Turk labeled 20,580 predicates in pairs.",
+        "The inter-annotator agreement for the UDS-IH2 dataset is 0.84 (κ=0.66).",
+        "UDS-IH2's factuality ratings are mapped to a single [-3,3] scale."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The paper presents two neural models for predicting factuality.",
+        "One model is a stacked bidirectional linear chain LSTM.",
+        "The other model is a stacked bidirectional child-sum dependency tree LSTM.",
+        "Both models use a two-layer regression model to predict the factuality of an event."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The stacked bidirectional linear LSTM (L-biLSTM) extends standard LSTMs with multiple layers and bidirectional processing.",
+        "The stacked bidirectional tree LSTM (T-biLSTM) incorporates dependency tree structure for upward and downward computation.",
+        "A regression model using Huber loss takes the final hidden states as input to predict factuality scores.",
+        "The T-biLSTM omits dependency labels to maintain architectural simplicity and reduce parameters."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The authors implement L-biLSTM and T-biLSTM models in PyTorch.",
+        "They use 300-dimensional GloVe word embeddings with 300-dimensional hidden states.",
+        "Five training regimes tested include single-task specific and multi-task balanced.",
+        "Models are evaluated on FactBank, UW, MEANTIME, and UDS-IH2 datasets."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The 2-layer biLSTM variants include L-biLSTM, T-biLSTM, and H-biLSTM.",
+        "Linear topology (L-biLSTM) consistently outperforms tree topology (T-biLSTM).",
+        "The hybrid topology (H-biLSTM) achieves the best correlation on the UW dataset.",
+        "Lexical features yield minimal improvements, with slight gains only on UW."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Events without direct modals or negation have the highest average factuality.",
+        "Future events marked with \"will\" show the most negative factuality scores.",
+        "Manual error analysis of 50 high-error predictions reveals challenges from grammatical errors and informal language.",
+        "Linguistically-motivated lexical features show minimal overall impact on performance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The authors propose two neural models for event factuality prediction: L-biLSTM and T-biLSTM.",
+        "L-biLSTM generally performs better than T-biLSTM.",
+        "The authors created UDS-IH2, the largest publicly-available factuality dataset to date.",
+        "The research was supported by JHU HLT-COE, DARPA LORELEI, DARPA AIDA, and NSF-GRFP."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "The dataset filtering removes low-agreement annotators using two approaches.",
+        "One annotator and 4,179 annotations were removed during the filtering process.",
+        "The filtering for the HAPPENED question uses a z-scored BLUP threshold of -2.",
+        "Table 10 presents full experimental results across multiple models and variants."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Rudinger, White, and Van Durme authored a paper on neural models for determining factuality in text.",
+        "The research was conducted at Johns Hopkins University and the University of Rochester.",
+        "The models developed aim to assess whether statements or propositions are factual.",
+        "The work contributes to natural language processing and computational linguistics."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The paper introduces two neural models for predicting event factuality.",
+        "The models outperform prior approaches on three datasets: FactBank, UW, and MEANTIME.",
+        "The authors expand the \"It Happened\" component of the Universal Decompositional Semantics dataset.",
+        "The extended dataset is the largest event factuality dataset available."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The authors present two neural models that significantly outperform previous systems.",
+        "They introduce UDS-IH2, an extension of UDS-IH1.",
+        "UDS-IH2 covers the entire English Universal Dependencies v1.2 treebank.",
+        "Event factuality prediction is crucial for natural language understanding systems."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The text examines event factuality prediction. The authors compare bidirectional LSTMs with linear chain versus dependency tree topologies. The study evaluates four factuality datasets: FactBank, MEANTIME, UW, and UDS-IH2. Previous approaches used deterministic rule-based systems with hand-engineered lexical features."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The UDS-IH2 dataset is an extension of the UDS-IH1 event factuality dataset.",
+        "Thirty-two annotators from Amazon Mechanical Turk labeled 20,580 predicates in pairs.",
+        "The inter-annotator agreement for the UDS-IH2 dataset is 0.84 (κ=0.66).",
+        "UDS-IH2's factuality ratings are mapped to a single [-3,3] scale."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The paper presents two neural models for predicting factuality.",
+        "One model is a stacked bidirectional linear chain LSTM.",
+        "The other model is a stacked bidirectional child-sum dependency tree LSTM.",
+        "Both models use a two-layer regression model to predict the factuality of an event."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The stacked bidirectional linear LSTM (L-biLSTM) extends standard LSTMs with multiple layers and bidirectional processing.",
+        "The stacked bidirectional tree LSTM (T-biLSTM) incorporates dependency tree structure for upward and downward computation.",
+        "A regression model using Huber loss takes the final hidden states as input to predict factuality scores.",
+        "The T-biLSTM omits dependency labels to maintain architectural simplicity and reduce parameters."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The authors implement L-biLSTM and T-biLSTM models in PyTorch.",
+        "They use 300-dimensional GloVe word embeddings with 300-dimensional hidden states.",
+        "Five training regimes tested include single-task specific and multi-task balanced.",
+        "Models are evaluated on FactBank, UW, MEANTIME, and UDS-IH2 datasets."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The results demonstrate state-of-the-art performance using 2-layer biLSTM variants. Linear topology (L-biLSTM) consistently outperforms tree topology (T-biLSTM). The hybrid topology (H-biLSTM) achieves the best correlation on UW. Lexical features yield minimal improvements, producing slight gains only on UW."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Events without direct modals or negation have the highest average factuality.",
+        "Future events marked with \"will\" show the most negative factuality scores.",
+        "Manual error analysis of 50 high-error predictions reveals challenges from grammatical errors and informal language.",
+        "Linguistically-motivated lexical features show minimal overall impact on performance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The authors propose two neural models for event factuality prediction: L-biLSTM and T-biLSTM.",
+        "L-biLSTM generally performs better than T-biLSTM.",
+        "The authors created UDS-IH2, the largest publicly-available factuality dataset to date.",
+        "The research was supported by JHU HLT-COE, DARPA LORELEI, DARPA AIDA, and NSF-GRFP."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "The dataset filtering removes low-agreement annotators using two approaches.",
+        "One annotator and 4,179 annotations were removed during the filtering process.",
+        "The filtering for the HAPPENED question uses a z-scored BLUP threshold of -2.",
+        "Table 10 presents full experimental results across multiple models and variants."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    }
+  ]
+}

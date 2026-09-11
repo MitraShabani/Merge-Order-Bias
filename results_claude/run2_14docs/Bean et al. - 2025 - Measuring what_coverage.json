@@ -1,0 +1,304 @@
+{
+  "title": "Bean Et Al. - 2025 - Measuring What",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The paper is authored by Andrew M. Bean and Ryan Othniel Kearns.",
+        "The research examines construct validity in large language model benchmarks.",
+        "The study investigates the validity of popular LLM evaluation metrics.",
+        "The goal is to improve the reliability and interpretability of LLM assessment methodologies."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "This systematic review examined 445 LLM benchmarks.",
+        "The review involved 29 expert reviewers.",
+        "The study identified significant patterns that compromise benchmark validity.",
+        "The authors provided eight key recommendations for improving LLM benchmarks."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Benchmarks are essential for developing large language models.",
+        "The systematic review analyzed 445 articles from leading ML and NLP conferences.",
+        "The study found that nearly all articles have weaknesses in defining phenomena and designing tasks.",
+        "The researchers developed an operational checklist covering eight areas for establishing construct validity."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Construct validity evaluates whether a test measures its intended phenomenon.",
+        "Construct validity includes face validity, content validity, and ecological validity.",
+        "For Large Language Models, construct validity is critical for benchmarking reasoning abilities.",
+        "There are ongoing disagreements about whether LLM results demonstrate genuine intelligence."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "This systematic review analyzed 46,114 articles from major machine learning and NLP conferences published between 2018–2024. After filtering, 2,189 articles were identified and screened based on four inclusion criteria. The final analysis included 445 articles coded using an a priori codebook. Inter-rater reliability was assessed via Brennan–Prediger Kappa with a score of .524 across 30 questions."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The dataset includes 445 benchmark articles annotated by 29 NLP and machine learning experts.",
+        "The reviewed benchmarks cover phenomena such as reasoning (18.5%) and alignment (8.1%).",
+        "Less than 10% of the tasks use complete real-world tasks.",
+        "Only 53.4% of articles discuss construct validity."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The text presents eight recommendations for strengthening the construct validity of Large Language Model benchmarks.",
+        "Only a small fraction of reviewed benchmarks currently employ the recommended practices.",
+        "GSM8K is a grade-school math benchmark discussed in the text.",
+        "The recommendations include conducting qualitative and quantitative error analyses to identify failure modes."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "This systematic review analyzed 445 NLP and ML benchmarks. Approximately half of the reviewed articles discussed benchmark validity. The authors developed an operational checklist to enhance construct validity of future LLM benchmarks. The review acknowledged limitations such as a focus on leading conference proceedings."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "A systematic review of 445 LLM benchmarks was conducted.",
+        "The authors propose eight recommendations to improve benchmark design.",
+        "The review highlights significant gaps that compromise construct validity.",
+        "A cultural shift is needed in the research community for better evaluation methodologies."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The systematic review analyzed 445 LLM benchmark papers from six major conferences.",
+        "321 benchmarks measure general capabilities, while 118 measure specific applications.",
+        "The mean percent agreement in the Inter-rater Reliability Assessment was 68.1%.",
+        "Structured, objective fields showed very high agreement of over 90%."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The paper is authored by Andrew M. Bean and Ryan Othniel Kearns.",
+        "The research examines construct validity in large language model benchmarks.",
+        "The study investigates the validity of popular LLM evaluation metrics.",
+        "The goal is to improve the reliability and interpretability of LLM assessment methodologies."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The systematic review examined 445 LLM benchmarks.",
+        "The review involved 29 expert reviewers.",
+        "The study identified significant patterns that compromise benchmark validity.",
+        "The authors provided eight key recommendations for improving LLM benchmarks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Benchmarks are essential for developing large language models.",
+        "The systematic review analyzed 445 articles from leading ML and NLP conferences.",
+        "The study found that nearly all articles have weaknesses in defining phenomena and designing tasks.",
+        "The researchers developed an operational checklist covering eight areas for establishing construct validity."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Construct validity evaluates whether a test measures its intended phenomenon.",
+        "Face validity assesses whether a test appears valid.",
+        "Construct validity is critical for benchmarking Large Language Models' reasoning abilities.",
+        "There are ongoing disagreements about whether LLM results demonstrate genuine intelligence."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The systematic review analyzed 46,114 articles from major machine learning and NLP conferences published between 2018–2024. After filtering, 2,189 articles were identified for screening based on four inclusion criteria. The final analysis included 445 articles coded using an a priori codebook. Inter-rater reliability was assessed via Brennan–Prediger Kappa with a score of .524 across 30 questions."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The dataset includes 445 benchmark articles annotated by 29 NLP and machine learning experts.",
+        "The reviewed benchmarks cover phenomena such as reasoning (18.5%) and alignment (8.1%).",
+        "Less than 10% of the tasks use complete real-world tasks.",
+        "Only 53.4% of articles discuss construct validity."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The text presents eight recommendations for strengthening the construct validity of Large Language Model benchmarks.",
+        "Only a small fraction of reviewed benchmarks currently employ the recommended practices.",
+        "GSM8K is a grade-school math benchmark discussed in the text.",
+        "The recommendations include conducting qualitative and quantitative error analyses to identify failure modes."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "This systematic review analyzed 445 NLP and ML benchmarks. Approximately half of the reviewed articles discussed benchmark validity. The authors developed an operational checklist to enhance construct validity of future LLM benchmarks. The review acknowledged limitations such as a focus on leading conference proceedings."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "A systematic review of 445 LLM benchmarks was conducted.",
+        "The authors propose eight recommendations to improve benchmark design.",
+        "The review highlights significant gaps that compromise construct validity.",
+        "A cultural shift is needed in the research community for better evaluation methodologies."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The systematic review analyzed 445 LLM benchmark papers from six major conferences.",
+        "321 benchmarks measure general capabilities, while 118 measure specific applications.",
+        "The mean percent agreement in the Inter-rater Reliability Assessment was 68.1%.",
+        "Structured, objective fields showed very high agreement of over 90%."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    }
+  ]
+}

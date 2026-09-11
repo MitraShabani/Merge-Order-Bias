@@ -1,0 +1,164 @@
+{
+  "title": "Boozer - 2026 - Comment On Nuclear",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Allen H. Boozer is affiliated with Columbia University.",
+        "The model was published in Nuclear Fusion 66, 016012 (2026).",
+        "The model addresses plasma current control during tokamak operations.",
+        "The publication is a comment on Richard Fitzpatrick's work."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Richard Fitzpatrick's paper on Nuclear Fusion was published in 2026.",
+        "The critique argues that the paper contains fundamental errors in describing poloidal magnetic flux evolution in tokamaks.",
+        "The author claims that the tokamak community neglects toroidal flux while focusing on the quantity ψ.",
+        "The author presents a new simplified loop voltage expression derived from Ohm's law's parallel component."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was accepted on October 14, 2025.",
+        "The author's arXiv preprint was submitted on September 9, 2025.",
+        "Fitzpatrick's paper was published on November 6, 2025.",
+        "The author's paper discusses misunderstandings of Faraday's Law in toroidal plasmas."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Richard Fitzpatrick's 2026 Nuclear Fusion paper critiques tokamak current ramp-up and ramp-down. The author argues that Fitzpatrick misunderstood Faraday's Law in toroidal plasmas. The critique identifies nine specific problems with Fitzpatrick's paper. Fitzpatrick's analysis neglects controllable solenoid flux and oversimplifies thermal and stability assumptions."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The author disputes misquotations in Fitzpatrick's Nuclear Fusion paper regarding their arXiv article on tokamak design. Fitzpatrick's paper claims that design ramp times are not infeasible. Email exchanges from September 2025 reveal disagreements about tokamak plasma disruptions. The author believes achieving low disruption rates for economically viable power plants is non-trivial."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The loop voltage in toroidal plasmas is derived using Faraday's Law and Boozer coordinates. The expression for loop voltage is V_ℓ = μ₀(G + ιI)η[dI/dψ_t − dI_bs/dψ_t − dI_cd/dψ_t]. The analysis distinguishes between the Pfirsch-Schlüter current and the net plasma current. The derivation incorporates Ohm's law with parallel electric field components."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Allen H. Boozer is from Columbia University.",
+        "The model was published in Nuclear Fusion 66, 016012 (2026).",
+        "The model explains plasma current control during tokamak operations.",
+        "The publication is a response to Richard Fitzpatrick's work."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Richard Fitzpatrick's 2026 Nuclear Fusion paper is critiqued for fundamental errors in describing poloidal magnetic flux evolution in tokamaks.",
+        "The author argues that poloidal-to-toroidal flux slippage is governed by Faraday's Law and loop voltage.",
+        "The critique highlights the tokamak community's neglect of toroidal flux in favor of the quantity ψ.",
+        "The author presents a new simplified loop voltage expression derived from Ohm's law's parallel component."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was accepted on October 14, 2025.",
+        "The author's arXiv preprint was submitted on September 9, 2025.",
+        "Fitzpatrick's paper was published on November 6, 2025.",
+        "The author's paper discusses misunderstandings of Faraday's Law in toroidal plasmas."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Richard Fitzpatrick's 2026 Nuclear Fusion paper critiques tokamak current ramp-up and ramp-down. The author argues that Fitzpatrick misunderstood Faraday's Law in toroidal plasmas. The critique identifies nine specific problems with Fitzpatrick's paper. Fitzpatrick's analysis neglects controllable solenoid flux and oversimplifies thermal and stability assumptions."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The author disputes misquotations in Fitzpatrick's Nuclear Fusion paper regarding their arXiv article on tokamak design. Fitzpatrick's paper includes false statements supported by \"private communication\" references. Email exchanges from September 2025 reveal disagreements about tokamak plasma disruptions. The author believes achieving low disruption rates for economically viable power plants is non-trivial."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The loop voltage in toroidal plasmas is derived using Faraday's Law and Boozer coordinates. The expression for loop voltage is V_ℓ = μ₀(G + ιI)η[dI/dψ_t − dI_bs/dψ_t − dI_cd/dψ_t]. The analysis distinguishes between the Pfirsch-Schlüter current and the net plasma current. The derivation incorporates Ohm's law with parallel electric field components."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

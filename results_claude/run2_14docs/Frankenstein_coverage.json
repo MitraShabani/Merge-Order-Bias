@@ -1,0 +1,912 @@
+{
+  "title": "Frankenstein",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "\"Frankenstein; or, the Modern Prometheus\" was originally released on October 1, 1993.",
+        "The most recent update of the eBook was on February 10, 2026.",
+        "The eBook is available for free at www.gutenberg.org/ebooks/84.",
+        "The text was prepared by editors including Judith Boss and Christy Phillips."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Robert Walton wrote a letter to his sister Margaret on December 11th.",
+        "He has spent six years preparing for his polar expedition.",
+        "Walton plans to depart for Archangel within weeks.",
+        "He intends to set sail in June."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Robert Walton wrote to his sister Margaret on March 28th.",
+        "He has hired a vessel and engaged sailors for his arctic expedition.",
+        "Walton describes his lieutenant as a courageous Englishman driven by ambition.",
+        "He expresses uncertainty about whether he will meet Margaret again after his journey."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "R.W. wrote a letter to his sister Mrs. Saville on July 7th.",
+        "He is currently on an Arctic voyage.",
+        "R.W. has encountered floating ice and minor accidents during his journey.",
+        "He expresses confidence that success will crown his endeavors."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Captain Walton is on a voyage of polar discovery.",
+        "On July 31st, Walton's crew sees a gigantic figure driving a dog sledge.",
+        "The stranger rescued from the ice reveals himself to be eloquent and wise.",
+        "By August 19th, the stranger agrees to share his complete narrative with Walton."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator's father befriended a merchant named Beaufort.",
+        "Caroline supported her family through needlework until her father's death.",
+        "The narrator was born in Naples.",
+        "Elizabeth Lavenza was discovered living in poverty with peasants near Lake Como."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Victor Frankenstein was raised in Geneva and Belrive.",
+        "At age thirteen, Victor discovered works by Cornelius Agrippa.",
+        "At fifteen, Victor witnessed lightning destroy an oak tree.",
+        "Victor abandoned natural history for mathematics after the lightning incident."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Victor Frankenstein departs for the University of Ingolstadt at seventeen.",
+        "Victor's mother dies of scarlet fever while nursing his cousin Elizabeth.",
+        "M. Krempe ridicules Victor's previous study of alchemy.",
+        "M. Waldman's lecture on modern chemistry profoundly inspires Victor."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator studies natural philosophy and chemistry at the University of Ingolstadt.",
+        "He discovers the secret to generating life and gains the power to animate lifeless matter.",
+        "He constructs a human being of gigantic proportions using materials from dissecting rooms and graveyards.",
+        "The narrator neglects his family, friends, and health while working on his creation for over a year."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Victor Frankenstein animates a creature from lifeless matter on a November night in Ingolstadt.",
+        "The creature has a grotesque appearance with pallid, withered skin and watery eyes.",
+        "Victor experiences a nervous fever that confines him for several months.",
+        "Henry Clerval's presence momentarily comforts Victor after he flees from the creature."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Elizabeth writes to Victor urging him to recover and return home to Geneva.",
+        "Victor's brother Ernest desires a military career at the age of sixteen.",
+        "Victor experiences severe distress when university professors praise his scientific achievements.",
+        "In May, Clerval proposes a farewell walking tour of the Ingolstadt region."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Victor Frankenstein's brother William was murdered.",
+        "The miniature portrait of their mother was missing from the crime scene.",
+        "Justine Moritz was arrested for William's murder.",
+        "Victor Frankenstein glimpsed his creature near Mont Salêve during a storm."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Victor Frankenstein attends the trial of Justine Moritz.",
+        "Justine Moritz is condemned and executed for the murder of William.",
+        "William's portrait is found in Justine's pocket as circumstantial evidence.",
+        "Victor knows his creature is responsible for William's murder."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Victor Frankenstein created the monster that murdered both William and Justine.",
+        "Victor contemplates suicide but is restrained by his love for Elizabeth, his father, and his remaining brother.",
+        "Elizabeth loses her former joy and questions the nature of justice and human goodness after Justine's execution.",
+        "Victor travels to the Alpine valley of Chamounix in August, two months after Justine's death."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "The narrator explores the Arveiron glacier valley.",
+        "He resolves to ascend Montanvert alone the next morning.",
+        "The narrator encounters a hideous, superhuman creature on the glacier.",
+        "The creature threatens to slaughter Frankenstein's loved ones unless his conditions are met."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "The creature learns to distinguish between his senses of sight, sound, smell, and touch.",
+        "He discovers fire and learns to maintain and use it for warmth and cooking.",
+        "The creature is violently rejected by the inhabitants of a village.",
+        "He observes a family through a crack in the wall of a cottage."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "The narrator observes a poor family consisting of an elderly blind father, his daughter Agatha, and his son Felix.",
+        "The narrator secretly assists the family by gathering firewood and collecting food.",
+        "He learns basic words like \"fire,\" \"milk,\" and the names of the family members.",
+        "The narrator hopes to bridge the gap between his appearance and the family's beauty through language and kindness."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Safie is described as a beautiful Arabian woman.",
+        "The narrator learns language by eavesdropping on Felix's lessons.",
+        "The narrator studies *Volney's Ruins of Empires*.",
+        "The narrator feels isolated due to his grotesque appearance."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "De Lacey lived in Paris with his son Felix and daughter Agatha.",
+        "Felix helped a Turkish merchant escape unjust imprisonment.",
+        "De Lacey and Agatha were exiled to a cottage in Germany.",
+        "Safie traveled alone to Germany to reunite with Felix."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "The creature discovers three abandoned books: *Paradise Lost*, *Plutarch's Lives*, and *The Sorrows of Werter*.",
+        "The creature identifies with Satan's isolation in *Paradise Lost*.",
+        "The creature approaches the blind old man, De Lacey, hoping for sympathy.",
+        "Felix brutally attacks the creature upon his return, shattering the creature's hopes."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "The creature is rejected by the De Lacey family.",
+        "He burns down the De Lacey cottage in fury.",
+        "The creature strangles Victor's young son William.",
+        "He demands that Victor create him a female companion."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Victor refuses the creature's demand to create a female companion.",
+        "The creature claims that companionship would transform him into a benevolent being.",
+        "Victor agrees to create a female creature after extracting a solemn oath from the creature.",
+        "Victor returns to Geneva in anguish after committing to create the female creature."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "Victor Frankenstein is unable to create a female companion for his creature.",
+        "Victor departs for England in late September.",
+        "Victor's father arranges for his friend Clerval to accompany him.",
+        "Victor and Clerval arrive at the white cliffs of Britain in late December."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "The narrator and Clerval settle in London for several months.",
+        "The narrator consults with distinguished natural philosophers using letters of introduction.",
+        "The narrator travels to a remote island in the Orkneys to complete his work.",
+        "The narrator fears the monster will appear to claim his newly created companion."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Victor Frankenstein experiences a crisis of conscience about creating a female companion for his creature.",
+        "Victor destroys the half-finished female creature in a moment of resolve.",
+        "The creature vows revenge, threatening to visit Victor on his wedding night.",
+        "Victor is arrested on suspicion of murdering a gentleman found dead the previous night."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "The narrator is brought before Magistrate Kirwin to answer charges in the death of Henry Clerval. Witnesses testify that a boat matching the narrator's was seen near the crime scene. The grand jury acquits the narrator after proving he was on the Orkney Islands when Clerval died. The narrator becomes dependent on laudanum for sleep after Clerval's death."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 27,
+      "facts": [
+        "Victor Frankenstein is emotionally devastated and physically weakened after arriving in Paris.",
+        "Victor feels guilt over the deaths of Justine, William, and Henry.",
+        "Victor receives a letter from his cousin Elizabeth proposing marriage.",
+        "On their wedding day, Victor and Elizabeth travel by water toward Lake Como."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 28,
+      "facts": [
+        "Victor Frankenstein arrives at an inn on the night of his wedding.",
+        "Elizabeth is murdered on their bridal bed.",
+        "Victor fires at the monster as it escapes into the lake.",
+        "Victor is imprisoned in a dungeon after being deemed mad by authorities."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 29,
+      "facts": [
+        "Victor Frankenstein pursues his creature across continents to the Arctic. The creature kills Victor's loved ones, including William and Elizabeth. Walton's ship rescues the dying Victor from the Arctic ice. The creature expresses remorse for his murders after Victor's death."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "\"Frankenstein; or, the Modern Prometheus\" was originally released on October 1, 1993.",
+        "The most recent update of the eBook was on February 10, 2026.",
+        "The eBook is available for free at www.gutenberg.org/ebooks/84.",
+        "The text was prepared by editors including Judith Boss and Christy Phillips."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Robert Walton wrote a letter to his sister Margaret on December 11th.",
+        "He has spent six years preparing for his polar expedition.",
+        "Walton plans to depart for Archangel within weeks.",
+        "He intends to set sail in June."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Robert Walton wrote to his sister Margaret on March 28th.",
+        "Walton has hired a vessel and engaged sailors for his arctic expedition.",
+        "Walton describes his lieutenant as a courageous Englishman driven by ambition.",
+        "Walton expresses uncertainty about whether he will meet Margaret again after his journey."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "R.W. wrote a letter to his sister Mrs. Saville on July 7th.",
+        "He is currently on an Arctic voyage.",
+        "R.W. has encountered floating ice and minor accidents during his journey.",
+        "He expresses confidence that success will crown his endeavors."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Captain Walton is on a voyage of polar discovery.",
+        "On July 31st, Walton's crew sees a gigantic figure driving a dog sledge.",
+        "The stranger is rescued from the ice two days after the crew sees the figure.",
+        "The stranger agrees to share his complete narrative by August 19th."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator's father befriended a merchant named Beaufort.",
+        "Caroline supported her family through needlework until her father's death.",
+        "The narrator was born in Naples.",
+        "Elizabeth Lavenza was discovered living in poverty with peasants near Lake Como."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Victor Frankenstein was raised in Geneva and Belrive.",
+        "At age thirteen, Victor discovered works by Cornelius Agrippa.",
+        "At fifteen, Victor witnessed lightning destroy an oak tree.",
+        "Victor abandoned natural history for mathematics after the lightning incident."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Victor Frankenstein departs for the University of Ingolstadt at seventeen.",
+        "Victor's mother dies of scarlet fever while nursing his cousin Elizabeth.",
+        "M. Krempe ridicules Victor's previous study of alchemy.",
+        "M. Waldman's lecture on modern chemistry profoundly inspires Victor."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator studies natural philosophy and chemistry at the University of Ingolstadt.",
+        "He discovers the secret to generating life and gains the power to animate lifeless matter.",
+        "He constructs a human being of gigantic proportions while working in isolation for over a year.",
+        "The narrator neglects his family, friends, and his own health during his obsessive creation."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Victor Frankenstein animates a creature from lifeless matter on a November night in Ingolstadt.",
+        "The creature has a grotesque appearance with pallid, withered skin and watery eyes.",
+        "Victor experiences a nervous fever that confines him for several months.",
+        "Henry Clerval's presence momentarily comforts Victor after he flees from the creature."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Elizabeth writes to Victor urging him to recover and return home to Geneva.",
+        "Victor's brother Ernest desires a military career at the age of sixteen.",
+        "Victor experiences severe distress when university professors praise his scientific achievements.",
+        "In May, Clerval proposes a farewell walking tour of the Ingolstadt region."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Victor Frankenstein's brother William was murdered.",
+        "The miniature portrait of their mother was missing from the crime scene.",
+        "Justine Moritz was arrested for William's murder.",
+        "Victor Frankenstein glimpsed his creature near Mont Salêve during a storm."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Victor Frankenstein attends the trial of Justine Moritz.",
+        "Justine Moritz is condemned and executed for the murder of William.",
+        "William's portrait is found in Justine's pocket as circumstantial evidence.",
+        "Victor knows his creature is responsible for William's murder."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Victor Frankenstein created the monster that murdered both William and Justine.",
+        "Victor contemplates suicide but is restrained by his love for Elizabeth, his father, and his remaining brother.",
+        "Elizabeth loses her former joy and questions the nature of justice and human goodness after Justine's execution.",
+        "Victor travels to the Alpine valley of Chamounix in August, two months after Justine's death."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "The narrator explores the Arveiron glacier valley.",
+        "He resolves to ascend Montanvert alone the next morning.",
+        "The narrator encounters a hideous, superhuman creature on the glacier.",
+        "The creature threatens to slaughter Frankenstein's loved ones unless his conditions are met."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "The creature learns to distinguish between his senses of sight, sound, smell, and touch.",
+        "He discovers fire and learns to maintain and use it for warmth and cooking.",
+        "The creature is violently rejected by the inhabitants of a village.",
+        "He observes a family through a crack in the wall of a cottage."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "The narrator observes a poor family of cottagers consisting of an elderly blind father, his daughter Agatha, and his son Felix.",
+        "The narrator secretly assists the cottagers by gathering firewood and collecting food.",
+        "The narrator learns basic words like \"fire,\" \"milk,\" and the names of the cottagers.",
+        "The narrator hopes to bridge the gap between his appearance and the cottagers' beauty through language and kindness."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Safie is described as a beautiful Arabian woman.",
+        "The narrator learns language by eavesdropping on Felix's lessons.",
+        "The narrator studies *Volney's Ruins of Empires*.",
+        "The narrator feels isolated due to his grotesque appearance."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "De Lacey lived in Paris with his son Felix and daughter Agatha.",
+        "Felix helped a Turkish merchant escape unjust imprisonment.",
+        "De Lacey and Agatha were exiled to a cottage in Germany.",
+        "Safie traveled alone to Germany to reunite with Felix."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "The creature discovers three abandoned books: *Paradise Lost*, *Plutarch's Lives*, and *The Sorrows of Werter*.",
+        "The creature identifies with Satan's isolation in *Paradise Lost*.",
+        "The creature approaches the blind old man, De Lacey, hoping for sympathy.",
+        "Felix brutally attacks the creature upon his return, shattering the creature's hopes."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "The creature is rejected by the De Lacey family.",
+        "He burns down the De Lacey cottage after the family abandons it.",
+        "The creature strangles Victor's young son William.",
+        "He demands that Victor create him a female companion."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Victor refuses the creature's demand to create a female companion.",
+        "The creature claims that companionship would transform him into a benevolent being.",
+        "Victor agrees to create a female creature after extracting a solemn oath from the creature.",
+        "Victor returns to Geneva in anguish after committing to create the female creature."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "Victor Frankenstein is unable to create a female companion for his creature.",
+        "Victor departs for England in late September.",
+        "Victor's father arranges for his friend Clerval to accompany him.",
+        "Victor and Clerval arrive at the white cliffs of Britain in late December."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "The narrator and Clerval settle in London for several months.",
+        "The narrator consults with distinguished natural philosophers using letters of introduction.",
+        "The narrator travels to a remote island in the Orkneys to complete his work.",
+        "The narrator fears the monster will appear to claim his newly created companion."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Victor Frankenstein experiences a crisis of conscience about creating a female companion for his creature.",
+        "Victor destroys the half-finished female creature in a moment of resolve.",
+        "The creature vows revenge, threatening to visit Victor on his wedding night.",
+        "Victor is arrested on suspicion of murdering a gentleman found dead the previous night."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "The narrator is charged with the death of a young man found strangled on an Irish shore. The body discovered by fishermen is identified as the narrator's friend Henry Clerval. The grand jury acquits the narrator after proving he was on the Orkney Islands when Clerval died. The narrator boards a ship homeward to return to Geneva and pursue the creature he believes murdered Clerval."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 27,
+      "facts": [
+        "Victor Frankenstein is emotionally devastated and physically weakened after arriving in Paris.",
+        "Victor Frankenstein feels guilt over the deaths of Justine, William, and Henry.",
+        "Victor receives a letter from his cousin Elizabeth proposing marriage.",
+        "On their wedding day, Victor and Elizabeth travel by water toward Lake Como."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 28,
+      "facts": [
+        "Victor Frankenstein arrives at an inn on the night of his wedding.",
+        "Elizabeth is murdered on their bridal bed.",
+        "Victor fires at the monster as it escapes into the lake.",
+        "Victor is imprisoned in a dungeon after being deemed mad by authorities."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 29,
+      "facts": [
+        "Victor Frankenstein pursues his creature across continents to the Arctic. The creature kills Victor's loved ones, including William and Elizabeth. Walton's ship rescues the dying Victor from the Arctic ice. The creature expresses remorse for his actions after Victor's death."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

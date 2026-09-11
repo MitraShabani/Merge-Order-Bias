@@ -1,0 +1,360 @@
+{
+  "title": "The Strange Case Of Dr. Jekyll And Mr.",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "\"The Strange Case of Dr. Jekyll and Mr. Hyde\" is a novella by Robert Louis Stevenson.",
+        "The eBook was released on June 27, 2008.",
+        "The novella consists of nine chapters.",
+        "The murder of Carew is one of the incidents involving Mr. Hyde."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Mr. Utterson regularly takes Sunday walks with Richard Enfield.",
+        "Hyde trampled a young girl and then walked away.",
+        "Hyde produced a large cheque signed by a well-known, respectable man.",
+        "Utterson knows the identity of the cheque's drawer."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Mr. Utterson reviews Dr. Jekyll's will, which bequeaths all of Jekyll's possessions to Edward Hyde.",
+        "Dr. Lanyon has not seen Dr. Jekyll in over ten years.",
+        "Utterson begins nightly vigils outside Jekyll's house.",
+        "Hyde has a key to the laboratory and possesses Jekyll's complete trust."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Mr. Utterson speaks privately with Dr. Jekyll about his will during a dinner at Jekyll's home.",
+        "Dr. Jekyll's will leaves his estate to Mr. Hyde.",
+        "Jekyll becomes distressed when Utterson mentions disturbing things about Hyde.",
+        "Utterson agrees to ensure Hyde receives fair treatment if something happens to Jekyll."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Sir Danvers Carew was murdered in October.",
+        "Mr. Hyde attacked an elderly gentleman with a cane.",
+        "The murder weapon was identified as a broken stick given to Henry Jekyll by Mr. Utterson.",
+        "Hyde's residence was found ransacked with burned papers and the other half of the murder stick."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Mr. Utterson visits Dr. Jekyll at his laboratory.",
+        "Sir Danvers Carew was murdered.",
+        "Jekyll received a letter from Edward Hyde.",
+        "Mr. Guest identifies the handwriting in the letter as nearly identical to Jekyll's own."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Dr. Jekyll initially appears to recover and resume a normal social life after Sir Danvers Carew's murder.",
+        "Lawyer Utterson visits Dr. Lanyon on January 15th and finds him gravely ill.",
+        "Dr. Lanyon refuses to discuss Jekyll and declares him \"dead.\"",
+        "Lanyon dies within a fortnight, leaving Utterson a sealed envelope to be opened only after Jekyll's death or disappearance."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Mr. Utterson and his cousin Mr. Enfield encounter Dr. Jekyll at a window of his residence.",
+        "Dr. Jekyll declines to take a walk with Mr. Utterson and Mr. Enfield.",
+        "Dr. Jekyll's expression transforms into one of absolute terror and despair before he closes the window.",
+        "Utterson prays for forgiveness after leaving the court with Mr. Enfield."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Butler Poole visits lawyer Utterson with concerns about Dr. Jekyll.",
+        "Utterson and Poole find Edward Hyde's dead body in Jekyll's cabinet.",
+        "A note on Jekyll's desk indicates he is alive but has disappeared.",
+        "Utterson plans to examine documents from Lanyon and Jekyll before midnight."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Dr. Lanyon receives a letter from Dr. Jekyll requesting the retrieval of a drawer from Jekyll's locked cabinet.",
+        "Lanyon delivers the drawer to a mysterious messenger at midnight.",
+        "The stranger who arrives at midnight transforms into Dr. Jekyll after drinking a concoction.",
+        "Lanyon is left physically and mentally broken after witnessing Jekyll's transformation and confession."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Dr. Jekyll develops a scientific potion that separates his dual nature into two entities.",
+        "Edward Hyde commits an unprovoked murder.",
+        "Hyde retrieves the antidote drug through Dr. Lanyon.",
+        "Dr. Jekyll loses control as Hyde grows stronger and more dominant."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "\"The Strange Case of Dr. Jekyll and Mr. Hyde\" is a novella by Robert Louis Stevenson.",
+        "The eBook was released on June 27, 2008.",
+        "The novella consists of nine chapters.",
+        "The murder of Carew is one of the incidents involving Mr. Hyde."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Mr. Utterson regularly takes Sunday walks with Richard Enfield.",
+        "Hyde trampled a young girl and then walked away.",
+        "Hyde produced a large cheque signed by a well-known, respectable man.",
+        "Utterson knows the identity of the cheque's drawer."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Mr. Utterson reviews Dr. Jekyll's will, which bequeaths all of Jekyll's possessions to Edward Hyde.",
+        "Dr. Lanyon has not seen Dr. Jekyll in over ten years.",
+        "Utterson begins nightly vigils outside Jekyll's house.",
+        "Hyde has a key to the laboratory and possesses Jekyll's complete trust."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Mr. Utterson speaks privately with Dr. Jekyll about his will during a dinner at Jekyll's home.",
+        "Dr. Jekyll's will leaves his estate to Mr. Hyde.",
+        "Utterson expresses his disapproval of Mr. Hyde to Dr. Jekyll.",
+        "Dr. Jekyll asks Utterson to ensure Mr. Hyde receives fair treatment if something happens to him."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Sir Danvers Carew was murdered in October.",
+        "Mr. Hyde attacked an elderly gentleman with a cane.",
+        "The murder weapon was identified as a broken stick given to Henry Jekyll by Mr. Utterson.",
+        "Hyde's residence was found ransacked with burned papers and the other half of the murder stick."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Mr. Utterson visits Dr. Jekyll at his laboratory.",
+        "Sir Danvers Carew was murdered.",
+        "Utterson discovers that the letter from Hyde was not delivered by a messenger.",
+        "Mr. Guest identifies the handwriting on the letter as nearly identical to Jekyll's own."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Dr. Jekyll initially appears to recover and resume a normal social life after Sir Danvers Carew's murder.",
+        "Lawyer Utterson visits Dr. Lanyon on January 15th and finds him gravely ill.",
+        "Dr. Lanyon refuses to discuss Jekyll and declares him \"dead.\"",
+        "Lanyon dies within a fortnight, leaving Utterson a sealed envelope to be opened only after Jekyll's death or disappearance."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Mr. Utterson and his cousin Mr. Enfield encounter Dr. Jekyll at a window of his residence.",
+        "Dr. Jekyll declines to take a walk with Mr. Utterson and Mr. Enfield.",
+        "Dr. Jekyll's expression transforms into one of absolute terror and despair before he closes the window.",
+        "Utterson prays for forgiveness after leaving the court with Mr. Enfield."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Butler Poole visits lawyer Utterson with concerns about Dr. Jekyll.",
+        "Utterson and Poole find Edward Hyde's dead body in Jekyll's cabinet.",
+        "A note on Jekyll's desk indicates he is alive but has disappeared.",
+        "Utterson plans to examine documents from Lanyon and Jekyll before midnight."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Dr. Lanyon receives a letter from Dr. Jekyll requesting the retrieval of a drawer from Jekyll's locked cabinet.",
+        "Lanyon delivers the drawer to a mysterious messenger at midnight.",
+        "The stranger who arrives at midnight transforms into Dr. Jekyll after drinking a concoction.",
+        "Lanyon is traumatized by Jekyll's confession involving the murderer Hyde."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Dr. Jekyll develops a scientific potion that separates his dual nature into two entities.",
+        "Edward Hyde commits an unprovoked murder.",
+        "Dr. Jekyll briefly reforms through charitable work.",
+        "Hyde retrieves the antidote drug through Dr. Lanyon."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "title": "The Great Gatsby",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "*The Great Gatsby* was released as a Project Gutenberg eBook on January 17, 2021.",
+        "The eBook edition of *The Great Gatsby* is eBook #64317.",
+        "The novel is organized into nine chapters.",
+        "*The Great Gatsby* is dedicated to Zelda."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Nick Carraway moves to West Egg, Long Island, to work in the bond business.",
+        "Daisy Buchanan expresses her hope that her daughter will be \"a beautiful little fool.\"",
+        "Nick meets Jordan Baker, a professional golfer and socialite.",
+        "Gatsby is seen standing alone on his lawn, gazing toward a distant green light across the water."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Myrtle Wilson is Tom Buchanan's mistress.",
+        "Tom takes the narrator and Myrtle to a Manhattan apartment for a gathering.",
+        "Myrtle invents stories about Daisy being Catholic to justify Tom's absence.",
+        "The narrator finds himself alone at Pennsylvania Station at dawn."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The narrator attends one of Gatsby's parties at his Long Island mansion.",
+        "The narrator meets Gatsby, who is in his early thirties and is surprisingly modest.",
+        "\"Owl Eyes\" crashes his car outside Gatsby's mansion during the party.",
+        "The narrator develops a casual relationship with Jordan Baker, a famous golfer."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Nick Carraway is introduced to Jay Gatsby's world through lavish parties.",
+        "Gatsby claims to have an aristocratic background, an Oxford education, and war heroism.",
+        "Gatsby purchased his mansion to be near Daisy Buchanan.",
+        "Nick agrees to invite Daisy to tea without her knowledge."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Nick Carraway arranges a tea at his house to reunite Gatsby with Daisy Buchanan.",
+        "Gatsby becomes luminous with joy after a private moment with Daisy.",
+        "Daisy weeps at the beauty of Gatsby's expensive imported shirts.",
+        "Nick departs alone into the rain after observing Gatsby and Daisy."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was born James Gatz to poor farmers in North Dakota.",
+        "He reinvented himself at seventeen after meeting Dan Cody.",
+        "Gatsby inherited twenty-five thousand dollars from Dan Cody.",
+        "Gatsby is obsessed with Daisy Buchanan, who visits his house."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby's affair with Daisy is revealed during a lunch with Tom and Nick.",
+        "Tom accuses Gatsby of lying about his Oxford education.",
+        "Daisy is driving Gatsby's car when a fatal accident occurs.",
+        "Nick finds Tom and Daisy together in the kitchen after the confrontation."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator rushes to warn Gatsby about Daisy.",
+        "Gatsby met Daisy while stationed at Camp Taylor.",
+        "Daisy married Tom Buchanan while Gatsby served in World War I.",
+        "The narrator discovers Gatsby's body floating in the pool with a gunshot wound."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Nick Carraway arranges Gatsby's funeral alone.",
+        "Meyer Wolfshiem refuses to attend Gatsby's funeral.",
+        "Only Gatsby's father and a mysterious owl-eyed man attend the service.",
+        "Nick confronts Tom Buchanan about revealing Gatsby's car ownership to Wilson."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "*The Great Gatsby* was released as a Project Gutenberg eBook on January 17, 2021.",
+        "The eBook edition of *The Great Gatsby* is eBook #64317.",
+        "The novel is organized into nine chapters.",
+        "*The Great Gatsby* is dedicated to Zelda."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Nick Carraway moves to West Egg, Long Island.",
+        "Daisy hopes her daughter will be \"a beautiful little fool.\"",
+        "Nick meets Jordan Baker, a professional golfer and socialite.",
+        "Gatsby is seen standing alone on his lawn, gazing toward a green light across the water."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Myrtle Wilson is Tom Buchanan's mistress.",
+        "Tom takes the narrator and Myrtle to a Manhattan apartment for a gathering.",
+        "Myrtle invents stories about Daisy being Catholic to justify Tom's absence.",
+        "The narrator finds himself alone at Pennsylvania Station at dawn."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The narrator attends one of Gatsby's parties at his Long Island mansion.",
+        "The narrator meets Gatsby, who is in his early thirties and is described as modest and well-mannered.",
+        "\"Owl Eyes\" crashes his car outside Gatsby's mansion during the party.",
+        "The narrator develops a casual relationship with Jordan Baker, a famous golfer."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Nick Carraway is introduced to Jay Gatsby's world through lavish parties.",
+        "Gatsby claims to have an aristocratic background, an Oxford education, and war heroism.",
+        "Gatsby purchased his mansion to be near Daisy Buchanan.",
+        "Nick agrees to invite Daisy to tea without her knowledge."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Nick Carraway arranges a tea at his house to reunite Gatsby with Daisy Buchanan.",
+        "Gatsby becomes luminous with joy after a private moment with Daisy.",
+        "Daisy weeps at the beauty of Gatsby's expensive imported shirts.",
+        "Nick departs alone into the rain after observing Gatsby and Daisy."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was born James Gatz to poor farmers in North Dakota.",
+        "He reinvented himself at seventeen after meeting Dan Cody.",
+        "Gatsby inherited twenty-five thousand dollars from Dan Cody.",
+        "He is obsessed with Daisy Buchanan, who visits his house and attends his party."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby's affair with Daisy is revealed during a lunch with Tom and Nick.",
+        "Tom accuses Gatsby of lying about his Oxford education.",
+        "Daisy is driving Gatsby's car when a fatal accident occurs.",
+        "Nick finds Tom and Daisy together in the kitchen after the confrontation."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator rushes to warn Gatsby about Daisy.",
+        "Gatsby met Daisy while stationed at Camp Taylor.",
+        "Daisy married Tom Buchanan while Gatsby served in World War I.",
+        "The narrator discovers Gatsby's body floating in the pool with a gunshot wound."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Nick Carraway arranges Gatsby's funeral alone.",
+        "Meyer Wolfshiem refuses to attend Gatsby's funeral.",
+        "Only Gatsby's father and a mysterious owl-eyed man attend the service.",
+        "Nick confronts Tom Buchanan about revealing Gatsby's car ownership to Wilson."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

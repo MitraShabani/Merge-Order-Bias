@@ -1,15 +1,15 @@
 document,type,forward_mean_coverage,backward_mean_coverage
-Barducci Et Al. - 2025 - A,paper,0.9642857142857143,0.9285714285714286
-Bean Et Al. - 2025 - Measuring What,paper,0.85,0.65
-Boozer - 2026 - Comment On Nuclear,paper,0.75,0.6666666666666666
-Dracula,novel,0.375,0.5535714285714286
-Frankenstein,novel,0.3620689655172414,0.3017241379310345
-Gambler,novel,0.2638888888888889,0.4166666666666667
-Little Brother,novel,0.4772727272727273,0.4659090909090909
-Pride And Prejudice,novel,0.3112244897959184,0.3979591836734694
-Qin Et Al.-2025-Large Language Models,paper,0.65625,0.96875
-Rudinger Et Al. - 2018 - Neural Models,paper,0.9791666666666666,0.6458333333333334
-The Great Gatsby,novel,0.525,0.65
-The Strange Case Of Dr. Jekyll And Mr.,novel,0.36363636363636365,0.7954545454545454
-Ting Et Al. - 2025 - Astro Mlab5,paper,0.7727272727272727,0.7045454545454546
-Łajewska Et Al. - 2025 - Understanding,paper,0.8863636363636364,0.8863636363636364
+Barducci Et Al. - 2025 - A,paper,0.9642857142857143,1.0
+Bean Et Al. - 2025 - Measuring What,paper,0.9,0.925
+Boozer - 2026 - Comment On Nuclear,paper,0.9583333333333334,0.9583333333333334
+Dracula,novel,0.3392857142857143,0.4107142857142857
+Frankenstein,novel,0.39655172413793105,0.5862068965517241
+Gambler,novel,0.2361111111111111,0.2777777777777778
+Little Brother,novel,0.5,0.2727272727272727
+Pride And Prejudice,novel,0.413265306122449,0.2602040816326531
+Qin Et Al.-2025-Large Language Models,paper,0.9375,0.875
+Rudinger Et Al. - 2018 - Neural Models,paper,0.7916666666666666,0.8125
+The Great Gatsby,novel,0.5,0.7
+The Strange Case Of Dr. Jekyll And Mr.,novel,0.38636363636363635,0.5
+Ting Et Al. - 2025 - Astro Mlab5,paper,0.7045454545454546,0.6136363636363636
+Łajewska Et Al. - 2025 - Understanding,paper,0.75,0.7045454545454546

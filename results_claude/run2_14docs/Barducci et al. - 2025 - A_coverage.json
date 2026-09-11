@@ -1,0 +1,232 @@
+{
+  "title": "Barducci Et Al. - 2025 - A",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "JanusDDG is a machine learning model developed by researchers at the University of Turin.",
+        "The model predicts protein stability changes (ΔΔG) from amino acid sequences.",
+        "JanusDDG employs a two-fronts multi-head attention mechanism.",
+        "The model is designed to be thermodynamically compliant."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "JanusDDG is a deep learning framework that predicts protein stability changes (ΔΔG) from mutations.",
+        "The model uses a bidirectional cross-attention transformer architecture.",
+        "JanusDDG respects fundamental thermodynamic properties such as antisymmetry and transitivity.",
+        "Experimental results show that JanusDDG achieves state-of-the-art performance in predicting ΔΔG from sequence alone."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Protein stability is measured by the change in Gibbs free energy (ΔΔG).",
+        "JanusDDG is a deep learning model that predicts ΔΔG values using only amino acid sequences.",
+        "JanusDDG can handle multi-mutations, unlike existing methods that are limited to single or double mutations.",
+        "The model enforces antisymmetry and transitivity through tailored loss functions."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "JanusDDG is a sequence-based model for predicting protein stability changes (ΔΔG) from mutations.",
+        "The model integrates delta between wild-type and mutant sequences using bidirectional cross-attention.",
+        "JanusDDG respects thermodynamic principles such as antisymmetry and transitivity through a Siamese architecture.",
+        "The model was evaluated on benchmark datasets including S669, S461, S96, PTmut-NR, and PTmul-D."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "JanusDDG is a sequence-based deep learning model that predicts protein stability changes upon mutation.",
+        "JanusDDG integrates protein language model embeddings with a bidirectional cross-attention architecture.",
+        "Benchmarking shows that JanusDDG matches or outperforms existing sequence-based and structure-informed predictors.",
+        "The model effectively generalizes to multiple mutation prediction, an area where many current models are limited."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "JanusDDG is a deep learning model for predicting protein stability changes (ΔΔG) upon mutation.",
+        "The model was evaluated using blind test sets with low sequence similarity (<25%) to training data.",
+        "JanusDDG integrates ESM2 protein language model embeddings with a Bidirectional Cross-Attention Transformer.",
+        "The research addresses applications in precision medicine and therapeutic design."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The fine-tuned variant of JanusDDG achieves a PCC of 0.83 on the S461 single-point test set.",
+        "The antisymmetric model of JanusDDG maintains symmetry properties with an rd-r of -1.",
+        "JanusDDG achieves a PCC of 0.84 and RMSE of 0.85 on the Ssym dataset.",
+        "On the Q3421 dataset, JanusDDG leads with an MSE of 2.10 and accuracy of 0.78."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "JanusDDG is a machine learning model developed by researchers at the University of Turin.",
+        "The model predicts protein stability changes (ΔΔG) from amino acid sequences.",
+        "JanusDDG employs a two-fronts multi-head attention mechanism.",
+        "The model is designed to be thermodynamically compliant."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "JanusDDG is a deep learning framework that predicts protein stability changes (ΔΔG) from mutations.",
+        "The model uses a bidirectional cross-attention transformer architecture.",
+        "JanusDDG respects fundamental thermodynamic properties such as antisymmetry and transitivity.",
+        "Experimental results show that JanusDDG achieves state-of-the-art performance in predicting ΔΔG from sequence alone."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Protein stability is measured by the change in Gibbs free energy (ΔΔG).",
+        "JanusDDG is a deep learning model that predicts ΔΔG values using only amino acid sequences.",
+        "JanusDDG can handle multi-mutations, unlike existing methods that are limited to single or double mutations.",
+        "The model enforces antisymmetry and transitivity through tailored loss functions."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "JanusDDG is a sequence-based model for predicting protein stability changes (ΔΔG) from mutations.",
+        "The model integrates delta between wild-type and mutant sequences using bidirectional cross-attention.",
+        "JanusDDG respects thermodynamic principles such as antisymmetry and transitivity through a Siamese architecture.",
+        "It was evaluated on benchmark datasets including S669, S461, S96, PTmut-NR, and PTmul-D."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "JanusDDG is a sequence-based deep learning model that predicts protein stability changes upon mutation.",
+        "JanusDDG integrates protein language model embeddings with a bidirectional cross-attention architecture.",
+        "Benchmarking shows that JanusDDG matches or outperforms existing sequence-based and structure-informed predictors.",
+        "The model effectively generalizes to multiple mutation prediction, an area where many current models are limited."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "JanusDDG is a deep learning model for predicting protein stability changes (ΔΔG) upon mutation.",
+        "The model was evaluated using blind test sets with low sequence similarity (<25%) to training data.",
+        "JanusDDG integrates ESM2 protein language model embeddings with a Bidirectional Cross-Attention Transformer.",
+        "The research context includes applications in precision medicine and therapeutic design."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The fine-tuned variant of JanusDDG achieves a PCC of 0.83 on the S461 single-point test set.",
+        "The antisymmetric model of JanusDDG maintains symmetry properties with an rd-r of -1.",
+        "JanusDDG achieves a PCC of 0.84 and RMSE of 0.85 on the Ssym dataset.",
+        "On the Q3421 dataset, JanusDDG leads with an MSE of 2.10 and accuracy of 0.78."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}

@@ -1,0 +1,892 @@
+{
+  "title": "Dracula",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "\"Dracula\" was originally published in 1897 by Grosset & Dunlap.",
+        "The eBook edition of \"Dracula\" was first released on October 1, 1995.",
+        "The eBook edition of \"Dracula\" is eBook #345.",
+        "The most recent update to the eBook was on September 24, 2025."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Jonathan Harker travels from London to Castle Dracula in Transylvania.",
+        "Harker arrives in Bistritz on May 3rd.",
+        "Harker departs on May 4th, the eve of St. George's Day.",
+        "Harker is driven to the castle by a mysterious driver who commands wolves."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Jonathan Harker arrives at Count Dracula's castle in Transylvania to manage the purchase of an estate called Carfax.",
+        "Dracula casts no reflection in the mirror.",
+        "Dracula reacts with fury when he notices blood on Harker's face.",
+        "Harker discovers that the castle is completely sealed with exits only through windows overlooking a precipice."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Jonathan Harker is imprisoned in Count Dracula's castle.",
+        "Dracula has the ability to control wolves.",
+        "Harker plans to write secretly to Mina in shorthand.",
+        "Dracula forbids the vampire women from touching Harker."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Jonathan Harker is imprisoned at Castle Dracula.",
+        "Harker is forced to write post-dated letters revealing his execution dates of June 12, 19, and 29.",
+        "Harker discovers Dracula's coffin in the chapel.",
+        "Harker attempts to escape the castle by scaling the walls."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Mina Murray is engaged to Jonathan.",
+        "Lucy Westenra received three marriage proposals in one day.",
+        "Lucy accepts the proposal from Arthur Holmwood.",
+        "Dr. John Seward studies a patient named R. M. Renfield."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Mina Murray visits the coastal town of Whitby.",
+        "Mr. Swales is an elderly sailor who debunks local legends.",
+        "Lucy has resumed sleepwalking and displays odd behavior.",
+        "A coastguard reports a strangely-behaving Russian ship during a storm."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "A catastrophic storm struck Whitby, England, on August 8-9.",
+        "The Russian schooner *Demeter* ran aground on Tate Hill Pier.",
+        "The captain of the *Demeter* was found dead, lashed to the wheel with a crucifix and rosary beads.",
+        "The *Demeter* carried wooden boxes of mould shipped from Varna, Russia."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Mina discovers Lucy sleepwalking in a churchyard with a dark, red-eyed figure nearby.",
+        "Lucy exhibits severe symptoms including nocturnal wanderings and extreme weakness.",
+        "Jonathan Harker recovers from brain fever in Budapest after suffering violent delirium.",
+        "Renfield escapes the asylum and pledges allegiance to an unseen \"Master.\""
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Jonathan Harker marries Mina in the hospital after recovering from amnesia.",
+        "Lucy Westenra announces her engagement to Arthur Holmwood.",
+        "Professor Van Helsing finds Lucy free of anemic symptoms despite her significant blood loss.",
+        "Renfield exhibits violent outbursts during daylight hours and calmness during moonrise."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Dr. Seward and Professor Van Helsing perform an emergency blood transfusion using Arthur Holmwood as the donor.",
+        "Lucy Westenra appears more pallid and corpse-like the morning after the blood transfusion.",
+        "Seward discovers two mysterious puncture marks on Lucy's throat near the jugular vein.",
+        "Van Helsing receives a parcel of garlic from Haarlem to use as a protective measure for Lucy."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Lucy Westenra initially recovers with Dr. Van Helsing's treatment of garlic flowers and blood transfusions.",
+        "Lucy's mother removes the protective garlic from Lucy's room.",
+        "On the night of September 17, a great grey wolf crashes through Lucy's bedroom window.",
+        "Lucy writes an account as a final record, fearing she may not survive the night."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Dr. Seward and Van Helsing discover Lucy Westenra and her mother at Hillingham estate on September 18. Mrs. Westenra is dead, and Lucy has puncture wounds on her throat. Lucy exhibits a peculiar aversion to garlic while semi-conscious. Renfield experiences violent outbursts when wooden boxes arrive at the asylum."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Dr. Seward documents the emotional aftermath following Lucy's death and funeral.",
+        "Professor Van Helsing cancels a secret nocturnal operation when a golden crucifix is stolen from Lucy's body.",
+        "Arthur believes that the blood transfusions made him and Lucy spiritually married.",
+        "Lucy’s entire estate has been left to Arthur according to the solicitor."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Mina Harker shares Jonathan's journal entries with Dr. Van Helsing.",
+        "Dr. Seward learns that children attacked in Hampstead have the same throat wounds as Lucy Westenra.",
+        "Van Helsing reveals that Lucy Westenra has transformed into a vampire.",
+        "The group confronts the reality of supernatural evil threatening their world."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Dr. Seward doubts Professor Van Helsing's claims about Lucy Westenra's death.",
+        "Van Helsing intends to open Lucy's coffin and decapitate her.",
+        "They discover Lucy's body unnaturally preserved with sharpened teeth.",
+        "Van Helsing warns that a more dangerous vampire may seek Lucy's tomb."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Dr. Seward and his companions find Lucy Westenra's coffin empty.",
+        "Arthur drives a wooden stake through Lucy's heart to free her spirit.",
+        "Van Helsing instructs the group to meet for dinner in two days at John's home.",
+        "Van Helsing promises to return the following night to explain their mission details."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Dr. Seward meets Mina Harker at Paddington Station.",
+        "Mina Harker transcribes Dr. Seward's phonograph diary.",
+        "Fifty boxes of Dracula's native soil were shipped to Carfax in London.",
+        "Lord Godalming and Mr. Morris arrive on September 30th."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "Dr. Seward returns home on September 30th to find his colleagues have reviewed the compiled documents.",
+        "Mina visits Renfield, who warns her not to remain in the house.",
+        "Van Helsing insists Mina cease her involvement, deeming it unsuitable for a woman.",
+        "The group plans to raid Carfax immediately, with Van Helsing insisting Mina remain behind for safety."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "Jonathan Harker's group discovers twenty-one missing earth boxes in Dracula's chapel.",
+        "The men decide to exclude Mina from future investigations to protect her.",
+        "Mina experiences terrifying visions of mist with red eyes invading her room.",
+        "Mina's deteriorating mental and physical state suggests she may be falling under Dracula's influence."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "Jonathan Harker traces Count Dracula's boxes to a locked mansion near Piccadilly.",
+        "Dr. Seward observes Renfield's behavior and deduces that Dracula has visited him.",
+        "Renfield makes cryptic statements about acquiring \"higher life\" and avoids discussing \"drinking.\"",
+        "The group investigates the property purchase under the alias \"Count de Ville.\""
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Renfield lies mortally wounded with a fractured skull after attempting to stop Count Dracula.",
+        "Dracula forces Mina Harker to drink his blood, binding her to him.",
+        "Dracula destroys the group's manuscript evidence and phonograph records before escaping.",
+        "Jonathan comforts the traumatized and bloodied Mina as dawn breaks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "Renfield's death prompts the team to inform Mina of their situation.",
+        "Mina is marked by Count Dracula, confirmed when a Sacred Wafer burns her skin.",
+        "The group discovers eight of the nine boxes of earth at Dracula's Piccadilly house.",
+        "Lord Godalming and Quincey Morris leave to destroy the remaining boxes in Mile End and Bermondsey."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "Dr. Seward records the hunters' confrontation with Count Dracula at his house.",
+        "The hunters destroy twelve of Dracula's earth-boxes.",
+        "Mina reveals through hypnosis that Dracula is fleeing London by ship with his final earth-box.",
+        "Dracula has marked Mina with a bite, making her vulnerable to his influence."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Count Dracula fled England aboard the *Czarina Catherine*.",
+        "The ship is bound for Varna with a box of Dracula's native soil.",
+        "Mina shows signs of vampiric transformation.",
+        "The team plans to mark Dracula's coffin with wild rose branches."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "Mina requests her companions to promise to kill her if she becomes a vampire.",
+        "Jonathan reads the Burial Service for comfort.",
+        "Van Helsing organizes a pursuit to intercept Dracula's box aboard the *Czarina Catherine*.",
+        "Van Helsing learns that Dracula will flee back to his homeland when defeated."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 27,
+      "facts": [
+        "Count Dracula's earthbox was transferred for river transport to Galatz.",
+        "Petrof Skinsky was murdered after transporting Dracula's coffin.",
+        "Dr. Seward's group devised a three-part plan to intercept Dracula.",
+        "Van Helsing believes Dracula is vulnerable during daylight river travel."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 28,
+      "facts": [
+        "Van Helsing and Mina journey toward Dracula's castle in the Carpathian Mountains.",
+        "Mina exhibits symptoms of vampiric contamination from Dracula's bite.",
+        "Van Helsing destroys the three female vampires in the castle chapel through ritual killings.",
+        "Jonathan Harker and Quincey Morris intercept the gypsies transporting Dracula's coffin."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "\"Dracula\" was originally published in 1897 by Grosset & Dunlap.",
+        "The novel is presented through a collection of documents including journal entries and letters.",
+        "The eBook edition of \"Dracula\" was first released on October 1, 1995.",
+        "The most recent update of the eBook was on September 24, 2025."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Jonathan Harker travels from London to Castle Dracula in Transylvania.",
+        "Harker arrives in Bistritz on May 3rd.",
+        "Harker departs on May 4th, the eve of St. George's Day.",
+        "Harker is driven to the castle by a mysterious driver who commands wolves."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Jonathan Harker arrives at Count Dracula's castle in Transylvania to manage the purchase of an estate called Carfax.",
+        "Dracula requests Harker's assistance with the property transaction and English language instruction.",
+        "Harker discovers that Dracula casts no reflection in the mirror.",
+        "Dracula destroys the shaving glass in rage after noticing blood on Harker's face."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Jonathan Harker is imprisoned in Count Dracula's castle.",
+        "Dracula has the ability to control wolves.",
+        "Harker plans to write secretly to Mina in shorthand.",
+        "Dracula forbids the vampire women from touching Harker."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Jonathan Harker is imprisoned at Castle Dracula.",
+        "Harker is forced to write post-dated letters revealing his execution dates of June 12, 19, and 29.",
+        "Harker discovers Dracula's coffin in the chapel.",
+        "Harker attempts to escape the castle by scaling the walls."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Mina Murray is engaged to Jonathan.",
+        "Lucy Westenra receives three marriage proposals in one day.",
+        "Lucy accepts the marriage proposal from Arthur Holmwood.",
+        "Dr. John Seward studies a patient named R. M. Renfield."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Mina Murray visits the coastal town of Whitby.",
+        "Mr. Swales is an elderly sailor who debunks local legends.",
+        "Lucy has resumed sleepwalking and displays odd behavior.",
+        "A coastguard reports a strangely-behaving Russian ship during a storm."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "A catastrophic storm struck Whitby, England, on August 8-9.",
+        "The Russian schooner *Demeter* ran aground on Tate Hill Pier.",
+        "The captain of the *Demeter* was found dead, lashed to the wheel with a crucifix and rosary beads.",
+        "The *Demeter* carried wooden boxes of mould shipped from Varna, Russia."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "Mina discovers Lucy sleepwalking in a churchyard with a dark, red-eyed figure nearby.",
+        "Lucy exhibits severe symptoms including nocturnal wanderings and extreme weakness.",
+        "Jonathan Harker recovers from brain fever in Budapest after suffering violent delirium.",
+        "Renfield escapes the asylum and pledges allegiance to an unseen \"Master\" at an abandoned chapel."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Jonathan Harker marries Mina in the hospital after recovering from amnesia.",
+        "Lucy Westenra announces her engagement to Arthur Holmwood.",
+        "Professor Van Helsing examines Lucy and finds her free of anemic symptoms despite blood loss.",
+        "Renfield exhibits violent outbursts during daylight hours and calmness during moonrise."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "Dr. Seward and Professor Van Helsing perform an emergency blood transfusion using Arthur Holmwood as the donor.",
+        "Lucy Westenra appears more pallid and corpse-like the morning after the blood transfusion.",
+        "Seward discovers two mysterious puncture marks on Lucy's throat near the jugular vein.",
+        "Van Helsing receives a parcel of garlic from Haarlem to use as a protective measure for Lucy."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "Lucy Westenra recovers initially with Dr. Van Helsing's treatment of garlic flowers and blood transfusions.",
+        "Lucy's mother removes the protective garlic from Lucy's room, undermining her treatment.",
+        "On the night of September 17, a great grey wolf crashes through Lucy's bedroom window.",
+        "Lucy writes an account as a final record, fearing she may not survive the night."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Dr. Seward and Van Helsing discover Lucy Westenra and her mother at Hillingham estate on September 18. Mrs. Westenra is dead, and Lucy has puncture wounds on her throat. Lucy exhibits a peculiar aversion to garlic while semi-conscious. Renfield experiences violent outbursts when wooden boxes arrive at the asylum."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Dr. Seward documents the emotional aftermath following Lucy's death and funeral.",
+        "Professor Van Helsing cancels a secret nocturnal operation when a golden crucifix is stolen from Lucy's body.",
+        "Arthur believes the blood transfusions made him and Lucy spiritually married.",
+        "Lucy’s entire estate has been left to Arthur according to the solicitor."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Mina Harker shares Jonathan's journal entries with Dr. Van Helsing.",
+        "Dr. Seward learns that children attacked in Hampstead have the same throat wounds as Lucy Westenra.",
+        "Van Helsing reveals that Lucy Westenra has transformed into a vampire.",
+        "The group confronts the reality of supernatural evil threatening their world."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Dr. Seward doubts Professor Van Helsing's claims about Lucy Westenra's death.",
+        "Van Helsing intends to open Lucy's coffin and decapitate her.",
+        "They discover Lucy's body unnaturally preserved with sharpened teeth.",
+        "Van Helsing warns that a more dangerous vampire may seek Lucy's tomb."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Dr. Seward and his companions find Lucy Westenra's coffin empty.",
+        "Arthur drives a wooden stake through Lucy's heart to free her spirit.",
+        "Van Helsing instructs the group to meet for dinner in two days at John's home.",
+        "Van Helsing promises to return the following night to explain their mission details."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Dr. Seward meets Mina Harker at Paddington Station.",
+        "Mina Harker transcribes Dr. Seward's phonograph diary.",
+        "Fifty boxes of Dracula's native soil were shipped to Carfax in London.",
+        "Lord Godalming and Mr. Morris arrive on September 30th."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "Dr. Seward returns home on September 30th to find his colleagues have reviewed the compiled documents.",
+        "Mina visits Renfield, who warns her not to remain in the house.",
+        "Van Helsing insists Mina cease her involvement, deeming it unsuitable for a woman.",
+        "The men plan to raid Carfax immediately, with Van Helsing insisting Mina remain behind for safety."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "Jonathan Harker's group discovers twenty-one missing earth boxes in Dracula's chapel.",
+        "The men decide to exclude Mina from future investigations to protect her.",
+        "Mina experiences terrifying visions of mist with red eyes invading her room.",
+        "Mina's deteriorating mental and physical state suggests she may be falling under Dracula's influence."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "Jonathan Harker traces Count Dracula's boxes to a locked mansion near Piccadilly.",
+        "Dr. Seward observes Renfield's behavior and deduces that Dracula has visited him.",
+        "Renfield makes cryptic statements about acquiring \"higher life\" and avoids discussing \"drinking.\"",
+        "The group investigates the property purchase under the alias \"Count de Ville.\""
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Renfield lies mortally wounded with a fractured skull after attempting to stop Dracula.",
+        "Dracula forces Mina to drink his blood, binding her to him.",
+        "Dracula destroys the group's manuscript evidence and phonograph records.",
+        "Jonathan comforts the traumatized and bloodied Mina at dawn."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 23,
+      "facts": [
+        "Renfield's death prompts the team to inform Mina of their situation.",
+        "Mina is marked by Count Dracula, confirmed when a Sacred Wafer burns her skin.",
+        "The group discovers eight of the nine boxes of earth at Dracula's Piccadilly house.",
+        "Lord Godalming and Quincey Morris leave to destroy the remaining boxes in Mile End and Bermondsey."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 24,
+      "facts": [
+        "Dr. Seward records the hunters' confrontation with Count Dracula at his house.",
+        "Jonathan Harker nearly strikes Dracula with a knife, but he escapes through a window.",
+        "Mina reveals through hypnosis that Dracula is fleeing London by ship with his final earth-box.",
+        "Dracula has marked Mina with a bite, making her vulnerable to his vampiric influence."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 25,
+      "facts": [
+        "Count Dracula fled England aboard the *Czarina Catherine*.",
+        "The ship is bound for Varna with a box of Dracula's native soil.",
+        "Mina shows signs of vampiric transformation.",
+        "The team plans to mark Dracula's coffin with wild rose branches."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 26,
+      "facts": [
+        "Mina requests her companions to promise to kill her if she becomes a vampire.",
+        "Jonathan reads the Burial Service for comfort.",
+        "Van Helsing organizes a pursuit to intercept Dracula's box aboard the *Czarina Catherine*.",
+        "Van Helsing learns that Dracula will flee back to his homeland when defeated."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 27,
+      "facts": [
+        "Count Dracula's earthbox was transferred for river transport to Galatz.",
+        "Petrof Skinsky was murdered after transporting Dracula's coffin.",
+        "Dr. Seward's group devised a three-part plan to intercept Dracula.",
+        "Van Helsing believes Dracula is vulnerable during daylight river travel."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 28,
+      "facts": [
+        "Van Helsing and Mina journey toward Dracula's castle in the Carpathian Mountains.",
+        "Mina exhibits symptoms of vampiric contamination from Dracula's bite.",
+        "Van Helsing destroys the three female vampires in the castle chapel through ritual killings.",
+        "Jonathan Harker and Quincey Morris intercept the gypsies transporting Dracula's coffin."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    }
+  ]
+}

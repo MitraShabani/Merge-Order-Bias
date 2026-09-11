@@ -1,0 +1,348 @@
+{
+  "title": "Ting Et Al. - 2025 - Astro Mlab5",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "AstroMLab 5 is a research project led by Yuan-Sen Ting.",
+        "The project involves approximately 400,000 astrophysics papers.",
+        "Collaborating institutions include The Ohio State University and Harvard-Smithsonian Center for Astrophysics.",
+        "The goal of AstroMLab 5 is to create structured summaries and extract key concepts."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The dataset includes 408,590 astrophysics papers from arXiv.",
+        "It spans the years 1992 to July 2025.",
+        "The dataset contains 3.8 million paper-concept associations.",
+        "The concept vocabulary and embeddings are available on GitHub."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Large language models are capable of reasoning about scientific literature and executing complex retrieval tasks.",
+        "The authors created a centralized dataset of 408,590 arXiv astronomy papers.",
+        "The dataset includes 9,999 unique concepts along with semantic embeddings.",
+        "Astronomy literature often lacks adequate text curation and controlled vocabularies like the Unified Astronomy Thesaurus."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Converting astrophysics PDFs to machine-readable text requires OCR rather than LaTeX source files.",
+        "The pipeline initially employed Nougat, which required approximately 1 minute of V100 GPU processing per paper.",
+        "Starting November 2024, the team transitioned to Mathpix OCR API due to superior reliability.",
+        "Inspection of Mathpix-processed pages showed no systematic errors affecting summary quality."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The summarization approach processes academic papers by splitting them into ~10,000-character segments.",
+        "The method emphasizes the retention of LaTeX formulas and excludes acknowledgments and references.",
+        "The complete summarization involved 408,590 papers and cost over $50,000 in API fees.",
+        "Raw summaries are reorganized into seven semantic sections for structured knowledge representation."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The authors use large language models GPT-4o and o1-mini to extract approximately 10 key concepts per research paper. They employ K-means clustering with k=10,000 on embedded concept descriptions to ensure consistency across papers. The final vocabulary was refined to 9,999 concepts distributed across eight categories. The category with the most concepts is Cosmology & Nongalactic Physics, which has 2,192 concepts."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "ADS keywords suffer from severe sparsity, with 44% of papers having 3 or fewer keywords.",
+        "The most common ADS keyword, \"galaxies: evolution,\" appears in 16,321 papers.",
+        "The proposed extraction method achieves an average of 9.4 concepts per paper.",
+        "The median concept frequency for the proposed method is 223 papers, compared to 28 for ADS keywords."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Temporal analysis tracks concept emergence over three decades using a 5-paper threshold for stability.",
+        "A notable peak in new concept emergence occurred in 2007 due to arXiv's cross-listing policy expansion.",
+        "From 2015 to 2025, deep learning concepts like CNNs and transformers dominate new concepts in astrophysics.",
+        "Comparing 1992-2003 and 2023-2025 shows that computational domains have evolved from peripheral to core components in astrophysics research."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The dataset covers all astro-ph papers from 1992 through July 2025.",
+        "The dataset includes concept embeddings generated using text-embedding-3-large.",
+        "The citation network contains 1.67 million unique identifiers.",
+        "Structured summaries follow a conservative distribution policy detailed in the appendix."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The dataset contains 408,590 astrophysics papers from arXiv spanning the years 1992 to 2025.",
+        "There are 9,999 AI-generated concepts included in the dataset.",
+        "The average number of concept associations per paper is 9.4.",
+        "The dataset tracks the emergence of machine learning in astrophysics post-2015."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The document describes a structured summary framework for academic papers in astrophysics from 2015 to 2025.",
+        "The case study focuses on USco1606-1935, a candidate wide low-mass triple star system.",
+        "The analysis uses 2MASS archival data and spectroscopy from Palomar Observatory.",
+        "190 emergent astrophysics concepts appeared between 2015 and 2025, representing approximately 2% of total vocabulary."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "AstroMLab 5 is a research project led by Yuan-Sen Ting.",
+        "The project aims to create structured summaries from approximately 400,000 astrophysics papers.",
+        "The institutions involved include The Ohio State University and Harvard-Smithsonian Center for Astrophysics.",
+        "AstroMLab 5 focuses on organizing and synthesizing large-scale scientific literature in astrophysics."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The dataset includes 408,590 astrophysics papers from arXiv.",
+        "It spans the years 1992 to July 2025.",
+        "The dataset contains 3.8 million paper-concept associations.",
+        "The concept vocabulary and embeddings are available on GitHub."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Large language models are capable of reasoning about scientific literature and executing complex retrieval tasks.",
+        "The authors created a centralized dataset of 408,590 arXiv astronomy papers.",
+        "The dataset includes 9,999 unique concepts along with semantic embeddings.",
+        "Astronomy literature often lacks adequate text curation and controlled vocabulary mapping."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Converting astrophysics PDFs to machine-readable text requires OCR rather than LaTeX source files.",
+        "The pipeline initially employed Nougat, which required approximately 1 minute of V100 GPU processing per paper.",
+        "Starting November 2024, the team transitioned to Mathpix OCR API due to superior reliability.",
+        "Inspection of Mathpix-processed pages showed no systematic errors affecting summary quality."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The summarization approach processes academic papers by splitting them into ~10,000-character segments.",
+        "The method emphasizes the retention of LaTeX formulas and key results while excluding acknowledgments and references.",
+        "The complete summarization involved 408,590 papers and cost over $50,000 in API fees.",
+        "The raw summaries are reorganized into seven semantic sections for structured knowledge representation."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The authors use large language models GPT-4o and o1-mini to extract approximately 10 key concepts per research paper. They employ K-means clustering with k=10,000 on embedded concept descriptions to ensure consistency across papers. The final vocabulary was refined to 9,999 concepts distributed across eight categories. The category with the most concepts is Cosmology & Nongalactic Physics, which has 2,192 concepts."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "ADS keywords suffer from severe sparsity, with 44% of papers having 3 or fewer keywords.",
+        "The most common ADS keyword, \"galaxies: evolution,\" appears in 16,321 papers.",
+        "The proposed extraction method achieves an average of 9.4 concepts per paper.",
+        "The median concept frequency for the proposed method is 223 papers, compared to 28 for ADS keywords."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Temporal analysis tracks concept emergence over three decades using a 5-paper threshold for stability.",
+        "A notable peak in new concept emergence occurred in 2007 due to arXiv's cross-listing policy expansion.",
+        "From 2015 to 2025, deep learning concepts like CNNs and transformers dominate new concepts in astrophysics.",
+        "Comparing 1992-2003 and 2023-2025 shows that computational domains have evolved from peripheral to core components in astrophysics research."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The dataset covers all astro-ph papers from 1992 through July 2025.",
+        "The dataset includes concept embeddings generated using text-embedding-3-large.",
+        "The citation network contains 1.67 million unique identifiers.",
+        "Structured summaries follow a conservative distribution policy detailed in the appendix."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "The dataset contains 408,590 astrophysics papers from arXiv spanning the years 1992 to 2025.",
+        "There are 9,999 AI-generated concepts included in the dataset.",
+        "The average number of concept associations per paper is 9.4, totaling 3,827,232 associations.",
+        "The dataset tracks the emergence of machine learning in astrophysics, particularly after 2015."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The document describes a structured summary framework for academic papers in astrophysics from 2015 to 2025.",
+        "The case study focuses on USco1606-1935, a candidate wide low-mass triple star system.",
+        "The analysis uses 2MASS archival data and spectroscopy from Palomar Observatory.",
+        "Machine learning and deep learning contributed 46 emergent concepts in astrophysics in 2015."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    }
+  ]
+}

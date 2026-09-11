@@ -1,0 +1,264 @@
+{
+  "title": "Qin Et Al.-2025-Large Language Models",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The research article was published in Frontiers in Computer Science in 2025.",
+        "The survey focuses on Large Language Models and their applications in Natural Language Processing.",
+        "The authors are affiliated with Central South University, Harbin Institute of Technology, University of Hong Kong, Tsinghua University, and University of Illinois at Chicago.",
+        "The research represents a collaborative effort across five leading computer science research centers in China, Hong Kong, and the United States."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "This study provides an overview of Large Language Models (LLMs) like ChatGPT in Natural Language Processing.",
+        "The research addresses three key questions regarding LLMs in NLP literature.",
+        "A unified taxonomy of two paradigms—parameter-frozen and parameter-tuning—is introduced in the study.",
+        "The work aims to offer practical insights into the potential and limitations of LLMs in NLP applications."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "This paper presents the first comprehensive survey of Large Language Models (LLMs) for Natural Language Processing tasks.",
+        "LLMs like GPT-series, PaLM-series, OPT, and LLaMA have demonstrated remarkable capabilities through scaling.",
+        "The authors propose a novel taxonomy organizing LLM applications into parameter-frozen and parameter-tuning paradigms.",
+        "The work provides curated resources including open-source implementations, corpora, and research papers for the LLM-for-NLP research community."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The parameter-frozen paradigm includes zero-shot learning and few-shot learning.",
+        "Zero-shot learning offers maximum efficiency and generalization but lower accuracy.",
+        "Full-parameter tuning achieves the best in-domain performance but requires high resources.",
+        "Parameter-efficient tuning methods like LoRA and QLoRA adjust only selected parameters."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Sentiment Analysis uses zero-shot and few-shot learning with instruction tuning to identify emotional tone in text.",
+        "Information Extraction employs zero-shot prompting and decomposition strategies to extract structured information from plain text.",
+        "Dialogue Understanding utilizes zero-shot chain-of-thought prompting and agent-based frameworks for task performance.",
+        "LoRA is a method used for full-parameter and parameter-efficient tuning to enhance performance in various natural language understanding tasks."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "LLMs like GPT-3 achieve strong zero-shot performance in summarization through instruction tuning.",
+        "Specialized models such as CodeLLama and CodeGemma demonstrate robust zero-shot capabilities in code generation.",
+        "Few-shot learning techniques like \"Chain of Density\" prompting enhance summary quality.",
+        "Reinforcement learning approaches like CodeRL leverage compiler feedback for code refinement."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Multilingual LLMs aim to extend English-centric LLM success to over 7,000 languages.",
+        "Multi-modal LLMs require improvements in complex reasoning and effective modal interaction mechanisms.",
+        "Hallucination mitigation addresses LLMs' tendency to produce outputs deviating from factual knowledge.",
+        "Long Chain-of-Thought extends reasoning capabilities through hierarchical, reflective problem-solving."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Libo Qin et al. led a comprehensive survey on Large Language Models in Natural Language Processing.",
+        "The survey introduces a unified taxonomy distinguishing parameter-frozen and parameter-tuning paradigms.",
+        "Key techniques covered in the survey include prompt engineering and chain-of-thought reasoning.",
+        "Emerging research frontiers highlighted in the survey include multilingual LLM capabilities and autonomous agents."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The research article was published in Frontiers in Computer Science in 2025.",
+        "The survey focuses on Large Language Models and their applications in Natural Language Processing.",
+        "The authors are affiliated with Central South University, Harbin Institute of Technology, University of Hong Kong, Tsinghua University, and University of Illinois at Chicago.",
+        "The research represents a collaborative effort across five leading computer science research centers in China, Hong Kong, and the United States."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "This study provides an overview of Large Language Models (LLMs) like ChatGPT in Natural Language Processing.",
+        "The research addresses three key questions regarding LLMs in NLP literature.",
+        "A unified taxonomy of two paradigms—parameter-frozen and parameter-tuning—is introduced in the study.",
+        "The work aims to offer practical insights into the potential and limitations of LLMs in NLP applications."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "This paper presents the first comprehensive survey of Large Language Models (LLMs) for Natural Language Processing tasks.",
+        "LLMs like GPT-series, PaLM-series, OPT, and LLaMA have demonstrated remarkable capabilities through scaling.",
+        "The authors propose a novel taxonomy organizing LLM applications into two paradigms: parameter-frozen and parameter-tuning.",
+        "The work provides curated resources including open-source implementations, corpora, and research papers to support the LLM-for-NLP research community."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The parameter-frozen paradigm includes zero-shot learning and few-shot learning.",
+        "Zero-shot learning offers maximum efficiency and generalization but lower accuracy.",
+        "Full-parameter tuning achieves the best in-domain performance but requires high resources.",
+        "Parameter-efficient tuning methods like LoRA and QLoRA adjust only selected parameters."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Sentiment Analysis uses zero-shot and few-shot learning with instruction tuning to identify emotional tone in text.",
+        "Information Extraction employs zero-shot prompting and decomposition strategies to extract structured information from plain text.",
+        "Dialogue Understanding utilizes zero-shot chain-of-thought prompting and agent-based frameworks for task performance.",
+        "LoRA is a method used for full-parameter and parameter-efficient tuning to enhance performance in various LLM applications."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "LLMs like GPT-3 achieve strong zero-shot performance in summarization through instruction tuning.",
+        "Specialized models such as CodeLLama and CodeGemma demonstrate robust zero-shot capabilities in code generation.",
+        "Few-shot learning techniques like \"Chain of Density\" prompting enhance summary quality in LLMs.",
+        "Reinforcement learning approaches like CodeRL leverage compiler feedback for code refinement."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Multilingual LLMs aim to extend English-centric LLM success to over 7,000 languages.",
+        "Multi-modal LLMs require improvements in complex reasoning and effective modal interaction mechanisms.",
+        "Hallucination mitigation addresses LLMs' tendency to produce outputs deviating from factual knowledge.",
+        "Long Chain-of-Thought extends reasoning capabilities through hierarchical, reflective problem-solving."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Libo Qin et al. led a comprehensive survey on Large Language Models in Natural Language Processing.",
+        "The survey introduces a unified taxonomy distinguishing parameter-frozen and parameter-tuning paradigms.",
+        "Key techniques covered in the survey include prompt engineering and chain-of-thought reasoning.",
+        "Emerging research frontiers highlighted in the survey include multilingual LLM capabilities and autonomous agents."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ]
+}
