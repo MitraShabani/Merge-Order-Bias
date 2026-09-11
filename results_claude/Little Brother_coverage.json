@@ -1,0 +1,694 @@
+{
+  "title": "Little Brother",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Cory Doctorow's *Little Brother* was written in 2007.",
+        "The novel encourages readers to resist censorship and engage with its themes.",
+        "Doctorow advocates for the free distribution of ebooks as beneficial to authors.",
+        "Each chapter of the novel is dedicated to independent bookstores."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Marcus Yallow is a high school senior who operates under the hacker handle \"w1n5t0n.\"",
+        "Vice Principal Benson accuses Marcus Yallow of wrongdoing.",
+        "Marcus and his friend Darryl try to evade the school's surveillance systems.",
+        "Marcus uses a Faraday pouch to block RFID signals."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The protagonist of the novel is named Marcus.",
+        "Marcus and Darryl sneak into their school's teacher's lounge to destroy a library book's RFID tag.",
+        "The friends participate in an alternate reality game called Harajuku Fun Madness.",
+        "A massive explosion occurs near the Bay, triggering emergency civil defense sirens."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Marcus and his friends are abducted by Department of Homeland Security agents.",
+        "Marcus is interrogated by armed agents who threaten him as a potential enemy combatant.",
+        "Marcus refuses to unlock his phone citing his right to privacy.",
+        "Marcus later reflects he may have made a mistake in not cooperating."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Marcus is a seventeen-year-old high school student.",
+        "He is illegally detained by the government after a terrorist attack on a Bay Area bridge.",
+        "A female agent coerces Marcus into signing documents falsely declaring his detention was voluntary.",
+        "Marcus is released in an alley near his city after being hooded and transported by ship."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The protagonist was detained for six days following terrorist attacks on the Bay Bridge and BART.",
+        "Darryl disappeared after refusing to unlock his phone.",
+        "The protagonist discovers a keystroke-logging bug planted by the Department of Homeland Security in his laptop.",
+        "He installs ParanoidLinux, a government-resistant operating system, on his Xbox Universal."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Marcus is a seventeen-year-old activist in post-9/11 San Francisco.",
+        "He protests government surveillance by distributing ParanoidXbox game discs through an underground network called Xnet.",
+        "Marcus is inspired by a Turkish coffee shop owner's resistance to the PATRIOT Act II.",
+        "He is cornered by two SFPD officers at a burrito restaurant before surrendering to authorities."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Marcus is detained by police due to suspicious Fast Pass usage patterns.",
+        "Vanessa leaves emotionally devastated after discussing the risks with Marcus and Jolu.",
+        "Jolu proposes using indienet to normalize encrypted traffic and mask Xnet activity.",
+        "Marcus apologizes to Jolu and acknowledges his superior coding skills."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The Department of Homeland Security employs invasive monitoring systems in San Francisco.",
+        "Marcus, writing as \"M1k3y,\" becomes radicalized after his friend Darryl's arrest.",
+        "\"Operation False Positive\" involves using RFID cloners to swap identification codes.",
+        "The flawed security system falsely identifies 200,000 innocent people as suspects."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Marcus's father supports expanded security measures after terrorist attacks prompt DHS surveillance.",
+        "Marcus feels guilt over Xnet members arrested due to his jamming activities.",
+        "Marcus discovers a suspicious quiz on the Xnet that indicates DHS infiltration.",
+        "Marcus and Jolu disguise their key-signing meeting as a teenage party at the Sutro Baths."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The narrator educates twenty friends on public key cryptography at a key-signing party.",
+        "The event takes place at San Francisco's Sutro Baths.",
+        "Participants use a secure laptop running ParanoidLinux to generate cryptographic key-pairs.",
+        "Jolu quits the movement due to fear and concerns about risks faced by activists of color."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "The protagonist and Jolu organize a cryptographic key-signing event at a beach cave.",
+        "The narrator shares his traumatic DHS detention to build credibility.",
+        "Ange invites the narrator to an illegal concert organized under the slogan \"Don't Trust Anyone Over 25.\"",
+        "Ms. Galvez connects the events to 1960s Yippie protests against the Vietnam War."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Marcus and Ange attend an illegal Xnet-organized rave in Dolores Park.",
+        "Authorities deploy helicopter-delivered pepper spray during the protest.",
+        "Marcus's teacher Ms. Galvez is replaced by Fred Benson.",
+        "The media frames the protest as a \"youth riot.\""
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Marcus and his girlfriend Ange document a protest at Dolores Park.",
+        "They use an underground wireless network called Xnet to share their reports.",
+        "Al-Jazeera amplifies their reports, attracting government attention.",
+        "Marcus's social studies teacher argues that constitutional rights can be suspended for national security."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Marcus is a suspended high school student in San Francisco.",
+        "He creates a viral meme called \"AbusesOfAuthority\" by posting a video of General Claude Geist's arrest.",
+        "The meme accumulates hundreds of documented cases of government overreach.",
+        "Marcus declines multiple interview requests from news outlets due to privacy concerns."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Marcus organizes a press conference via the video game Clockwork Plunder to promote the Xnet.",
+        "The media misrepresents Xnet activists, with Fox News labeling them \"Cal-Quaeda.\"",
+        "Darryl was imprisoned on Treasure Island for three months and refused to betray Marcus.",
+        "Marcus grows distant from his girlfriend Ange due to the stress of the situation."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Marcus was illegally imprisoned by the DHS.",
+        "Darryl is alive but imprisoned on Treasure Island.",
+        "Marcus confesses to Barbara Stratford that he is M1k3y, Xnet's creator.",
+        "Barbara Stratford agrees to publicize Darryl's case after meeting with Marcus."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Marcus meets with journalist Barbara to expose DHS abuses.",
+        "Masha provides video evidence of DHS leadership plotting to manipulate Xnet activists.",
+        "Marcus's girlfriend Ange agrees to flee with him.",
+        "Masha needs a major Xnet operation to justify her absence from surveillance."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "The protagonist participates in LARPING activities at Scout Camp.",
+        "The protagonist's fictional story about \"the Old People\" is published and later debunked by the New York Times.",
+        "Marcus introduces his girlfriend Ange to his parents, and she impresses them.",
+        "Marcus and Ange plan to mislead the Department of Homeland Security with fake VampMob messages."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "The narrator orchestrated a massive urban game called VampMob in San Francisco's Civic Center. Over 1,000 participants arrived at the VampMob event, causing chaos. The narrator, identified as Marcus, struggles with his desperation to help his imprisoned friend Darryl. Marcus escapes a moving van after smashing Masha's hand with her phone during a struggle."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "Marcus reaches San Francisco's Tenderloin district after escaping pursuers with an injured ankle.",
+        "Barbara Stratford exposed Marcus's identity in a Bay Guardian article.",
+        "Marcus is arrested by Department of Homeland Security agents and taken to a detention facility on Treasure Island.",
+        "Marcus is subjected to waterboarding torture while in detention."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Marcus Yallow is released from detention after being tortured by DHS officer Carrie Johnstone.",
+        "Johnstone was cleared by a secret military tribunal and reassigned to Iraq.",
+        "Marcus collaborates with the Coalition of Voters for a Free America to create a viral political video.",
+        "The video exposes government corruption and urges voters to choose freedom in the upcoming election."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Cory Doctorow's *Little Brother* was written in 2007.",
+        "The novel encourages readers to resist censorship and engage with its themes.",
+        "Doctorow advocates for the free distribution of ebooks as beneficial to authors.",
+        "Each chapter of *Little Brother* is dedicated to independent bookstores."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Marcus Yallow is a high school senior who operates under the hacker handle \"w1n5t0n.\"",
+        "Marcus and his friend Darryl try to evade the school's surveillance systems.",
+        "Marcus uses a Faraday pouch to block RFID signals.",
+        "Vice Principal Benson accuses Marcus of wrongdoing."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The protagonist of the novel is named Marcus.",
+        "Marcus and Darryl sneak into their school's teacher's lounge to destroy a library book's RFID tag.",
+        "The friends participate in an alternate reality game called Harajuku Fun Madness.",
+        "A massive explosion occurs near the Bay, triggering emergency civil defense sirens."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Marcus and his friends are abducted by Department of Homeland Security agents.",
+        "Marcus is interrogated by armed agents who threaten him as a potential enemy combatant.",
+        "Marcus refuses to unlock his phone citing his right to privacy.",
+        "Marcus later reflects that he may have made a mistake in not cooperating."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Marcus is a seventeen-year-old high school student.",
+        "He is illegally detained by the government after a terrorist attack on a Bay Area bridge.",
+        "A female agent coerces Marcus into signing documents falsely declaring his detention was voluntary.",
+        "Marcus is released in an alley near his city after being hooded and transported by ship."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The protagonist was detained for six days following terrorist attacks on the Bay Bridge and BART.",
+        "Darryl disappeared after refusing to unlock his phone.",
+        "The protagonist discovers a keystroke-logging bug planted by the Department of Homeland Security in his laptop.",
+        "He installs ParanoidLinux, a government-resistant operating system, on his Xbox Universal."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Marcus is a seventeen-year-old activist in post-9/11 San Francisco.",
+        "He protests government surveillance by distributing ParanoidXbox game discs through an underground network called Xnet.",
+        "Marcus is inspired by a Turkish coffee shop owner's resistance to the PATRIOT Act II.",
+        "He is cornered by two SFPD officers at a burrito restaurant before surrendering to authorities."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Marcus is detained by police due to suspicious Fast Pass usage patterns.",
+        "Vanessa leaves emotionally devastated after discussing the risks with Marcus and Jolu.",
+        "Jolu proposes using indienet to normalize encrypted traffic and mask Xnet activity.",
+        "Marcus apologizes to Jolu and acknowledges his superior coding skills."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The Department of Homeland Security employs invasive monitoring systems in San Francisco.",
+        "Marcus, writing as \"M1k3y,\" becomes radicalized after his friend Darryl's arrest.",
+        "\"Operation False Positive\" involves using RFID cloners to swap identification codes.",
+        "The flawed security system falsely identifies 200,000 innocent people as suspects."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Marcus's father supports expanded security measures after terrorist attacks prompt DHS surveillance.",
+        "Marcus feels guilt over Xnet members arrested due to his jamming activities.",
+        "Marcus discovers a suspicious quiz on the Xnet that indicates DHS infiltration.",
+        "Marcus and Jolu disguise their key-signing meeting as a teenage party at the Sutro Baths."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The narrator educates twenty friends on public key cryptography at a key-signing party in San Francisco's Sutro Baths. Participants use a secure laptop running ParanoidLinux to generate cryptographic key-pairs. Jolu reveals he is quitting the movement due to fear and risks faced by activists of color. The group must manually type and verify keys using fingerprints after the event."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "The protagonist and Jolu organize a cryptographic key-signing event at a beach cave.",
+        "The narrator destroys his laptop to demonstrate the network's trustworthiness.",
+        "Ms. Galvez connects modern events to 1960s Yippie protests against the Vietnam War.",
+        "The illegal concert is organized under the slogan \"Don't Trust Anyone Over 25.\""
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "Marcus and Ange attend an illegal Xnet-organized rave in Dolores Park.",
+        "Authorities deploy helicopter-delivered pepper spray during the protest.",
+        "Marcus's teacher Ms. Galvez is replaced by Fred Benson.",
+        "The media frames the protest as a \"youth riot.\""
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "Marcus and his girlfriend Ange document a protest at Dolores Park.",
+        "They use an underground wireless network called Xnet to share their reports.",
+        "Al-Jazeera amplifies their reports, attracting government attention.",
+        "Marcus's social studies teacher argues that constitutional rights can be suspended for national security."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Marcus is a suspended high school student in San Francisco.",
+        "He creates a viral meme called \"AbusesOfAuthority\" by posting a video of General Claude Geist's arrest.",
+        "The meme accumulates hundreds of documented cases of government overreach.",
+        "Marcus declines multiple interview requests from news outlets due to privacy concerns."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "Marcus organizes a press conference via the video game Clockwork Plunder to promote the Xnet.",
+        "The media misrepresents Xnet activists, with Fox News labeling them \"Cal-Quaeda.\"",
+        "Darryl was imprisoned on Treasure Island for three months and refused to betray Marcus.",
+        "Marcus posts a message discouraging further Xnet activities due to the arrests of activists."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "Marcus was illegally imprisoned by the DHS.",
+        "Darryl is alive but imprisoned on Treasure Island.",
+        "Marcus confesses to Barbara Stratford that he is M1k3y, Xnet's creator.",
+        "Barbara Stratford agrees to publicize Darryl's case after meeting with Marcus."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "Marcus meets with journalist Barbara to expose DHS abuses.",
+        "Masha provides video evidence of DHS leadership plotting to manipulate Xnet activists.",
+        "Marcus's girlfriend Ange agrees to flee with him.",
+        "Masha needs a major Xnet operation to justify her absence from surveillance."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 19,
+      "facts": [
+        "The protagonist participates in LARPING activities at Scout Camp.",
+        "The protagonist's fictional story about \"the Old People\" is published and later debunked by the New York Times.",
+        "Marcus introduces his girlfriend Ange to his parents, and the meeting goes smoothly.",
+        "Marcus and Ange plan to mislead the Department of Homeland Security with fake VampMob messages."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 20,
+      "facts": [
+        "The narrator orchestrated a massive urban game called VampMob in San Francisco's Civic Center. Over 1,000 participants arrived at the VampMob event, causing chaos. The narrator, identified as Marcus, struggles with his desperation to help his imprisoned friend Darryl. Marcus escapes a moving van after smashing Masha's hand with her phone during a struggle."
+      ],
+      "found": [
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 21,
+      "facts": [
+        "Marcus reaches San Francisco's Tenderloin district after escaping pursuers with an injured ankle.",
+        "Barbara Stratford exposed Marcus's identity in a Bay Guardian article.",
+        "Marcus is arrested by Department of Homeland Security agents and taken to a detention facility on Treasure Island.",
+        "Marcus is subjected to waterboarding torture while in detention."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 22,
+      "facts": [
+        "Marcus Yallow is released from detention after being tortured by DHS officer Carrie Johnstone.",
+        "Johnstone was cleared by a secret military tribunal and reassigned to Iraq.",
+        "Marcus collaborates with the Coalition of Voters for a Free America to create a viral political video.",
+        "The video exposes government corruption and urges voters to choose freedom in the upcoming election."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    }
+  ]
+}

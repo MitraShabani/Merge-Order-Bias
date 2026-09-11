@@ -1,0 +1,360 @@
+{
+  "title": "Łajewska Et Al. - 2025 - Understanding",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The paper is authored by researchers from the University of Stavanger and Amazon.",
+        "Weronika Łajewska is the lead author of the paper.",
+        "The research addresses the challenge of compressing prompts for Large Language Models.",
+        "The work aims to maintain critical information integrity during prompt compression."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The paper addresses prompt compression in large language models.",
+        "The authors developed an evaluation framework assessing compression methods across three dimensions.",
+        "They achieved gains of up to +23% in downstream performance with their improved soft prompting method.",
+        "The findings indicate that soft prompting with sequence-level training offers the best balance between compression effectiveness and rate."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Recent advances in large language models enable their application to tasks requiring long-context inputs.",
+        "The paper proposes a holistic evaluation framework assessing prompt compression across three dimensions.",
+        "Modifications to xRAG achieve a 23% improvement on downstream tasks.",
+        "PISCO offers the best compression-effectiveness trade-off among the methods evaluated."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Prompt compression techniques improve LLM efficiency by creating reduced-size prompt representations.",
+        "Hard prompting methods include demonstration selection, token refinement, and syntax-guided compression.",
+        "Soft prompting techniques achieve higher compression rates but lack interpretability.",
+        "This work advances evaluation methodology by measuring response grounding in original inputs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The evaluation framework introduces more challenging tasks including long-form QA, document summarization, and retrieval-augmented generation (RAG).",
+        "The framework measures compression quality using metrics like BERTScore and Exact Match.",
+        "FABLES is used to assess the faithfulness of claims to source material in the evaluation framework.",
+        "Table 2 presents performance results comparing various compression methods across multiple datasets including HotpotQA and arXiv summarization."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The study analyzes four prompt compression methods: xRAG, PISCO, and LLMLingua.",
+        "All compression methods cause significant performance losses ranging from 3-55%.",
+        "Compression methods result in 30-50 point drops in groundedness scores.",
+        "xRAG has a BERTScore F1 of 0.66 for reconstructing original contexts."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The xRAG prompt compression method struggled to preserve detailed information in long-context scenarios.",
+        "Sentence-level Pre-Training and Fine-Tuning yielded 1-5 point improvements across downstream tasks.",
+        "The Two-Step Pre-Training method achieved a 23% relative improvement on HotpotQA.",
+        "The baseline method reconstructed 13% of entities compared to 50% with the Two-Step Pre-Training."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Current compression methods, particularly xRAG, fail to preserve detailed information in long-context scenarios.",
+        "The authors suggest using sequence-level distillation to better integrate information across separate units.",
+        "One proposed direction is to dynamically adjust compression rates based on input complexity.",
+        "The authors recommend combining hard compression with soft prompting to reduce information loss."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The paper evaluates prompt compression methods in long-context generation tasks.",
+        "LLMLingua is a state-of-the-art hard compression approach discussed in the paper.",
+        "The proposed improvements to the xRAG method achieved up to a 23% improvement on downstream tasks.",
+        "The improvements resulted in a 2.7x better entity preservation compared to previous methods."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Experiments in the study are restricted to the Mistral-7B model.",
+        "The analysis focuses exclusively on English benchmarks.",
+        "Only one representative baseline per compression technique category is evaluated.",
+        "Long-form question-answering scenarios require further exploration."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The study used the Mistral-7B Instruct v0.2 model for prompt compression in LLMs.",
+        "The research trained models on two instances with 8 NVIDIA A100 GPUs each for approximately 16 hours per run.",
+        "Evaluation was conducted across five datasets: HotpotQA, arXiv-summarization, QuAC, TriviaQA, and GSM8K.",
+        "The Two-Step PT + FT variant of xRAG significantly improves ROUGE scores on out-of-domain examples."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The paper is authored by researchers from the University of Stavanger and Amazon.",
+        "Weronika Łajewska is the lead author of the paper.",
+        "The research addresses the challenge of compressing prompts for Large Language Models.",
+        "The work aims to maintain critical information integrity during prompt compression."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The paper addresses prompt compression in large language models.",
+        "The authors developed an evaluation framework assessing compression methods across three dimensions.",
+        "They achieved gains of up to +23% in downstream performance with their improved soft prompting method.",
+        "The findings indicate that soft prompting with sequence-level training offers the best balance between compression effectiveness and rate."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Recent advances in large language models enable their application to tasks requiring long-context inputs.",
+        "The paper proposes a holistic evaluation framework assessing prompt compression across three dimensions.",
+        "Modifications to xRAG achieve a 23% improvement on downstream tasks.",
+        "PISCO offers the best compression-effectiveness trade-off among the methods evaluated."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Prompt compression techniques improve LLM efficiency by creating reduced-size prompt representations.",
+        "Hard prompting methods include demonstration selection, token refinement, and syntax-guided compression.",
+        "Soft prompting techniques achieve higher compression rates but lack interpretability.",
+        "This work advances evaluation methodology by measuring response grounding in original inputs."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The evaluation framework introduces more challenging tasks including long-form QA, document summarization, and retrieval-augmented generation (RAG).",
+        "The framework measures compression quality using metrics like BERTScore and Exact Match.",
+        "FABLES is used to assess the faithfulness of claims to source material in the evaluation framework.",
+        "Table 2 presents performance results comparing various compression methods across multiple datasets including HotpotQA and arXiv summarization."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The study analyzes four prompt compression methods: xRAG, PISCO, and LLMLingua.",
+        "All compression methods cause significant performance losses ranging from 3-55%.",
+        "Compression methods result in 30-50 point drops in groundedness scores.",
+        "xRAG has a BERTScore F1 of 0.66 in reconstructing original contexts."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The xRAG prompt compression method struggled to preserve detailed information in long-context scenarios.",
+        "Sentence-level Pre-Training and Fine-Tuning yielded 1-5 point improvements across downstream tasks.",
+        "The Two-Step Pre-Training method achieved a 23% relative improvement on HotpotQA.",
+        "The baseline method reconstructed 13% of entities compared to 50% with the Two-Step Pre-Training."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Current compression methods, particularly xRAG, fail to preserve detailed information in long-context scenarios.",
+        "The authors suggest using sequence-level distillation to better integrate information across separate units.",
+        "They propose dynamically adjusting compression rates based on input complexity.",
+        "The authors recommend combining hard compression with soft prompting to reduce information loss."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The paper evaluates prompt compression methods in long-context generation tasks.",
+        "LLMLingua is a state-of-the-art hard compression approach discussed in the paper.",
+        "The proposed improvements to the xRAG method achieved up to a 23% improvement on downstream tasks.",
+        "The improvements resulted in a 2.7x better entity preservation compared to previous methods."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Experiments in the study are restricted to the Mistral-7B model.",
+        "The analysis focuses exclusively on English benchmarks.",
+        "Only one representative baseline per compression technique category is evaluated.",
+        "Long-form question-answering scenarios require further exploration."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The study used the Mistral-7B Instruct v0.2 model for prompt compression in LLMs.",
+        "The research trained models on two instances with 8 NVIDIA A100 GPUs each for approximately 16 hours per run.",
+        "Evaluation was conducted across five datasets: HotpotQA, arXiv-summarization, QuAC, TriviaQA, and GSM8K.",
+        "The Two-Step PT + FT variant of xRAG significantly improves ROUGE scores on out-of-domain examples."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    }
+  ]
+}

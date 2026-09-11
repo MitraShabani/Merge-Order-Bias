@@ -1,0 +1,578 @@
+{
+  "title": "Gambler",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "*The Gambler* is a novel by Fyodor Dostoyevsky.",
+        "The eBook edition was originally released on May 1, 2000.",
+        "The text was most recently updated on July 1, 2020.",
+        "The eBook is organized into seventeen chapters."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The narrator returns to Roulettenberg after a two-week absence.",
+        "Polina expresses frustration at receiving only 700 gülden from pledged diamonds.",
+        "The narrator quarrels with a French Marquis over Russian mistreatment at European tables d'hôte.",
+        "Polina reveals that the family awaits news of their grandmother's death in St. Petersburg."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The narrator enters a casino for the first time.",
+        "He wins 1,600 gülden while playing with Polina's money.",
+        "Polina insists that they become gambling partners and share profits equally.",
+        "The General warned the narrator that gambling would compromise him."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The narrator has a complex relationship with Polina.",
+        "The General is waiting for news from St. Petersburg about his mother.",
+        "Mlle. Blanche is a wealthy Frenchwoman with a questionable background.",
+        "Mr. Astley warns the narrator about Mlle. Blanche's character."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The narrator played roulette with six hundred gülden belonging to Polina Alexandrovna.",
+        "He initially won approximately 4,000 gülden before losing everything in two large bets.",
+        "The narrator claimed the gambling money was his own capital during lunch.",
+        "The General dismissed the narrator as an insufferable charlatan."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator confronts Polina about the Marquis de Griers's absence.",
+        "Polina reveals she is in debt and needs to win at gambling.",
+        "The narrator confesses his obsessive love for Polina.",
+        "The narrator accepts a challenge to compliment the Baroness Burmergelm."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The narrator insulted Baron and Baroness Burmergelm on a carriage path.",
+        "The General promised the narrator's dismissal from the household.",
+        "The narrator threatened to challenge the Baron himself.",
+        "Maria Philipovna has mysteriously departed to Carlsbad."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The narrator has 160 gülden remaining.",
+        "De Griers is sent by the General to dissuade the narrator from confronting the Baron.",
+        "The narrator plans to recruit Mr. Astley as his second for a meeting with the Baron.",
+        "Polina urges the narrator to abandon his plans in a note."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator confesses his love for Polina at a café.",
+        "Mlle. Blanche de Cominges was expelled from Roulettenberg three years ago.",
+        "Blanche seeks to marry the General to escape her disreputable history.",
+        "A woman calls out \"Alexis Ivanovitch\" from the verandah as the narrator walks toward his hotel."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Antonida Vassilievna Tarassevitcha is seventy-five years old.",
+        "She arrived at a luxury spa hotel carried in an armchair.",
+        "The General believed Antonida was gravely ill before her arrival.",
+        "Antonida criticized the General for his financial mismanagement."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The Grandmother is mistakenly registered as a princess at the spa.",
+        "She wins 4,200 gülden by betting on zero at the roulette wheel.",
+        "Her total winnings accumulate to 12,000 florins.",
+        "She instructs Alexis Ivanovitch to take her home after collecting her money."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "The elderly Russian grandmother wins twelve thousand florins at roulette.",
+        "She refuses to give any money to her heir, the General.",
+        "Alexis Ivanovitch is asked to deliver a letter to Mr. Astley.",
+        "The grandmother commands Alexis to return to the casino at four o'clock."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "The Grandmother loses approximately 15,000 roubles at Roulettenberg Casino.",
+        "She gambles through the night with a Polish stranger and loses roughly ten thousand roubles.",
+        "The Grandmother gives the narrator five hundred gülden before dismissing him.",
+        "Polina declines the Grandmother's invitation to join her, hinting at a romantic involvement with De Griers."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "The Grandmother loses nearly one hundred thousand roubles at the Casino.",
+        "The Grandmother departs by the 9:30 train after borrowing three thousand francs from Mr. Astley.",
+        "Mlle. Blanche abandons the General upon learning of his financial ruin.",
+        "The narrator finds Polina waiting for him by the window after escorting the Grandmother to the station."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Polina arrives at the narrator's hotel room with a letter from De Griers.",
+        "The narrator suggests consulting Mr. Astley to solve their financial problems.",
+        "The narrator wins one hundred thousand florins at the casino.",
+        "The narrator returns to his hotel room and shows his winnings to Polina."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "The narrator wins 200,000 francs at roulette.",
+        "The narrator offers 50,000 francs to Polina to pay off her debt to De Griers.",
+        "Polina throws the money in the narrator's face and flees.",
+        "The narrator departs for Paris with Mlle. Blanche and her mother."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "The narrator spends 200,000 francs during his stay in Paris.",
+        "Mlle. Blanche extracts 100,000 francs in cash from the narrator.",
+        "Blanche marries the General to secure her status and access to wealth.",
+        "The narrator leaves Paris with five hundred francs and personal effects."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "The narrator has lost money gambling for eighteen months.",
+        "The narrator meets his old friend Mr. Astley in Homburg.",
+        "Polina, a woman the narrator cares for, is traveling in Switzerland.",
+        "The narrator has fifteen louis d'or remaining."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "*The Gambler* is a novel by Fyodor Dostoyevsky.",
+        "The eBook edition was originally released on May 1, 2000.",
+        "The text was most recently updated on July 1, 2020.",
+        "The eBook is organized into seventeen chapters."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "The narrator returns to Roulettenberg after a two-week absence.",
+        "Polina expresses frustration at receiving only 700 gülden from pledged diamonds.",
+        "The narrator quarrels with a French Marquis over Russian mistreatment at European tables d'hôte.",
+        "Polina reveals that the family awaits news of their grandmother's death in St. Petersburg."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "The narrator enters a casino for the first time.",
+        "He wins 1,600 gülden while playing with Polina's money.",
+        "Polina insists that they become gambling partners and share profits equally.",
+        "The General warned the narrator that gambling would compromise him."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The narrator has a complex relationship with Polina, who treats him with contempt. The General is waiting for news from St. Petersburg about his mother. Mlle. Blanche is a wealthy Frenchwoman with a questionable background who has captured the General's affections. Mr. Astley warns the narrator about Mlle. Blanche while inquiring about Polina's preferences."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "The narrator gambled with six hundred gülden belonging to Polina Alexandrovna.",
+        "He initially won approximately 4,000 gülden at roulette.",
+        "The narrator lost all his winnings in two large bets.",
+        "The General dismissed the narrator as an insufferable charlatan."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The narrator confronts Polina about the Marquis de Griers's absence.",
+        "Polina reveals she is in debt and needs to win at gambling.",
+        "The narrator confesses his obsessive love for Polina.",
+        "The narrator accepts a challenge to compliment the Baroness Burmergelm."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "The narrator insulted Baron and Baroness Burmergelm on a carriage path.",
+        "The General promised the narrator's dismissal from the household.",
+        "The narrator threatened to challenge the Baron himself.",
+        "Maria Philipovna has mysteriously departed to Carlsbad."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "The narrator has 160 gülden remaining.",
+        "De Griers is sent by the General to dissuade the narrator from confronting the Baron.",
+        "The narrator plans to recruit Mr. Astley as his second for a meeting with the Baron.",
+        "Polina urges the narrator to abandon his plans in a note."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator confesses his love for Polina at a café.",
+        "Mlle. Blanche de Cominges was expelled from Roulettenberg three years ago.",
+        "Blanche seeks to marry the General to escape her disreputable history.",
+        "A woman calls out \"Alexis Ivanovitch\" from the verandah as the narrator walks toward his hotel."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Antonida Vassilievna Tarassevitcha is seventy-five years old.",
+        "She arrived at a luxury spa hotel carried in an armchair.",
+        "Antonida criticized the General's financial mismanagement.",
+        "She expressed interest in local attractions during her stay."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 11,
+      "facts": [
+        "The Grandmother is mistakenly registered as a princess at the spa.",
+        "She wins 4,200 gülden by betting on zero at the roulette wheel.",
+        "Her total winnings accumulate to 12,000 florins.",
+        "She instructs Alexis Ivanovitch to take her home after collecting her money."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 12,
+      "facts": [
+        "The elderly Russian grandmother wins twelve thousand florins at roulette.",
+        "She refuses to give any money to her heir, the General.",
+        "Alexis Ivanovitch is asked to deliver a letter to Mr. Astley.",
+        "The grandmother commands Alexis to return to the casino at four o'clock."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 13,
+      "facts": [
+        "The Grandmother loses approximately 15,000 roubles at Roulettenberg Casino.",
+        "She gambles through the night with a Polish stranger and loses roughly ten thousand roubles.",
+        "The Grandmother gives the narrator five hundred gülden before dismissing him.",
+        "Polina declines the Grandmother's invitation to join her, hinting at a romantic involvement with De Griers."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 14,
+      "facts": [
+        "The Grandmother loses nearly one hundred thousand roubles at the Casino.",
+        "The Grandmother departs by the 9:30 train after borrowing three thousand francs from Mr. Astley.",
+        "Mlle. Blanche abandons the General upon learning of his financial ruin.",
+        "The narrator finds Polina waiting for him by the window after escorting the Grandmother to the station."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 15,
+      "facts": [
+        "Polina arrives at the narrator's hotel room with a letter from De Griers.",
+        "The narrator suggests consulting Mr. Astley to solve their financial problems.",
+        "The narrator wins one hundred thousand florins at the casino.",
+        "The narrator returns to his hotel room and shows his winnings to Polina."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 16,
+      "facts": [
+        "The narrator wins 200,000 francs at roulette.",
+        "Polina throws 50,000 francs in the narrator's face.",
+        "Polina goes to Mr. Astley's rooms at the Hotel d'Angleterre.",
+        "The narrator departs for Paris with Mlle. Blanche and her mother."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 17,
+      "facts": [
+        "The narrator spends 200,000 francs during his stay in Paris.",
+        "Mlle. Blanche extracts 100,000 francs in cash from the narrator.",
+        "Blanche marries the General to secure her status and access to wealth.",
+        "The narrator leaves Paris with five hundred francs and personal effects."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 18,
+      "facts": [
+        "The narrator has lost money gambling for eighteen months.",
+        "The narrator meets his old friend Mr. Astley in Homburg.",
+        "Polina, a woman the narrator cares for, is traveling in Switzerland.",
+        "The narrator has fifteen louis d'or remaining."
+      ],
+      "found": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    }
+  ]
+}

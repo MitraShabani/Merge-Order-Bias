@@ -1,0 +1,188 @@
+{
+  "title": "Boozer - 2026 - Comment On Nuclear",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Allen H Boozer is affiliated with Columbia University.",
+        "The model was published as a comment in Nuclear Fusion 66, 016012.",
+        "The publication date of the work is August 25, 2026.",
+        "The model addresses plasma control dynamics in tokamaks."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was published in 2026.",
+        "The critique argues that Faraday's Law governs poloidal-toroidal flux slippage.",
+        "The critique identifies errors related to the tokamak community's focus on the quantity ψ.",
+        "The author published the critique on arXiv due to citation restrictions from Nuclear Fusion."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was published in November 2025.",
+        "The paper contains scientific errors related to Faraday's Law in toroidal plasmas.",
+        "Fitzpatrick's paper misquotes the author's work and misattributes private communications.",
+        "The author's Physics of Plasmas submission was initially rejected due to issues with Fitzpatrick's paper."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Richard Fitzpatrick's 2025 Nuclear Fusion paper critiques tokamak current ramp-up/ramp-down. The critique identifies nine major flaws in Fitzpatrick's work. The author presents the loop voltage equation (Equation 1) and current balance equation (Equation 2). The text questions the reliability of magnetic induction codes used in tokamak design."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Fitzpatrick's paper critiques the author's arXiv article on tokamak magnetic field constraints.",
+        "The author claims Fitzpatrick used \"private communication\" references to support false statements.",
+        "A September 2025 email exchange highlights a disagreement about managing tokamak disruptions.",
+        "The author argues that ensuring low disruption rates for power plant feasibility is non-trivial."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The loop voltage in toroidal plasmas is derived using Faraday's Law and Boozer coordinates.",
+        "The key result for loop voltage is expressed as Vℓ = μ₀(G+ιI)η[dI/dψₜ - dIbs/dψₜ - dIcd/dψₜ].",
+        "The Pfirsch-Schlüter current has non-zero divergence balanced by pressure-gradient-driven perpendicular currents.",
+        "The formulation provides a general expression analogous to parallel Ohm's Law for magnetically confined plasmas."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "Allen H Boozer is affiliated with Columbia University.",
+        "The model was published as a comment in Nuclear Fusion 66, 016012.",
+        "The publication date of the work is August 25, 2026.",
+        "The model addresses plasma control in tokamaks."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was published in 2026.",
+        "The critique argues that Faraday's Law governs poloidal-toroidal flux slippage.",
+        "The critique identifies errors related to the tokamak community's focus on the quantity ψ.",
+        "The author published the critique on arXiv due to citation restrictions from Nuclear Fusion."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Richard Fitzpatrick's Nuclear Fusion paper was published in November 2025.",
+        "The paper contains scientific errors related to Faraday's Law in toroidal plasmas.",
+        "Fitzpatrick's paper misquotes the author's work and misattributes private communications.",
+        "The author's Physics of Plasmas submission was initially rejected due to issues with Fitzpatrick's paper."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "Richard Fitzpatrick's 2025 Nuclear Fusion paper critiques tokamak current ramp-up/ramp-down. The critique identifies nine major flaws in Fitzpatrick's work. The author presents the loop voltage equation (Equation 1) and current balance equation (Equation 2). The text questions the reliability of magnetic induction codes used in tokamak design."
+      ],
+      "found": [
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Fitzpatrick's paper critiques the author's arXiv article on tokamak magnetic field constraints.",
+        "The author claims Fitzpatrick used \"private communication\" references to support false statements.",
+        "A September 2025 email exchange highlights a disagreement about managing tokamak disruptions.",
+        "The author argues that ensuring low disruption rates for power plant feasibility is non-trivial."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "The loop voltage in toroidal plasmas is derived using Faraday's Law and Boozer coordinates.",
+        "The key result for loop voltage is expressed as Vℓ = μ₀(G+ιI)η[dI/dψₜ - dIbs/dψₜ - dIcd/dψₜ].",
+        "The Pfirsch-Schlüter current has non-zero divergence balanced by pressure-gradient-driven perpendicular currents.",
+        "The formulation provides a general expression analogous to parallel Ohm's Law for magnetically confined plasmas."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    }
+  ]
+}

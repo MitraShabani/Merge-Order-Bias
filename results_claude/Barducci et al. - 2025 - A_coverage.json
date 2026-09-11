@@ -1,0 +1,232 @@
+{
+  "title": "Barducci Et Al. - 2025 - A",
+  "type": "paper",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "JanusDDG is a deep learning model developed by researchers at the University of Turin's Computational Biomedicine Unit.",
+        "The model predicts protein stability changes (ΔΔG) from amino acid sequences.",
+        "JanusDDG employs a two-fronts multi-head attention mechanism.",
+        "The model integrates thermodynamic constraints to improve the accuracy of protein stability predictions."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "JanusDDG is a deep learning framework that predicts protein stability changes (ΔΔG) caused by mutations.",
+        "The model uses a bidirectional cross-attention transformer architecture.",
+        "JanusDDG achieves state-of-the-art performance in predicting ΔΔG from sequence alone.",
+        "The framework has significant applications for functional protein design and understanding disease-related mutations."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Protein stability is measured by the change in Gibbs free energy (ΔΔG).",
+        "JanusDDG is a deep learning model that predicts ΔΔG using only amino acid sequences.",
+        "JanusDDG can predict stability changes for multi-mutations.",
+        "The model complies with thermodynamic principles through antisymmetry and transitivity properties."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "JanusDDG is a sequence-based deep learning model for predicting protein stability changes (ΔΔG).",
+        "The model incorporates thermodynamic principles such as antisymmetry and transitivity.",
+        "JanusDDG was evaluated on benchmark datasets including S669, S461, S96, PTmut-NR, and PTmul-D.",
+        "The model shows consistent performance for double mutations regardless of spatial or sequence distance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "JanusDDG is a sequence-based deep learning model for predicting protein stability changes upon mutation.",
+        "The model combines protein language model embeddings with a bidirectional cross-attention architecture.",
+        "JanusDDG outperforms existing predictors on low-sequence-identity benchmarks like the S96 and PTmul-NR datasets.",
+        "The model effectively predicts multiple mutations, showing superior performance compared to current models."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "JanusDDG is a protein stability prediction model that uses ESM2 protein embeddings.",
+        "The model employs a Bidirectional Cross-Attention Transformer architecture.",
+        "Evaluation of JanusDDG includes multiple datasets such as S669 and S461.",
+        "The model builds on established methods like FoldX and POPMUSIC."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "JanusDDG has three variants: fine-tuned, antisymmetric by construction, and base.",
+        "The Pearson correlation for single mutations in JanusDDG ranges from 0.54 to 0.84.",
+        "JanusDDG achieved a Pearson correlation of 0.84 on the Ssym benchmark dataset.",
+        "JanusDDG's mean squared error on the K2369 dataset is 1.14."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "JanusDDG is a deep learning model developed by researchers at the University of Turin's Computational Biomedicine Unit.",
+        "The model predicts protein stability changes (ΔΔG) from amino acid sequences.",
+        "JanusDDG employs a two-fronts multi-head attention mechanism.",
+        "The model integrates thermodynamic constraints to improve the accuracy of protein stability predictions."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "JanusDDG is a deep learning framework that predicts protein stability changes (ΔΔG) caused by mutations.",
+        "The model uses a bidirectional cross-attention transformer architecture.",
+        "JanusDDG achieves state-of-the-art performance in predicting ΔΔG from sequence alone.",
+        "The framework has significant applications for functional protein design and understanding disease-related mutations."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Protein stability is measured by the change in Gibbs free energy (ΔΔG).",
+        "JanusDDG is a deep learning model that predicts ΔΔG using only amino acid sequences.",
+        "JanusDDG can predict stability changes for multi-mutations.",
+        "The model complies with thermodynamic principles through antisymmetry and transitivity properties."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "JanusDDG is a sequence-based deep learning model for predicting protein stability changes (ΔΔG).",
+        "The model incorporates thermodynamic principles such as antisymmetry and transitivity.",
+        "JanusDDG was evaluated on benchmark datasets including S669, S461, S96, PTmut-NR, and PTmul-D.",
+        "The model shows consistent performance for double mutations regardless of spatial or sequence distance."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "JanusDDG is a sequence-based deep learning model for predicting protein stability changes upon mutation.",
+        "The model combines protein language model embeddings with a bidirectional cross-attention architecture.",
+        "JanusDDG outperforms existing predictors on low-sequence-identity benchmarks like the S96 and PTmul-NR datasets.",
+        "The model effectively predicts multiple mutations, showing superior performance compared to current models."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "JanusDDG is a protein stability prediction model that uses ESM2 protein embeddings.",
+        "The model employs a Bidirectional Cross-Attention Transformer architecture.",
+        "Evaluation of JanusDDG includes multiple datasets such as S669 and S461.",
+        "The model builds on established methods like FoldX and POPMUSIC."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "JanusDDG has three variants: fine-tuned, antisymmetric by construction, and base.",
+        "The Pearson correlation for single mutations in JanusDDG ranges from 0.54 to 0.84.",
+        "JanusDDG achieved a Pearson correlation of 0.84 on the Ssym benchmark dataset.",
+        "The mean squared error (MSE) for JanusDDG on the K2369 dataset is 1.14."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    }
+  ]
+}

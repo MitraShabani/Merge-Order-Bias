@@ -1,0 +1,328 @@
+{
+  "title": "The Great Gatsby",
+  "type": "novel",
+  "forward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Great Gatsby was released as a free eBook on January 17, 2021.",
+        "The eBook of The Great Gatsby is available at www.gutenberg.org/ebooks/64317.",
+        "The novel comprises nine chapters.",
+        "The eBook was produced by Alex Cabal for the Standard Ebooks project."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Nick Carraway moves to West Egg in 1922 to work in bonds.",
+        "Tom Buchanan has disturbing racial theories and a strained marriage with Daisy.",
+        "Daisy once wished her daughter would be \"a beautiful little fool.\"",
+        "Nick observes Jay Gatsby standing alone on his lawn, gazing at a green light."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Tom Buchanan takes the narrator to meet his mistress Myrtle Wilson at her husband's garage.",
+        "Myrtle Wilson's sister Catherine and the McKees are among the guests at the Manhattan apartment.",
+        "Mr. McKee shows the narrator a portfolio of photographs titled \"Beauty and the Beast,\" \"Loneliness,\" \"Old Grocery Horse,\" and \"Brook'n Bridge.\"",
+        "The narrator ends up alone at Pennsylvania Station early in the morning."
+      ],
+      "found": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.0
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The narrator attends one of Gatsby's extravagant parties at his Long Island mansion.",
+        "Owl Eyes crashes a new coupé into a ditch during the party.",
+        "The narrator works at a bond firm in New York City.",
+        "Jordan Baker is a famous golfer who has cheated in a golf tournament."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Jay Gatsby is a mysterious millionaire who hosts lavish parties.",
+        "Gatsby has been obsessed with Daisy Buchanan for five years.",
+        "Daisy married Tom Buchanan in a lavish ceremony.",
+        "Gatsby asks Nick to arrange a secret reunion with Daisy by inviting her to tea."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Nick arranges a tea meeting between Gatsby and Daisy at his West Egg house.",
+        "Gatsby sends a gardener and flowers in preparation for the meeting.",
+        "Daisy is moved to tears by Gatsby's beautiful shirts.",
+        "Nick exits into the rain, leaving Gatsby and Daisy alone together."
+      ],
+      "found": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was born James Gatz to poor farmers in North Dakota.",
+        "Gatsby met millionaire Dan Cody at the age of seventeen.",
+        "Gatsby inherited $25,000 after Dan Cody's death.",
+        "Daisy Buchanan found Gatsby's first party disappointingly vulgar."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby demands that Daisy leave Tom and declare her love for him.",
+        "Myrtle Wilson is struck and killed by Gatsby's yellow car.",
+        "Gatsby takes the blame for Myrtle's death to protect Daisy.",
+        "Nick finds Tom and Daisy sitting together in the kitchen."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator visits Gatsby at dawn to warn him about suspicion surrounding his car.",
+        "Gatsby had a brief romance with Daisy during the war before she married Tom Buchanan.",
+        "Gatsby spent years building his fortune to reclaim Daisy.",
+        "Gatsby's body is discovered floating face-down in his pool."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Nick Carraway is responsible for arranging Gatsby's funeral.",
+        "Catherine testifies falsely to protect Daisy's reputation.",
+        "Gatsby's father comes from Minnesota to attend the funeral.",
+        "Tom reveals the car's ownership to Wilson, leading to Gatsby's death."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 0.75
+    }
+  ],
+  "backward_coverage": [
+    {
+      "chapter": 1,
+      "facts": [
+        "The Great Gatsby was released as a free eBook on January 17, 2021.",
+        "The eBook of The Great Gatsby is available at www.gutenberg.org/ebooks/64317.",
+        "The novel comprises nine chapters.",
+        "The eBook was produced by Alex Cabal for the Standard Ebooks project."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 2,
+      "facts": [
+        "Nick Carraway moves to West Egg in 1922 to work in bonds.",
+        "Tom Buchanan has disturbing racial theories and a strained marriage with Daisy.",
+        "Daisy once wished her daughter would be \"a beautiful little fool.\"",
+        "Nick observes Jay Gatsby standing alone on his lawn, gazing at a green light."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 3,
+      "facts": [
+        "Tom Buchanan takes the narrator to meet his mistress Myrtle Wilson at her husband's garage.",
+        "Myrtle Wilson's sister Catherine and the McKees are among the guests at the Manhattan apartment.",
+        "Mr. McKee shows the narrator a portfolio of photographs titled \"Beauty and the Beast,\" \"Loneliness,\" \"Old Grocery Horse,\" and \"Brook'n Bridge.\"",
+        "The narrator ends the scene alone at Pennsylvania Station early in the morning."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 4,
+      "facts": [
+        "The narrator attends one of Gatsby's extravagant parties at his Long Island mansion.",
+        "Owl Eyes crashes a new coupé into a ditch outside Gatsby's mansion.",
+        "The narrator works at a bond firm in New York City.",
+        "Jordan Baker is a famous golfer who has cheated in a golf tournament."
+      ],
+      "found": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.25
+    },
+    {
+      "chapter": 5,
+      "facts": [
+        "Jay Gatsby is a mysterious millionaire who hosts lavish parties.",
+        "Gatsby has been obsessed with Daisy Buchanan for five years.",
+        "Daisy married Tom Buchanan in a lavish ceremony.",
+        "Gatsby asks Nick to arrange a secret reunion with Daisy by inviting her to tea."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 6,
+      "facts": [
+        "Nick arranges a tea meeting between Gatsby and Daisy at his West Egg house.",
+        "Gatsby sends a gardener and flowers in preparation for the meeting.",
+        "Daisy is moved to tears by Gatsby's beautiful shirts.",
+        "Nick exits into the rain, leaving Gatsby and Daisy alone together."
+      ],
+      "found": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 7,
+      "facts": [
+        "Gatsby was born James Gatz to poor farmers in North Dakota.",
+        "He met millionaire Dan Cody at the age of seventeen.",
+        "Gatsby inherited $25,000 after Dan Cody's death.",
+        "Daisy Buchanan found Gatsby's first party disappointingly vulgar."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 8,
+      "facts": [
+        "Gatsby demands that Daisy leave Tom and declare her love for him.",
+        "Myrtle Wilson is struck and killed by Gatsby's yellow car.",
+        "Gatsby takes the blame for Myrtle's death to protect Daisy.",
+        "Nick finds Tom and Daisy sitting together in the kitchen."
+      ],
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "coverage": 1.0
+    },
+    {
+      "chapter": 9,
+      "facts": [
+        "The narrator visits Gatsby at dawn to warn him about suspicion surrounding his car.",
+        "Gatsby had a brief romance with Daisy during the war before she married Tom Buchanan.",
+        "Gatsby's body is discovered floating face-down in his pool.",
+        "Wilson's body is found nearby in the grass."
+      ],
+      "found": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "coverage": 0.5
+    },
+    {
+      "chapter": 10,
+      "facts": [
+        "Nick Carraway is responsible for arranging Gatsby's funeral.",
+        "Catherine testifies falsely to protect Daisy's reputation.",
+        "Gatsby's father comes from Minnesota to attend the funeral.",
+        "Tom reveals the car's ownership to Wilson, leading to Gatsby's death."
+      ],
+      "found": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "coverage": 0.75
+    }
+  ]
+}
