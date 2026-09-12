@@ -184,7 +184,7 @@ def run_merge(chunk_summaries: list[str], direction: str) -> tuple[str, list[dic
     return running_summary, merge_log
 
 
-def truncate(text: str, max_length: int = 40) -> str:
+def truncate(text: str, max_length: int = 20) -> str:
     """Shorten a string to max_length characters, without cutting mid-word if possible."""
     if len(text) <= max_length:
         return text

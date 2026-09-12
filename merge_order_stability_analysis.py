@@ -7,22 +7,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sentence_transformers import SentenceTransformer, util
 
-SHORT_LABELS = {
-    "Bean Et Al. - 2025 - Measuring What": "Bean et al. 2025",
-    "Rudinger Et Al. - 2018 - Neural Models": "Rudinger et al. 2018",
-    "Łajewska Et Al. - 2025 - Understanding": "Łajewska et al. 2025",
-    "Qin Et Al.-2025-Large Language Models": "Qin et al. 2025",
-    "Gambler": "The Gambler",
-    "The Strange Case Of Dr. Jekyll And Mr.": "Jekyll and Hyde",
-    "Pride And Prejudice": "Pride and Prejudice",
-    "Frankenstein": "Frankenstein",
-    "Barducci Et Al. - 2025 - A": "Barducci et al. 2025",
-    "Boozer - 2026 - Comment On Nuclear": "Boozer 2026",
-    "Ting Et Al. - 2025 - Astro Mlab5": "Ting Et Al. 2025"
-}
-def short_label(title):
-    return SHORT_LABELS.get(title, title)
-
 
 # A book is "complete" if both its forward and backward files exist
 def find_result_pairs(results_dir: str) -> list[str]:
@@ -161,7 +145,7 @@ def main():
 
     # Cross-document summary plot, grouped by type
     for doc_type, group in summary_df.groupby("type"):
-        docs = [short_label(d) for d in group["document"].tolist()]
+        docs = group["document"].tolist()
 
         x = np.arange(len(docs))
         width = 0.35
@@ -174,7 +158,7 @@ def main():
         plt.xlabel("Document")
         plt.ylabel("Mean stability (error bars = std across chunks)")
         plt.title(f"Mean stability, forward vs. backward -- type: {doc_type}")
-        plt.xticks(x, docs, rotation=0, ha="center")
+        plt.xticks(x, docs, rotation=15, ha="center")
         plt.legend()
         plt.grid(True, alpha=0.3, axis="y")
         summary_plot_path = os.path.join(args.plots_dir, f"stability_summary_{doc_type}.png")
@@ -183,7 +167,7 @@ def main():
         print(f"Saved summary plot ({doc_type}): {summary_plot_path}")
 
     # Cross-document summary plot, ALL documents together (novels + papers)
-    docs = [short_label(d) for d in summary_df["document"].tolist()]
+    docs = summary_df["document"].tolist()
     x = np.arange(len(docs))
     width = 0.35
 
